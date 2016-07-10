@@ -2,21 +2,25 @@ package ozu.tweetanalyzer;
 
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Hashtable;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.Map.Entry;
 
-import org.jfree.chart.plot.XYPlot;
 import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.data.general.PieDataset;
-import org.jfree.data.time.Millisecond;
-import org.jfree.data.xy.XYSeries;
-import org.jfree.data.xy.XYSeriesCollection;
 
 import edu.stanford.nlp.ie.AbstractSequenceClassifier;
 import edu.stanford.nlp.ie.crf.CRFClassifier;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.util.Triple;
+import twitter4j.HashtagEntity;
 import twitter4j.Status;
+import twitter4j.URLEntity;
 
 public class EntityRecognition {
 
@@ -30,9 +34,9 @@ public class EntityRecognition {
 
 	}
 
-	public void entityRecognition(Status status, CurrentTime time,ChartGeneration locationChart,ChartGeneration organizationChart,ChartGeneration personChart,ChartGeneration languageChart,Deneme deneme) 
+	public void entityRecognition(Status tweet, CurrentTime time,ChartGeneration locationChart,ChartGeneration organizationChart,ChartGeneration personChart,ChartGeneration languageChart,ChartGeneration hashTagChart,ChartGeneration verifiedUrlChart,Deneme deneme) 
 	{
-		String text = status.getText();
+		String text = tweet.getText();
 		try {
 			classifier = CRFClassifier.getClassifier(classifierPath);//LOAD CLASSIFIER FROM FILE TO START ENTITY RECOGNITION
 		} catch (ClassCastException e) {
@@ -48,54 +52,52 @@ public class EntityRecognition {
 
 		for (int i = 0; i < out.size(); i++) {
 			if (out.get(i).first.equals("LOCATION")) {// IF ENETITYRECOGNIZER RECOGNIZE A TOKEN AS LOCATION
-				String location = text.substring(out.get(i).second,	out.get(i).third);//TAKE LOCATION
-				location = location.toUpperCase();//MAKE IT UPPER CASED LETTERS TO MAKE SAME WORDS 
+				String location = text.substring(out.get(i).second,	out.get(i).third).toUpperCase();//TAKE LOCATION, MAKE IT UPPER CASED LETTERS TO MAKE SAME WORDS 
 				updateLists(database.getLocationList(), location, "location");//UPDATE THE LOCATION LIST
-				time.startTime();
+				//CREATE NEW DATASET BASED ON UPDATED DATASET
+				locationChart.getPlot().setDataset(listToPieChartDataset(database.getLocationList()));// CHANGE THE CHART DATASET
 
-				PieDataset result = new DefaultPieDataset();//CREATE NEW PIECHARTDATASET
-				result = locationChart.createSampleDataset(database.getLocationList());//CREATE NEW DATASET BASED ON UPDATED DATASET
-				locationChart.getPlot().setDataset(result);// CHANGE THE CHART DATASET
-
-				XYSeries series = new XYSeries(location);
-				//double asd= Double.valueOf(time.getDateFormat().format(time.getCal().getTime()));
-				series.add(10.2, 10.2);
-				series.add(15.2, 10.2);
-				series.add(20.2, 10.2);
-				series.add(30.2, 10.2);
-
-				final Millisecond now = new Millisecond();
-				System.out.println("Now = " + now.toString());
-				deneme.getSeries().add(new Millisecond(), 10.0);
+				/*TimeSeriesCollection dataset = new TimeSeriesCollection();
+				dataset = deneme.createSampleDataset(database.getLocationList());
+				deneme.setDataset(dataset);*/
 
 			}		
 			if (out.get(i).first.equals("ORGANIZATION")) {
-				String organization = text.substring(out.get(i).second,	out.get(i).third);
-				organization = organization.toUpperCase();
+				String organization = text.substring(out.get(i).second,	out.get(i).third).toUpperCase();
 				updateLists(database.getOrganizationList(), organization, "organization");//UPDATE DATA WHEN NEW TOKEN COMES
-				time.startTime();
-				PieDataset result = new DefaultPieDataset();
-				result = organizationChart.createSampleDataset(database.getOrganizationList());
-				organizationChart.getPlot().setDataset(result);// CHANGE DATA WHEN NEW TOKEN COMES
+				organizationChart.getPlot().setDataset(listToPieChartDataset(database.getOrganizationList()));// CHANGE THE CHART DATASET
 			}
 			if (out.get(i).first.equals("PERSON")) {
-				String person = text.substring(out.get(i).second, out.get(i).third);
-				person = person.toUpperCase();
+				String person = text.substring(out.get(i).second, out.get(i).third).toUpperCase();
 				updateLists(database.getPersonList(), person,"person");
-				time.startTime();
-				PieDataset result = new DefaultPieDataset();
-				result = personChart.createSampleDataset(database.getPersonList());
-				personChart.getPlot().setDataset(result);
+				personChart.getPlot().setDataset(listToPieChartDataset(database.getPersonList()));// CHANGE THE CHART DATASET
 
 			}
 		}
 
-		String language = status.getLang();
+		String language = tweet.getLang();
 		updateLists(database.getLanguageList(), language, "language");
-		PieDataset result = new DefaultPieDataset();
-		result = languageChart.createSampleDataset(database.getLanguageList());
-		languageChart.getPlot().setDataset(result);
+		languageChart.getPlot().setDataset(listToPieChartDataset(database.getLanguageList()));// CHANGE THE CHART DATASET
 
+
+		HashtagEntity[] hashtagsEntities = tweet.getHashtagEntities();
+		for (HashtagEntity hashtag : hashtagsEntities){
+			updateLists(database.getHashTagList(), hashtag.getText(),"hashtag");
+		}
+
+		hashTagChart.getPlot().setDataset(listToPieChartDataset(database.getHashTagList()));// CHANGE THE CHART DATASET
+
+		if(tweet.getUser().isVerified()){
+			URLEntity[] urls = tweet.getURLEntities();
+			for(URLEntity url : urls){
+				updateLists(database.getVerifiedURLList(), url.getURL(), "verifiedURLList");
+			}						
+		}
+		verifiedUrlChart.getPlot().setDataset(listToPieChartDataset(database.getVerifiedURLList()));// CHANGE THE CHART DATASET
+
+		
+		
+		
 
 	}
 
@@ -119,9 +121,64 @@ public class EntityRecognition {
 		if(tableName.equals("language")){
 			database.setLanguageList(table);
 		}
+		if(tableName.equals("hashtag")){
+			database.setHashTagList(table);
+		}
+		if(tableName.equals("verifiedURLList")){
+			database.setHashTagList(table);
+		}
 
 	}
 
+
+
+	public ArrayList<Map.Entry<String, Integer>> sortHashTable (Hashtable<String, Integer> list){
+
+		//TO SORT THE TOKENS OF HASHTABLE IN DESCENDING ORDER 
+		ArrayList<Map.Entry<String, Integer>> sortedList = new ArrayList<Entry<String, Integer>>(list.entrySet());
+		Collections.sort(sortedList, new Comparator<Map.Entry<String, Integer>>(){
+
+			public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
+				return o1.getValue().compareTo(o2.getValue());
+			}});
+
+		return sortedList;
+	}
+
+
+
+	public PieDataset listToPieChartDataset(Hashtable<String, Integer> list){
+
+
+		final DefaultPieDataset result = new DefaultPieDataset();
+
+
+		if(list.size()<5){//IF DATASET HAS LESS THAN 5 TOKEN, SHOW IT RANDOM
+			Set<String> keys = list.keySet();
+			for(String key: keys)
+			{
+				result.setValue(key+" = "+list.get(key), list.get(key));
+
+			}
+		}
+		if(list.size()>= 5){// TO SHOW NO MORE THAN 5 DIFFERENT TOKEN IN GRAPH, 
+			//BECAUSE SHOWING ALL THE TOKENS IN ONE GRAPH LOOKS VERY ANNOYING
+
+			ArrayList<Map.Entry<String, Integer>> sortedList = sortHashTable(list);
+
+			for(int i = sortedList.size()-1 ; i>=sortedList.size()-5;i--){
+				String token = sortedList.get(i).toString();
+				String[] parts = token.split("=", 2);
+				String tokenName = parts[0];
+				String tokenValue = parts[1];
+
+
+				result.setValue(tokenName.toString()+" = "+tokenValue.toString(), Integer.valueOf(tokenValue.toString()));
+			}
+		}
+		return result;
+
+	}
 
 
 }

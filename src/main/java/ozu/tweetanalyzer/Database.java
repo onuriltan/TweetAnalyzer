@@ -4,13 +4,15 @@ import java.util.Hashtable;
 
 
 public class Database {
-	
+
 	private String searchQuery;
 	private Hashtable<String, Integer> locationList = new Hashtable<String, Integer>()  ;
 	private Hashtable<String, Integer> organizationList = new Hashtable<String, Integer>() ;
 	private Hashtable<String, Integer> personList= new Hashtable<String, Integer>() ;
 	private Hashtable<String, Integer> languageList = new Hashtable<String, Integer>() ;
-	
+	private Hashtable<String, Integer> hashTagList = new Hashtable<String, Integer>() ;
+	private Hashtable<String, Integer> verifiedURLList = new Hashtable<String, Integer>() ;
+
 
 	public Database(){
 
@@ -56,6 +58,22 @@ public class Database {
 
 	public void setSearchQuery(String searchQuery) {
 		this.searchQuery = searchQuery;
+	}
+
+	public Hashtable<String, Integer> getHashTagList() {
+		return hashTagList;
+	}
+
+	public void setHashTagList(Hashtable<String, Integer> hashTagList) {
+		this.hashTagList = hashTagList;
+	}
+
+	public Hashtable<String, Integer> getVerifiedURLList() {
+		return verifiedURLList;
+	}
+
+	public void setVerifiedURLList(Hashtable<String, Integer> verifiedURLList) {
+		this.verifiedURLList = verifiedURLList;
 	}
 
 

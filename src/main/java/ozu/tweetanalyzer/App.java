@@ -45,40 +45,50 @@ public class App
 
 	public static void stream(TwitterAuthorization authorize,final Database database, final EntityRecognition recognition,final CurrentTime time)
 	{
-	
-		final ChartGeneration locationChart = new ChartGeneration("Location",time,database.getLocationList());
+
+		final ChartGeneration locationChart = new ChartGeneration("Location",time);
 		locationChart.pack();
-        RefineryUtilities.centerFrameOnScreen(locationChart);
-        locationChart.setVisible(true);//CREATE CHARTS WHEN STREAM STARTS AND SHOW THEM
-		
-		final ChartGeneration organizationChart = new ChartGeneration("Organization",time, database.getOrganizationList());
+		RefineryUtilities.centerFrameOnScreen(locationChart);
+		locationChart.setVisible(true);//CREATE CHARTS WHEN STREAM STARTS AND SHOW THEM
+
+		final ChartGeneration organizationChart = new ChartGeneration("Organization",time);
 		organizationChart.pack();
-        RefineryUtilities.centerFrameOnScreen(organizationChart);
-        organizationChart.setVisible(true);
-		
-		final ChartGeneration personChart = new ChartGeneration("Person",time, database.getPersonList());
+		RefineryUtilities.centerFrameOnScreen(organizationChart);
+		organizationChart.setVisible(true);
+
+		final ChartGeneration personChart = new ChartGeneration("Person",time);
 		personChart.pack();
-        RefineryUtilities.centerFrameOnScreen(personChart);
-        personChart.setVisible(true);
-		
-		final ChartGeneration languageChart = new ChartGeneration("Language",time, database.getLanguageList());
+		RefineryUtilities.centerFrameOnScreen(personChart);
+		personChart.setVisible(true);
+
+		final ChartGeneration languageChart = new ChartGeneration("Language",time);
 		languageChart.pack();
-        RefineryUtilities.centerFrameOnScreen(languageChart);
-        languageChart.setVisible(true);
-        
-        final Deneme deneme = new Deneme("Deneme");
-        deneme.pack();
+		RefineryUtilities.centerFrameOnScreen(languageChart);
+		languageChart.setVisible(true);
+
+		final ChartGeneration hashtagChart = new ChartGeneration("Hashtag",time);
+		hashtagChart.pack();
+		RefineryUtilities.centerFrameOnScreen(hashtagChart);
+		hashtagChart.setVisible(true);
+
+		final ChartGeneration verifiedUrlChart = new ChartGeneration("VerfiedURLs",time);
+		verifiedUrlChart.pack();
+		RefineryUtilities.centerFrameOnScreen(verifiedUrlChart);
+		verifiedUrlChart.setVisible(true);
+
+		final Deneme deneme = new Deneme("Deneme",time, database.getLocationList());
+		deneme.pack();
 		RefineryUtilities.centerFrameOnScreen(deneme);
 		deneme.setVisible(true);
-        
+
 
 		StatusListener listener = new StatusListener() {
-			public void onStatus(Status arg0) {// data keep coming to onStatus method, 
-				                               // the code that written under onStatus method will execute the code again and again when new tweet comes
+			public void onStatus(Status tweet) {// data keep coming to onStatus method, 
+				// the code that written under onStatus method will execute the code again and again when new tweet comes
 
-				recognition.entityRecognition(arg0,time,locationChart,organizationChart,personChart,languageChart,deneme); // apply entity recognition on tweet text
-			
-				
+				recognition.entityRecognition(tweet,time,locationChart,organizationChart,personChart,languageChart,hashtagChart,verifiedUrlChart,deneme); // apply entity recognition on tweet text
+                //this command takes tweets and analyzes them and updates charts according to analyzation
+
 
 
 

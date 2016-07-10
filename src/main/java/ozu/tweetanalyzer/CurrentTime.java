@@ -8,59 +8,53 @@ import java.util.Calendar;
 public class CurrentTime {
 
 
-	private DateFormat dateFormat;
-	private Date date;
-	private Calendar cal;
 
 
+	private String currentDate;
+	private String currentTime;
 
-	public void startTime(){
 
-		dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+	public CurrentTime(){
+
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		//get current date time with Date()
-		date = new Date();
-		System.out.println(dateFormat.format(date));
+		Date date = new Date();
+		//System.out.println(dateFormat.format(date));
 		//get current date time with Calendar()
-		cal = Calendar.getInstance();
-		System.out.println(dateFormat.format(cal.getTime()));
+		Calendar cal = Calendar.getInstance();
+		//System.out.println(dateFormat.format(cal.getTime()));
+
+		currentDate = dateFormat.format(date).toString();
+		currentTime = dateFormat.format(cal.getTime()).toString();
 
 	}
 
 
+	public String getCurrentDate() {
+		return currentDate;
+	}
 
-	public DateFormat getDateFormat() {
-		return dateFormat;
+
+	public void setCurrentDate(String currentDate) {
+		this.currentDate = currentDate;
+	}
+
+
+	public String getCurrentTime() {
+		return currentTime;
+	}
+
+
+	public void setCurrentTime(String currentTime) {
+		this.currentTime = currentTime;
 	}
 
 
 
-	public void setDateFormat(DateFormat dateFormat) {
-		this.dateFormat = dateFormat;
-	}
 
 
 
-	public Date getDate() {
-		return date;
-	}
 
-
-
-	public void setDate(Date date) {
-		this.date = date;
-	}
-
-
-
-	public Calendar getCal() {
-		return cal;
-	}
-
-
-
-	public void setCal(Calendar cal) {
-		this.cal = cal;
-	}
 
 
 
