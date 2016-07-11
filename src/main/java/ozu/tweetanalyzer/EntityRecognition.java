@@ -31,12 +31,6 @@ public class EntityRecognition {
 
 	public EntityRecognition(Database database){
 		this.database = database;
-
-	}
-
-	public void entityRecognition(Status tweet, CurrentTime time,ChartGeneration locationChart,ChartGeneration organizationChart,ChartGeneration personChart,ChartGeneration languageChart,ChartGeneration hashTagChart,ChartGeneration verifiedUrlChart,Deneme deneme) 
-	{
-		String text = tweet.getText();
 		try {
 			classifier = CRFClassifier.getClassifier(classifierPath);//LOAD CLASSIFIER FROM FILE TO START ENTITY RECOGNITION
 		} catch (ClassCastException e) {
@@ -46,6 +40,12 @@ public class EntityRecognition {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public void entityRecognition(Status tweet, CurrentTime time,ChartGeneration locationChart,ChartGeneration organizationChart,ChartGeneration personChart,ChartGeneration languageChart,ChartGeneration hashTagChart,ChartGeneration verifiedUrlChart,Deneme deneme) 
+	{
+		String text = tweet.getText();
+
 
 
 		List<Triple<String, Integer, Integer>> out = classifier.classifyToCharacterOffsets(text);
@@ -95,9 +95,9 @@ public class EntityRecognition {
 		}
 		verifiedUrlChart.getPlot().setDataset(listToPieChartDataset(database.getVerifiedURLList()));// CHANGE THE CHART DATASET
 
-		
-		
-		
+
+
+
 
 	}
 
@@ -158,8 +158,15 @@ public class EntityRecognition {
 			for(String key: keys)
 			{
 				result.setValue(key+" = "+list.get(key), list.get(key));
+				System.out.print(key+" = "+list.get(key)+" ");
 
 			}
+			System.out.println();
+
+
+
+
+
 		}
 		if(list.size()>= 5){// TO SHOW NO MORE THAN 5 DIFFERENT TOKEN IN GRAPH, 
 			//BECAUSE SHOWING ALL THE TOKENS IN ONE GRAPH LOOKS VERY ANNOYING
@@ -174,7 +181,10 @@ public class EntityRecognition {
 
 
 				result.setValue(tokenName.toString()+" = "+tokenValue.toString(), Integer.valueOf(tokenValue.toString()));
+				System.out.print(tokenName.toString()+" = "+tokenValue.toString()+" ");
+
 			}
+			System.out.println();
 		}
 		return result;
 

@@ -90,8 +90,6 @@ public class App
                 //this command takes tweets and analyzes them and updates charts according to analyzation
 
 
-
-
 			}
 			public void onException(Exception arg0) {}
 			public void onDeletionNotice(StatusDeletionNotice arg0) {}
