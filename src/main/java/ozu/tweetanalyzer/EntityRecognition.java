@@ -54,20 +54,16 @@ public class EntityRecognition {
 			if (out.get(i).first.equals("LOCATION")) {// IF ENETITYRECOGNIZER RECOGNIZE A TOKEN AS LOCATION
 				String location = text.substring(out.get(i).second,	out.get(i).third).toUpperCase();//TAKE LOCATION, MAKE IT UPPER CASED LETTERS TO MAKE SAME WORDS 
 				updateLists(database.getLocationList(), location, "location");//UPDATE THE LOCATION LIST
-				//CREATE NEW DATASET BASED ON UPDATED DATASET
 				locationChart.getPlot().setDataset(listToPieChartDataset(database.getLocationList()));// CHANGE THE CHART DATASET
-
-				/*TimeSeriesCollection dataset = new TimeSeriesCollection();
-				dataset = deneme.createSampleDataset(database.getLocationList());
-				deneme.setDataset(dataset);*/
+	
 
 			}		
-			if (out.get(i).first.equals("ORGANIZATION")) {
+			if (out.get(i).first.equals("ORGANIZATION")) {// IF ENETITYRECOGNIZER RECOGNIZE A TOKEN AS ORGANIZATION
 				String organization = text.substring(out.get(i).second,	out.get(i).third).toUpperCase();
 				updateLists(database.getOrganizationList(), organization, "organization");//UPDATE DATA WHEN NEW TOKEN COMES
 				organizationChart.getPlot().setDataset(listToPieChartDataset(database.getOrganizationList()));// CHANGE THE CHART DATASET
 			}
-			if (out.get(i).first.equals("PERSON")) {
+			if (out.get(i).first.equals("PERSON")) {// IF ENETITYRECOGNIZER RECOGNIZE A TOKEN AS PERSON
 				String person = text.substring(out.get(i).second, out.get(i).third).toUpperCase();
 				updateLists(database.getPersonList(), person,"person");
 				personChart.getPlot().setDataset(listToPieChartDataset(database.getPersonList()));// CHANGE THE CHART DATASET
@@ -75,20 +71,20 @@ public class EntityRecognition {
 			}
 		}
 
-		String language = tweet.getLang();
+		String language = tweet.getLang();// GET THE TWEET LANGUAGE
 		updateLists(database.getLanguageList(), language, "language");
 		languageChart.getPlot().setDataset(listToPieChartDataset(database.getLanguageList()));// CHANGE THE CHART DATASET
 
 
-		HashtagEntity[] hashtagsEntities = tweet.getHashtagEntities();
+		HashtagEntity[] hashtagsEntities = tweet.getHashtagEntities();// TO GET HASHTAGS THAT USED IN TWEET
 		for (HashtagEntity hashtag : hashtagsEntities){
-			updateLists(database.getHashTagList(), hashtag.getText(),"hashtag");
+			updateLists(database.getHashTagList(), "#"+hashtag.getText(),"hashtag");
 		}
 
 		hashTagChart.getPlot().setDataset(listToPieChartDataset(database.getHashTagList()));// CHANGE THE CHART DATASET
 
-		if(tweet.getUser().isVerified()){
-			URLEntity[] urls = tweet.getURLEntities();
+		if(tweet.getUser().isVerified()){// IF USER ACCOUNT IS VERIFIED ACCOUNT
+			URLEntity[] urls = tweet.getURLEntities();// TAKE URL ENTITIES
 			for(URLEntity url : urls){
 				updateLists(database.getVerifiedURLList(), url.getURL(), "verifiedURLList");
 			}						
@@ -125,7 +121,7 @@ public class EntityRecognition {
 			database.setHashTagList(table);
 		}
 		if(tableName.equals("verifiedURLList")){
-			database.setHashTagList(table);
+			database.setVerifiedURLList(table);
 		}
 
 	}
@@ -162,14 +158,9 @@ public class EntityRecognition {
 
 			}
 			System.out.println();
-
-
-
-
-
 		}
 		if(list.size()>= 5){// TO SHOW NO MORE THAN 5 DIFFERENT TOKEN IN GRAPH, 
-			//BECAUSE SHOWING ALL THE TOKENS IN ONE GRAPH LOOKS VERY ANNOYING
+			//BECAUSE NO POINT SHOWING ALL THE TOKENS IN ONE GRAPH 
 
 			ArrayList<Map.Entry<String, Integer>> sortedList = sortHashTable(list);
 
