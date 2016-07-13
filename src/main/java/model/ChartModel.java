@@ -2,74 +2,78 @@
 
 package model;
 
-import java.awt.BorderLayout;
-import java.awt.Font;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-
-import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
-import org.jfree.chart.plot.PiePlot;
-import org.jfree.data.general.DefaultPieDataset;
+import org.jfree.chart.plot.PiePlot3D;
 import org.jfree.data.general.PieDataset;
 
-public class ChartModel extends JFrame {
-	
-	private DefaultPieDataset result ;
-	private ChartPanel chartPanel;
-	private JFreeChart chart;
+public class ChartModel {
+
 	private String chartName;
-	private String fileName;
-	private PiePlot plot;
+	private PieDataset dataset;
+	private JFreeChart chart;
+	private ChartPanel chartPanel;
+	private PiePlot3D plot;
+
 	
-	
-	public ChartModel(String fileName, String chartName,JPanel chartsPanel) throws FileNotFoundException, IOException {
-		result = new DefaultPieDataset();
+
+	public String getChartName() {
+		return chartName;
+	}
+
+
+	public void setChartName(String chartName) {
 		this.chartName = chartName;
-		this.fileName = fileName;
-		
-
-	// based on the dataset we create the chart
-		chart = createChart(result, chartName);
-		// we put the chart into a panel
-		chartPanel = new ChartPanel(chart);
-		// default size
-		chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));
-		// add it to our application
-		chartsPanel.add(chartPanel, BorderLayout.CENTER);
-		chartsPanel.revalidate();
-		setContentPane(chartPanel);
-		
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	private JFreeChart createChart(PieDataset dataset, String title) {
+	public PieDataset getDataset() {
+		return dataset;
+	}
 
-		JFreeChart chart = ChartFactory.createPieChart3D(title,          // chart title
-				dataset,                // data
-				true,                   // include legend
-				true,
-				false);
 
-		plot = (PiePlot) chart.getPlot();
-		plot.setLabelFont(new Font("SansSerif", Font.PLAIN, 12));
-		plot.setNoDataMessage("No data available");
-		plot.setCircular(false);
-		plot.setLabelGap(0.02);
+	public void setDataset(PieDataset dataset) {
+		this.dataset = dataset;
+	}
+
+
+	public JFreeChart getChart() {
 		return chart;
-
 	}
+
+
+	public void setChart(JFreeChart chart) {
+		this.chart = chart;
+	}
+
+
+	public ChartPanel getChartPanel() {
+		return chartPanel;
+	}
+
+
+	public void setChartPanel(ChartPanel chartPanel) {
+		this.chartPanel = chartPanel;
+	}
+
+
+	public PiePlot3D getPlot() {
+		return plot;
+	}
+
+
+	public void setPlot(PiePlot3D plot) {
+		this.plot = plot;
+	}	
+
+
+
+
+
+
+
+
+
+
+
 
 }

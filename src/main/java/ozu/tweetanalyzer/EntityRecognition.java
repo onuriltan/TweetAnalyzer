@@ -14,6 +14,7 @@ import java.util.Map.Entry;
 import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.data.general.PieDataset;
 
+import controller.ChartController;
 import edu.stanford.nlp.ie.AbstractSequenceClassifier;
 import edu.stanford.nlp.ie.crf.CRFClassifier;
 import edu.stanford.nlp.ling.CoreLabel;
@@ -42,11 +43,9 @@ public class EntityRecognition {
 		}
 	}
 
-	public void entityRecognition(Status tweet, CurrentTime time,ChartGeneration locationChart,ChartGeneration organizationChart,ChartGeneration personChart,ChartGeneration languageChart,ChartGeneration hashTagChart,ChartGeneration verifiedUrlChart,Deneme deneme) 
+	public void entityRecognition(Status tweet, ChartController locationChart, ChartController organizationChart, ChartController personChart, ChartController languageChart, ChartController hashTagChart, ChartController verifiedUrlChart) 
 	{
 		String text = tweet.getText();
-
-
 
 		List<Triple<String, Integer, Integer>> out = classifier.classifyToCharacterOffsets(text);
 
@@ -54,34 +53,36 @@ public class EntityRecognition {
 			if (out.get(i).first.equals("LOCATION")) {// IF ENETITYRECOGNIZER RECOGNIZE A TOKEN AS LOCATION
 				String location = text.substring(out.get(i).second,	out.get(i).third).toUpperCase();//TAKE LOCATION, MAKE IT UPPER CASED LETTERS TO MAKE SAME WORDS 
 				updateLists(database.getLocationList(), location, "location");//UPDATE THE LOCATION LIST
-				locationChart.getPlot().setDataset(listToPieChartDataset(database.getLocationList()));// CHANGE THE CHART DATASET
-	
+				locationChart.updateChart(listToPieChartDataset(database.getLocationList()));
 
+				// CHANGE THE CHART DATASET
 			}		
 			if (out.get(i).first.equals("ORGANIZATION")) {// IF ENETITYRECOGNIZER RECOGNIZE A TOKEN AS ORGANIZATION
 				String organization = text.substring(out.get(i).second,	out.get(i).third).toUpperCase();
 				updateLists(database.getOrganizationList(), organization, "organization");//UPDATE DATA WHEN NEW TOKEN COMES
-				organizationChart.getPlot().setDataset(listToPieChartDataset(database.getOrganizationList()));// CHANGE THE CHART DATASET
+				organizationChart.updateChart(listToPieChartDataset(database.getOrganizationList()));// CHANGE THE CHART DATASET
+				// CHANGE THE CHART DATASET
+
 			}
 			if (out.get(i).first.equals("PERSON")) {// IF ENETITYRECOGNIZER RECOGNIZE A TOKEN AS PERSON
 				String person = text.substring(out.get(i).second, out.get(i).third).toUpperCase();
 				updateLists(database.getPersonList(), person,"person");
-				personChart.getPlot().setDataset(listToPieChartDataset(database.getPersonList()));// CHANGE THE CHART DATASET
+				personChart.updateChart(listToPieChartDataset(database.getPersonList()));// CHANGE THE CHART DATASET
+				// CHANGE THE CHART DATASET
 
 			}
 		}
 
 		String language = tweet.getLang();// GET THE TWEET LANGUAGE
 		updateLists(database.getLanguageList(), language, "language");
-		languageChart.getPlot().setDataset(listToPieChartDataset(database.getLanguageList()));// CHANGE THE CHART DATASET
-
+		languageChart.updateChart(listToPieChartDataset(database.getLanguageList()));// CHANGE THE CHART DATASET
 
 		HashtagEntity[] hashtagsEntities = tweet.getHashtagEntities();// TO GET HASHTAGS THAT USED IN TWEET
 		for (HashtagEntity hashtag : hashtagsEntities){
 			updateLists(database.getHashTagList(), "#"+hashtag.getText(),"hashtag");
 		}
 
-		hashTagChart.getPlot().setDataset(listToPieChartDataset(database.getHashTagList()));// CHANGE THE CHART DATASET
+		hashTagChart.updateChart(listToPieChartDataset(database.getHashTagList()));// CHANGE THE CHART DATASET
 
 		if(tweet.getUser().isVerified()){// IF USER ACCOUNT IS VERIFIED ACCOUNT
 			URLEntity[] urls = tweet.getURLEntities();// TAKE URL ENTITIES
@@ -89,11 +90,7 @@ public class EntityRecognition {
 				updateLists(database.getVerifiedURLList(), url.getURL(), "verifiedURLList");
 			}						
 		}
-		verifiedUrlChart.getPlot().setDataset(listToPieChartDataset(database.getVerifiedURLList()));// CHANGE THE CHART DATASET
-
-
-
-
+		verifiedUrlChart.updateChart(listToPieChartDataset(database.getVerifiedURLList()));// CHANGE THE CHART DATASET
 
 	}
 
@@ -126,23 +123,6 @@ public class EntityRecognition {
 
 	}
 
-
-
-	public ArrayList<Map.Entry<String, Integer>> sortHashTable (Hashtable<String, Integer> list){
-
-		//TO SORT THE TOKENS OF HASHTABLE IN DESCENDING ORDER 
-		ArrayList<Map.Entry<String, Integer>> sortedList = new ArrayList<Entry<String, Integer>>(list.entrySet());
-		Collections.sort(sortedList, new Comparator<Map.Entry<String, Integer>>(){
-
-			public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
-				return o1.getValue().compareTo(o2.getValue());
-			}});
-
-		return sortedList;
-	}
-
-
-
 	public PieDataset listToPieChartDataset(Hashtable<String, Integer> list){
 
 
@@ -154,10 +134,8 @@ public class EntityRecognition {
 			for(String key: keys)
 			{
 				result.setValue(key+" = "+list.get(key), list.get(key));
-				System.out.print(key+" = "+list.get(key)+" ");
 
 			}
-			System.out.println();
 		}
 		if(list.size()>= 5){// TO SHOW NO MORE THAN 5 DIFFERENT TOKEN IN GRAPH, 
 			//BECAUSE NO POINT SHOWING ALL THE TOKENS IN ONE GRAPH 
@@ -172,13 +150,24 @@ public class EntityRecognition {
 
 
 				result.setValue(tokenName.toString()+" = "+tokenValue.toString(), Integer.valueOf(tokenValue.toString()));
-				System.out.print(tokenName.toString()+" = "+tokenValue.toString()+" ");
 
 			}
-			System.out.println();
 		}
 		return result;
 
+	}
+
+	public ArrayList<Map.Entry<String, Integer>> sortHashTable (Hashtable<String, Integer> list){
+
+		//TO SORT THE TOKENS OF HASHTABLE IN DESCENDING ORDER 
+		ArrayList<Map.Entry<String, Integer>> sortedList = new ArrayList<Entry<String, Integer>>(list.entrySet());
+		Collections.sort(sortedList, new Comparator<Map.Entry<String, Integer>>(){
+
+			public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
+				return o1.getValue().compareTo(o2.getValue());
+			}});
+
+		return sortedList;
 	}
 
 

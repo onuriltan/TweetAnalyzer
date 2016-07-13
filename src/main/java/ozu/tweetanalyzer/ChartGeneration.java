@@ -2,7 +2,6 @@ package ozu.tweetanalyzer;
 
 
 
-import java.util.List;
 
 
 import javax.swing.JFrame;
@@ -19,10 +18,7 @@ public class ChartGeneration extends JFrame {
 
 
 	private static final long serialVersionUID = 1L;
-	private List<Double> yData;
 	private String chartName;
-	private String date ;
-	private String clock ;
 	private PieDataset dataset;
 	private JFreeChart chart;
 	private ChartPanel chartPanel;
@@ -60,13 +56,7 @@ public class ChartGeneration extends JFrame {
 		return chart;
 	}
 
-	public List<Double> getyData() {
-		return yData;
-	}
 
-	public void setyData(List<Double> yData) {
-		this.yData = yData;
-	}
 
 	public String getChartName() {
 		return chartName;
@@ -76,22 +66,6 @@ public class ChartGeneration extends JFrame {
 		this.chartName = chartName;
 	}
 
-	public String getDate() {
-		return date;
-	}
-
-	public void setDate(String date) {
-		this.date = date;
-	}
-
-	public String getClock() {
-		return clock;
-	}
-	public void setClock(String clock) {
-		this.clock = clock;
-	}
-
-
 	public PieDataset getDataset() {
 		return dataset;
 	}
@@ -99,18 +73,23 @@ public class ChartGeneration extends JFrame {
 	public void setDataset(PieDataset dataset) {
 		this.dataset = dataset;
 	}
+	
 	public ChartPanel getChartPanel() {
 		return chartPanel;
 	}
+	
 	public void setChartPanel(ChartPanel chartPanel) {
 		this.chartPanel = chartPanel;
 	}
+	
 	public void setChart(JFreeChart chart) {
 		this.chart = chart;
 	}
+	
 	public PiePlot3D getPlot() {
 		return plot;
 	}
+	
 	public void setPlot(PiePlot3D plot) {
 		this.plot = plot;
 	}
