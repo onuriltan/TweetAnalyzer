@@ -43,7 +43,7 @@ public class EntityRecognition {
 		}
 	}
 
-	public void entityRecognition(Status tweet, ChartController locationChart, ChartController organizationChart, ChartController personChart, ChartController languageChart, ChartController hashTagChart, ChartController verifiedUrlChart) 
+	public void entityRecognition(Status tweet, ChartController locationChartController, ChartController organizationChartController, ChartController personChartController, ChartController languageChartController, ChartController hashTagChartController, ChartController verifiedUrlChartController) 
 	{
 		String text = tweet.getText();
 
@@ -51,50 +51,50 @@ public class EntityRecognition {
 
 		for (int i = 0; i < out.size(); i++) {
 			if (out.get(i).first.equals("LOCATION")) {// IF ENETITYRECOGNIZER RECOGNIZE A TOKEN AS LOCATION
-				String location = text.substring(out.get(i).second,	out.get(i).third).toUpperCase();//TAKE LOCATION, MAKE IT UPPER CASED LETTERS TO MAKE SAME WORDS 
-				updateLists(database.getLocationList(), location, "location");//UPDATE THE LOCATION LIST
-				locationChart.updateChart(listToPieChartDataset(database.getLocationList()));
-
-				// CHANGE THE CHART DATASET
+				String location = text.substring(out.get(i).second,	out.get(i).third).toUpperCase();//TAKE LOCATION, MAKE IT UPPER CASED LETTERS TO MATCH SAME WORDS(e.g ONUR onur)
+				updateDatabase(database.getLocationList(), location, "location");//UPDATE THE LOCATION LIST
+				locationChartController.setDataset(listToPieChartDataset(database.getLocationList()));// CHANGE THE CHART DATASET
+				locationChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
 			}		
 			if (out.get(i).first.equals("ORGANIZATION")) {// IF ENETITYRECOGNIZER RECOGNIZE A TOKEN AS ORGANIZATION
 				String organization = text.substring(out.get(i).second,	out.get(i).third).toUpperCase();
-				updateLists(database.getOrganizationList(), organization, "organization");//UPDATE DATA WHEN NEW TOKEN COMES
-				organizationChart.updateChart(listToPieChartDataset(database.getOrganizationList()));// CHANGE THE CHART DATASET
-				// CHANGE THE CHART DATASET
+				updateDatabase(database.getOrganizationList(), organization, "organization");//UPDATE DATA WHEN NEW TOKEN COMES
+				organizationChartController.setDataset(listToPieChartDataset(database.getOrganizationList()));// CHANGE THE CHART DATASET
+				organizationChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
 
 			}
 			if (out.get(i).first.equals("PERSON")) {// IF ENETITYRECOGNIZER RECOGNIZE A TOKEN AS PERSON
 				String person = text.substring(out.get(i).second, out.get(i).third).toUpperCase();
-				updateLists(database.getPersonList(), person,"person");
-				personChart.updateChart(listToPieChartDataset(database.getPersonList()));// CHANGE THE CHART DATASET
-				// CHANGE THE CHART DATASET
+				updateDatabase(database.getPersonList(), person,"person");
+				personChartController.setDataset(listToPieChartDataset(database.getPersonList()));
+				personChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
 
 			}
 		}
 
 		String language = tweet.getLang();// GET THE TWEET LANGUAGE
-		updateLists(database.getLanguageList(), language, "language");
-		languageChart.updateChart(listToPieChartDataset(database.getLanguageList()));// CHANGE THE CHART DATASET
+		updateDatabase(database.getLanguageList(), language, "language");
+		languageChartController.setDataset(listToPieChartDataset(database.getLanguageList()));// CHANGE THE CHART DATASET
+		languageChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
 
 		HashtagEntity[] hashtagsEntities = tweet.getHashtagEntities();// TO GET HASHTAGS THAT USED IN TWEET
 		for (HashtagEntity hashtag : hashtagsEntities){
-			updateLists(database.getHashTagList(), "#"+hashtag.getText(),"hashtag");
+			updateDatabase(database.getHashTagList(), "#"+hashtag.getText(),"hashtag");
 		}
-
-		hashTagChart.updateChart(listToPieChartDataset(database.getHashTagList()));// CHANGE THE CHART DATASET
+		hashTagChartController.setDataset(listToPieChartDataset(database.getHashTagList()));// CHANGE THE CHART DATASET
+		hashTagChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
 
 		if(tweet.getUser().isVerified()){// IF USER ACCOUNT IS VERIFIED ACCOUNT
 			URLEntity[] urls = tweet.getURLEntities();// TAKE URL ENTITIES
 			for(URLEntity url : urls){
-				updateLists(database.getVerifiedURLList(), url.getURL(), "verifiedURLList");
+				updateDatabase(database.getVerifiedURLList(), url.getURL(), "verifiedURLList");
 			}						
 		}
-		verifiedUrlChart.updateChart(listToPieChartDataset(database.getVerifiedURLList()));// CHANGE THE CHART DATASET
-
+		verifiedUrlChartController.setDataset(listToPieChartDataset(database.getVerifiedURLList()));// CHANGE THE CHART DATASET
+		verifiedUrlChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
 	}
 
-	public void updateLists(Hashtable<String, Integer> table, String key, String tableName){
+	public void updateDatabase(Hashtable<String, Integer> table, String key, String tableName){
 
 		if(!table.containsKey(key)){
 			table.put(key,1);
@@ -128,7 +128,6 @@ public class EntityRecognition {
 
 		final DefaultPieDataset result = new DefaultPieDataset();
 
-
 		if(list.size()<5){//IF DATASET HAS LESS THAN 5 TOKEN, SHOW IT RANDOM
 			Set<String> keys = list.keySet();
 			for(String key: keys)
@@ -147,8 +146,6 @@ public class EntityRecognition {
 				String[] parts = token.split("=", 2);
 				String tokenName = parts[0];
 				String tokenValue = parts[1];
-
-
 				result.setValue(tokenName.toString()+" = "+tokenValue.toString(), Integer.valueOf(tokenValue.toString()));
 
 			}

@@ -66,8 +66,8 @@ public class ChartController {
 		view.populateChart(model);
 	}	
 	
-	public void updateChart(PieDataset dataset){
-		view.updateChart(dataset);
+	public void updateChart(){
+		view.updateChart();
 	}
 
 

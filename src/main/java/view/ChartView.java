@@ -7,7 +7,6 @@ import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PiePlot3D;
-import org.jfree.data.general.PieDataset;
 import org.jfree.ui.RefineryUtilities;
 import org.jfree.util.Rotation;
 import model.ChartModel;
@@ -52,9 +51,9 @@ public class ChartView extends JFrame{
 		this.setVisible(true);
 	}
 
-	public void updateChart(PieDataset dataset){
+	public void updateChart(){
 
-		model.getPlot().setDataset(dataset);
+		model.getPlot().setDataset(model.getDataset());
 
 	}
 
