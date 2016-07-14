@@ -12,17 +12,21 @@ public class CurrentTime {
 
 	private String currentDate;
 	private String currentTime;
-
+	private int year;
+	private int month ;
+	private int day ;
 
 	public CurrentTime(){
 
 		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		//get current date time with Date()
 		Date date = new Date();
-		//System.out.println(dateFormat.format(date));
-		//get current date time with Calendar()
+		// your date
 		Calendar cal = Calendar.getInstance();
-		//System.out.println(dateFormat.format(cal.getTime()));
+		cal.setTime(date);
+		year = cal.get(Calendar.YEAR);
+		month = cal.get(Calendar.MONTH);
+		day = cal.get(Calendar.DAY_OF_MONTH);
 
 		currentDate = dateFormat.format(date).toString();
 		currentTime = dateFormat.format(cal.getTime()).toString();
@@ -47,6 +51,36 @@ public class CurrentTime {
 
 	public void setCurrentTime(String currentTime) {
 		this.currentTime = currentTime;
+	}
+
+
+	public int getYear() {
+		return year;
+	}
+
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+
+	public int getMonth() {
+		return month;
+	}
+
+
+	public void setMonth(int month) {
+		this.month = month;
+	}
+
+
+	public int getDay() {
+		return day;
+	}
+
+
+	public void setDay(int day) {
+		this.day = day;
 	}
 
 

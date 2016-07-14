@@ -22,16 +22,13 @@ public class App
 
 	public static void main(String[] args)
 	{
-		//CurrentTime time = new CurrentTime();
+		CurrentTime time = new CurrentTime();
 		Database database = new Database();
 		TwitterAuthorization authorize = new TwitterAuthorization();  // to get twitter API working
 		EntityRecognition recognition = new EntityRecognition(database);
 		SpamDetector spamDetector = new SpamDetector();
-
 		getQuerySearchKey(database);
-		stream(authorize,database,recognition,spamDetector);
-
-
+		stream(authorize,database,recognition,spamDetector,time);
 
 	}
 
@@ -39,7 +36,7 @@ public class App
 
 
 
-	public static void stream(TwitterAuthorization authorize,final Database database, final EntityRecognition recognition,final SpamDetector spamDetector)
+	public static void stream(TwitterAuthorization authorize,final Database database, final EntityRecognition recognition,final SpamDetector spamDetector, final CurrentTime currentTime)
 	{
 
 
@@ -81,12 +78,11 @@ public class App
 			public void onStatus(Status tweet) {// data keep coming to onStatus method, 
 				// the code that written under onStatus method will execute the code again and again when new tweet comes
 
-				if(spamDetector.isNotSpam(tweet)){// if tweet is not spam according to our parameters
-
+				if(spamDetector.isNotSpam(tweet,currentTime) && !tweet.isRetweet()){// if tweet is not spam according to our parameters
+					// if tweet is not retweet
 					recognition.entityRecognition(tweet,locationController,organizationController,personController,languageController,hashtagController,urlController); // apply entity recognition on tweet text
 					//this command takes tweets and analyzes them and updates charts according to analyzation
 
-					//System.out.println(tweet.getText());
 				}
 			}
 			public void onException(Exception arg0) {}
