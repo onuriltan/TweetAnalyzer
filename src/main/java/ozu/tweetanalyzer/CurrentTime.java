@@ -27,7 +27,6 @@ public class CurrentTime {
 		year = cal.get(Calendar.YEAR);
 		month = cal.get(Calendar.MONTH);
 		day = cal.get(Calendar.DAY_OF_MONTH);
-
 		currentDate = dateFormat.format(date).toString();
 		currentTime = dateFormat.format(cal.getTime()).toString();
 

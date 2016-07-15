@@ -78,8 +78,9 @@ public class App
 			public void onStatus(Status tweet) {// data keep coming to onStatus method, 
 				// the code that written under onStatus method will execute the code again and again when new tweet comes
 
-				if(spamDetector.isNotSpam(tweet,currentTime) && !tweet.isRetweet()){// if tweet is not spam according to our parameters
-					// if tweet is not retweet
+				if(spamDetector.isNotSpam(tweet,currentTime) && tweet.isRetweet() == false){// if tweet is not spam according to our parameters
+																							// if tweet is not retweet
+					
 					recognition.entityRecognition(tweet,locationController,organizationController,personController,languageController,hashtagController,urlController); // apply entity recognition on tweet text
 					//this command takes tweets and analyzes them and updates charts according to analyzation
 

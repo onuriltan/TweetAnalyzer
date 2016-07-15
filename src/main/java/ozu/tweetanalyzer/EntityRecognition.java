@@ -32,16 +32,10 @@ public class EntityRecognition {
 
 	public EntityRecognition(Database database){
 		this.database = database;
-		try {
-			classifier = CRFClassifier.getClassifier(classifierPath);//LOAD CLASSIFIER FROM FILE TO START ENTITY RECOGNITION
-		} catch (ClassCastException e) {
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		loadClassifier();
 	}
+
+
 
 	public void entityRecognition(Status tweet, ChartController locationChartController, ChartController organizationChartController, ChartController personChartController, ChartController languageChartController, ChartController hashTagChartController, ChartController verifiedUrlChartController) 
 	{
@@ -165,6 +159,18 @@ public class EntityRecognition {
 			}});
 
 		return sortedList;
+	}
+
+	private void loadClassifier() {
+		try {
+			classifier = CRFClassifier.getClassifier(classifierPath);//LOAD CLASSIFIER FROM FILE TO START ENTITY RECOGNITION
+		} catch (ClassCastException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 
