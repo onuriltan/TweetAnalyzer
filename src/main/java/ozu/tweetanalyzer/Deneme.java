@@ -82,6 +82,7 @@ public class Deneme extends ApplicationFrame {
 			Set<String> keys = list.keySet();
 			for(String key: keys)
 			{
+				@SuppressWarnings("deprecation")
 				TimeSeries series = new TimeSeries(key, Millisecond.class);
 				series.add(new Millisecond(),Double.valueOf(list.get(key)));
 				dataset.addSeries(series);
@@ -99,6 +100,7 @@ public class Deneme extends ApplicationFrame {
 				String tokenName = parts[0];
 				String tokenValue = parts[1];
 
+				@SuppressWarnings("deprecation")
 				TimeSeries series = new TimeSeries(tokenName, Millisecond.class);
 				series.add(new Millisecond(),Double.valueOf(tokenValue));
 				dataset.addSeries(series);

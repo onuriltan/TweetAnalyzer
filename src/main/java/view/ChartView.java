@@ -16,7 +16,6 @@ public class ChartView extends JFrame{
 
 	private static final long serialVersionUID = 1L;
 
-	//private ChartModel model = new ChartModel();
 	private ChartModel model;
 
 
@@ -40,6 +39,7 @@ public class ChartView extends JFrame{
 		plot.setForegroundAlpha(0.5f);
 		plot.setNoDataMessage("No data to display");
 		model.setPlot(plot);
+		
 		// add the chart to a panel...
 		ChartPanel chartPanel = new ChartPanel(chart);
 		chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));

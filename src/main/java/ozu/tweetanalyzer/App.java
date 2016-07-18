@@ -4,7 +4,10 @@ import java.util.Scanner;
 
 
 import controller.ChartController;
+import controller.MapController;
 import model.ChartModel;
+import model.DatabaseModel;
+import model.MapModel;
 import twitter4j.FilterQuery;
 import twitter4j.StallWarning;
 import twitter4j.Status;
@@ -13,17 +16,17 @@ import twitter4j.StatusListener;
 import twitter4j.TwitterStream;
 import twitter4j.TwitterStreamFactory;
 import view.ChartView;
+import view.MapView;
 
 
 public class App 
 {
 
 
-
 	public static void main(String[] args)
 	{
 		CurrentTime time = new CurrentTime();
-		Database database = new Database();
+		DatabaseModel database = new DatabaseModel();
 		TwitterAuthorization authorize = new TwitterAuthorization();  // to get twitter API working
 		EntityRecognition recognition = new EntityRecognition(database);
 		SpamDetector spamDetector = new SpamDetector();
@@ -34,9 +37,7 @@ public class App
 
 
 
-
-
-	public static void stream(TwitterAuthorization authorize,final Database database, final EntityRecognition recognition,final SpamDetector spamDetector, final CurrentTime currentTime)
+	public static void stream(TwitterAuthorization authorize,final DatabaseModel database, final EntityRecognition recognition,final SpamDetector spamDetector, final CurrentTime currentTime)
 	{
 
 
@@ -74,15 +75,30 @@ public class App
 		urlController.populateChart();
 
 
+		//WorldMapView mapView = new WorldMapView();
+		MapModel mapModel = new MapModel();
+		TweetLocationFinder getLocationFromAccountInfo = new TweetLocationFinder();
+		MapController mapController = new MapController(mapModel, new MapView(mapModel,getLocationFromAccountInfo));
+		mapController.populateMap();
+
+
+
+
 		StatusListener listener = new StatusListener() {
 			public void onStatus(Status tweet) {// data keep coming to onStatus method, 
 				// the code that written under onStatus method will execute the code again and again when new tweet comes
 
 				if(spamDetector.isNotSpam(tweet,currentTime) && tweet.isRetweet() == false){// if tweet is not spam according to our parameters
-																							// if tweet is not retweet
-					
+					// if tweet is not retweet
 					recognition.entityRecognition(tweet,locationController,organizationController,personController,languageController,hashtagController,urlController); // apply entity recognition on tweet text
 					//this command takes tweets and analyzes them and updates charts according to analyzation
+
+					mapController.updateMap(tweet);
+					
+
+
+
+
 
 				}
 			}
@@ -106,7 +122,7 @@ public class App
 
 
 
-	public static void getQuerySearchKey(Database database) 
+	public static void getQuerySearchKey(DatabaseModel database) 
 	{
 		Scanner reader = new Scanner(System.in);  
 		System.out.println("Enter a query: ");

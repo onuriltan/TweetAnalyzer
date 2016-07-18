@@ -19,6 +19,7 @@ import edu.stanford.nlp.ie.AbstractSequenceClassifier;
 import edu.stanford.nlp.ie.crf.CRFClassifier;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.util.Triple;
+import model.DatabaseModel;
 import twitter4j.HashtagEntity;
 import twitter4j.Status;
 import twitter4j.URLEntity;
@@ -27,10 +28,10 @@ public class EntityRecognition {
 
 	private String classifierPath = "libs/english.all.3class.distsim.crf.ser.gz";
 	private AbstractSequenceClassifier<CoreLabel> classifier;
-	private Database database;
+	private DatabaseModel database;
 
 
-	public EntityRecognition(Database database){
+	public EntityRecognition(DatabaseModel database){
 		this.database = database;
 		loadClassifier();
 	}
@@ -78,12 +79,11 @@ public class EntityRecognition {
 		hashTagChartController.setDataset(listToPieChartDataset(database.getHashTagList()));// CHANGE THE CHART DATASET
 		hashTagChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
 
-		if(tweet.getUser().isVerified()){// IF USER ACCOUNT IS VERIFIED ACCOUNT
-			URLEntity[] urls = tweet.getURLEntities();// TAKE URL ENTITIES
-			for(URLEntity url : urls){
-				updateDatabase(database.getVerifiedURLList(), url.getURL(), "verifiedURLList");
-			}						
-		}
+		URLEntity[] urls = tweet.getURLEntities();// TAKE URL ENTITIES
+		for(URLEntity url : urls){
+			updateDatabase(database.getVerifiedURLList(), url.getURL(), "verifiedURLList");
+		}						
+
 		verifiedUrlChartController.setDataset(listToPieChartDataset(database.getVerifiedURLList()));// CHANGE THE CHART DATASET
 		verifiedUrlChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
 	}

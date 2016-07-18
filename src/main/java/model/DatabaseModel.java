@@ -1,9 +1,9 @@
-package ozu.tweetanalyzer;
+package model;
 
 import java.util.Hashtable;
 
 
-public class Database {
+public class DatabaseModel {
 
 	private String searchQuery;
 	private Hashtable<String, Integer> locationList = new Hashtable<String, Integer>()  ;
@@ -14,11 +14,9 @@ public class Database {
 	private Hashtable<String, Integer> verifiedURLList = new Hashtable<String, Integer>() ;
 
 
-	public Database(){
+	public DatabaseModel(){}
 
 
-
-	}
 
 	public Hashtable<String, Integer> getLocationList() {
 		return locationList;
