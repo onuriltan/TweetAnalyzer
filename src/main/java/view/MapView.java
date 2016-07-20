@@ -35,7 +35,7 @@ public class MapView extends JFrame {
 		JMapViewer map = new JMapViewer();
 
 
-		setSize(1800,900);
+		setSize(1000,900);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocation(0,300);
 

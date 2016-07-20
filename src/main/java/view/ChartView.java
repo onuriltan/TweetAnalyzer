@@ -7,7 +7,6 @@ import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PiePlot3D;
-import org.jfree.ui.RefineryUtilities;
 import org.jfree.util.Rotation;
 import model.ChartModel;
 
@@ -46,9 +45,6 @@ public class ChartView extends JFrame{
 		setContentPane(chartPanel);
 		model.setChartPanel(chartPanel);
 
-		this.pack();
-		RefineryUtilities.centerFrameOnScreen(this);
-		this.setVisible(true);
 	}
 
 	public void updateChart(){
