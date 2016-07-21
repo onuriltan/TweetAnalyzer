@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
@@ -7,13 +8,12 @@ import javax.swing.JSplitPane;
 import javax.swing.JTextPane;
 import org.openstreetmap.gui.jmapviewer.JMapViewer;
 import org.openstreetmap.gui.jmapviewer.MapMarkerDot;
-
 import model.MapModel;
 import ozu.tweetanalyzer.TweetLocationFinder;
 import twitter4j.Status;
 
-public class MapView extends JFrame {
 
+public class MapView extends JFrame {
 
 	/**
 	 * 
@@ -53,12 +53,12 @@ public class MapView extends JFrame {
 		streamContainer.setSize(new Dimension(900,900));
 		mapModel.setStreamContainer(streamContainer);
 
-		//Scanner qrytext= new Scanner(System.in);
 		JSplitPane panel = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, map, streamContainer);
 		panel.setResizeWeight(0.5);
 		mapModel.setPanel(panel);
-		setContentPane(panel);
-		setVisible(true);
+		//setContentPane(panel);
+		//setVisible(true);
+
 	}
 
 	public void updateMap(Status tweet){
@@ -75,6 +75,7 @@ public class MapView extends JFrame {
 			double lat = tweet.getGeoLocation().getLatitude();
 			double lon = tweet.getGeoLocation().getLongitude();
 			marker = new MapMarkerDot(lat,lon);
+			marker.setBackColor(Color.black);// to differentiate that if users shared their exact location, show it with black dot
 			//marker.setName(tweet.getUser().getScreenName());
 			String nameText = tweet.getUser().getScreenName();
 			mapModel.getMap().addMapMarker(marker);
@@ -92,18 +93,20 @@ public class MapView extends JFrame {
 
 			try{
 				locationFromAccount.locationRecognizer(location);
-				marker = locationFromAccount.getMarker();
-				mapModel.getMap().addMapMarker(marker);
-				text = text+"\n"
-						+tweet.getUser().getScreenName()+" : "
-						+tweet.getText()+"\n";
-				mapModel.setText(text);
+				if(locationFromAccount.locationRecognizer(location)){
+					marker = new MapMarkerDot(locationFromAccount.getLatitude(),locationFromAccount.getLongitude());
+					marker.setBackColor(Color.blue);//to differentiate that if users have a location description of their accounts, show it with blue dot
+					mapModel.getMap().addMapMarker(marker);
+					text = text+"\n"
+							+tweet.getUser().getScreenName()+" : "
+							+tweet.getText()+"\n";
+					mapModel.setText(text);
+					mapModel.getTwitterStreamPanel().setText(mapModel.getText());
+				}else{// if location can't recognized, do nothing
+
+				}
 
 			}catch(Exception e){}
-
-
-			mapModel.getTwitterStreamPanel().setText(mapModel.getText());
-
 
 		}
 	}

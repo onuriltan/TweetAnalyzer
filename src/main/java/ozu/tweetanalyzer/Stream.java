@@ -3,7 +3,6 @@ package ozu.tweetanalyzer;
 import controller.ChartController;
 import controller.MapController;
 import model.DatabaseModel;
-import model.MapModel;
 import twitter4j.FilterQuery;
 import twitter4j.StallWarning;
 import twitter4j.Status;
@@ -11,24 +10,14 @@ import twitter4j.StatusDeletionNotice;
 import twitter4j.StatusListener;
 import twitter4j.TwitterStream;
 import twitter4j.TwitterStreamFactory;
-import view.MapView;
 
 public class Stream {
 
-	public void startStream(TwitterAuthorization authorize, final DatabaseModel database,
-			final EntityRecognition recognition, final SpamDetector spamDetector, final CurrentTime currentTime,
-			final ChartController locationController, final ChartController organizationController,
-			final ChartController personController, final ChartController languageController,
-			final ChartController hashtagController, final ChartController urlController) {
-
-
-
-		MapModel mapModel = new MapModel();
-		TweetLocationFinder getLocationFromAccountInfo = new TweetLocationFinder();
-		MapController mapController = new MapController(mapModel, new MapView(mapModel,getLocationFromAccountInfo));
-		mapController.populateMap();
-
-
+	public void startStream(TwitterAuthorization authorize,  DatabaseModel database,
+			 EntityRecognition recognition,  SpamDetector spamDetector,  CurrentTime currentTime,
+			 MapController mapController, ChartController locationController,  ChartController organizationController,
+			 ChartController personController,  ChartController languageController,
+			 ChartController hashtagController,  ChartController urlController) {
 
 
 		StatusListener listener = new StatusListener() {

@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import controller.ChartController;
+import controller.MapController;
 import model.DatabaseModel;
 
 public class SearchPanel  {
@@ -22,10 +23,8 @@ public class SearchPanel  {
 
 
 
-
-
 	public JPanel populateSearchPanel(Stream stream,TwitterAuthorization authorize,final DatabaseModel database, final EntityRecognition recognition,final SpamDetector spamDetector, final CurrentTime currentTime,
-			final ChartController locationController, final ChartController organizationController,final ChartController personController,final ChartController languageController,final ChartController hashtagController,final ChartController urlController){
+			final MapController mapController,final ChartController locationController, final ChartController organizationController,final ChartController personController,final ChartController languageController,final ChartController hashtagController,final ChartController urlController){
 
 		label.setBackground(Color.blue);
 		label.setVerticalTextPosition(JLabel.BOTTOM);
@@ -39,8 +38,8 @@ public class SearchPanel  {
 		loginButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {     
 				database.setSearchQuery(userText.getText());
-				stream.startStream(authorize, database, recognition, spamDetector, currentTime, locationController, organizationController, personController, languageController, hashtagController, urlController);
-
+				stream.startStream(authorize, database, recognition, spamDetector, currentTime, mapController,locationController, organizationController, personController, languageController, hashtagController, urlController);
+				loginButton.setEnabled(false);
 
 			}
 		}); 
@@ -49,7 +48,6 @@ public class SearchPanel  {
 
 
 	}
-
 
 
 	public JLabel getNamelabel() {

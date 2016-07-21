@@ -25,8 +25,7 @@ public class TweetLocationFinder {
 	private MapMarkerDot marker;
 
 
-
-	public void locationRecognizer(String location){
+	public Boolean locationRecognizer(String location){
 
 		String jsonString = getHttpLocationFromGoogleMapsAPI(location);
 		JSONParser parser = new JSONParser();
@@ -37,18 +36,19 @@ public class TweetLocationFinder {
 			e.printStackTrace();
 		}
 		if(obj.get("status").toString().equals("ZERO_RESULTS")){
-			//System.out.println("Google Map API cant found location");
+			return false;
 
 		}
-		if(obj.get("status").toString().equals("OK")){
+		else{
 			JSONArray results = (JSONArray) obj.get("results");
 			JSONObject data = (JSONObject) results.get(0);
 			JSONObject geometry = (JSONObject)data.get("geometry");
 			JSONObject JsonLocation = (JSONObject) geometry.get("location"); 
-
 			latitude =  (Double) JsonLocation.get("lat");
 			longitude =  (Double) JsonLocation.get("lng");
-			marker = new MapMarkerDot(latitude,longitude); 
+			marker = new MapMarkerDot(latitude,longitude);
+			return true;
+
 		}
 
 	}
@@ -70,7 +70,7 @@ public class TweetLocationFinder {
 			e.printStackTrace();
 		}
 
-		HttpGet get = new HttpGet(url);			//Assign the URI to the get request
+		HttpGet get = new HttpGet(url);	//Assign the URI to the get request
 		CloseableHttpClient client = HttpClients.createDefault();	
 		CloseableHttpResponse response = null;
 		try {
@@ -119,8 +119,8 @@ public class TweetLocationFinder {
 		this.marker = marker;
 	}
 
-	
-	
+
+
 
 
 

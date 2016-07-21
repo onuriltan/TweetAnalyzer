@@ -1,17 +1,17 @@
 package ozu.tweetanalyzer;
 
-import java.util.Scanner;
 
 import javax.swing.JPanel;
-
 import org.jfree.chart.ChartPanel;
 import org.jfree.ui.RefineryUtilities;
-
+import org.openstreetmap.gui.jmapviewer.JMapViewer;
 import controller.ChartController;
+import controller.MapController;
 import model.ChartModel;
 import model.DatabaseModel;
-
+import model.MapModel;
 import view.ChartView;
+import view.MapView;
 
 
 public class App 
@@ -26,91 +26,72 @@ public class App
 		TwitterAuthorization authorize = new TwitterAuthorization();  // to get twitter API working
 		EntityRecognition recognition = new EntityRecognition(database);
 		SpamDetector spamDetector = new SpamDetector();
-		//getQuerySearchKey(database);
-		stream(appFrame,authorize,database,recognition,spamDetector,time);
+		Stream stream = new Stream();
+		SearchPanel searchPanel = new SearchPanel();
+		TweetLocationFinder getLocationFromAccountInfo = new TweetLocationFinder();
+		stream(getLocationFromAccountInfo,searchPanel,stream,appFrame,authorize,database,recognition,spamDetector,time);
 
 	}
 
 
 
-	public static void stream(ApplicationFrame appFrame,TwitterAuthorization authorize,final DatabaseModel database, final EntityRecognition recognition,final SpamDetector spamDetector, final CurrentTime currentTime)
+	public static void stream(TweetLocationFinder getLocationFromAccountInfo,SearchPanel searchPanel,Stream stream,ApplicationFrame appFrame,TwitterAuthorization authorize, DatabaseModel database,  EntityRecognition recognition, SpamDetector spamDetector,  CurrentTime currentTime)
 	{
 
 
-		final ChartModel locationChartModel = new ChartModel();
+		ChartModel locationChartModel = new ChartModel();
 		locationChartModel.setChartName("Location");
-
-		final ChartModel organizationChartModel = new ChartModel();
-		organizationChartModel.setChartName("Organization");
-
-		final ChartModel personChartModel = new ChartModel();
-		personChartModel.setChartName("Person");
-
-		final ChartModel languageChartModel = new ChartModel();
-		languageChartModel.setChartName("Language");
-
-		final ChartModel hashtagChartModel = new ChartModel();
-		hashtagChartModel.setChartName("Hashtag");
-
-		final ChartModel verifiedUrlChartModel = new ChartModel();
-		verifiedUrlChartModel.setChartName("VerfiedURLs");
-
-
-		final ChartController locationController = new ChartController(locationChartModel, new ChartView());
-		final ChartController organizationController = new ChartController(organizationChartModel, new ChartView());
-		final ChartController personController = new ChartController(personChartModel, new ChartView());
-		final ChartController languageController = new ChartController(languageChartModel, new ChartView());
-		final ChartController hashtagController = new ChartController(hashtagChartModel, new ChartView());
-		final ChartController urlController = new ChartController(verifiedUrlChartModel, new ChartView());
-
+		ChartController locationController = new ChartController(locationChartModel, new ChartView());
 		locationController.populateChart();
+
+		ChartModel organizationChartModel = new ChartModel();
+		organizationChartModel.setChartName("Organization");
+		ChartController organizationController = new ChartController(organizationChartModel, new ChartView());
 		organizationController.populateChart();
+
+		ChartModel personChartModel = new ChartModel();
+		personChartModel.setChartName("Person");
+		ChartController personController = new ChartController(personChartModel, new ChartView());
 		personController.populateChart();
+
+		ChartModel languageChartModel = new ChartModel();
+		languageChartModel.setChartName("Language");
+		ChartController languageController = new ChartController(languageChartModel, new ChartView());
 		languageController.populateChart();
+
+		ChartModel hashtagChartModel = new ChartModel();
+		hashtagChartModel.setChartName("Hashtag");
+		ChartController hashtagController = new ChartController(hashtagChartModel, new ChartView());
 		hashtagController.populateChart();
+
+		ChartModel verifiedUrlChartModel = new ChartModel();
+		verifiedUrlChartModel.setChartName("VerfiedURLs");
+		ChartController urlController = new ChartController(verifiedUrlChartModel, new ChartView());
 		urlController.populateChart();
 
-
+		MapModel mapModel = new MapModel();
+		MapController mapController = new MapController(mapModel, new MapView(mapModel,getLocationFromAccountInfo));
+		mapController.populateMap();
+		
+		JMapViewer mapPanel = mapController.getMap();
 		ChartPanel locationChartPanel = new ChartPanel(locationController.getChart());
 		ChartPanel organizationChartPanel = new ChartPanel(organizationController.getChart());
 		ChartPanel personChartPanel = new ChartPanel(personController.getChart());
 		ChartPanel languageChartPanel = new ChartPanel(languageController.getChart());
 		ChartPanel hashtagChartPanel = new ChartPanel(hashtagController.getChart());
 		ChartPanel urlChartPanel = new ChartPanel(urlController.getChart());
-
-
-		Stream stream = new Stream();
-
-		SearchPanel searchPanel = new SearchPanel();
-		JPanel search = searchPanel.populateSearchPanel(stream,authorize, database, recognition, spamDetector, currentTime, locationController,
+		
+		JPanel search = searchPanel.populateSearchPanel(stream,authorize, database, recognition, spamDetector, currentTime, mapController,locationController,
 				organizationController, personController, languageController, hashtagController, urlController);
 
-
-		appFrame.populateApplication(search,locationChartPanel,organizationChartPanel,personChartPanel,languageChartPanel,hashtagChartPanel, urlChartPanel);
+		appFrame.populateApplication(search,mapPanel,locationChartPanel,organizationChartPanel,personChartPanel,languageChartPanel,hashtagChartPanel, urlChartPanel);
 		appFrame.pack();
 		RefineryUtilities.centerFrameOnScreen(appFrame);
 		appFrame.setVisible(true);
 
 
 
-
-
-
-
 	}
 
-
-
-
-
-	public static void getQuerySearchKey(DatabaseModel database) 
-	{
-		Scanner reader = new Scanner(System.in);  
-		System.out.println("Enter a query: ");
-		String searchQuery = reader.nextLine();
-		database.setSearchQuery(searchQuery);
-		reader.close();
-
-	}
 
 }
