@@ -23,7 +23,7 @@ public class SearchPanel  {
 
 
 
-	public JPanel populateSearchPanel(Search search,Stream stream,TwitterAuthorization authorize,final DatabaseModel database, final EntityRecognition recognition,final SpamDetector spamDetector, final CurrentTime currentTime,
+	public JPanel populateSearchPanel(final Search search,final Stream stream,final TwitterAuthorization authorize,final DatabaseModel database, final EntityRecognition recognition,final SpamDetector spamDetector, final CurrentTime currentTime,
 			final MapController mapController,final ChartController locationController, final ChartController organizationController,final ChartController personController,final ChartController languageController,final ChartController hashtagController,final ChartController urlController){
 
 		label.setBackground(Color.blue);

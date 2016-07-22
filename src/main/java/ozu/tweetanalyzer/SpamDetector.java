@@ -21,7 +21,20 @@ public class SpamDetector {
 		int yearDifference = currentYear-userAccountCreationYear;
 		int monthDifference = currentMonth - userAccountCreationMonth;
 		Boolean isUserAccountOlderThanOneMonth;
-
+		int friendsCount = user.getFriendsCount();
+		int followersCount = user.getFollowersCount();
+		Boolean isDefaultPP=user.isDefaultProfileImage();
+		
+		if(isDefaultPP==true){
+			return false;
+		}
+		
+		if(friendsCount<10){
+			return false;
+		}
+		if(followersCount<10){
+			return false;
+		}
 
 
 		if(yearDifference > 0)

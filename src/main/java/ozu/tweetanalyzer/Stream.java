@@ -14,10 +14,10 @@ import twitter4j.TwitterStreamFactory;
 public class Stream {
 
 	public void startStream(TwitterAuthorization authorize,  DatabaseModel database,
-			 EntityRecognition recognition,  SpamDetector spamDetector,  CurrentTime currentTime,
-			 MapController mapController, ChartController locationController,  ChartController organizationController,
-			 ChartController personController,  ChartController languageController,
-			 ChartController hashtagController,  ChartController urlController) {
+			 final EntityRecognition recognition,  final SpamDetector spamDetector,  final CurrentTime currentTime,
+			 final MapController mapController, final ChartController locationController,  final ChartController organizationController,
+			 final ChartController personController,  final ChartController languageController,
+			 final ChartController hashtagController,  final ChartController urlController) {
 
 
 		StatusListener listener = new StatusListener() {
