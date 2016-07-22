@@ -75,6 +75,7 @@ public class EntityRecognition {
 		HashtagEntity[] hashtagsEntities = tweet.getHashtagEntities();// TO GET HASHTAGS THAT USED IN TWEET
 		for (HashtagEntity hashtag : hashtagsEntities){
 			updateDatabase(database.getHashTagList(), "#"+hashtag.getText(),"hashtag");
+			System.out.println(tweet.getUser().getName()+"    "+"#"+hashtag.getText());
 		}
 		hashTagChartController.setDataset(listToPieChartDataset(database.getHashTagList()));// CHANGE THE CHART DATASET
 		hashTagChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET

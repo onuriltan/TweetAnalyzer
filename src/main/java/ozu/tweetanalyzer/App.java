@@ -72,7 +72,7 @@ public class App
 		MapModel mapModel = new MapModel();
 		MapController mapController = new MapController(mapModel, new MapView(mapModel,getLocationFromAccountInfo));
 		mapController.populateMap();
-		
+
 		JMapViewer mapPanel = mapController.getMap();
 		ChartPanel locationChartPanel = new ChartPanel(locationController.getChart());
 		ChartPanel organizationChartPanel = new ChartPanel(organizationController.getChart());
@@ -80,8 +80,10 @@ public class App
 		ChartPanel languageChartPanel = new ChartPanel(languageController.getChart());
 		ChartPanel hashtagChartPanel = new ChartPanel(hashtagController.getChart());
 		ChartPanel urlChartPanel = new ChartPanel(urlController.getChart());
+
 		
-		JPanel search = searchPanel.populateSearchPanel(stream,authorize, database, recognition, spamDetector, currentTime, mapController,locationController,
+		Search searchRecentTweets = new Search();
+		JPanel search = searchPanel.populateSearchPanel(searchRecentTweets,stream,authorize, database, recognition, spamDetector, currentTime, mapController,locationController,
 				organizationController, personController, languageController, hashtagController, urlController);
 
 		appFrame.populateApplication(search,mapPanel,locationChartPanel,organizationChartPanel,personChartPanel,languageChartPanel,hashtagChartPanel, urlChartPanel);

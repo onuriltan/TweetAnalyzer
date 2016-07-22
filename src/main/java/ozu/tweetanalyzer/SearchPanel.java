@@ -23,7 +23,7 @@ public class SearchPanel  {
 
 
 
-	public JPanel populateSearchPanel(Stream stream,TwitterAuthorization authorize,final DatabaseModel database, final EntityRecognition recognition,final SpamDetector spamDetector, final CurrentTime currentTime,
+	public JPanel populateSearchPanel(Search search,Stream stream,TwitterAuthorization authorize,final DatabaseModel database, final EntityRecognition recognition,final SpamDetector spamDetector, final CurrentTime currentTime,
 			final MapController mapController,final ChartController locationController, final ChartController organizationController,final ChartController personController,final ChartController languageController,final ChartController hashtagController,final ChartController urlController){
 
 		label.setBackground(Color.blue);
@@ -39,11 +39,27 @@ public class SearchPanel  {
 			public void actionPerformed(ActionEvent e) {     
 				database.setSearchQuery(userText.getText());
 				stream.startStream(authorize, database, recognition, spamDetector, currentTime, mapController,locationController, organizationController, personController, languageController, hashtagController, urlController);
+				search.searchRecentlyRelatedTweets(spamDetector, currentTime, database, authorize, recognition, mapController, locationController, organizationController, personController, languageController, hashtagController, urlController);
 				loginButton.setEnabled(false);
 
 			}
 		}); 
 
+		restartButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {  
+				database.setHashTagList(null);
+				database.setLanguageList(null);
+				database.setLocationList(null);
+				database.setOrganizationList(null);
+				database.setPersonList(null);
+				mapController.getMap().removeAllMapMarkers();
+				//TODO: MAKE NECESSARY CHANGES MR TASKAYA
+				loginButton.setEnabled(true);
+
+
+
+			}
+		});
 		return controlPanel;
 
 
