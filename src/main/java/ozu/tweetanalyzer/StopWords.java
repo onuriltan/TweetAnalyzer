@@ -29,7 +29,7 @@ public class StopWords {
 		}
 		try {
 			for(String line;(line = SW.readLine()) != null;)
-				stopWords.add(line.trim());
+				stopWords.add(line.toUpperCase().trim());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -39,6 +39,5 @@ public class StopWords {
 			e.printStackTrace();
 		}
 		database.setStopWords(stopWords);
-		System.out.println("load done.");
 	}
 }

@@ -96,10 +96,11 @@ public class EntityRecognition {
 			StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
 			while(tokenizer.hasMoreTokens()){
 				String word = tokenizer.nextToken();
-				if(!database.getStopWords().contains(word)){
+
+				if(!database.getStopWords().contains(word.toUpperCase())){
 					updateDatabase(database.getAllWords(), word, "allword");
 				}
-			
+
 
 			}
 
