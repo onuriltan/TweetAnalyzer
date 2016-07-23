@@ -19,8 +19,8 @@ public class SearchPanel  {
 	private JLabel  namelabel= new JLabel("Enter query: ", JLabel.RIGHT);
 	private JPanel controlPanel = new JPanel();	      
 	private final JTextField userText = new JTextField(10);	        
-	private JButton loginButton = new JButton("SEARCH");	  
-	private JButton restartButton = new JButton("RESTART");	
+	private JButton searchButton = new JButton("SEARCH");	  
+	private JButton refreshButton = new JButton("REFRESH");	
 	private JLabel label = new JLabel("<html>This is a tool to analyze real-time tweets. You need to enter a query that can be a specific event<BR>and after you enter the search button user can see the tweets visualization from world map<BR>and also user can see the names, organizations, locations and tweets<BR>languages as a graph. This tool uses Stanford named entity recognizer tool to identify tweets and recognizes<BR>which names, locations and organization names mentioned in a tweet, and if Twitter user shared his/her location,<BR> user also can see wheretweet tweeted in world map as a visualization.</html>");
 	private TrendPanel trendModel= new TrendPanel();
 
@@ -33,8 +33,8 @@ public class SearchPanel  {
 		label.setHorizontalTextPosition(JLabel.CENTER);
 		controlPanel.add(namelabel);
 		controlPanel.add(userText);	     
-		controlPanel.add(loginButton);
-		controlPanel.add(restartButton);
+		controlPanel.add(searchButton);
+		controlPanel.add(refreshButton);
 		controlPanel.add(label);
 		controlPanel.add(trendModel);
 
@@ -54,17 +54,17 @@ public class SearchPanel  {
 
 		});
 
-		loginButton.addActionListener(new ActionListener() {
+		searchButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {     
 				database.setSearchQuery(userText.getText());
 				stream.startStream(authorize, database, recognition, spamDetector, currentTime, mapController,locationController, organizationController, personController, languageController, hashtagController, urlController);
 				search.searchRecentlyRelatedTweets(spamDetector, currentTime, database, authorize, recognition, mapController, locationController, organizationController, personController, languageController, hashtagController, urlController);
-				loginButton.setEnabled(false);
+				searchButton.setEnabled(false);
 
 			}
 		}); 
 
-		restartButton.addActionListener(new ActionListener() {
+		refreshButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {  
 				stream.getStream().cleanUp(); // shutdown internal stream consuming thread
 				stream.getStream().shutdown(); // Shuts down internal dispatcher thread shared by all TwitterStream instances.
@@ -90,7 +90,7 @@ public class SearchPanel  {
 				hashtagController.setDataset(null);
 				urlController.getPlot().setDataset(null);
 				urlController.setDataset(null);
-				loginButton.setEnabled(true);
+				searchButton.setEnabled(true);
 
 
 
@@ -128,25 +128,25 @@ public class SearchPanel  {
 
 
 	public JButton getLoginButton() {
-		return loginButton;
+		return searchButton;
 	}
 
 
 
 	public void setLoginButton(JButton loginButton) {
-		this.loginButton = loginButton;
+		this.searchButton = loginButton;
 	}
 
 
 
 	public JButton getRestartButton() {
-		return restartButton;
+		return refreshButton;
 	}
 
 
 
 	public void setRestartButton(JButton restartButton) {
-		this.restartButton = restartButton;
+		this.refreshButton = restartButton;
 	}
 
 
