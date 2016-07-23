@@ -79,7 +79,6 @@ public class EntityRecognition {
 		HashtagEntity[] hashtagsEntities = tweet.getHashtagEntities();// TO GET HASHTAGS THAT USED IN TWEET
 		for (HashtagEntity hashtag : hashtagsEntities){
 			updateDatabase(database.getHashTagList(), "#"+hashtag.getText(),"hashtag");
-			System.out.println(tweet.getUser().getName()+"    "+"#"+hashtag.getText());
 		}
 		hashTagChartController.setDataset(listToPieChartDataset(database.getHashTagList()));// CHANGE THE CHART DATASET
 		hashTagChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
@@ -99,11 +98,8 @@ public class EntityRecognition {
 				String word = tokenizer.nextToken();
 				if(!database.getStopWords().contains(word)){
 					updateDatabase(database.getAllWords(), word, "allword");
-					//System.out.println(word);
 				}
-				if(database.getStopWords().contains(word)){
-					System.out.println(word);
-				}
+			
 
 			}
 
