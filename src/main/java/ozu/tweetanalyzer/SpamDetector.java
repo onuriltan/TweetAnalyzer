@@ -25,14 +25,14 @@ public class SpamDetector {
 		int followersCount = user.getFollowersCount();
 		Boolean isDefaultPP=user.isDefaultProfileImage();
 		
-		if(isDefaultPP==true){
+		if(isDefaultPP){
 			return false;
 		}
 		
-		if(friendsCount<10){
+		if(friendsCount < 10){
 			return false;
 		}
-		if(followersCount<10){
+		if(followersCount < 10){
 			return false;
 		}
 

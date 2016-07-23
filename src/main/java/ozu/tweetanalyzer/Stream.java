@@ -1,5 +1,6 @@
 package ozu.tweetanalyzer;
 
+
 import controller.ChartController;
 import controller.MapController;
 import model.DatabaseModel;
@@ -19,22 +20,30 @@ public class Stream {
 	private String[] keywordsArray;
 	private ConfigurationBuilder cb;
 
-	public void startStream(TwitterAuthorization authorize,  DatabaseModel database,
+	private SearchPanel searchPanel;
+
+	public Stream(SearchPanel searchPanel){
+		this.searchPanel = searchPanel;
+	}
+
+	public void startStream(DatabaseModel database,
 			final EntityRecognition recognition,  final SpamDetector spamDetector,  final CurrentTime currentTime,
 			final MapController mapController, final ChartController locationController,  final ChartController organizationController,
 			final ChartController personController,  final ChartController languageController,
-			final ChartController hashtagController,  final ChartController urlController) {
+			final ChartController hashtagController,  final ChartController urlController,final ChartController allWordsController) {
 
 
 		StatusListener listener = new StatusListener() {
 			public void onStatus(Status tweet) {// data keep coming to onStatus method, 
 				// the code that written under onStatus method will execute the code again and again when new tweet comes
 
+
 				if(spamDetector.isNotSpam(tweet,currentTime) && tweet.isRetweet() == false){// if tweet is not spam according to our parameters and not a retweet
 
-					recognition.entityRecognition(tweet,locationController,organizationController,personController,languageController,hashtagController,urlController); // apply entity recognition on tweet text
+					recognition.entityRecognition(tweet,locationController,organizationController,personController,languageController,hashtagController,urlController, allWordsController); // apply entity recognition on tweet text
 					//this command takes tweets and analyzes them and updates charts according to analyzation
-
+					database.setTweetCount(database.getTweetCount()+1);
+					searchPanel.getTweetCountlabel().setText("<html>Tweet count: "+database.getTweetCount()+"<html>");
 					mapController.updateMap(tweet);
 
 

@@ -17,8 +17,9 @@ import twitter4j.conf.ConfigurationBuilder;
 public class Search {
 
 
-	public void searchRecentlyRelatedTweets(SpamDetector spamDetector,CurrentTime currentTime,DatabaseModel database,TwitterAuthorization authorization,EntityRecognition entityRecognition,MapController mapController,
-			ChartController locationController,ChartController organizationController,ChartController personController,ChartController languageController,ChartController hashtagController,ChartController urlController){
+	public void searchRecentlyRelatedTweets(SpamDetector spamDetector,CurrentTime currentTime,DatabaseModel database,EntityRecognition entityRecognition,MapController mapController,
+			ChartController locationController,ChartController organizationController,ChartController personController,ChartController languageController,ChartController hashtagController,ChartController urlController,
+			ChartController allWordsController){
 
 
 		ConfigurationBuilder cb = new ConfigurationBuilder();// WE CREATE NEW CB AGAIN BECAUSE TWITTER SEATCH API AND STREAM API CANNOT USE SAME CB
@@ -39,7 +40,7 @@ public class Search {
 				List<Status> tweets = result.getTweets();
 				for (Status tweet : tweets) {
 					if(spamDetector.isNotSpam(tweet,currentTime) && tweet.isRetweet() == false){// if tweet is not spam according to our parameters and not a retweet
-						entityRecognition.entityRecognition(tweet,locationController,organizationController,personController,languageController,hashtagController,urlController); // apply entity recognition on tweet text
+						entityRecognition.entityRecognition(tweet,locationController,organizationController,personController,languageController,hashtagController,urlController, allWordsController); // apply entity recognition on tweet text
 						//this command takes tweets and analyzes them and updates charts according to analyzation
 						mapController.updateMap(tweet);
 

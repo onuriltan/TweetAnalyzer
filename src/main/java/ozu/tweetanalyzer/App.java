@@ -4,7 +4,6 @@ package ozu.tweetanalyzer;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
 
-import org.jfree.chart.ChartPanel;
 import org.jfree.ui.RefineryUtilities;
 import controller.ChartController;
 import controller.MapController;
@@ -21,22 +20,25 @@ public class App
 
 	public static void main(String[] args)
 	{
-		ApplicationFrame appFrame = new ApplicationFrame();
 		CurrentTime time = new CurrentTime();
 		DatabaseModel database = new DatabaseModel();
-		TwitterAuthorization authorize = new TwitterAuthorization();  // to get twitter API working
+		StopWords stopWords = new StopWords();
+		stopWords.loadStopWordsFromFile(database);
 		EntityRecognition recognition = new EntityRecognition(database);
 		SpamDetector spamDetector = new SpamDetector();
-		Stream stream = new Stream();
-		SearchPanel searchPanel = new SearchPanel();
+		Search searchRecentTweets = new Search();
+		TrendPanel trendPanel= new TrendPanel();
+		ApplicationMainFrame appFrame = new ApplicationMainFrame();
+		SearchPanel searchPanel = new SearchPanel(trendPanel);
+		Stream stream = new Stream(searchPanel);
 		TweetLocationFinder getLocationFromAccountInfo = new TweetLocationFinder();
-		stream(getLocationFromAccountInfo,searchPanel,stream,appFrame,authorize,database,recognition,spamDetector,time);
+		startMVCPattern(getLocationFromAccountInfo,searchPanel,searchRecentTweets,stream,appFrame,database,recognition,spamDetector,time);
 
 	}
 
 
 
-	public static void stream(TweetLocationFinder getLocationFromAccountInfo,SearchPanel searchPanel,Stream stream,ApplicationFrame appFrame,TwitterAuthorization authorize, DatabaseModel database,  EntityRecognition recognition, SpamDetector spamDetector,  CurrentTime currentTime)
+	public static void startMVCPattern(TweetLocationFinder getLocationFromAccountInfo,SearchPanel searchPanel,Search searchRecentTweets, Stream stream,ApplicationMainFrame appFrame, DatabaseModel database,  EntityRecognition recognition, SpamDetector spamDetector,  CurrentTime currentTime)
 	{
 
 
@@ -66,28 +68,27 @@ public class App
 		hashtagController.populateChart();
 
 		ChartModel verifiedUrlChartModel = new ChartModel();
-		verifiedUrlChartModel.setChartName("VerfiedURLs");
+		verifiedUrlChartModel.setChartName("URLs");
 		ChartController urlController = new ChartController(verifiedUrlChartModel, new ChartView());
 		urlController.populateChart();
+
+		ChartModel allWordsChartModel = new ChartModel();
+		allWordsChartModel.setChartName("MostCommonWords");
+		ChartController allWordsController = new ChartController(allWordsChartModel, new ChartView());
+		allWordsController.populateChart();
 
 		MapModel mapModel = new MapModel();
 		MapController mapController = new MapController(mapModel, new MapView(mapModel,getLocationFromAccountInfo));
 		mapController.populateMap();
 
 		JSplitPane mapPanel = mapController.getPanel();
-		ChartPanel locationChartPanel = new ChartPanel(locationController.getChart());
-		ChartPanel organizationChartPanel = new ChartPanel(organizationController.getChart());
-		ChartPanel personChartPanel = new ChartPanel(personController.getChart());
-		ChartPanel languageChartPanel = new ChartPanel(languageController.getChart());
-		ChartPanel hashtagChartPanel = new ChartPanel(hashtagController.getChart());
-		ChartPanel urlChartPanel = new ChartPanel(urlController.getChart());
 
 
-		Search searchRecentTweets = new Search();
-		JPanel search = searchPanel.populateSearchPanel(searchRecentTweets,stream,authorize, database, recognition, spamDetector, currentTime, mapController,locationController,
-				organizationController, personController, languageController, hashtagController, urlController);
+		database.setTweetCount(0);
+		JPanel search = searchPanel.populateSearchPanel(searchRecentTweets,stream, database, recognition, spamDetector, currentTime, mapController,locationController,
+				organizationController, personController, languageController, hashtagController, urlController, allWordsController);
 
-		appFrame.populateApplication(search,mapPanel,locationChartPanel,organizationChartPanel,personChartPanel,languageChartPanel,hashtagChartPanel, urlChartPanel);
+		appFrame.populateApplication(search,mapPanel,locationController.getChartPanel(),organizationController.getChartPanel(), personController.getChartPanel(), languageController.getChartPanel(), hashtagController.getChartPanel(), urlController.getChartPanel(),allWordsController.getChartPanel());
 		appFrame.pack();
 		RefineryUtilities.centerFrameOnScreen(appFrame);
 		appFrame.setVisible(true);

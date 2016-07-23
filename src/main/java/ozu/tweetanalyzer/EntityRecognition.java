@@ -1,6 +1,7 @@
 package ozu.tweetanalyzer;
 
 
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,6 +10,7 @@ import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.StringTokenizer;
 import java.util.Map.Entry;
 
 import org.jfree.data.general.DefaultPieDataset;
@@ -31,6 +33,7 @@ public class EntityRecognition {
 	private DatabaseModel database;
 
 
+
 	public EntityRecognition(DatabaseModel database){
 		this.database = database;
 		loadClassifier();
@@ -38,7 +41,8 @@ public class EntityRecognition {
 
 
 
-	public void entityRecognition(Status tweet, ChartController locationChartController, ChartController organizationChartController, ChartController personChartController, ChartController languageChartController, ChartController hashTagChartController, ChartController verifiedUrlChartController) 
+	public void entityRecognition(Status tweet, ChartController locationChartController, ChartController organizationChartController, ChartController personChartController, ChartController languageChartController, ChartController hashTagChartController, ChartController verifiedUrlChartController,
+			ChartController allWordsController) 
 	{
 		String text = tweet.getText();
 
@@ -87,7 +91,32 @@ public class EntityRecognition {
 
 		verifiedUrlChartController.setDataset(listToPieChartDataset(database.getVerifiedURLList()));// CHANGE THE CHART DATASET
 		verifiedUrlChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
+
+
+		if(tweet.getLang().equals("en")){
+			StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+			while(tokenizer.hasMoreTokens()){
+				String word = tokenizer.nextToken();
+				if(!database.getStopWords().contains(word)){
+					updateDatabase(database.getAllWords(), word, "allword");
+					//System.out.println(word);
+				}
+				if(database.getStopWords().contains(word)){
+					System.out.println(word);
+				}
+
+			}
+
+			allWordsController.setDataset(listToPieChartDataset(database.getAllWords()));// CHANGE THE CHART DATASET
+			allWordsController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
+		}
+
+
+
 	}
+
+
+
 
 	public void updateDatabase(Hashtable<String, Integer> table, String key, String tableName){
 
@@ -115,9 +144,11 @@ public class EntityRecognition {
 		if(tableName.equals("verifiedURLList")){
 			database.setVerifiedURLList(table);
 		}
+		if(tableName.equals("allword")){
+			database.setAllWords(table);
+		}
 
 	}
-
 	public PieDataset listToPieChartDataset(Hashtable<String, Integer> list){
 
 
