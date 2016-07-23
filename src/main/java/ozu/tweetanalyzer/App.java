@@ -2,9 +2,10 @@ package ozu.tweetanalyzer;
 
 
 import javax.swing.JPanel;
+import javax.swing.JSplitPane;
+
 import org.jfree.chart.ChartPanel;
 import org.jfree.ui.RefineryUtilities;
-import org.openstreetmap.gui.jmapviewer.JMapViewer;
 import controller.ChartController;
 import controller.MapController;
 import model.ChartModel;
@@ -73,7 +74,7 @@ public class App
 		MapController mapController = new MapController(mapModel, new MapView(mapModel,getLocationFromAccountInfo));
 		mapController.populateMap();
 
-		JMapViewer mapPanel = mapController.getMap();
+		JSplitPane mapPanel = mapController.getPanel();
 		ChartPanel locationChartPanel = new ChartPanel(locationController.getChart());
 		ChartPanel organizationChartPanel = new ChartPanel(organizationController.getChart());
 		ChartPanel personChartPanel = new ChartPanel(personController.getChart());
@@ -81,7 +82,7 @@ public class App
 		ChartPanel hashtagChartPanel = new ChartPanel(hashtagController.getChart());
 		ChartPanel urlChartPanel = new ChartPanel(urlController.getChart());
 
-		
+
 		Search searchRecentTweets = new Search();
 		JPanel search = searchPanel.populateSearchPanel(searchRecentTweets,stream,authorize, database, recognition, spamDetector, currentTime, mapController,locationController,
 				organizationController, personController, languageController, hashtagController, urlController);
@@ -90,8 +91,6 @@ public class App
 		appFrame.pack();
 		RefineryUtilities.centerFrameOnScreen(appFrame);
 		appFrame.setVisible(true);
-
-
 
 	}
 

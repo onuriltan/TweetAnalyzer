@@ -2,6 +2,7 @@ package view;
 
 import java.awt.Color;
 import java.awt.Dimension;
+
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JSplitPane;
@@ -14,6 +15,7 @@ import twitter4j.Status;
 
 
 public class MapView extends JFrame {
+
 
 	/**
 	 * 
@@ -34,28 +36,23 @@ public class MapView extends JFrame {
 		this.mapModel = mapModel;
 		JMapViewer map = new JMapViewer();
 
-
-		setSize(1000,900);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setLocation(0,300);
-
-
-		map.setMaximumSize(new Dimension(1300,900));
+		map.setMaximumSize(new Dimension(700, 400));
 		map.setMinimumSize(new Dimension(900,900));
-		map.setSize(new Dimension(1300,900));
+		map.setSize(new Dimension(700, 400));
 		mapModel.setMap(map);
 
 		JTextPane twitterStreamPanel = new JTextPane();
 		mapModel.setTwitterStreamPanel(twitterStreamPanel); 
 
 		JScrollPane streamContainer = new JScrollPane(twitterStreamPanel);
-		streamContainer.setMaximumSize(new Dimension(900,900));
+		streamContainer.setMaximumSize(new Dimension(1000, 600));
 		streamContainer.setSize(new Dimension(900,900));
 		mapModel.setStreamContainer(streamContainer);
 
 		JSplitPane panel = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, map, streamContainer);
 		panel.setResizeWeight(0.5);
 		mapModel.setPanel(panel);
+
 		//setContentPane(panel);
 		//setVisible(true);
 

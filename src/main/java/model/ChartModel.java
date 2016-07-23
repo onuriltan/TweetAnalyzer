@@ -15,7 +15,7 @@ public class ChartModel {
 	private ChartPanel chartPanel;
 	private PiePlot3D plot;
 
-	
+
 
 	public String getChartName() {
 		return chartName;

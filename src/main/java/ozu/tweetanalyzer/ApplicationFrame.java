@@ -4,10 +4,10 @@ import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JSplitPane;
 import javax.swing.JTabbedPane;
 
 import org.jfree.chart.ChartPanel;
-import org.openstreetmap.gui.jmapviewer.JMapViewer;
 
 
 public class ApplicationFrame extends JFrame{
@@ -17,7 +17,7 @@ public class ApplicationFrame extends JFrame{
 	private  JTabbedPane tabs = new JTabbedPane();
 	private JPanel content = new JPanel(new BorderLayout());
 
-	public void populateApplication(JPanel searchPanel,JMapViewer mapPanel,ChartPanel locationChartPanel,ChartPanel organizationChartPanel,ChartPanel personChartPanel,ChartPanel languageChartPanel,ChartPanel hashtagChartPanel, ChartPanel urlChartPanel){
+	public void populateApplication(JPanel searchPanel,JSplitPane mapPanel,ChartPanel locationChartPanel,ChartPanel organizationChartPanel,ChartPanel personChartPanel,ChartPanel languageChartPanel,ChartPanel hashtagChartPanel, ChartPanel urlChartPanel){
 
 
 
@@ -28,7 +28,7 @@ public class ApplicationFrame extends JFrame{
 		tabs.add("LanguageChart", languageChartPanel);
 		tabs.add("HashtagChart", hashtagChartPanel);
 		tabs.add("URLChart", urlChartPanel);
-		tabs.add("MapVİsualizaiton", mapPanel);
+		tabs.add("MapVisualizaiton", mapPanel);
 
 
 

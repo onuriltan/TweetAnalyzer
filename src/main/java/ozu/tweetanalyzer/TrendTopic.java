@@ -11,7 +11,7 @@ import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
 
 public class TrendTopic {
-	ArrayList<String> trendTopicList = new ArrayList<String>();
+	private ArrayList<String> trendTopicList = new ArrayList<String>();
 
 	public void getTrendsFromTwitter(){
 
@@ -24,6 +24,7 @@ public class TrendTopic {
 			Trends trends = twitter.getPlaceTrends(turkeyTrends);
 
 			for (Trend trend : trends.getTrends()) {
+				
 				trendTopicList.add(trend.getName());
 			}
 

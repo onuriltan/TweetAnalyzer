@@ -36,27 +36,24 @@ public class SearchPanel  {
 		controlPanel.add(loginButton);
 		controlPanel.add(restartButton);
 		controlPanel.add(label);
-        controlPanel.add(trendModel);
-        
-        
-        trendModel.list.addListSelectionListener(new ListSelectionListener() {
-        	
-        	    public void valueChanged(ListSelectionEvent e) {
-        	
-        	        if (!e.getValueIsAdjusting()) {
-        	
-        	            String selectedName = (String) trendModel.list.getSelectedValue();
-        	
-        	            userText.setText(selectedName);
-        	
-        	        }
-        	
-        	    }
-        	
-        	});
+		controlPanel.add(trendModel);
 
-        
-        
+
+		trendModel.list.addListSelectionListener(new ListSelectionListener() {
+
+			public void valueChanged(ListSelectionEvent e) {
+
+				if (!e.getValueIsAdjusting()) {
+
+					String selectedName = (String) trendModel.list.getSelectedValue();
+					userText.setText(selectedName);
+
+				}
+
+			}
+
+		});
+
 		loginButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {     
 				database.setSearchQuery(userText.getText());
@@ -69,14 +66,32 @@ public class SearchPanel  {
 
 		restartButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {  
-				database.setHashTagList(null);
-				database.setLanguageList(null);
-				database.setLocationList(null);
-				database.setOrganizationList(null);
-				database.setPersonList(null);
+				stream.getStream().cleanUp(); // shutdown internal stream consuming thread
+				stream.getStream().shutdown(); // Shuts down internal dispatcher thread shared by all TwitterStream instances.
+				database.getHashTagList().clear();
+				database.getLocationList().clear();
+				database.getOrganizationList().clear();
+				database.getPersonList().clear();
+				database.getLanguageList().clear();
+				database.getVerifiedURLList().clear();
+				database.setSearchQuery("");
 				mapController.getMap().removeAllMapMarkers();
-				//TODO: MAKE NECESSARY CHANGES MR TASKAYA
+				mapController.setText("");
+				mapController.getTwitterStreamPanel().setText("");
+				locationController.getPlot().setDataset(null);
+				locationController.setDataset(null);
+				organizationController.getPlot().setDataset(null);
+				organizationController.setDataset(null);
+				personController.getPlot().setDataset(null);
+				personController.setDataset(null);
+				languageController.getPlot().setDataset(null);
+				languageController.setDataset(null);
+				hashtagController.getPlot().setDataset(null);
+				hashtagController.setDataset(null);
+				urlController.getPlot().setDataset(null);
+				urlController.setDataset(null);
 				loginButton.setEnabled(true);
+
 
 
 

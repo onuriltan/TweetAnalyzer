@@ -38,7 +38,7 @@ public class ChartView extends JFrame{
 		plot.setForegroundAlpha(0.5f);
 		plot.setNoDataMessage("No data to display");
 		model.setPlot(plot);
-		
+
 		// add the chart to a panel...
 		ChartPanel chartPanel = new ChartPanel(chart);
 		chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));
@@ -50,6 +50,7 @@ public class ChartView extends JFrame{
 	public void updateChart(){
 
 		model.getPlot().setDataset(model.getDataset());
+
 
 	}
 

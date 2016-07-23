@@ -1,10 +1,8 @@
 package ozu.tweetanalyzer;
 
 import java.awt.BorderLayout;
-import java.awt.event.ActionEvent;
 
 import javax.swing.DefaultListModel;
-import javax.swing.JButton;
 import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -13,24 +11,21 @@ public class TrendPanel extends JPanel {
 
 
 	private static final long serialVersionUID = 1L;
-	public JList list;
+	public JList<String> list;
 	TrendTopic trend= new TrendTopic();
-
-	DefaultListModel model;
-
-	int counter = 15;
+	DefaultListModel<String> model;
+	//int counter = 15;
 
 	public TrendPanel() {
 		trend.getTrendsFromTwitter();
 		setLayout(new BorderLayout());
-		model = new DefaultListModel();
-		list = new JList(model);
+		model = new DefaultListModel<String>();
+		list = new JList<String>(model);
 		JScrollPane pane = new JScrollPane(list);
 
 		for (String t : trend.getTrendList()) {
 			model.addElement(t);              
 		}    
-
 
 		/*    addButton.addActionListener(new ActionListener() {
 	      public void actionPerformed(ActionEvent e) {
@@ -41,7 +36,5 @@ public class TrendPanel extends JPanel {
 		 */ 
 
 		add(pane, BorderLayout.NORTH);
-
-
 	}
 }
