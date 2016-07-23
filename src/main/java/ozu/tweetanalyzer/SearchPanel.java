@@ -7,10 +7,13 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 
 import controller.ChartController;
 import controller.MapController;
 import model.DatabaseModel;
+import model.TrendModel;
 
 public class SearchPanel  {
 
@@ -19,8 +22,8 @@ public class SearchPanel  {
 	private final JTextField userText = new JTextField(10);	        
 	private JButton loginButton = new JButton("SEARCH");	  
 	private JButton restartButton = new JButton("RESTART");	
-	private JLabel label = new JLabel("<html>This is a tool to analyze real-time tweets. You need to enter a query that can be a specific event<BR>and after you enter the search button user can see the tweets visualization from world map<BR>and also user can see the names, organizations, locations and tweets<BR>languages as a graph. This tool uses Stanford named entity recognizer tool to identify tweets and recognizes<BR>which names, locations and organization names mentioned in a tweet, and if Twitter user shared his/her location, user also can see where<BR>tweet tweeted in world map as a visualization.</html>");
-
+	private JLabel label = new JLabel("<html>This is a tool to analyze real-time tweets. You need to enter a query that can be a specific event<BR>and after you enter the search button user can see the tweets visualization from world map<BR>and also user can see the names, organizations, locations and tweets<BR>languages as a graph. This tool uses Stanford named entity recognizer tool to identify tweets and recognizes<BR>which names, locations and organization names mentioned in a tweet, and if Twitter user shared his/her location,<BR> user also can see wheretweet tweeted in world map as a visualization.</html>");
+	private TrendModel trendModel= new TrendModel();
 
 
 	public JPanel populateSearchPanel(final Search search,final Stream stream,final TwitterAuthorization authorize,final DatabaseModel database, final EntityRecognition recognition,final SpamDetector spamDetector, final CurrentTime currentTime,
@@ -34,7 +37,27 @@ public class SearchPanel  {
 		controlPanel.add(loginButton);
 		controlPanel.add(restartButton);
 		controlPanel.add(label);
+        controlPanel.add(trendModel);
+        
+        
+        trendModel.list.addListSelectionListener(new ListSelectionListener() {
+        	
+        	    public void valueChanged(ListSelectionEvent e) {
+        	
+        	        if (!e.getValueIsAdjusting()) {
+        	
+        	            String selectedName = (String) trendModel.list.getSelectedValue();
+        	
+        	            userText.setText(selectedName);
+        	
+        	        }
+        	
+        	    }
+        	
+        	});
 
+        
+        
 		loginButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {     
 				database.setSearchQuery(userText.getText());
