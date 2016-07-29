@@ -92,25 +92,23 @@ public class EntityRecognition {
 		verifiedUrlChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
 
 
-		if(tweet.getLang().equals("en")){
-			StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
-			while(tokenizer.hasMoreTokens()){
-				String word = tokenizer.nextToken();
 
-				if(!database.getStopWords().contains(word.toUpperCase()) && word.charAt(0) != '#'){
-					if(word.length() > 5 && !word.substring(0, 6).equals("https")){
-						updateDatabase(database.getAllWords(), word, "allword");
-					}else{
-						updateDatabase(database.getAllWords(), word, "allword");
-					}
+		StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+		while(tokenizer.hasMoreTokens()){
+			String word = tokenizer.nextToken();
+			if(tweet.getLang().equals("en") && !database.getStopWords().contains(word.toUpperCase()) && word.charAt(0) != '#'){
+				if(word.length() > 5 && !word.substring(0, 5).equals("https")){
+					System.out.println(word);
+					updateDatabase(database.getAllWords(), word, "allword");
 				}
+			}
+			if(!tweet.getLang().equals("en")){
+				updateDatabase(database.getAllWords(), word, "allword");
 
 			}
-
-			allWordsController.setDataset(listToPieChartDataset(database.getAllWords()));// CHANGE THE CHART DATASET
-			allWordsController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
 		}
-
+		allWordsController.setDataset(listToPieChartDataset(database.getAllWords()));// CHANGE THE CHART DATASET
+		allWordsController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
 
 
 	}
