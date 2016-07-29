@@ -97,10 +97,13 @@ public class EntityRecognition {
 			while(tokenizer.hasMoreTokens()){
 				String word = tokenizer.nextToken();
 
-				if(!database.getStopWords().contains(word.toUpperCase())){
-					updateDatabase(database.getAllWords(), word, "allword");
+				if(!database.getStopWords().contains(word.toUpperCase()) && word.charAt(0) != '#'){
+					if(word.length() > 5 && !word.substring(0, 6).equals("https")){
+						updateDatabase(database.getAllWords(), word, "allword");
+					}else{
+						updateDatabase(database.getAllWords(), word, "allword");
+					}
 				}
-
 
 			}
 

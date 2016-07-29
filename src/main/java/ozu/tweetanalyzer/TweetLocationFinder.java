@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-import org.apache.http.ParseException;
+
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.utils.URIBuilder;
@@ -80,7 +80,7 @@ public class TweetLocationFinder {
 		}
 		try {
 			jsonString = EntityUtils.toString(response.getEntity());
-		} catch (ParseException | IOException e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		}		
 		return jsonString;

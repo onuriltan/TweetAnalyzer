@@ -26,7 +26,7 @@ public class Stream {
 		this.searchPanel = searchPanel;
 	}
 
-	public void startStream(DatabaseModel database,
+	public void startStream(final DatabaseModel database,
 			final EntityRecognition recognition,  final SpamDetector spamDetector,  final CurrentTime currentTime,
 			final MapController mapController, final ChartController locationController,  final ChartController organizationController,
 			final ChartController personController,  final ChartController languageController,
