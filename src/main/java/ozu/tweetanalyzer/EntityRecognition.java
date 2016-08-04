@@ -95,17 +95,17 @@ public class EntityRecognition {
 
 		StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
 		while(tokenizer.hasMoreTokens()){
-			String word = tokenizer.nextToken();
-			if(tweet.getLang().equals("en") && !database.getStopWords().contains(word.toUpperCase()) && word.charAt(0) != '#'){
+			String word = tokenizer.nextToken().toUpperCase();
+			if(!database.getStopWords().contains(word.toLowerCase()) && word.charAt(0) != '#'){
 				if(word.length() > 5 && !word.substring(0, 5).equals("https")){
-					System.out.println(word);
+
 					updateDatabase(database.getAllWords(), word, "allword");
 				}
 			}
-			if(!tweet.getLang().equals("en")){
-				updateDatabase(database.getAllWords(), word, "allword");
 
-			}
+			updateDatabase(database.getAllWords(), word, "allword");
+
+
 		}
 		allWordsController.setDataset(listToPieChartDataset(database.getAllWords()));// CHANGE THE CHART DATASET
 		allWordsController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET

@@ -11,6 +11,8 @@ public class MongoConnection {
 	MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
 	MongoDatabase db = mongoClient.getDatabase("TwitterDatabase");
 	MongoCollection<Document> coll;	
+
+
 	
 	public MongoConnection(String collectionName){
 		this.coll=db.getCollection(collectionName);

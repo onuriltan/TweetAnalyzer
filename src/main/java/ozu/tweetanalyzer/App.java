@@ -25,11 +25,11 @@ public class App
 		StopWords stopWords = new StopWords();
 		stopWords.loadStopWordsFromFile(database);
 		EntityRecognition recognition = new EntityRecognition(database);
-		SpamDetector spamDetector = new SpamDetector();
-		Search searchRecentTweets = new Search();
 		TrendPanel trendPanel= new TrendPanel();
-		ApplicationMainFrame appFrame = new ApplicationMainFrame();
 		SearchPanel searchPanel = new SearchPanel(trendPanel);
+		SpamDetector spamDetector = new SpamDetector();
+		Search searchRecentTweets = new Search(searchPanel);
+		ApplicationMainFrame appFrame = new ApplicationMainFrame();
 		Stream stream = new Stream(searchPanel);
 		TweetLocationFinder getLocationFromAccountInfo = new TweetLocationFinder();
 		startMVCPattern(getLocationFromAccountInfo,searchPanel,searchRecentTweets,stream,appFrame,database,recognition,spamDetector,time);

@@ -15,6 +15,11 @@ import twitter4j.TwitterFactory;
 import twitter4j.conf.ConfigurationBuilder;
 
 public class Search {
+	private SearchPanel searchPanel;
+	public Search(SearchPanel searchPanel){
+		this.searchPanel = searchPanel;
+		
+	}
 
 
 	public void searchRecentlyRelatedTweets(SpamDetector spamDetector,CurrentTime currentTime,DatabaseModel database,EntityRecognition entityRecognition,MapController mapController,
@@ -42,8 +47,9 @@ public class Search {
 					if(spamDetector.isNotSpam(tweet,currentTime) && tweet.isRetweet() == false){// if tweet is not spam according to our parameters and not a retweet
 						entityRecognition.entityRecognition(tweet,locationController,organizationController,personController,languageController,hashtagController,urlController, allWordsController); // apply entity recognition on tweet text
 						//this command takes tweets and analyzes them and updates charts according to analyzation
+						database.setTweetCount(database.getTweetCount()+1);
 						mapController.updateMap(tweet);
-
+						searchPanel.getTweetCountlabel().setText("<html>Tweet count: "+database.getTweetCount()+"<html>");
 					}	                }
 			} while ((query = result.nextQuery()) != null);
 			//System.exit(0);
