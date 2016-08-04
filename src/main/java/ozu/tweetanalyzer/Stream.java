@@ -1,6 +1,8 @@
 package ozu.tweetanalyzer;
 
 
+import org.bson.Document;
+
 import controller.ChartController;
 import controller.MapController;
 import model.DatabaseModel;
@@ -21,7 +23,8 @@ public class Stream {
 	private ConfigurationBuilder cb;
 
 	private SearchPanel searchPanel;
-
+	
+	
 	public Stream(SearchPanel searchPanel){
 		this.searchPanel = searchPanel;
 	}
@@ -32,11 +35,26 @@ public class Stream {
 			final ChartController personController,  final ChartController languageController,
 			final ChartController hashtagController,  final ChartController urlController,final ChartController allWordsController) {
 
-
+		final MongoConnection mongoConnection=new MongoConnection(database.getSearchQuery());
 		StatusListener listener = new StatusListener() {
+			
 			public void onStatus(Status tweet) {// data keep coming to onStatus method, 
 				// the code that written under onStatus method will execute the code again and again when new tweet comes
+				Document basicObj = new Document();
+				basicObj.put("tweet_ID", tweet.getId());
+				basicObj.put("tweet_text", tweet.getText());
+				basicObj.put("user_name", tweet.getUser().getScreenName());                
+				basicObj.put("coordinates",tweet.getGeoLocation());                
+				basicObj.put("language", tweet.getLang());
+				basicObj.put("createdAt", tweet.getCreatedAt()); 
+				basicObj.put("isVerified", tweet.getUser().isVerified());
 
+				try {
+					mongoConnection.coll.insertOne(basicObj);
+
+				} catch (Exception e) {
+					//System.out.println("MongoDB Connection Error : " + e.getMessage());                    
+				}
 
 				if(spamDetector.isNotSpam(tweet,currentTime) && tweet.isRetweet() == false){// if tweet is not spam according to our parameters and not a retweet
 

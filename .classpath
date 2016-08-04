@@ -12,7 +12,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
@@ -22,28 +22,29 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/httpcore-4.3.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/jcommon-1.0.23.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/jfreechart-1.0.19.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/jfreechart-1.0.19-experimental.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/jfreechart-1.0.19-swt.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/JMapViewer.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/joda-time.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/jollyday-0.4.7.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/json-simple-1.1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/org.apache.httpcomponents.httpclient_4.3.6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/slf4j-api.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/slf4j-simple.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/stanford-ner.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/stanford-ner-3.6.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/stanford-ner-3.6.0-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/stanford-ner-3.6.0-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/stanford-ner-resources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/twitter4j-async-4.0.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/twitter4j-core-4.0.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/twitter4j-examples-4.0.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/twitter4j-media-support-4.0.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/twitter4j-stream-4.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/httpcore-4.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/jcommon-1.0.23.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/jfreechart-1.0.19.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/jfreechart-1.0.19-experimental.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/jfreechart-1.0.19-swt.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/JMapViewer.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/joda-time.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/jollyday-0.4.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/org.apache.httpcomponents.httpclient_4.3.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/slf4j-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/slf4j-simple.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/stanford-ner.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/stanford-ner-3.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/stanford-ner-3.6.0-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/stanford-ner-3.6.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/stanford-ner-resources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/twitter4j-async-4.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/twitter4j-core-4.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/twitter4j-examples-4.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/twitter4j-media-support-4.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Documents/TweetAnalyzer-master/TweetAnalyzer-master/libs/twitter4j-stream-4.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Levent/Desktop/mongo-java-driver-r3.1.0.zip"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
