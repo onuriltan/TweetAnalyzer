@@ -41,7 +41,7 @@ public class Stream {
 			public void onStatus(Status tweet) {// data keep coming to onStatus method, 
 				// the code that written under onStatus method will execute the code again and again when new tweet comes
 				Document basicObj = new Document();
-				basicObj.put("tweet", tweet);
+				
 				basicObj.put("tweet_ID", tweet.getId());
 				basicObj.put("tweet_text", tweet.getText());
 				basicObj.put("user_name", tweet.getUser().getScreenName());                
