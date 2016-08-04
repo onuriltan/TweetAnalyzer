@@ -41,6 +41,7 @@ public class Stream {
 			public void onStatus(Status tweet) {// data keep coming to onStatus method, 
 				// the code that written under onStatus method will execute the code again and again when new tweet comes
 				Document basicObj = new Document();
+				basicObj.put("tweet", tweet);
 				basicObj.put("tweet_ID", tweet.getId());
 				basicObj.put("tweet_text", tweet.getText());
 				basicObj.put("user_name", tweet.getUser().getScreenName());                
@@ -49,15 +50,15 @@ public class Stream {
 				basicObj.put("createdAt", tweet.getCreatedAt()); 
 				basicObj.put("isVerified", tweet.getUser().isVerified());
 
-				try {
-					mongoConnection.coll.insertOne(basicObj);
-
-				} catch (Exception e) {
-					//System.out.println("MongoDB Connection Error : " + e.getMessage());                    
-				}
+				
 
 				if(spamDetector.isNotSpam(tweet,currentTime) && tweet.isRetweet() == false){// if tweet is not spam according to our parameters and not a retweet
+					try {
+						mongoConnection.coll.insertOne(basicObj);
 
+					} catch (Exception e) {
+						System.out.println("MongoDB Connection Error : " + e.getMessage());                    
+					}
 					recognition.entityRecognition(tweet,locationController,organizationController,personController,languageController,hashtagController,urlController, allWordsController); // apply entity recognition on tweet text
 					//this command takes tweets and analyzes them and updates charts according to analyzation
 					database.setTweetCount(database.getTweetCount()+1);
