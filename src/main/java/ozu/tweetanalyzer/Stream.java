@@ -1,6 +1,8 @@
 package ozu.tweetanalyzer;
 
 
+import java.util.StringTokenizer;
+
 import org.bson.Document;
 import controller.ChartController;
 import controller.MapController;
@@ -62,34 +64,29 @@ public class Stream {
 					database.setTweetCount(database.getTweetCount()+1);
 					searchPanel.getTweetCountlabel().setText("<html>Tweet count: "+database.getTweetCount()+"<html>");
 					mapController.updateMap(tweet);
-					
-					String notSpamText = tweet.getUser().getScreenName()+" : "	+tweet.getText();
+					String cleanedText = getCleanedTweetText(tweet);
 					StringBuilder str = new StringBuilder();
 					int j  = 1 ;
-					for(int i = 0 ; i< notSpamText.length()  ;i++){
-						str.append(notSpamText.charAt(i));
+					for(int i = 0 ; i< cleanedText.length()  ;i++){
+						str.append(cleanedText.charAt(i));
 						if(i == 50*j){
 							database.getNotSpamModel().addElement(str.toString());
 							str.setLength(0);
 							j++;
 						}
-
 					}
-					
 					database.getNotSpamModel().addElement(str.toString());
 					database.getNotSpamModel().addElement(" ");
 					j = 1;
 					str.setLength(0);
 
-
-
 				}
 				else if ( tweet.isRetweet() == false){
-					String spamText = tweet.getUser().getScreenName()+" : "	+tweet.getText();
+					String cleanedText = getCleanedTweetText(tweet);
 					StringBuilder str = new StringBuilder();
 					int j  = 1 ;
-					for(int i = 0 ; i< spamText.length()  ;i++){
-						str.append(spamText.charAt(i));
+					for(int i = 0 ; i< cleanedText.length()  ;i++){
+						str.append(cleanedText.charAt(i));
 						if(i == 50*j){
 							database.getSpamModel().addElement(str.toString());
 							str.setLength(0);
@@ -102,6 +99,17 @@ public class Stream {
 					j = 1;
 					str.setLength(0);
 				}
+			}
+			private String getCleanedTweetText(Status tweet) {
+				StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+				String tokenizedText = tweet.getUser().getScreenName()+" : ";
+				while(tokenizer.hasMoreTokens()){
+					String text = tokenizer.nextToken(); 
+					if(text.charAt(0) != '#' && !text.contains("http")){
+						tokenizedText += text+ " ";
+					}
+				}
+				return tokenizedText;
 			}
 			public void onException(Exception arg0) {}
 			public void onDeletionNotice(StatusDeletionNotice arg0) {}

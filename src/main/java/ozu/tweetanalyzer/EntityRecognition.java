@@ -31,7 +31,7 @@ public class EntityRecognition {
 	private String classifierPath = "libs/english.all.3class.distsim.crf.ser.gz";
 	private AbstractSequenceClassifier<CoreLabel> classifier;
 	private DatabaseModel database;
-	
+
 
 
 
@@ -46,8 +46,8 @@ public class EntityRecognition {
 			ChartController allWordsController) 
 	{
 		String text = tweet.getText();
-		
-		
+
+
 		List<Triple<String, Integer, Integer>> out = classifier.classifyToCharacterOffsets(text);
 
 		for (int i = 0; i < out.size(); i++) {
@@ -96,20 +96,22 @@ public class EntityRecognition {
 
 		StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
 		String lang = tweet.getLang();
-		
+
 		StopWords stopWords = new StopWords(lang);
 		stopWords.loadStopWordsFromFile(database);
-		
-	
+
+
 		while(tokenizer.hasMoreTokens()){
-			
+
 			String word = tokenizer.nextToken().toUpperCase();
-			if(!database.getStopWords().contains(word.toLowerCase().toString()) && word.charAt(0) != '#' && word.length() > 5 && !word.substring(0, 5).equals("https")){
-									
-				updateDatabase(database.getAllWords(), word, "allword");
+			if(!database.getStopWords().contains(word.toLowerCase().toString()) && word.charAt(0) != '#' && !word.contains("https")){
+					updateDatabase(database.getAllWords(), word, "allword");
+
+				
+				
 			}
 
-			
+
 
 
 		}

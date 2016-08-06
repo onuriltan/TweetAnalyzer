@@ -2,6 +2,7 @@ package view;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.util.StringTokenizer;
 
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
@@ -73,7 +74,7 @@ public class MapView extends JFrame {
 			mapModel.getMap().addMapMarker(marker);
 			text = text+"\n"
 					+nameText+" : "
-					+tweet.getText()+"\n";
+					+getCleanedTweetText(tweet)+"\n";
 			mapModel.setText(text);
 			mapModel.getTwitterStreamPanel().setText(mapModel.getText());
 
@@ -93,7 +94,7 @@ public class MapView extends JFrame {
 					mapModel.getMap().addMapMarker(marker);
 					text = text+"\n"
 							+tweet.getUser().getScreenName()+" : "
-							+tweet.getText()+"\n";
+							+getCleanedTweetText(tweet)+"\n";
 					mapModel.setText(text);
 					mapModel.getTwitterStreamPanel().setText(mapModel.getText());
 				}
@@ -105,6 +106,17 @@ public class MapView extends JFrame {
 			
 
 		}
+	}
+	private String getCleanedTweetText(Status tweet) {
+		StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+		String tokenizedText = tweet.getUser().getScreenName()+" : ";
+		while(tokenizer.hasMoreTokens()){
+			String text = tokenizer.nextToken(); 
+			if(text.charAt(0) != '#' && !text.contains("http")){
+				tokenizedText += text+ " ";
+			}
+		}
+		return tokenizedText;
 	}
 
 }
