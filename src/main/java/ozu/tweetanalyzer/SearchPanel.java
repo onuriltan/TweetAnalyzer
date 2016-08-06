@@ -3,7 +3,6 @@ package ozu.tweetanalyzer;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.ScrollPane;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -17,12 +16,11 @@ import java.util.Calendar;
 import java.util.Date;
 import javax.swing.JButton;
 import javax.swing.JLabel;
-import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JSplitPane;
 import javax.swing.JTextField;
-import javax.swing.JTextPane;
+import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -74,24 +72,31 @@ public class SearchPanel extends JPanel  {
 	
 		spamScrollPane = new JScrollPane(database.getSpamList());
 
-		TitledBorder border = new TitledBorder("SPAMS");
+		TitledBorder border = new TitledBorder(new LineBorder(Color.WHITE, 1),"SPAMS");
 		border.setTitleJustification(TitledBorder.CENTER);
 		border.setTitlePosition(TitledBorder.TOP);
+		border.setTitleColor(Color.RED);
 		spamScrollPane.setBorder(border);
 		spamScrollPane.setPreferredSize((new Dimension(400,250)));
+		spamScrollPane.setBackground(Color.white);
 		spamPanel.setPreferredSize((new Dimension(400,250)));
+		spamPanel.setBackground(Color.white);
 		spamPanel.add(spamScrollPane, BorderLayout.NORTH);
 
 
 
 		notSpamScrollPane = new JScrollPane(database.getNotSpamList());
 	
-		TitledBorder border1 = new TitledBorder("PASSED");
+		TitledBorder border1 = new TitledBorder(new LineBorder(Color.WHITE, 1),"PASSED");
 		border1.setTitleJustification(TitledBorder.CENTER);
 		border1.setTitlePosition(TitledBorder.TOP);
+		border1.setTitleColor(Color.GREEN);
 		notSpamScrollPane.setBorder(border1);
 		notSpamScrollPane.setPreferredSize((new Dimension(400,250)));
 		notSpamPanel.setPreferredSize((new Dimension(400,250)));
+		notSpamPanel.setBackground(Color.white);
+		notSpamScrollPane.setBackground(Color.white);
+
 		notSpamPanel.add(notSpamScrollPane, BorderLayout.NORTH);
 
 		splitPanel = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, notSpamPanel, spamPanel);
@@ -105,19 +110,10 @@ public class SearchPanel extends JPanel  {
 		add(label);
 		add(trendPanel);
 		add(tweetCountlabel);
-		
-		
-		/*JList<String> list = new JList<String>();
-		  JPanel panel = new JPanel();
-		panel.setLayout(new BorderLayout());
-		JScrollPane pane = new JScrollPane(list);
-		panel.add(pane, BorderLayout.NORTH);
-		add(panel);*/
-		resultButton.setEnabled(false);
 		add(splitPanel);
 		
-
-		
+		resultButton.setEnabled(false);
+	
 
 
 		trendPanel.list.addListSelectionListener(new ListSelectionListener() {
@@ -168,10 +164,6 @@ public class SearchPanel extends JPanel  {
 				searchButton.setEnabled(true);
 				resultButton.setEnabled(false);
 
-				
-				resultButton.setEnabled(false);
-				searchButton.setEnabled(true);
-
 			}
 		});
 
@@ -186,15 +178,12 @@ public class SearchPanel extends JPanel  {
 				String mainFile = "results";
 				String file = dateFormat.format(cal.getTime())+" to "+dateFormat.format(date);
 
-
-
 				File locationfile = new File(mainFile+"/"+file+"/Location.png");
 				File organizationfile = new File(mainFile+"/"+file+"/Organization.png");
 				File personfile = new File(mainFile+"/"+file+"/Person.png");
 				File languagefile = new File(mainFile+"/"+file+"/Language.png");
 				File hashtagfile = new File(mainFile+"/"+file+"/Hashtags.png");
 				File allWordsfile = new File(mainFile+"/"+file+"/MostCommonWords.png");
-
 				File parentDir = locationfile.getParentFile();
 				File parentDir1 = organizationfile.getParentFile();
 				File parentDir2 = personfile.getParentFile();
@@ -229,8 +218,6 @@ public class SearchPanel extends JPanel  {
 				} catch (FileNotFoundException e1) {
 					e1.printStackTrace();
 				}
-
-
 
 				try {
 					ChartUtilities.saveChartAsJPEG(locationfile, locationController.getChart(), 600, 400);

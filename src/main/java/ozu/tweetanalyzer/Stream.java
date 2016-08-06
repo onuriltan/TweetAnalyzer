@@ -61,7 +61,8 @@ public class Stream {
 					//this command takes tweets and analyzes them and updates charts according to analyzation
 					database.setTweetCount(database.getTweetCount()+1);
 					searchPanel.getTweetCountlabel().setText("<html>Tweet count: "+database.getTweetCount()+"<html>");
-
+					mapController.updateMap(tweet);
+					
 					String notSpamText = tweet.getUser().getScreenName()+" : "	+tweet.getText();
 					StringBuilder str = new StringBuilder();
 					int j  = 1 ;
@@ -80,7 +81,6 @@ public class Stream {
 					j = 1;
 					str.setLength(0);
 
-					searchPanel.revalidate();
 
 
 				}
@@ -101,7 +101,6 @@ public class Stream {
 					database.getSpamModel().addElement(" ");
 					j = 1;
 					str.setLength(0);
-					searchPanel.revalidate();
 				}
 			}
 			public void onException(Exception arg0) {}

@@ -51,9 +51,6 @@ public class MapView extends JFrame {
 		panel.setResizeWeight(0.5);
 		mapModel.setPanel(panel);
 
-		//setContentPane(panel);
-		//setVisible(true);
-
 	}
 
 	public void updateMap(Status tweet){
@@ -102,6 +99,10 @@ public class MapView extends JFrame {
 				}
 
 			}catch(Exception e){}
+
+		}
+		else{// if location can't recognized, do nothing
+			
 
 		}
 	}

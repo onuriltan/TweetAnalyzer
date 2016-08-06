@@ -19,7 +19,6 @@ public class DatabaseModel {
 	private Hashtable<String, Integer> verifiedURLList = new Hashtable<String, Integer>() ;
 	private Hashtable<String, Integer> allWords = new Hashtable<String, Integer>()  ;
 	private Set<String> stopWords = new LinkedHashSet<String>();
-
 	private DefaultListModel<String> notSpamModel = new DefaultListModel<String>();
 	private DefaultListModel<String> spamModel = new DefaultListModel<String>();
 	private JList<String> notSpamList = new JList<String>(notSpamModel);
@@ -27,10 +26,7 @@ public class DatabaseModel {
 
 
 
-
-
 	public DatabaseModel(){}
-
 
 
 	public Hashtable<String, Integer> getLocationList() {
@@ -117,57 +113,37 @@ public class DatabaseModel {
 	}
 
 
-
-
 	public JList<String> getNotSpamList() {
 		return notSpamList;
 	}
-
-
 
 	public void setNotSpamList(JList<String> notSpamTList) {
 		this.notSpamList = notSpamTList;
 	}
 
-
-
 	public JList<String> getSpamList() {
 		return spamList;
 	}
-
-
 
 	public void setSpamList(JList<String> spamList) {
 		this.spamList = spamList;
 	}
 
-
-
-
-
-
 	public DefaultListModel<String> getNotSpamModel() {
 		return notSpamModel;
 	}
-
-
 
 	public void setNotSpamModel(DefaultListModel<String> notSpamModel) {
 		this.notSpamModel = notSpamModel;
 	}
 
-
-
 	public DefaultListModel<String> getSpamModel() {
 		return spamModel;
 	}
 
-
-
 	public void setSpamModel(DefaultListModel<String> spamModel) {
 		this.spamModel = spamModel;
 	}
-
 
 
 	public void clearDatabase(){
@@ -183,8 +159,6 @@ public class DatabaseModel {
 		notSpamModel.clear();
 		spamModel.clear();
 		
-
-
 
 	}
 
