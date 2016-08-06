@@ -16,7 +16,6 @@ public class ApplicationMainFrame extends JFrame{
 	private static final long serialVersionUID = 1L;
 	private  JTabbedPane tabs = new JTabbedPane();
 	private JPanel content = new JPanel(new BorderLayout());
-
 	public void populateApplication(JPanel searchPanel,JSplitPane mapPanel,ChartPanel locationChartPanel,ChartPanel organizationChartPanel,ChartPanel personChartPanel,ChartPanel languageChartPanel,ChartPanel hashtagChartPanel, ChartPanel urlChartPanel,
 			ChartPanel allWordsChartPanel){
 
@@ -35,12 +34,17 @@ public class ApplicationMainFrame extends JFrame{
 
 
 		content.setPreferredSize(new java.awt.Dimension(1000, 600));
+		content.setMaximumSize(new java.awt.Dimension(1000, 600));
+		content.setMinimumSize(new java.awt.Dimension(1000, 600));
+
 		content.add(tabs);
 		setContentPane(content);
 
 
 	}
-
+	
+	
+	
 
 
 

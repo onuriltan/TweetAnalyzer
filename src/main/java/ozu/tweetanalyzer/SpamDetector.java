@@ -26,7 +26,9 @@ public class SpamDetector {
 		Boolean isDefaultPP=user.isDefaultProfileImage();
 		
 		if(isDefaultPP){
-			return false;
+			return true;
+			//isDefaultProfile returns true if user changed theme or background(picture)
+
 		}
 		
 		if(friendsCount < 10){
@@ -51,9 +53,8 @@ public class SpamDetector {
 		}
 		
 		
-		if(isUserAccountOlderThanOneMonth && user.isDefaultProfile() && user.getFriendsCount()>=50 && user.getFollowersCount()>=50)
+		if(isUserAccountOlderThanOneMonth && user.isDefaultProfile())
 		{
-			//isDefaultProfile returns true if user changed theme or background(picture)
 
 			return true;
 		}

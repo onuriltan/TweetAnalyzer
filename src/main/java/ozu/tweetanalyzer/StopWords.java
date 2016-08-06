@@ -11,9 +11,10 @@ import model.DatabaseModel;
 
 public class StopWords {
 
+	private String lang;
 
-
-	public StopWords(){
+	public StopWords(String lang){
+		this.lang = lang;
 
 	}
 
@@ -23,20 +24,18 @@ public class StopWords {
 		Set<String> stopWords = new LinkedHashSet<String>();
 		BufferedReader SW = null;
 		try {
-			SW = new BufferedReader(new FileReader("StopWords.txt"));
+			SW = new BufferedReader(new FileReader("StopWords/"+lang+".txt"));
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			
 		}
 		try {
 			for(String line;(line = SW.readLine()) != null;)
 				stopWords.add(line.toUpperCase().trim());
 		} catch (IOException e) {
-			e.printStackTrace();
 		}
 		try {
 			SW.close();
 		} catch (IOException e) {
-			e.printStackTrace();
 		}
 		database.setStopWords(stopWords);
 	}

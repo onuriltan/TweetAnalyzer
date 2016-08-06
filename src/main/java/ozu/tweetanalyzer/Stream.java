@@ -20,10 +20,11 @@ public class Stream {
 	private FilterQuery filtre;
 	private String[] keywordsArray;
 	private ConfigurationBuilder cb;
-
+	private String notSpamText = "";
+	private String spamText = "";
 	private SearchPanel searchPanel;
-	
-	
+
+
 	public Stream(SearchPanel searchPanel){
 		this.searchPanel = searchPanel;
 	}
@@ -36,7 +37,7 @@ public class Stream {
 
 		final MongoConnection mongoConnection=new MongoConnection(database.getSearchQuery());
 		StatusListener listener = new StatusListener() {
-			
+
 			public void onStatus(Status tweet) {// data keep coming to onStatus method, 
 				// the code that written under onStatus method will execute the code again and again when new tweet comes
 				Document basicObj = new Document();
@@ -47,7 +48,7 @@ public class Stream {
 				basicObj.put("language", tweet.getLang());
 				basicObj.put("createdAt", tweet.getCreatedAt()); 
 				basicObj.put("isVerified", tweet.getUser().isVerified());
-				
+
 
 				if(spamDetector.isNotSpam(tweet,currentTime) && tweet.isRetweet() == false){// if tweet is not spam according to our parameters and not a retweet
 					try {
@@ -60,9 +61,47 @@ public class Stream {
 					//this command takes tweets and analyzes them and updates charts according to analyzation
 					database.setTweetCount(database.getTweetCount()+1);
 					searchPanel.getTweetCountlabel().setText("<html>Tweet count: "+database.getTweetCount()+"<html>");
-					mapController.updateMap(tweet);
+
+					String notSpamText = tweet.getUser().getScreenName()+" : "	+tweet.getText();
+					StringBuilder str = new StringBuilder();
+					int j  = 1 ;
+					for(int i = 0 ; i< notSpamText.length()  ;i++){
+						str.append(notSpamText.charAt(i));
+						if(i == 50*j){
+							database.getNotSpamModel().addElement(str.toString());
+							str.setLength(0);
+							j++;
+						}
+
+					}
+					
+					database.getNotSpamModel().addElement(str.toString());
+					database.getNotSpamModel().addElement(" ");
+					j = 1;
+					str.setLength(0);
+
+					searchPanel.revalidate();
 
 
+				}
+				else if ( tweet.isRetweet() == false){
+					String spamText = tweet.getUser().getScreenName()+" : "	+tweet.getText();
+					StringBuilder str = new StringBuilder();
+					int j  = 1 ;
+					for(int i = 0 ; i< spamText.length()  ;i++){
+						str.append(spamText.charAt(i));
+						if(i == 50*j){
+							database.getSpamModel().addElement(str.toString());
+							str.setLength(0);
+							j++;
+						}
+
+					}
+					database.getSpamModel().addElement(str.toString());
+					database.getSpamModel().addElement(" ");
+					j = 1;
+					str.setLength(0);
+					searchPanel.revalidate();
 				}
 			}
 			public void onException(Exception arg0) {}
@@ -126,7 +165,24 @@ public class Stream {
 	public void setKeywordsArray(String[] keywordsArray) {
 		this.keywordsArray = keywordsArray;
 	}
+	public String getNotSpamText() {
+		return notSpamText;
+	}
 
+
+	public void setNotSpamText(String notSpamText) {
+		this.notSpamText = notSpamText;
+	}
+
+
+	public String getSpamText() {
+		return spamText;
+	}
+
+
+	public void setSpamText(String spamText) {
+		this.spamText = spamText;
+	}
 
 
 

@@ -14,7 +14,6 @@ public class TrendPanel extends JPanel {
 	public JList<String> list;
 	TrendTopic trend= new TrendTopic();
 	DefaultListModel<String> model;
-	//int counter = 15;
 
 	public TrendPanel() {
 		trend.getTrendsFromTwitter();
@@ -26,15 +25,6 @@ public class TrendPanel extends JPanel {
 		for (String t : trend.getTrendList()) {
 			model.addElement(t);              
 		}    
-
-		/*    addButton.addActionListener(new ActionListener() {
-	      public void actionPerformed(ActionEvent e) {
-	        model.addElement("Element " + counter);
-	        counter++;
-	      }
-	    });
-		 */ 
-
 		add(pane, BorderLayout.NORTH);
 	}
 }

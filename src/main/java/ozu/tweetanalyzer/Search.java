@@ -3,6 +3,7 @@ package ozu.tweetanalyzer;
 
 import java.util.List;
 
+
 import controller.ChartController;
 import controller.MapController;
 import model.DatabaseModel;
@@ -16,9 +17,13 @@ import twitter4j.conf.ConfigurationBuilder;
 
 public class Search {
 	private SearchPanel searchPanel;
+
+	
+	
+	
 	public Search(SearchPanel searchPanel){
 		this.searchPanel = searchPanel;
-		
+
 	}
 
 
@@ -40,6 +45,7 @@ public class Search {
 		try {
 			Query query = new Query(database.getSearchQuery());
 			QueryResult result;
+			query.setCount(50);
 			do {
 				result = twitter.search(query);
 				List<Status> tweets = result.getTweets();
@@ -50,7 +56,26 @@ public class Search {
 						database.setTweetCount(database.getTweetCount()+1);
 						mapController.updateMap(tweet);
 						searchPanel.getTweetCountlabel().setText("<html>Tweet count: "+database.getTweetCount()+"<html>");
-					}	                }
+					
+						String notSpamText = tweet.getUser().getScreenName()+" : "	+tweet.getText();
+						database.getNotSpamModel().addElement(notSpamText);
+						
+						
+						searchPanel.revalidate();
+						  
+
+					}else if ( tweet.isRetweet() == false){
+						String spamText = tweet.getUser().getScreenName()+" : "+tweet.getText();
+						database.getSpamModel().addElement(spamText);
+						searchPanel.getSpamPanel().revalidate();
+						searchPanel.revalidate();
+
+					}
+
+
+
+
+				}
 			} while ((query = result.nextQuery()) != null);
 			//System.exit(0);
 		} catch (TwitterException te) {
@@ -59,5 +84,15 @@ public class Search {
 			System.exit(-1);
 		}
 	}
+
+
+
+
+
+
+
+
+
+
 
 }

@@ -1,7 +1,9 @@
 package ozu.tweetanalyzer;
 
 
-import javax.swing.JPanel;
+import java.util.Calendar;
+
+import javax.swing.JFrame;
 import javax.swing.JSplitPane;
 
 import org.jfree.ui.RefineryUtilities;
@@ -21,12 +23,11 @@ public class App
 	public static void main(String[] args)
 	{
 		CurrentTime time = new CurrentTime();
+	    Calendar cal = time.getCal();
 		DatabaseModel database = new DatabaseModel();
-		StopWords stopWords = new StopWords();
-		stopWords.loadStopWordsFromFile(database);
 		EntityRecognition recognition = new EntityRecognition(database);
 		TrendPanel trendPanel= new TrendPanel();
-		SearchPanel searchPanel = new SearchPanel(trendPanel);
+		SearchPanel searchPanel = new SearchPanel(trendPanel,cal);
 		SpamDetector spamDetector = new SpamDetector();
 		Search searchRecentTweets = new Search(searchPanel);
 		ApplicationMainFrame appFrame = new ApplicationMainFrame();
@@ -85,13 +86,15 @@ public class App
 
 
 		database.setTweetCount(0);
-		JPanel search = searchPanel.populateSearchPanel(searchRecentTweets,stream, database, recognition, spamDetector, currentTime, mapController,locationController,
+		searchPanel.populateSearchPanel(searchRecentTweets,stream, database, recognition, spamDetector, currentTime, mapController,locationController,
 				organizationController, personController, languageController, hashtagController, urlController, allWordsController);
 
-		appFrame.populateApplication(search,mapPanel,locationController.getChartPanel(),organizationController.getChartPanel(), personController.getChartPanel(), languageController.getChartPanel(), hashtagController.getChartPanel(), urlController.getChartPanel(),allWordsController.getChartPanel());
+		
+		appFrame.populateApplication(searchPanel,mapPanel,locationController.getChartPanel(),organizationController.getChartPanel(), personController.getChartPanel(), languageController.getChartPanel(), hashtagController.getChartPanel(), urlController.getChartPanel(),allWordsController.getChartPanel());
 		appFrame.pack();
 		RefineryUtilities.centerFrameOnScreen(appFrame);
 		appFrame.setVisible(true);
+		appFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 	}
 

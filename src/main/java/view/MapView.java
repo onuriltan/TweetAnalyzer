@@ -36,8 +36,7 @@ public class MapView extends JFrame {
 		this.mapModel = mapModel;
 		JMapViewer map = new JMapViewer();
 
-		map.setMaximumSize(new Dimension(700, 400));
-		map.setMinimumSize(new Dimension(900,900));
+
 		map.setSize(new Dimension(700, 400));
 		mapModel.setMap(map);
 
@@ -45,7 +44,6 @@ public class MapView extends JFrame {
 		mapModel.setTwitterStreamPanel(twitterStreamPanel); 
 
 		JScrollPane streamContainer = new JScrollPane(twitterStreamPanel);
-		streamContainer.setMaximumSize(new Dimension(1000, 600));
 		streamContainer.setSize(new Dimension(900,900));
 		mapModel.setStreamContainer(streamContainer);
 
@@ -79,6 +77,8 @@ public class MapView extends JFrame {
 			text = text+"\n"
 					+nameText+" : "
 					+tweet.getText()+"\n";
+			mapModel.setText(text);
+			mapModel.getTwitterStreamPanel().setText(mapModel.getText());
 
 
 		}
@@ -99,8 +99,6 @@ public class MapView extends JFrame {
 							+tweet.getText()+"\n";
 					mapModel.setText(text);
 					mapModel.getTwitterStreamPanel().setText(mapModel.getText());
-				}else{// if location can't recognized, do nothing
-
 				}
 
 			}catch(Exception e){}

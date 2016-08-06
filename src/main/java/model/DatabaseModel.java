@@ -4,6 +4,9 @@ import java.util.Hashtable;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
+
 
 public class DatabaseModel {
 	private int tweetCount;
@@ -17,6 +20,10 @@ public class DatabaseModel {
 	private Hashtable<String, Integer> allWords = new Hashtable<String, Integer>()  ;
 	private Set<String> stopWords = new LinkedHashSet<String>();
 
+	private DefaultListModel<String> notSpamModel = new DefaultListModel<String>();
+	private DefaultListModel<String> spamModel = new DefaultListModel<String>();
+	private JList<String> notSpamList = new JList<String>(notSpamModel);
+	private JList<String> spamList = new JList<String>(spamModel);
 
 
 
@@ -105,10 +112,60 @@ public class DatabaseModel {
 		return stopWords;
 	}
 
-
-
 	public void setStopWords(Set<String> stopWords) {
 		this.stopWords = stopWords;
+	}
+
+
+
+
+	public JList<String> getNotSpamList() {
+		return notSpamList;
+	}
+
+
+
+	public void setNotSpamList(JList<String> notSpamTList) {
+		this.notSpamList = notSpamTList;
+	}
+
+
+
+	public JList<String> getSpamList() {
+		return spamList;
+	}
+
+
+
+	public void setSpamList(JList<String> spamList) {
+		this.spamList = spamList;
+	}
+
+
+
+
+
+
+	public DefaultListModel<String> getNotSpamModel() {
+		return notSpamModel;
+	}
+
+
+
+	public void setNotSpamModel(DefaultListModel<String> notSpamModel) {
+		this.notSpamModel = notSpamModel;
+	}
+
+
+
+	public DefaultListModel<String> getSpamModel() {
+		return spamModel;
+	}
+
+
+
+	public void setSpamModel(DefaultListModel<String> spamModel) {
+		this.spamModel = spamModel;
 	}
 
 
@@ -123,6 +180,11 @@ public class DatabaseModel {
 		allWords.clear();
 		searchQuery = "";
 		tweetCount = 0;
+		notSpamModel.clear();
+		spamModel.clear();
+		
+
+
 
 	}
 

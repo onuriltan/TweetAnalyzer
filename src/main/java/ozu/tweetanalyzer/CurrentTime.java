@@ -15,20 +15,30 @@ public class CurrentTime {
 	private int year;
 	private int month ;
 	private int day ;
-
+	private Calendar cal;
+	private int hourOfDay; // 24 hour clock
+	private int minute;
+	private int second;
+	private SimpleDateFormat dateFormat1;
+	private Date date;
 	public CurrentTime(){
 
 		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		//get current date time with Date()
-		Date date = new Date();
+		date = new Date();
 		// your date
-		Calendar cal = Calendar.getInstance();
+		cal = Calendar.getInstance();
 		cal.setTime(date);
 		year = cal.get(Calendar.YEAR);
 		month = cal.get(Calendar.MONTH);
 		day = cal.get(Calendar.DAY_OF_MONTH);
 		currentDate = dateFormat.format(date).toString();
 		currentTime = dateFormat.format(cal.getTime()).toString();
+		hourOfDay  = cal.get(Calendar.HOUR_OF_DAY); // 24 hour clock,
+		minute     = cal.get(Calendar.MINUTE);
+		second     = cal.get(Calendar.SECOND);
+		dateFormat1 = new SimpleDateFormat("yyyy-MM-dd HH;mm;ss");
+		
 
 	}
 
@@ -80,6 +90,66 @@ public class CurrentTime {
 
 	public void setDay(int day) {
 		this.day = day;
+	}
+
+
+	public Calendar getCal() {
+		return cal;
+	}
+
+
+	public void setCal(Calendar cal) {
+		this.cal = cal;
+	}
+
+
+	public int getHourOfDay() {
+		return hourOfDay;
+	}
+
+
+	public void setHourOfDay(int hourOfDay) {
+		this.hourOfDay = hourOfDay;
+	}
+
+
+	public int getMinute() {
+		return minute;
+	}
+
+
+	public void setMinute(int minute) {
+		this.minute = minute;
+	}
+
+
+	public int getSecond() {
+		return second;
+	}
+
+
+	public void setSecond(int second) {
+		this.second = second;
+	}
+
+
+	public SimpleDateFormat getDateFormat1() {
+		return dateFormat1;
+	}
+
+
+	public void setDateFormat1(SimpleDateFormat dateFormat1) {
+		this.dateFormat1 = dateFormat1;
+	}
+
+
+	public Date getDate() {
+		return date;
+	}
+
+
+	public void setDate(Date date) {
+		this.date = date;
 	}
 
 
