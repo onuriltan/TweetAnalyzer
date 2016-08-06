@@ -53,6 +53,8 @@ public class Stream {
 
 
 				if(spamDetector.isNotSpam(tweet,currentTime) && tweet.isRetweet() == false){// if tweet is not spam according to our parameters and not a retweet
+					System.out.println("notspam");
+					
 					try {
 						mongoConnection.coll.insertOne(basicObj);
 
@@ -60,7 +62,6 @@ public class Stream {
 						System.out.println("MongoDB Connection Error : " + e.getMessage());                    
 					}
 					recognition.entityRecognition(tweet,locationController,organizationController,personController,languageController,hashtagController,urlController, allWordsController); // apply entity recognition on tweet text
-					//this command takes tweets and analyzes them and updates charts according to analyzation
 					database.setTweetCount(database.getTweetCount()+1);
 					searchPanel.getTweetCountlabel().setText("<html>Tweet count: "+database.getTweetCount()+"<html>");
 					mapController.updateMap(tweet);
@@ -81,7 +82,7 @@ public class Stream {
 					str.setLength(0);
 
 				}
-				else if ( tweet.isRetweet() == false){
+				else if (tweet.isRetweet() == false){
 					String cleanedText = getCleanedTweetText(tweet);
 					StringBuilder str = new StringBuilder();
 					int j  = 1 ;
@@ -100,6 +101,11 @@ public class Stream {
 					str.setLength(0);
 				}
 			}
+
+
+
+
+
 			private String getCleanedTweetText(Status tweet) {
 				StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
 				String tokenizedText = tweet.getUser().getScreenName()+" : ";
@@ -111,6 +117,9 @@ public class Stream {
 				}
 				return tokenizedText;
 			}
+			
+			
+			
 			public void onException(Exception arg0) {}
 			public void onDeletionNotice(StatusDeletionNotice arg0) {}
 			public void onScrubGeo(long arg0, long arg1) {}

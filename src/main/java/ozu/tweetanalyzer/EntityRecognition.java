@@ -99,6 +99,12 @@ public class EntityRecognition {
 
 		StopWords stopWords = new StopWords(lang);
 		stopWords.loadStopWordsFromFile(database);
+		String[] a = new String[database.getStopWords().size()];
+		a = (String[]) database.getStopWords().toArray();
+		for (int i = 0; i < a.length; i++) {
+			
+			System.out.println(a[i]);
+		}
 
 
 		while(tokenizer.hasMoreTokens()){
@@ -106,14 +112,7 @@ public class EntityRecognition {
 			String word = tokenizer.nextToken().toUpperCase();
 			if(!database.getStopWords().contains(word.toLowerCase().toString()) && word.charAt(0) != '#' && !word.contains("https")){
 					updateDatabase(database.getAllWords(), word, "allword");
-
-				
-				
 			}
-
-
-
-
 		}
 		allWordsController.setDataset(listToPieChartDataset(database.getAllWords()));// CHANGE THE CHART DATASET
 		allWordsController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET */
