@@ -47,6 +47,7 @@ public class EntityRecognition {
 	{
 		String text = tweet.getText();
 		
+		
 		List<Triple<String, Integer, Integer>> out = classifier.classifyToCharacterOffsets(text);
 
 		for (int i = 0; i < out.size(); i++) {
@@ -92,7 +93,7 @@ public class EntityRecognition {
 		verifiedUrlChartController.setDataset(listToPieChartDataset(database.getVerifiedURLList()));// CHANGE THE CHART DATASET
 		verifiedUrlChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
 
-/*
+
 		StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
 		String lang = tweet.getLang();
 		

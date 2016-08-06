@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -14,12 +15,17 @@ import java.io.Writer;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JProgressBar;
 import javax.swing.JScrollPane;
 import javax.swing.JSplitPane;
 import javax.swing.JTextField;
+import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 import javax.swing.event.ListSelectionEvent;
@@ -38,7 +44,7 @@ public class SearchPanel extends JPanel  {
 	 */
 	private static final long serialVersionUID = 1L;
 	private JLabel enterQueryLabel= new JLabel("Enter query: ", JLabel.RIGHT);
-	private final JTextField userText = new JTextField(10);	        
+	private JTextField userText = new JTextField();	
 	private JButton searchButton = new JButton("SEARCH");	  
 	private JButton refreshButton = new JButton("REFRESH");	
 	private JButton resultButton = new JButton("GENERATE RESULTS");	
@@ -60,7 +66,8 @@ public class SearchPanel extends JPanel  {
 
 	public void populateSearchPanel(final Search search,final Stream stream,final DatabaseModel database, final EntityRecognition recognition,final SpamDetector spamDetector, final CurrentTime currentTime,
 			final MapController mapController,final ChartController locationController, final ChartController organizationController,final ChartController personController,final ChartController languageController,final ChartController hashtagController,final ChartController urlController, final ChartController allWordsController){
-
+		userText.setPreferredSize( new Dimension( 200, 24 ) );
+		System.out.println(userText.getText());
 		label.setBackground(Color.blue);
 		setBackground(Color.white);
 		tweetCountlabel = new JLabel("<html>Tweet count: "+database.getTweetCount()+"<html>");
@@ -69,7 +76,7 @@ public class SearchPanel extends JPanel  {
 		notSpamPanel = new JPanel();
 		spamPanel.setLayout(new BorderLayout());
 		notSpamPanel.setLayout(new BorderLayout());
-	
+
 		spamScrollPane = new JScrollPane(database.getSpamList());
 
 		TitledBorder border = new TitledBorder(new LineBorder(Color.WHITE, 1),"SPAMS");
@@ -86,7 +93,7 @@ public class SearchPanel extends JPanel  {
 
 
 		notSpamScrollPane = new JScrollPane(database.getNotSpamList());
-	
+
 		TitledBorder border1 = new TitledBorder(new LineBorder(Color.WHITE, 1),"PASSED");
 		border1.setTitleJustification(TitledBorder.CENTER);
 		border1.setTitlePosition(TitledBorder.TOP);
@@ -111,10 +118,10 @@ public class SearchPanel extends JPanel  {
 		add(trendPanel);
 		add(tweetCountlabel);
 		add(splitPanel);
-		
-		resultButton.setEnabled(false);
-	
 
+		resultButton.setEnabled(false);
+
+	
 
 		trendPanel.list.addListSelectionListener(new ListSelectionListener() {
 
@@ -128,13 +135,22 @@ public class SearchPanel extends JPanel  {
 		});
 
 		searchButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {     
-				database.setSearchQuery(userText.getText());
-				stream.startStream(database, recognition, spamDetector, currentTime, mapController,locationController, organizationController, personController, languageController, hashtagController, urlController,allWordsController);
-				//search.searchRecentlyRelatedTweets(spamDetector, currentTime, database, recognition, mapController, locationController, organizationController, personController, languageController, hashtagController, urlController, allWordsController);
-				resultButton.setEnabled(true);
-				searchButton.setEnabled(false);
+			public void actionPerformed(ActionEvent e) {
+			
+				if(userText.getText().equals("")){
+					JOptionPane.showMessageDialog(null, "Please enter a search query...");
 
+				}else{
+
+					JOptionPane.showMessageDialog(null, "Your query sent, please wait...");
+					database.setSearchQuery(userText.getText());
+					stream.startStream(database, recognition, spamDetector, currentTime, mapController,locationController, organizationController, personController, languageController, hashtagController, urlController,allWordsController);
+					//search.searchRecentlyRelatedTweets(spamDetector, currentTime, database, recognition, mapController, locationController, organizationController, personController, languageController, hashtagController, urlController, allWordsController);
+					JOptionPane.showMessageDialog(null, "Search completed.");
+
+					resultButton.setEnabled(true);
+					searchButton.setEnabled(false);
+				}
 			}
 		}); 
 
@@ -241,6 +257,7 @@ public class SearchPanel extends JPanel  {
 				} catch (IOException e1) {
 					e1.printStackTrace();
 				}
+				JOptionPane.showMessageDialog(null, "Your search results created in the project directory.");
 
 
 			}
