@@ -99,19 +99,23 @@ public class EntityRecognition {
 
 		StopWords stopWords = new StopWords(lang);
 		stopWords.loadStopWordsFromFile(database);
-		String[] a = new String[database.getStopWords().size()];
-		a = (String[]) database.getStopWords().toArray();
-		for (int i = 0; i < a.length; i++) {
-			
-			System.out.println(a[i]);
-		}
-
-
 		while(tokenizer.hasMoreTokens()){
 
-			String word = tokenizer.nextToken().toUpperCase();
-			if(!database.getStopWords().contains(word.toLowerCase().toString()) && word.charAt(0) != '#' && !word.contains("https")){
-					updateDatabase(database.getAllWords(), word, "allword");
+			String word = tokenizer.nextToken().toLowerCase();
+			if(database.getStopWords().contains(word.toUpperCase()) == false ){
+				if(word.charAt(0) != '#'){
+					if(word.contains("https") == false){
+						if(word.length()>2){
+							updateDatabase(database.getAllWords(), word, "allword");
+
+						}
+					}
+				}
+
+				if(database.getStopWords().contains(word.toLowerCase().toString()) == false){
+				}
+
+
 			}
 		}
 		allWordsController.setDataset(listToPieChartDataset(database.getAllWords()));// CHANGE THE CHART DATASET

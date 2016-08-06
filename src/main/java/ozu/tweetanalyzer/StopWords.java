@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -21,7 +22,7 @@ public class StopWords {
 
 
 	public void loadStopWordsFromFile(DatabaseModel database){
-		Set<String> stopWords = new LinkedHashSet<String>();
+		ArrayList<String> stopWords = new ArrayList<String>();
 		BufferedReader SW = null;
 		try {
 			SW = new BufferedReader(new FileReader("StopWords/"+lang+".txt"));

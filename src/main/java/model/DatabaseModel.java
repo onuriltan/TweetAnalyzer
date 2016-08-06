@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -18,7 +19,7 @@ public class DatabaseModel {
 	private Hashtable<String, Integer> hashTagList = new Hashtable<String, Integer>() ;
 	private Hashtable<String, Integer> verifiedURLList = new Hashtable<String, Integer>() ;
 	private Hashtable<String, Integer> allWords = new Hashtable<String, Integer>()  ;
-	private Set<String> stopWords = new LinkedHashSet<String>();
+	private ArrayList<String> stopWords = new ArrayList<String>();
 	private DefaultListModel<String> notSpamModel = new DefaultListModel<String>();
 	private DefaultListModel<String> spamModel = new DefaultListModel<String>();
 	private JList<String> notSpamList = new JList<String>(notSpamModel);
@@ -104,11 +105,11 @@ public class DatabaseModel {
 
 
 
-	public Set<String> getStopWords() {
+	public ArrayList<String> getStopWords() {
 		return stopWords;
 	}
 
-	public void setStopWords(Set<String> stopWords) {
+	public void setStopWords(ArrayList<String> stopWords) {
 		this.stopWords = stopWords;
 	}
 

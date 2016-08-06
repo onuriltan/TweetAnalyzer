@@ -61,9 +61,10 @@ public class Stream {
 					} catch (Exception e) {
 						System.out.println("MongoDB Connection Error : " + e.getMessage());                    
 					}
-					recognition.entityRecognition(tweet,locationController,organizationController,personController,languageController,hashtagController,urlController, allWordsController); // apply entity recognition on tweet text
 					database.setTweetCount(database.getTweetCount()+1);
 					searchPanel.getTweetCountlabel().setText("<html>Tweet count: "+database.getTweetCount()+"<html>");
+
+					recognition.entityRecognition(tweet,locationController,organizationController,personController,languageController,hashtagController,urlController, allWordsController); // apply entity recognition on tweet text
 					mapController.updateMap(tweet);
 					String cleanedText = getCleanedTweetText(tweet);
 					StringBuilder str = new StringBuilder();
