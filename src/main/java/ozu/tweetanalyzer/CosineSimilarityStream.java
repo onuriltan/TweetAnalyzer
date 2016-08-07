@@ -30,7 +30,6 @@ public class CosineSimilarityStream {
 	private DatabaseModel database;
 	private CurrentTime currentTime;
 	private SpamDetector spamDetector;
-	private int cosineSimilarityCalculatonVariable = 1;
 	private TwitterStreamFactory tf;
 	private TwitterStream stream;
 	private FilterQuery filtre;
@@ -68,7 +67,7 @@ public class CosineSimilarityStream {
 		StatusListener listener = new StatusListener() {
 
 			public void onStatus(Status tweet) {
-				if(database.getTrendsCount() > 100*cosineSimilarityCalculatonVariable){
+				if(database.getTrendsCount() > 100*database.getCosineSimilarityCalculatonVariable()){
 
 					database.getTrendDatabaseList().add(0,database.getTrendNumberOne());
 					database.getTrendDatabaseList().add(1,database.getTrendNumberTwo());					
@@ -94,13 +93,10 @@ public class CosineSimilarityStream {
 					Hashtable<String, Double> topSimilarTrends= new Hashtable<String, Double>() ;
 					ArrayList<String> sortedKeys = new ArrayList<String>();
 					ArrayList<Double> sortedValues = new ArrayList<Double>();
-					calculateCosineSimilarity(topSimilarTrends,cosineController,sortedKeys,sortedValues);
+					ArrayList<String> array = new ArrayList<String>();
+					calculateCosineSimilarity(array,topSimilarTrends,cosineController,sortedKeys,sortedValues);
 					System.out.println("Calculation done.");
-
-
-
-
-					cosineSimilarityCalculatonVariable++;
+					database.setCosineSimilarityCalculatonVariable(database.getCosineSimilarityCalculatonVariable()+1);
 
 				}
 
@@ -283,7 +279,7 @@ public class CosineSimilarityStream {
 	}
 
 
-	private  void calculateCosineSimilarity(Hashtable<String, Double> topSimilarTrends,CosineSimilarityPanelController cosineController, ArrayList<String> sortedKeys, ArrayList<Double> sortedValues) {
+	private  void calculateCosineSimilarity(ArrayList<String> array,Hashtable<String, Double> topSimilarTrends,CosineSimilarityPanelController cosineController, ArrayList<String> sortedKeys, ArrayList<Double> sortedValues) {
 
 
 		for(int i = 0 ; i< database.getTrendTopicArray().length ; i++){
@@ -296,11 +292,12 @@ public class CosineSimilarityStream {
 						if(database.getTrendDatabaseList().get(j).isEmpty() == false){
 							double cosSimilarity = cosineSimilarity(database.getTrendDatabaseList().get(i), database.getTrendDatabaseList().get(j));
 							if(Double.isNaN(cosSimilarity) == false){
-								
+
 								topSimilarTrends.put("Cosine similarity for trends "+database.getTrendTopicArray()[i]+" and "+database.getTrendTopicArray()[j]+" is ", cosSimilarity);
 								sortedKeys.add("Cosine similarity for trends "+database.getTrendTopicArray()[i]+" and "+database.getTrendTopicArray()[j]+" is: "+cosSimilarity);
 								sortedValues.add(cosSimilarity);
 								cosineController.updateCosinePanel(topSimilarTrends,database,sortedKeys,sortedValues);
+								array.add("Cosine similarity for trends "+database.getTrendTopicArray()[i]+" and "+database.getTrendTopicArray()[j]+" is: "+cosSimilarity);
 
 							}
 
@@ -308,6 +305,15 @@ public class CosineSimilarityStream {
 					}
 				}
 			}
+			/*try {
+				if(!array.isEmpty()){
+					cosineSimilarityToTxt(array,0);
+					cosineSimilarityToTxt(database.getTrendDatabaseList(),1);
+				}
+
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			}*/
 		}
 	}
 
@@ -365,7 +371,24 @@ public class CosineSimilarityStream {
 	}
 
 
-
+	void cosineSimilarityToTxt(ArrayList<String> array,int k) throws IOException{
+		OutputStream outputStream;
+		if(k == 1){
+			 outputStream = new FileOutputStream("words.txt");
+		}else{
+			outputStream = new FileOutputStream("cosineSimilarity.txt");
+		}
+		String eol = System.getProperty("line.separator");
+		@SuppressWarnings("resource")        
+		Writer out = new OutputStreamWriter(outputStream);
+	
+		for (int i = 0; i < array.size(); i++) {
+			out.write(array.get(i));
+			out.write(eol);
+			out.write(eol);
+		}
+		out.flush();
+	}
 
 
 

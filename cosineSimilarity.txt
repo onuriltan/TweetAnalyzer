@@ -1,0 +1,108 @@
+Cosine similarity for trends #TekMilletTekYürek and #GinásticaArtística is: 0.03601671725857053
+
+Cosine similarity for trends #TekMilletTekYürek and #CommunityShield is: 0.09933514935191325
+
+Cosine similarity for trends #TekMilletTekYürek and #Voleibol is: 0.3046014319358628
+
+Cosine similarity for trends #TekMilletTekYürek and Fiji is: 0.3285012281482738
+
+Cosine similarity for trends #TekMilletTekYürek and Jim Furyk is: 0.28409608530042846
+
+Cosine similarity for trends #TekMilletTekYürek and Mata is: 0.1862919045365656
+
+Cosine similarity for trends #TekMilletTekYürek and #TiroConArco is: 0.2004348722279509
+
+Cosine similarity for trends #TekMilletTekYürek and Devlet Bahçeli is: 0.5164084980127407
+
+Cosine similarity for trends #TekMilletTekYürek and Jade Barbosa is: 0.00294164676451619
+
+Cosine similarity for trends #TekMilletTekYürek and Mariana Duque is: 0.23257458048063667
+
+Cosine similarity for trends #TekMilletTekYürek and Lituânia is: 0.03811163808804035
+
+Cosine similarity for trends #TekMilletTekYürek and Kemal Kılıçdaroğlu is: 0.40067372426726416
+
+Cosine similarity for trends #TekMilletTekYürek and Binali Yıldırım is: 0.4716978054770154
+
+Cosine similarity for trends #TekMilletTekYürek and Vamos Gladiadores is: 0.0013967543059870704
+
+Cosine similarity for trends #TekMilletTekYürek and San Cayetano is: 0.3005935382984951
+
+Cosine similarity for trends #TekMilletTekYürek and Andreina Pinto is: 0.002725529846428233
+
+Cosine similarity for trends #TekMilletTekYürek and #Mesaza is: 0.053925821538324474
+
+Cosine similarity for trends #TekMilletTekYürek and #مقاطعه_باسكن_روبنز is: 0.09578323126885262
+
+Cosine similarity for trends #TekMilletTekYürek and #عتيبي_يسرق_نعال_عجوز is: 0.040037378798305885
+
+Cosine similarity for trends #GinásticaArtística and #CommunityShield is: 0.005752461492657821
+
+Cosine similarity for trends #GinásticaArtística and #Voleibol is: 0.017174908758635306
+
+Cosine similarity for trends #GinásticaArtística and Fiji is: 0.04255208922880517
+
+Cosine similarity for trends #GinásticaArtística and Jim Furyk is: 0.02445842179076012
+
+Cosine similarity for trends #GinásticaArtística and Mata is: 0.06469854621596899
+
+Cosine similarity for trends #GinásticaArtística and #TiroConArco is: 0.040338816600142394
+
+Cosine similarity for trends #GinásticaArtística and Devlet Bahçeli is: 0.020154367070543057
+
+Cosine similarity for trends #GinásticaArtística and Jade Barbosa is: 0.056511695703760606
+
+Cosine similarity for trends #GinásticaArtística and Mariana Duque is: 0.0722312162767567
+
+Cosine similarity for trends #GinásticaArtística and Lituânia is: 0.167632027983351
+
+Cosine similarity for trends #GinásticaArtística and Kemal Kılıçdaroğlu is: 0.0093966974784169
+
+Cosine similarity for trends #GinásticaArtística and Binali Yıldırım is: 0.010322959495488608
+
+Cosine similarity for trends #GinásticaArtística and Vamos Gladiadores is: 0.007394897527409691
+
+Cosine similarity for trends #GinásticaArtística and San Cayetano is: 0.055757174117874786
+
+Cosine similarity for trends #GinásticaArtística and Andreina Pinto is: 0.004122826313596289
+
+Cosine similarity for trends #GinásticaArtística and #Mesaza is: 0.06948969263915968
+
+Cosine similarity for trends #GinásticaArtística and #مقاطعه_باسكن_روبنز is: 0.0045277621293756416
+
+Cosine similarity for trends #GinásticaArtística and #عتيبي_يسرق_نعال_عجوز is: 0.0014597663207466761
+
+Cosine similarity for trends #CommunityShield and #Voleibol is: 0.10932478893948047
+
+Cosine similarity for trends #CommunityShield and Fiji is: 0.1040612243467097
+
+Cosine similarity for trends #CommunityShield and Jim Furyk is: 0.1826551261614103
+
+Cosine similarity for trends #CommunityShield and Mata is: 0.2129049128657138
+
+Cosine similarity for trends #CommunityShield and #TiroConArco is: 0.0646708186371756
+
+Cosine similarity for trends #CommunityShield and Devlet Bahçeli is: 0.055921355184743234
+
+Cosine similarity for trends #CommunityShield and Jade Barbosa is: 0.006318492476329067
+
+Cosine similarity for trends #CommunityShield and Mariana Duque is: 0.08446618840169169
+
+Cosine similarity for trends #CommunityShield and Lituânia is: 0.007309077126963099
+
+Cosine similarity for trends #CommunityShield and Kemal Kılıçdaroğlu is: 0.03335754714445041
+
+Cosine similarity for trends #CommunityShield and Binali Yıldırım is: 0.041043190109267026
+
+Cosine similarity for trends #CommunityShield and Vamos Gladiadores is: 0.015000750056254689
+
+Cosine similarity for trends #CommunityShield and San Cayetano is: 0.09056742337536255
+
+Cosine similarity for trends #CommunityShield and Andreina Pinto is: 0.009757142403137058
+
+Cosine similarity for trends #CommunityShield and #Mesaza is: 0.006635085993336729
+
+Cosine similarity for trends #CommunityShield and #مقاطعه_باسكن_روبنز is: 0.02792516309534112
+
+Cosine similarity for trends #CommunityShield and #عتيبي_يسرق_نعال_عجوز is: 0.009158984826116294
+

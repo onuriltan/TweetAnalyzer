@@ -1,26 +1,19 @@
 package view;
 
 import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
+
+import java.awt.GridLayout;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Hashtable;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Set;
-
 import javax.swing.JPanel;
-
 import model.CosineSimilarityPanelModel;
 import model.DatabaseModel;
 
 public class CosineSimilarityPanelView extends JPanel{
-
-
-
 
 	/**
 	 * 
@@ -80,6 +73,7 @@ public class CosineSimilarityPanelView extends JPanel{
 
 
 		this.setBackground(Color.white);
+		this.setLayout(new GridLayout(0,1));
 		add(model.getLabelOne());
 		add(model.getLabelTwo());
 		add(model.getLabelThree());
@@ -145,48 +139,7 @@ public class CosineSimilarityPanelView extends JPanel{
 
 
 
-		/*for(int i = sortHashTable.size()-1 ; i>=sortHashTable.size()-10;i--){
-			if(i == sortHashTable.size()-1){
-				model.getLabelOne().setText(sortHashTable.get(i).toString());
-
-			}
-			if(i == sortHashTable.size()-2){
-				model.getLabelTwo().setText(sortHashTable.get(i).toString());
-
-			}
-			if(i == sortHashTable.size()-3){
-				model.getLabelThree().setText(sortHashTable.get(i).toString());
-
-			}
-			if(i == sortHashTable.size()-4){
-				model.getLabelFour().setText(sortHashTable.get(i).toString());
-
-			}
-			if(i == sortHashTable.size()-5){
-				model.getLabelFive().setText(sortHashTable.get(i).toString());
-
-			}
-			if(i == sortHashTable.size()-6){
-				model.getLabelSix().setText(sortHashTable.get(i).toString());
-
-			}
-			if(i == sortHashTable.size()-7){
-				model.getLabelSeven().setText(sortHashTable.get(i).toString());
-
-			}
-			if(i == sortHashTable.size()-8){
-				model.getLabelEight().setText(sortHashTable.get(i).toString());
-
-			}
-			if(i == sortHashTable.size()-9){
-				model.getLabelNine().setText(sortHashTable.get(i).toString());
-
-			}
-			if(i == sortHashTable.size()-10){
-				model.getLabelTen().setText(sortHashTable.get(i).toString());
-
-			}
-		}*/
+		
 
 	}
 	public ArrayList<Map.Entry<String, Double>>  sortValue(Hashtable<String, Double> t){
@@ -199,7 +152,6 @@ public class CosineSimilarityPanelView extends JPanel{
 				return Double.compare(o2.getValue(), o1.getValue());
 			}});
 
-		//System.out.println(l);
 		return l;
 	}
 }

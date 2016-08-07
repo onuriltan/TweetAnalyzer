@@ -49,7 +49,7 @@ public class DatabaseModel {
 	private ArrayList<String> trendTopicList = new ArrayList<String>();
 	private ArrayList<String> cosineSimilarityArray = new ArrayList<String>();
 	private Hashtable<String, Double> topSimilarTrends= new Hashtable<String, Double>() ;
-
+	private int cosineSimilarityCalculatonVariable = 1;
 
 
 
@@ -316,7 +316,7 @@ public class DatabaseModel {
 		this.cosineSimilarityArray = cosineSimilarityArray;
 	}
 
-	
+
 
 	public Hashtable<String, Double> getTopSimilarTrends() {
 		return topSimilarTrends;
@@ -438,6 +438,16 @@ public class DatabaseModel {
 	}
 
 
+	public int getCosineSimilarityCalculatonVariable() {
+		return cosineSimilarityCalculatonVariable;
+	}
+
+
+	public void setCosineSimilarityCalculatonVariable(int cosineSimilarityCalculatonVariable) {
+		this.cosineSimilarityCalculatonVariable = cosineSimilarityCalculatonVariable;
+	}
+
+
 	public void clearDatabase(){
 		hashTagList.clear();
 		locationList.clear();
@@ -446,7 +456,6 @@ public class DatabaseModel {
 		languageList.clear();
 		verifiedURLList.clear();
 		allWords.clear();
-		topSimilarTrends.clear();
 		searchQuery = "";
 		tweetCount = 0;
 		trendsCount = 0;
@@ -463,8 +472,16 @@ public class DatabaseModel {
 		trendNumberNine = " ";
 		trendNumberTen = " ";
 		String [] temp = new String[20];
-		trendTopicArray = temp;
+		//trendTopicArray = temp;
+		topSimilarTrends.clear();
 		trendDatabaseList.clear();
+		cosineSimilarityCalculatonVariable = 1;
+		trendDatabaseList.clear();
+		trendTopicList.clear();
+		cosineSimilarityArray.clear();
+		topSimilarTrends.clear();
+
+
 		//trendTopicList.clear();
 
 	}
