@@ -53,7 +53,6 @@ public class Stream {
 
 
 				if(spamDetector.isNotSpam(tweet,currentTime) && tweet.isRetweet() == false){// if tweet is not spam according to our parameters and not a retweet
-					System.out.println("notspam");
 					
 					try {
 						mongoConnection.coll.insertOne(basicObj);

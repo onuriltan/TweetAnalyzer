@@ -27,6 +27,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import org.jfree.chart.ChartUtilities;
 import controller.ChartController;
+import controller.CosineSimilarityPanelController;
 import controller.MapController;
 import model.DatabaseModel;
 
@@ -57,8 +58,9 @@ public class SearchPanel extends JPanel  {
 		this.cal = cal;
 	}
 
-	public void populateSearchPanel(final Search search,final Stream stream,final DatabaseModel database, final EntityRecognition recognition,final SpamDetector spamDetector, final CurrentTime currentTime,
-			final MapController mapController,final ChartController locationController, final ChartController organizationController,final ChartController personController,final ChartController languageController,final ChartController hashtagController,final ChartController urlController, final ChartController allWordsController){
+	public void populateSearchPanel(final CosineSimilarityStream cosineStream,final Search search,final Stream stream,final DatabaseModel database, final EntityRecognition recognition,final SpamDetector spamDetector, final CurrentTime currentTime,
+			final MapController mapController,final ChartController locationController, final ChartController organizationController,final ChartController personController,final ChartController languageController,final ChartController hashtagController,final ChartController urlController, final ChartController allWordsController
+			,final CosineSimilarityPanelController  cosineController){
 		userText.setPreferredSize( new Dimension( 200, 24 ) );
 		System.out.println(userText.getText());
 		label.setBackground(Color.blue);
@@ -116,12 +118,12 @@ public class SearchPanel extends JPanel  {
 
 	
 
-		trendPanel.list.addListSelectionListener(new ListSelectionListener() {
+		trendPanel.getList().addListSelectionListener(new ListSelectionListener() {
 
 			public void valueChanged(ListSelectionEvent e) {
 
 				if (!e.getValueIsAdjusting()) {
-					String selectedName = (String) trendPanel.list.getSelectedValue();
+					String selectedName = (String) trendPanel.getList().getSelectedValue();
 					userText.setText(selectedName);
 				}
 			}
@@ -139,6 +141,7 @@ public class SearchPanel extends JPanel  {
 					database.setSearchQuery(userText.getText());
 					stream.startStream(database, recognition, spamDetector, currentTime, mapController,locationController, organizationController, personController, languageController, hashtagController, urlController,allWordsController);
 					//search.searchRecentlyRelatedTweets(spamDetector, currentTime, database, recognition, mapController, locationController, organizationController, personController, languageController, hashtagController, urlController, allWordsController);
+					cosineStream.startCosineStream(cosineController);
 					JOptionPane.showMessageDialog(null, "Search completed.");
 
 					resultButton.setEnabled(true);
@@ -151,6 +154,8 @@ public class SearchPanel extends JPanel  {
 			public void actionPerformed(ActionEvent e) {  
 				stream.getStream().cleanUp(); // shutdown internal stream consuming thread
 				stream.getStream().shutdown(); // Shuts down internal dispatcher thread shared by all TwitterStream instances.
+				cosineStream.getStream().cleanUp();
+				cosineStream.getStream().shutdown();
 				database.clearDatabase();
 				mapController.getMap().removeAllMapMarkers();
 				mapController.setText("");

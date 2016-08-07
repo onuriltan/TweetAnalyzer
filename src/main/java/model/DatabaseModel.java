@@ -2,8 +2,7 @@ package model;
 
 import java.util.ArrayList;
 import java.util.Hashtable;
-import java.util.LinkedHashSet;
-import java.util.Set;
+
 
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
@@ -11,6 +10,7 @@ import javax.swing.JList;
 
 public class DatabaseModel {
 	private int tweetCount;
+	private int trendsCount;
 	private String searchQuery;
 	private Hashtable<String, Integer> locationList = new Hashtable<String, Integer>()  ;
 	private Hashtable<String, Integer> organizationList = new Hashtable<String, Integer>() ;
@@ -24,6 +24,32 @@ public class DatabaseModel {
 	private DefaultListModel<String> spamModel = new DefaultListModel<String>();
 	private JList<String> notSpamList = new JList<String>(notSpamModel);
 	private JList<String> spamList = new JList<String>(spamModel);
+	private String trendNumberOne = " ";
+	private String trendNumberTwo = " ";
+	private String trendNumberThree = " ";
+	private String trendNumberFour = " ";
+	private String trendNumberFive = " ";
+	private String trendNumberSix = " ";
+	private String trendNumberSeven = " ";
+	private String trendNumberEight = " ";
+	private String trendNumberNine = " ";
+	private String trendNumberTen = " ";
+	private String trendNumber11 = " ";
+	private String trendNumber12 = " ";
+	private String trendNumber13 = " ";
+	private String trendNumber14 = " ";
+	private String trendNumber15 = " ";
+	private String trendNumber16 = " ";
+	private String trendNumber17 = " ";
+	private String trendNumber18 = " ";
+	private String trendNumber19 = " ";
+	private String trendNumber20 = " ";
+	private String[] trendTopicArray = new String[20];
+	private ArrayList<String> trendDatabaseList = new ArrayList<String>();
+	private ArrayList<String> trendTopicList = new ArrayList<String>();
+	private ArrayList<String> cosineSimilarityArray = new ArrayList<String>();
+	private Hashtable<String, Double> topSimilarTrends= new Hashtable<String, Double>() ;
+
 
 
 
@@ -147,6 +173,271 @@ public class DatabaseModel {
 	}
 
 
+
+
+
+	public String getTrendNumberOne() {
+		return trendNumberOne;
+	}
+
+
+	public void setTrendNumberOne(String trendNumberOne) {
+		this.trendNumberOne = trendNumberOne;
+	}
+
+
+	public String getTrendNumberTwo() {
+		return trendNumberTwo;
+	}
+
+
+	public void setTrendNumberTwo(String trendNumberTwo) {
+		this.trendNumberTwo = trendNumberTwo;
+	}
+
+
+	public String getTrendNumberThree() {
+		return trendNumberThree;
+	}
+
+
+	public void setTrendNumberThree(String trendNumberThree) {
+		this.trendNumberThree = trendNumberThree;
+	}
+
+
+	public String getTrendNumberFour() {
+		return trendNumberFour;
+	}
+
+
+	public void setTrendNumberFour(String trendNumberFour) {
+		this.trendNumberFour = trendNumberFour;
+	}
+
+
+	public String getTrendNumberFive() {
+		return trendNumberFive;
+	}
+
+
+	public void setTrendNumberFive(String trendNumberFive) {
+		this.trendNumberFive = trendNumberFive;
+	}
+
+
+	public String getTrendNumberSix() {
+		return trendNumberSix;
+	}
+
+
+	public void setTrendNumberSix(String trendNumberSix) {
+		this.trendNumberSix = trendNumberSix;
+	}
+
+
+	public String getTrendNumberSeven() {
+		return trendNumberSeven;
+	}
+
+
+	public void setTrendNumberSeven(String trendNumberSeven) {
+		this.trendNumberSeven = trendNumberSeven;
+	}
+
+
+	public String getTrendNumberEight() {
+		return trendNumberEight;
+	}
+
+
+	public void setTrendNumberEight(String trendNumberEight) {
+		this.trendNumberEight = trendNumberEight;
+	}
+
+
+	public String getTrendNumberNine() {
+		return trendNumberNine;
+	}
+
+
+	public void setTrendNumberNine(String trendNumberNine) {
+		this.trendNumberNine = trendNumberNine;
+	}
+
+
+	public String getTrendNumberTen() {
+		return trendNumberTen;
+	}
+
+
+	public void setTrendNumberTen(String trendNumberTen) {
+		this.trendNumberTen = trendNumberTen;
+	}
+
+
+
+
+	public String[] getTrendTopicArray() {
+		return trendTopicArray;
+	}
+
+
+	public void setTrendTopicArray(String[] trendTopicArray) {
+		this.trendTopicArray = trendTopicArray;
+	}
+
+
+	public ArrayList<String> getTrendDatabaseList() {
+		return trendDatabaseList;
+	}
+
+
+	public void setTrendDatabaseList(ArrayList<String> trendDatabaseList) {
+		this.trendDatabaseList = trendDatabaseList;
+	}
+
+	public ArrayList<String> getTrendTopicList() {
+		return trendTopicList;
+	}
+
+
+	public void setTrendTopicList(ArrayList<String> trendTopicList) {
+		this.trendTopicList = trendTopicList;
+	}
+
+
+	public ArrayList<String> getCosineSimilarityArray() {
+		return cosineSimilarityArray;
+	}
+
+
+	public void setCosineSimilarityArray(ArrayList<String> cosineSimilarityArray) {
+		this.cosineSimilarityArray = cosineSimilarityArray;
+	}
+
+	
+
+	public Hashtable<String, Double> getTopSimilarTrends() {
+		return topSimilarTrends;
+	}
+
+
+	public void setTopSimilarTrends(Hashtable<String, Double> topSimilarTrends) {
+		this.topSimilarTrends = topSimilarTrends;
+	}
+
+
+	public String getTrendNumber11() {
+		return trendNumber11;
+	}
+
+
+	public void setTrendNumber11(String trendNumber11) {
+		this.trendNumber11 = trendNumber11;
+	}
+
+
+	public String getTrendNumber12() {
+		return trendNumber12;
+	}
+
+
+	public void setTrendNumber12(String trendNumber12) {
+		this.trendNumber12 = trendNumber12;
+	}
+
+
+	public String getTrendNumber13() {
+		return trendNumber13;
+	}
+
+
+	public void setTrendNumber13(String trendNumber13) {
+		this.trendNumber13 = trendNumber13;
+	}
+
+
+	public String getTrendNumber14() {
+		return trendNumber14;
+	}
+
+
+	public void setTrendNumber14(String trendNumber14) {
+		this.trendNumber14 = trendNumber14;
+	}
+
+
+	public String getTrendNumber15() {
+		return trendNumber15;
+	}
+
+
+	public void setTrendNumber15(String trendNumber15) {
+		this.trendNumber15 = trendNumber15;
+	}
+
+
+	public String getTrendNumber16() {
+		return trendNumber16;
+	}
+
+
+	public void setTrendNumber16(String trendNumber16) {
+		this.trendNumber16 = trendNumber16;
+	}
+
+
+	public String getTrendNumber17() {
+		return trendNumber17;
+	}
+
+
+	public void setTrendNumber17(String trendNumber17) {
+		this.trendNumber17 = trendNumber17;
+	}
+
+
+	public String getTrendNumber18() {
+		return trendNumber18;
+	}
+
+
+	public void setTrendNumber18(String trendNumber18) {
+		this.trendNumber18 = trendNumber18;
+	}
+
+
+	public String getTrendNumber19() {
+		return trendNumber19;
+	}
+
+
+	public void setTrendNumber19(String trendNumber19) {
+		this.trendNumber19 = trendNumber19;
+	}
+
+
+	public String getTrendNumber20() {
+		return trendNumber20;
+	}
+
+
+	public void setTrendNumber20(String trendNumber20) {
+		this.trendNumber20 = trendNumber20;
+	}
+
+
+	public int getTrendsCount() {
+		return trendsCount;
+	}
+
+
+	public void setTrendsCount(int trendsCount) {
+		this.trendsCount = trendsCount;
+	}
+
+
 	public void clearDatabase(){
 		hashTagList.clear();
 		locationList.clear();
@@ -155,11 +446,26 @@ public class DatabaseModel {
 		languageList.clear();
 		verifiedURLList.clear();
 		allWords.clear();
+		topSimilarTrends.clear();
 		searchQuery = "";
 		tweetCount = 0;
+		trendsCount = 0;
 		notSpamModel.clear();
 		spamModel.clear();
-		
+		trendNumberOne = " ";
+		trendNumberTwo = " ";
+		trendNumberThree = " ";
+		trendNumberFour = " ";
+		trendNumberFive = " ";
+		trendNumberSix = " ";
+		trendNumberSeven = " ";
+		trendNumberEight = " ";
+		trendNumberNine = " ";
+		trendNumberTen = " ";
+		String [] temp = new String[20];
+		trendTopicArray = temp;
+		trendDatabaseList.clear();
+		//trendTopicList.clear();
 
 	}
 
