@@ -3,6 +3,7 @@ package ozu.tweetanalyzer;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -14,6 +15,9 @@ import java.io.Writer;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+
+import javax.swing.Box;
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -44,6 +48,8 @@ public class SearchPanel extends JPanel  {
 	private JButton resultButton = new JButton("GENERATE RESULTS");	
 	private JLabel label = new JLabel("<html>This is a tool to analyze real-time tweets. You need to enter a query that can be a specific event<BR>and after you enter the search button user can see the tweets visualization from world map<BR>and also user can see the names, organizations, locations and tweets<BR>languages as a graph. This tool uses Stanford named entity recognizer tool to identify tweets and recognizes<BR>which names, locations and organization names mentioned in a tweet, and if Twitter user shared his/her location,<BR> user also can see wheretweet tweeted in world map as a visualization.</html>");
 	private JLabel tweetCountlabel;
+	private JLabel whyTweetIsSpam;
+
 	private TrendPanel trendPanel;
 	private Calendar cal;
 	private JPanel spamPanel;
@@ -51,8 +57,8 @@ public class SearchPanel extends JPanel  {
 	private JSplitPane splitPanel;
 	private JScrollPane spamScrollPane;
 	private JScrollPane notSpamScrollPane;
-
-
+	private TitledBorder spamTitle;
+	private TitledBorder notSpamTitle;
 	public SearchPanel(TrendPanel trendPanel, Calendar cal){
 		this.trendPanel = trendPanel;
 		this.cal = cal;
@@ -61,62 +67,76 @@ public class SearchPanel extends JPanel  {
 	public void populateSearchPanel(final CosineSimilarityStream cosineStream,final Search search,final Stream stream,final DatabaseModel database, final EntityRecognition recognition,final SpamDetector spamDetector, final CurrentTime currentTime,
 			final MapController mapController,final ChartController locationController, final ChartController organizationController,final ChartController personController,final ChartController languageController,final ChartController hashtagController,final ChartController urlController, final ChartController allWordsController
 			,final CosineSimilarityPanelController  cosineController){
+		
+		
+		this.setLayout(new BorderLayout());
 		userText.setPreferredSize( new Dimension( 200, 24 ) );
-		System.out.println(userText.getText());
 		label.setBackground(Color.blue);
-		setBackground(Color.white);
-		tweetCountlabel = new JLabel("<html>Tweet count: "+database.getTweetCount()+"<html>");
+		this.setBackground(Color.white);
+		tweetCountlabel = new JLabel("Tweet count: "+database.getTweetCount());
+		tweetCountlabel.setPreferredSize( new Dimension( 100, 24 ) );
+		whyTweetIsSpam = new JLabel(" ");
+		whyTweetIsSpam.setPreferredSize( new Dimension( 900, 24 ) );
 
 		spamPanel = new JPanel();
 		notSpamPanel = new JPanel();
 		spamPanel.setLayout(new BorderLayout());
 		notSpamPanel.setLayout(new BorderLayout());
-
 		spamScrollPane = new JScrollPane(database.getSpamList());
-
-		TitledBorder border = new TitledBorder(new LineBorder(Color.WHITE, 1),"SPAMS");
-		border.setTitleJustification(TitledBorder.CENTER);
-		border.setTitlePosition(TitledBorder.TOP);
-		border.setTitleColor(Color.RED);
-		spamScrollPane.setBorder(border);
-		spamScrollPane.setPreferredSize((new Dimension(400,250)));
+		spamTitle = new TitledBorder(new LineBorder(Color.WHITE, 1),"SPAMS");
+		spamTitle.setTitleFont(new Font("Arial", Font.BOLD, 14));
+		spamTitle.setTitleJustification(TitledBorder.CENTER);
+		spamTitle.setTitlePosition(TitledBorder.TOP);
+		Color red = new Color(255, 0, 0);
+		spamTitle.setTitleColor(red);
+		spamScrollPane.setBorder(spamTitle);
+		spamScrollPane.setPreferredSize((new Dimension(400,500)));
 		spamScrollPane.setBackground(Color.white);
-		spamPanel.setPreferredSize((new Dimension(400,250)));
+		spamPanel.setPreferredSize((new Dimension(400,500)));
 		spamPanel.setBackground(Color.white);
 		spamPanel.add(spamScrollPane, BorderLayout.NORTH);
 
-
-
 		notSpamScrollPane = new JScrollPane(database.getNotSpamList());
-
-		TitledBorder border1 = new TitledBorder(new LineBorder(Color.WHITE, 1),"PASSED");
-		border1.setTitleJustification(TitledBorder.CENTER);
-		border1.setTitlePosition(TitledBorder.TOP);
-		border1.setTitleColor(Color.GREEN);
-		notSpamScrollPane.setBorder(border1);
-		notSpamScrollPane.setPreferredSize((new Dimension(400,250)));
-		notSpamPanel.setPreferredSize((new Dimension(400,250)));
+		notSpamTitle = new TitledBorder(new LineBorder(Color.WHITE, 1),"PASSED");
+		notSpamTitle.setTitleFont(new Font("Arial", Font.BOLD, 14));
+		notSpamTitle.setTitleJustification(TitledBorder.CENTER);
+		notSpamTitle.setTitlePosition(TitledBorder.TOP);
+		Color green = new Color(34,139,34);
+		notSpamTitle.setTitleColor(green);
+		notSpamScrollPane.setBorder(notSpamTitle);
+		notSpamScrollPane.setPreferredSize((new Dimension(400,500)));
+		notSpamPanel.setPreferredSize((new Dimension(400,500)));
 		notSpamPanel.setBackground(Color.white);
 		notSpamScrollPane.setBackground(Color.white);
-
 		notSpamPanel.add(notSpamScrollPane, BorderLayout.NORTH);
-
 		splitPanel = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, notSpamPanel, spamPanel);
 		splitPanel.setResizeWeight(0.5);
+	
+		
+		JPanel labelPanel = new JPanel();
+		labelPanel.setLayout(new BoxLayout(labelPanel, BoxLayout.X_AXIS));
+		labelPanel.add(whyTweetIsSpam);
+		labelPanel.add(Box.createGlue()); //creates space between the JLabels
+		labelPanel.add(tweetCountlabel);
 
-		add(enterQueryLabel);
-		add(userText);	     
-		add(searchButton);
-		add(refreshButton);
-		add(resultButton);
-		add(label);
-		add(trendPanel);
-		add(tweetCountlabel);
-		add(splitPanel);
+		searchButton.setPreferredSize(new Dimension(150,20));
+		refreshButton.setPreferredSize(new Dimension(150,20));
+		resultButton.setPreferredSize(new Dimension(150,20));
+		JPanel subPanel = new JPanel();
+		subPanel.add(enterQueryLabel);
+		subPanel.add(userText);
+		subPanel.add(searchButton);
+		subPanel.add(refreshButton);
+		subPanel.add(resultButton);
+		    
+		add(subPanel,BorderLayout.PAGE_START);
+		add(trendPanel,BorderLayout.LINE_END);
+		add(splitPanel,BorderLayout.CENTER);
+		add(labelPanel,BorderLayout.PAGE_END);
 
 		resultButton.setEnabled(false);
 
-	
+
 
 		trendPanel.getList().addListSelectionListener(new ListSelectionListener() {
 
@@ -131,7 +151,7 @@ public class SearchPanel extends JPanel  {
 
 		searchButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			
+
 				if(userText.getText().equals("")){
 					JOptionPane.showMessageDialog(null, "Please enter a search query...");
 
@@ -143,7 +163,6 @@ public class SearchPanel extends JPanel  {
 					//search.searchRecentlyRelatedTweets(spamDetector, currentTime, database, recognition, mapController, locationController, organizationController, personController, languageController, hashtagController, urlController, allWordsController);
 					cosineStream.startCosineStream(cosineController);
 					JOptionPane.showMessageDialog(null, "Search completed.");
-
 					resultButton.setEnabled(true);
 					searchButton.setEnabled(false);
 				}
@@ -177,6 +196,11 @@ public class SearchPanel extends JPanel  {
 				tweetCountlabel.setText("<html>Tweet count: "+database.getTweetCount()+"<html>");
 				searchButton.setEnabled(true);
 				resultButton.setEnabled(false);
+				getWhyTweetIsSpam().setText("");
+				spamTitle.setTitle("SPAMS");
+				notSpamTitle.setTitle("PASSED");
+
+				repaint();
 
 			}
 		});
@@ -418,6 +442,30 @@ public class SearchPanel extends JPanel  {
 
 	public void setNotSpamScrollPane(JScrollPane notSpamScrollPane) {
 		this.notSpamScrollPane = notSpamScrollPane;
+	}
+
+	public TitledBorder getSpamTitle() {
+		return spamTitle;
+	}
+
+	public void setSpamTitle(TitledBorder spamTitle) {
+		this.spamTitle = spamTitle;
+	}
+
+	public TitledBorder getNotSpamTitle() {
+		return notSpamTitle;
+	}
+
+	public void setNotSpamTitle(TitledBorder notSpamTitle) {
+		this.notSpamTitle = notSpamTitle;
+	}
+
+	public JLabel getWhyTweetIsSpam() {
+		return whyTweetIsSpam;
+	}
+
+	public void setWhyTweetIsSpam(JLabel whyTweetIsSpam) {
+		this.whyTweetIsSpam = whyTweetIsSpam;
 	}
 
 

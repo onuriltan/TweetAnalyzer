@@ -45,7 +45,7 @@ public class MapView extends JFrame {
 		mapModel.setTwitterStreamPanel(twitterStreamPanel); 
 
 		JScrollPane streamContainer = new JScrollPane(twitterStreamPanel);
-		streamContainer.setSize(new Dimension(900,900));
+		streamContainer.setSize(new Dimension(600,900));
 		mapModel.setStreamContainer(streamContainer);
 
 		JSplitPane panel = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, map, streamContainer);

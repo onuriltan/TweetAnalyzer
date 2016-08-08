@@ -50,7 +50,9 @@ public class DatabaseModel {
 	private ArrayList<String> cosineSimilarityArray = new ArrayList<String>();
 	private Hashtable<String, Double> topSimilarTrends= new Hashtable<String, Double>() ;
 	private int cosineSimilarityCalculatonVariable = 1;
-
+	private int spamCount = 0;
+	private int notSpamCount = 0;
+	private String eliminationReason = " ";
 
 
 	public DatabaseModel(){}
@@ -448,6 +450,36 @@ public class DatabaseModel {
 	}
 
 
+	public int getSpamCount() {
+		return spamCount;
+	}
+
+
+	public void setSpamCount(int spamCount) {
+		this.spamCount = spamCount;
+	}
+
+
+	public int getNotSpamCount() {
+		return notSpamCount;
+	}
+
+
+	public void setNotSpamCount(int notSpamCount) {
+		this.notSpamCount = notSpamCount;
+	}
+
+
+	public String getEliminationReason() {
+		return eliminationReason;
+	}
+
+
+	public void setEliminationReason(String eliminationReason) {
+		this.eliminationReason = eliminationReason;
+	}
+
+
 	public void clearDatabase(){
 		hashTagList.clear();
 		locationList.clear();
@@ -480,7 +512,9 @@ public class DatabaseModel {
 		trendTopicList.clear();
 		cosineSimilarityArray.clear();
 		topSimilarTrends.clear();
-
+		spamCount = 0;
+		notSpamCount = 0;
+		eliminationReason = " ";
 
 		//trendTopicList.clear();
 

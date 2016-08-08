@@ -102,7 +102,7 @@ public class CosineSimilarityStream {
 
 				}
 
-				if(spamDetector.isNotSpam(tweet,currentTime) && tweet.isRetweet() == false){
+				if(spamDetector.isNotSpam(database,tweet,currentTime) && tweet.isRetweet() == false){
 
 					getTweets(tweet);
 					database.setTrendsCount(database.getTrendsCount()+1);

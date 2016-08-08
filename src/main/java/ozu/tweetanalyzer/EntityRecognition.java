@@ -8,6 +8,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Hashtable;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.StringTokenizer;
@@ -46,32 +47,47 @@ public class EntityRecognition {
 			ChartController allWordsController) 
 	{
 		String text = tweet.getText();
+		String text1 = tweet.getText();
 		String tweetForEntity = text.replaceAll("[\\d[^\\w\\s]]+", " ").replaceAll("(\\s{2,})", " ");
+		tweetForEntity = tweetForEntity.toLowerCase(Locale.ENGLISH).toString();
+		//System.out.println(text);
+		//	System.out.println(tweetForEntity.toLowerCase(Locale.ENGLISH).toString());
+		text1 = text1.replaceAll("RT", " ");
+		text1 = text1.replaceAll("#", " ");
+		text1 = text1.replaceAll("'", "");
+		text1 = text1.replaceAll("RT", " ");
 
 
-		List<Triple<String, Integer, Integer>> out = classifier.classifyToCharacterOffsets(tweetForEntity);
+
+		List<Triple<String, Integer, Integer>> out = classifier.classifyToCharacterOffsets(text);
+		System.out.println(text);
+		System.out.println(out);
+		System.out.println();
+		System.out.println();
+
+
 		for (int i = 0; i < out.size(); i++) {
 			if (out.get(i).first.equals("LOCATION")) {// IF ENETITYRECOGNIZER RECOGNIZE A TOKEN AS LOCATION
-				String location = tweetForEntity.substring(out.get(i).second,	out.get(i).third);//TAKE LOCATION, MAKE IT UPPER CASED LETTERS TO MATCH SAME WORDS(e.g ONUR onur)
-				updateDatabase(database.getLocationList(), location.toLowerCase(), "location");//UPDATE THE LOCATION LIST
+				String location = text.substring(out.get(i).second,	out.get(i).third);//TAKE LOCATION, MAKE IT UPPER CASED LETTERS TO MATCH SAME WORDS(e.g ONUR onur)
+				updateDatabase(database.getLocationList(), location.toLowerCase(Locale.ENGLISH), "location");//UPDATE THE LOCATION LIST
 				locationChartController.setDataset(listToPieChartDataset(database.getLocationList()));// CHANGE THE CHART DATASET
 				locationChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
-				System.out.println("Location updated.");
+
 			}		
 			if (out.get(i).first.equals("ORGANIZATION")) {// IF ENETITYRECOGNIZER RECOGNIZE A TOKEN AS ORGANIZATION
-				String organization = tweetForEntity.substring(out.get(i).second,	out.get(i).third);
-				updateDatabase(database.getOrganizationList(), organization.toLowerCase(), "organization");//UPDATE DATA WHEN NEW TOKEN COMES
+				String organization = text.substring(out.get(i).second,	out.get(i).third);
+				updateDatabase(database.getOrganizationList(), organization.toLowerCase(Locale.ENGLISH), "organization");//UPDATE DATA WHEN NEW TOKEN COMES
 				organizationChartController.setDataset(listToPieChartDataset(database.getOrganizationList()));// CHANGE THE CHART DATASET
 				organizationChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
-				System.out.println("Organization updated.");
+
 
 			}
 			if (out.get(i).first.equals("PERSON")) {// IF ENETITYRECOGNIZER RECOGNIZE A TOKEN AS PERSON
-				String person = tweetForEntity.substring(out.get(i).second, out.get(i).third);
-				updateDatabase(database.getPersonList(), person.toLowerCase(),"person");
+				String person = text.substring(out.get(i).second, out.get(i).third);
+				updateDatabase(database.getPersonList(), person.toLowerCase(Locale.ENGLISH),"person");
 				personChartController.setDataset(listToPieChartDataset(database.getPersonList()));
 				personChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
-				System.out.println("Person updated.");
+
 
 			}
 		}
@@ -97,7 +113,7 @@ public class EntityRecognition {
 		verifiedUrlChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
 
 
-		StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+		StringTokenizer tokenizer = new StringTokenizer(tweetForEntity);
 		String lang = tweet.getLang();
 
 		StopWords stopWords = new StopWords(lang);
@@ -114,11 +130,6 @@ public class EntityRecognition {
 						}
 					}
 				}
-
-				if(database.getStopWords().contains(word.toLowerCase().toString()) == false){
-				}
-
-
 			}
 		}
 		allWordsController.setDataset(listToPieChartDataset(database.getAllWords()));// CHANGE THE CHART DATASET
@@ -131,6 +142,7 @@ public class EntityRecognition {
 
 
 	public void updateDatabase(Hashtable<String, Integer> table, String key, String tableName){
+
 
 		if(!table.containsKey(key)){
 			table.put(key,1);
@@ -166,7 +178,7 @@ public class EntityRecognition {
 
 		final DefaultPieDataset result = new DefaultPieDataset();
 
-		if(list.size()<5){//IF DATASET HAS LESS THAN 5 TOKEN, SHOW IT RANDOM
+		if(list.size()<6){//IF DATASET HAS LESS THAN 5 TOKEN, SHOW IT RANDOM
 			Set<String> keys = list.keySet();
 			for(String key: keys)
 			{
@@ -174,12 +186,12 @@ public class EntityRecognition {
 
 			}
 		}
-		if(list.size()>= 5){// TO SHOW NO MORE THAN 5 DIFFERENT TOKEN IN GRAPH, 
+		if(list.size()>= 6){// TO SHOW NO MORE THAN 5 DIFFERENT TOKEN IN GRAPH, 
 			//BECAUSE NO POINT SHOWING ALL THE TOKENS IN ONE GRAPH 
 
 			ArrayList<Map.Entry<String, Integer>> sortedList = sortHashTable(list);
 
-			for(int i = sortedList.size()-1 ; i>=sortedList.size()-5;i--){
+			for(int i = sortedList.size()-1 ; i>=sortedList.size()-6;i--){
 				String token = sortedList.get(i).toString();
 				String[] parts = token.split("=", 2);
 				String tokenName = parts[0];
@@ -217,7 +229,6 @@ public class EntityRecognition {
 		}
 	}
 	public String cleanData(String tweet) {
-
 
 		//remove # from hash tag
 		tweet = tweet.replaceAll("RT", " ");

@@ -99,9 +99,7 @@ public class CosineSimilarityPanelView extends JPanel{
 		for (int i = 0; i < sortedHashTable.size(); i++) {
 			sortedList.add(sortedHashTable.get(i).toString());
 		}
-		for (int i = 0; i < sortedList.size(); i++) {
-			System.out.println(sortedList.get(i).toString());
-		}
+		
 		
 
 		for (int i = 0; i < sortedList.size(); i++) {

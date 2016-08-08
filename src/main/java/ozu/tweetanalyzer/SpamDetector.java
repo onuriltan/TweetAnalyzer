@@ -1,17 +1,20 @@
 package ozu.tweetanalyzer;
 
 
+import model.DatabaseModel;
 import twitter4j.Status;
 import twitter4j.User;
 
 public class SpamDetector {
 
 
+
+
 	public SpamDetector(){}
 
 
 	@SuppressWarnings("deprecation")
-	public Boolean isNotSpam(Status tweet, CurrentTime time){
+	public Boolean isNotSpam(DatabaseModel database,Status tweet, CurrentTime time){
 
 		User user = tweet.getUser();
 		int userAccountCreationYear = user.getCreatedAt().getYear() + 1900;// IT'S BECAUSE .GETYEAR() METHOD RETURNS CREATION DATE MINUS 1900, BECAUSE COMPUTERS SYSTEM TIME BEGINS FROM 1 JANUARY 1900, GOOGLE IT AS SYSTEM TIME FOR MORE INFO
@@ -24,17 +27,23 @@ public class SpamDetector {
 		int friendsCount = user.getFriendsCount();
 		int followersCount = user.getFollowersCount();
 		Boolean isDefaultPP=user.isDefaultProfileImage();
-		
+
 		if(isDefaultPP){
+			database.setEliminationReason("Tweet eliminated, user not uses default picture.");
+
 			return true;
 			//isDefaultProfile returns true if user changed theme or background(picture)
 
 		}
-		
+
 		if(friendsCount < 10){
+			database.setEliminationReason("Tweet eliminated, user has less than 10 friends.");
+
 			return false;
 		}
 		if(followersCount < 10){
+			database.setEliminationReason("Tweet eliminated, user has less than 10 followers.");
+
 			return false;
 		}
 
@@ -51,20 +60,26 @@ public class SpamDetector {
 		{
 			isUserAccountOlderThanOneMonth = false;
 		}
-		
-		
+
+
 		if(isUserAccountOlderThanOneMonth && user.isDefaultProfile())
 		{
 
 			return true;
+
 		}
 		else
 		{
+			database.setEliminationReason("Tweet eliminated, user's account is less than 1 month.");
+
 			return false;
+
 		}
 
 
 	}
+
+
 
 
 

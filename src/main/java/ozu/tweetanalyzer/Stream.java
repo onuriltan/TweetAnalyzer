@@ -2,6 +2,8 @@ package ozu.tweetanalyzer;
 
 
 
+import javax.swing.JOptionPane;
+
 import org.bson.Document;
 import controller.ChartController;
 import controller.MapController;
@@ -51,25 +53,24 @@ public class Stream {
 				basicObj.put("isVerified", tweet.getUser().isVerified());
 
 
-				if(spamDetector.isNotSpam(tweet,currentTime) && tweet.isRetweet() == false){// if tweet is not spam according to our parameters and not a retweet
-
+				if(spamDetector.isNotSpam(database,tweet,currentTime) && tweet.isRetweet() == false){// if tweet is not spam according to our parameters and not a retweet
+					database.setTweetCount(database.getTweetCount()+1);
+					searchPanel.getTweetCountlabel().setText("<html>Tweet count: "+database.getTweetCount()+"<html>");
 					try {
 						mongoConnection.coll.insertOne(basicObj);
 
 					} catch (Exception e) {
 						System.out.println("MongoDB Connection Error : " + e.getMessage());                    
 					}
-					database.setTweetCount(database.getTweetCount()+1);
-					searchPanel.getTweetCountlabel().setText("<html>Tweet count: "+database.getTweetCount()+"<html>");
 					recognition.entityRecognition(tweet,locationController,organizationController,personController,languageController,hashtagController,urlController, allWordsController); // apply entity recognition on tweet text
 					mapController.updateMap(tweet);
-					
-					
-					String cleanedText = tweet.getText();
+
+
+					String fullText = tweet.getUser().getScreenName()+" : "+tweet.getText();
 					StringBuilder str = new StringBuilder();
 					int j  = 1 ;
-					for(int i = 0 ; i< cleanedText.length()  ;i++){
-						str.append(cleanedText.charAt(i));
+					for(int i = 0 ; i< fullText.length()  ;i++){
+						str.append(fullText.charAt(i));
 						if(i == 50*j){
 							database.getNotSpamModel().addElement(str.toString());
 							str.setLength(0);
@@ -80,9 +81,15 @@ public class Stream {
 					database.getNotSpamModel().addElement(" ");
 					j = 1;
 					str.setLength(0);
-
+					database.setNotSpamCount(database.getNotSpamCount()+1);
+					searchPanel.getNotSpamTitle().setTitle("PASSED - "+database.getNotSpamCount());;
+					searchPanel.repaint();
 				}
-				else if (tweet.isRetweet() == false){
+				if (!spamDetector.isNotSpam(database,tweet,currentTime) && tweet.isRetweet() == false){
+					
+					
+					database.setTweetCount(database.getTweetCount()+1);
+					searchPanel.getTweetCountlabel().setText("<html>Tweet count: "+database.getTweetCount()+"<html>");
 					String cleanedText = tweet.getText();
 					StringBuilder str = new StringBuilder();
 					int j  = 1 ;
@@ -90,6 +97,7 @@ public class Stream {
 						str.append(cleanedText.charAt(i));
 						if(i == 50*j){
 							database.getSpamModel().addElement(str.toString());
+							//todo
 							str.setLength(0);
 							j++;
 						}
@@ -99,6 +107,11 @@ public class Stream {
 					database.getSpamModel().addElement(" ");
 					j = 1;
 					str.setLength(0);
+					database.setSpamCount(database.getSpamCount()+1);
+					searchPanel.getWhyTweetIsSpam().setText(database.getEliminationReason());
+					searchPanel.getSpamTitle().setTitle("SPAMS - "+database.getSpamCount());;
+					searchPanel.repaint();
+
 				}
 			}
 
@@ -106,8 +119,8 @@ public class Stream {
 
 
 
-			
-			
+
+
 
 
 			public void onException(Exception arg0) {}

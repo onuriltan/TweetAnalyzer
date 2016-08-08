@@ -50,7 +50,7 @@ public class Search {
 				result = twitter.search(query);
 				List<Status> tweets = result.getTweets();
 				for (Status tweet : tweets) {
-					if(spamDetector.isNotSpam(tweet,currentTime) && tweet.isRetweet() == false){// if tweet is not spam according to our parameters and not a retweet
+					if(spamDetector.isNotSpam(database,tweet,currentTime) && tweet.isRetweet() == false){// if tweet is not spam according to our parameters and not a retweet
 						entityRecognition.entityRecognition(tweet,locationController,organizationController,personController,languageController,hashtagController,urlController, allWordsController); // apply entity recognition on tweet text
 						//this command takes tweets and analyzes them and updates charts according to analyzation
 						database.setTweetCount(database.getTweetCount()+1);
