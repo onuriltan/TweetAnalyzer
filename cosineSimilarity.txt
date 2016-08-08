@@ -1,108 +1,760 @@
-Cosine similarity for trends #TekMilletTekYürek and #GinásticaArtística is: 0.03601671725857053
+Cosine similarity for trends #InternationalCatDay and #ThisIsBLACKPINKArea is: 0.4404622395800866
 
-Cosine similarity for trends #TekMilletTekYürek and #CommunityShield is: 0.09933514935191325
 
-Cosine similarity for trends #TekMilletTekYürek and #Voleibol is: 0.3046014319358628
 
-Cosine similarity for trends #TekMilletTekYürek and Fiji is: 0.3285012281482738
+Cosine similarity for trends #InternationalCatDay and #Quetta is: 0.3703298652348724
 
-Cosine similarity for trends #TekMilletTekYürek and Jim Furyk is: 0.28409608530042846
 
-Cosine similarity for trends #TekMilletTekYürek and Mata is: 0.1862919045365656
 
-Cosine similarity for trends #TekMilletTekYürek and #TiroConArco is: 0.2004348722279509
+Cosine similarity for trends #InternationalCatDay and #JourneeDuChat is: 0.5647367811600075
 
-Cosine similarity for trends #TekMilletTekYürek and Devlet Bahçeli is: 0.5164084980127407
 
-Cosine similarity for trends #TekMilletTekYürek and Jade Barbosa is: 0.00294164676451619
 
-Cosine similarity for trends #TekMilletTekYürek and Mariana Duque is: 0.23257458048063667
+Cosine similarity for trends #InternationalCatDay and Roberto Mancini is: 0.500137925292905
 
-Cosine similarity for trends #TekMilletTekYürek and Lituânia is: 0.03811163808804035
 
-Cosine similarity for trends #TekMilletTekYürek and Kemal Kılıçdaroğlu is: 0.40067372426726416
 
-Cosine similarity for trends #TekMilletTekYürek and Binali Yıldırım is: 0.4716978054770154
+Cosine similarity for trends #InternationalCatDay and Ed Balls is: 0.36897152433456104
 
-Cosine similarity for trends #TekMilletTekYürek and Vamos Gladiadores is: 0.0013967543059870704
 
-Cosine similarity for trends #TekMilletTekYürek and San Cayetano is: 0.3005935382984951
 
-Cosine similarity for trends #TekMilletTekYürek and Andreina Pinto is: 0.002725529846428233
+Cosine similarity for trends #InternationalCatDay and #idamahayır is: 0.12449518324342032
 
-Cosine similarity for trends #TekMilletTekYürek and #Mesaza is: 0.053925821538324474
 
-Cosine similarity for trends #TekMilletTekYürek and #مقاطعه_باسكن_روبنز is: 0.09578323126885262
 
-Cosine similarity for trends #TekMilletTekYürek and #عتيبي_يسرق_نعال_عجوز is: 0.040037378798305885
+Cosine similarity for trends #InternationalCatDay and #9YearsOfJonasBrothers is: 0.2802630329167495
 
-Cosine similarity for trends #GinásticaArtística and #CommunityShield is: 0.005752461492657821
 
-Cosine similarity for trends #GinásticaArtística and #Voleibol is: 0.017174908758635306
 
-Cosine similarity for trends #GinásticaArtística and Fiji is: 0.04255208922880517
+Cosine similarity for trends #InternationalCatDay and #KısaVeÖz is: 0.21969907928642196
 
-Cosine similarity for trends #GinásticaArtística and Jim Furyk is: 0.02445842179076012
 
-Cosine similarity for trends #GinásticaArtística and Mata is: 0.06469854621596899
 
-Cosine similarity for trends #GinásticaArtística and #TiroConArco is: 0.040338816600142394
+Cosine similarity for trends #InternationalCatDay and #HappyBirthdayShawn is: 0.4183039542958024
 
-Cosine similarity for trends #GinásticaArtística and Devlet Bahçeli is: 0.020154367070543057
 
-Cosine similarity for trends #GinásticaArtística and Jade Barbosa is: 0.056511695703760606
 
-Cosine similarity for trends #GinásticaArtística and Mariana Duque is: 0.0722312162767567
+Cosine similarity for trends #InternationalCatDay and #LeMallForAll is: 0.5777366945296801
 
-Cosine similarity for trends #GinásticaArtística and Lituânia is: 0.167632027983351
 
-Cosine similarity for trends #GinásticaArtística and Kemal Kılıçdaroğlu is: 0.0093966974784169
 
-Cosine similarity for trends #GinásticaArtística and Binali Yıldırım is: 0.010322959495488608
+Cosine similarity for trends #InternationalCatDay and #Weltkatzentag is: 0.5764029340347377
 
-Cosine similarity for trends #GinásticaArtística and Vamos Gladiadores is: 0.007394897527409691
 
-Cosine similarity for trends #GinásticaArtística and San Cayetano is: 0.055757174117874786
 
-Cosine similarity for trends #GinásticaArtística and Andreina Pinto is: 0.004122826313596289
+Cosine similarity for trends #InternationalCatDay and #Delta is: 0.5209753395186374
 
-Cosine similarity for trends #GinásticaArtística and #Mesaza is: 0.06948969263915968
 
-Cosine similarity for trends #GinásticaArtística and #مقاطعه_باسكن_روبنز is: 0.0045277621293756416
 
-Cosine similarity for trends #GinásticaArtística and #عتيبي_يسرق_نعال_عجوز is: 0.0014597663207466761
+Cosine similarity for trends #InternationalCatDay and #NeDemiştiAtalarımız is: 0.25986411839797613
 
-Cosine similarity for trends #CommunityShield and #Voleibol is: 0.10932478893948047
 
-Cosine similarity for trends #CommunityShield and Fiji is: 0.1040612243467097
 
-Cosine similarity for trends #CommunityShield and Jim Furyk is: 0.1826551261614103
+Cosine similarity for trends #InternationalCatDay and #camilaisoverparty is: 0.36325506426389653
 
-Cosine similarity for trends #CommunityShield and Mata is: 0.2129049128657138
 
-Cosine similarity for trends #CommunityShield and #TiroConArco is: 0.0646708186371756
 
-Cosine similarity for trends #CommunityShield and Devlet Bahçeli is: 0.055921355184743234
+Cosine similarity for trends #InternationalCatDay and #AfternoonTeaWeek is: 0.5017546485894124
 
-Cosine similarity for trends #CommunityShield and Jade Barbosa is: 0.006318492476329067
 
-Cosine similarity for trends #CommunityShield and Mariana Duque is: 0.08446618840169169
 
-Cosine similarity for trends #CommunityShield and Lituânia is: 0.007309077126963099
+Cosine similarity for trends #InternationalCatDay and #BuenLunes is: 0.2288519472163405
 
-Cosine similarity for trends #CommunityShield and Kemal Kılıçdaroğlu is: 0.03335754714445041
 
-Cosine similarity for trends #CommunityShield and Binali Yıldırım is: 0.041043190109267026
 
-Cosine similarity for trends #CommunityShield and Vamos Gladiadores is: 0.015000750056254689
+Cosine similarity for trends #InternationalCatDay and #AEstasHorasYo is: 0.02340217185938401
 
-Cosine similarity for trends #CommunityShield and San Cayetano is: 0.09056742337536255
 
-Cosine similarity for trends #CommunityShield and Andreina Pinto is: 0.009757142403137058
 
-Cosine similarity for trends #CommunityShield and #Mesaza is: 0.006635085993336729
+Cosine similarity for trends #InternationalCatDay and #FreedomOfChoice is: 0.11028621661057558
 
-Cosine similarity for trends #CommunityShield and #مقاطعه_باسكن_روبنز is: 0.02792516309534112
 
-Cosine similarity for trends #CommunityShield and #عتيبي_يسرق_نعال_عجوز is: 0.009158984826116294
+
+Cosine similarity for trends #InternationalCatDay and #traiRicordi is: 0.3123043007171327
+
+
+
+Cosine similarity for trends #ThisIsBLACKPINKArea and #Quetta is: 0.2611232101640773
+
+
+
+Cosine similarity for trends #ThisIsBLACKPINKArea and #JourneeDuChat is: 0.4015689864974718
+
+
+
+Cosine similarity for trends #ThisIsBLACKPINKArea and Roberto Mancini is: 0.36446487358065893
+
+
+
+Cosine similarity for trends #ThisIsBLACKPINKArea and Ed Balls is: 0.251165288059653
+
+
+
+Cosine similarity for trends #ThisIsBLACKPINKArea and #idamahayır is: 0.10814149761850357
+
+
+
+Cosine similarity for trends #ThisIsBLACKPINKArea and #9YearsOfJonasBrothers is: 0.1976127933511674
+
+
+
+Cosine similarity for trends #ThisIsBLACKPINKArea and #KısaVeÖz is: 0.17868101541073447
+
+
+
+Cosine similarity for trends #ThisIsBLACKPINKArea and #HappyBirthdayShawn is: 0.2910308092271146
+
+
+
+Cosine similarity for trends #ThisIsBLACKPINKArea and #LeMallForAll is: 0.4086301295624017
+
+
+
+Cosine similarity for trends #ThisIsBLACKPINKArea and #Weltkatzentag is: 0.4025674114100935
+
+
+
+Cosine similarity for trends #ThisIsBLACKPINKArea and #Delta is: 0.36758213304000975
+
+
+
+Cosine similarity for trends #ThisIsBLACKPINKArea and #NeDemiştiAtalarımız is: 0.20670480245116474
+
+
+
+Cosine similarity for trends #ThisIsBLACKPINKArea and #camilaisoverparty is: 0.26034745910714646
+
+
+
+Cosine similarity for trends #ThisIsBLACKPINKArea and #AfternoonTeaWeek is: 0.35527578470252325
+
+
+
+Cosine similarity for trends #ThisIsBLACKPINKArea and #BuenLunes is: 0.17629308214749081
+
+
+
+Cosine similarity for trends #ThisIsBLACKPINKArea and #AEstasHorasYo is: 0.027575841480988416
+
+
+
+Cosine similarity for trends #ThisIsBLACKPINKArea and #FreedomOfChoice is: 0.07836263223440897
+
+
+
+Cosine similarity for trends #ThisIsBLACKPINKArea and #traiRicordi is: 0.21919089513872667
+
+
+
+Cosine similarity for trends #Quetta and #JourneeDuChat is: 0.2859774298495403
+
+
+
+Cosine similarity for trends #Quetta and Roberto Mancini is: 0.2722812681392406
+
+
+
+Cosine similarity for trends #Quetta and Ed Balls is: 0.2896919047784236
+
+
+
+Cosine similarity for trends #Quetta and #idamahayır is: 0.13189501255363523
+
+
+
+Cosine similarity for trends #Quetta and #9YearsOfJonasBrothers is: 0.19453546391511303
+
+
+
+Cosine similarity for trends #Quetta and #KısaVeÖz is: 0.17625345503890794
+
+
+
+Cosine similarity for trends #Quetta and #HappyBirthdayShawn is: 0.2522863277982606
+
+
+
+Cosine similarity for trends #Quetta and #LeMallForAll is: 0.3723133458339184
+
+
+
+Cosine similarity for trends #Quetta and #Weltkatzentag is: 0.3119083227370567
+
+
+
+Cosine similarity for trends #Quetta and #Delta is: 0.37205666392806663
+
+
+
+Cosine similarity for trends #Quetta and #NeDemiştiAtalarımız is: 0.1761697021070643
+
+
+
+Cosine similarity for trends #Quetta and #camilaisoverparty is: 0.2847765045821475
+
+
+
+Cosine similarity for trends #Quetta and #AfternoonTeaWeek is: 0.31587438886089236
+
+
+
+Cosine similarity for trends #Quetta and #BuenLunes is: 0.13753115952076997
+
+
+
+Cosine similarity for trends #Quetta and #AEstasHorasYo is: 0.030752920982982816
+
+
+
+Cosine similarity for trends #Quetta and #FreedomOfChoice is: 0.0774027489814832
+
+
+
+Cosine similarity for trends #Quetta and #traiRicordi is: 0.17586845164715897
+
+
+
+Cosine similarity for trends #JourneeDuChat and Roberto Mancini is: 0.47969725641084987
+
+
+
+Cosine similarity for trends #JourneeDuChat and Ed Balls is: 0.28769712000331293
+
+
+
+Cosine similarity for trends #JourneeDuChat and #idamahayır is: 0.15302263399189944
+
+
+
+Cosine similarity for trends #JourneeDuChat and #9YearsOfJonasBrothers is: 0.25202215524381844
+
+
+
+Cosine similarity for trends #JourneeDuChat and #KısaVeÖz is: 0.21858596996488508
+
+
+
+Cosine similarity for trends #JourneeDuChat and #HappyBirthdayShawn is: 0.3568112932348736
+
+
+
+Cosine similarity for trends #JourneeDuChat and #LeMallForAll is: 0.49633300584965595
+
+
+
+Cosine similarity for trends #JourneeDuChat and #Weltkatzentag is: 0.5160793327498652
+
+
+
+Cosine similarity for trends #JourneeDuChat and #Delta is: 0.4363306552357134
+
+
+
+Cosine similarity for trends #JourneeDuChat and #NeDemiştiAtalarımız is: 0.27138839128211195
+
+
+
+Cosine similarity for trends #JourneeDuChat and #camilaisoverparty is: 0.2849175456568677
+
+
+
+Cosine similarity for trends #JourneeDuChat and #AfternoonTeaWeek is: 0.4270699759815731
+
+
+
+Cosine similarity for trends #JourneeDuChat and #BuenLunes is: 0.274856080336977
+
+
+
+Cosine similarity for trends #JourneeDuChat and #AEstasHorasYo is: 0.0642868011385388
+
+
+
+Cosine similarity for trends #JourneeDuChat and #FreedomOfChoice is: 0.09392098142391869
+
+
+
+Cosine similarity for trends #JourneeDuChat and #traiRicordi is: 0.3156981740082426
+
+
+
+Cosine similarity for trends Roberto Mancini and Ed Balls is: 0.28266862578894325
+
+
+
+Cosine similarity for trends Roberto Mancini and #idamahayır is: 0.11868228179834224
+
+
+
+Cosine similarity for trends Roberto Mancini and #9YearsOfJonasBrothers is: 0.20509324931276496
+
+
+
+Cosine similarity for trends Roberto Mancini and #KısaVeÖz is: 0.19596261070801188
+
+
+
+Cosine similarity for trends Roberto Mancini and #HappyBirthdayShawn is: 0.31452251462749803
+
+
+
+Cosine similarity for trends Roberto Mancini and #LeMallForAll is: 0.45519255446078455
+
+
+
+Cosine similarity for trends Roberto Mancini and #Weltkatzentag is: 0.4631574831297632
+
+
+
+Cosine similarity for trends Roberto Mancini and #Delta is: 0.4089078830943844
+
+
+
+Cosine similarity for trends Roberto Mancini and #NeDemiştiAtalarımız is: 0.23567157116723408
+
+
+
+Cosine similarity for trends Roberto Mancini and #camilaisoverparty is: 0.25946980021504445
+
+
+
+Cosine similarity for trends Roberto Mancini and #AfternoonTeaWeek is: 0.3967075635795599
+
+
+
+Cosine similarity for trends Roberto Mancini and #BuenLunes is: 0.2059179659625094
+
+
+
+Cosine similarity for trends Roberto Mancini and #AEstasHorasYo is: 0.024638743695985742
+
+
+
+Cosine similarity for trends Roberto Mancini and #FreedomOfChoice is: 0.08762873534303386
+
+
+
+Cosine similarity for trends Roberto Mancini and #traiRicordi is: 0.2530838152156261
+
+
+
+Cosine similarity for trends Ed Balls and #idamahayır is: 0.07389757971266346
+
+
+
+Cosine similarity for trends Ed Balls and #9YearsOfJonasBrothers is: 0.1704336889858847
+
+
+
+Cosine similarity for trends Ed Balls and #KısaVeÖz is: 0.12332874417219658
+
+
+
+Cosine similarity for trends Ed Balls and #HappyBirthdayShawn is: 0.23260414363284454
+
+
+
+Cosine similarity for trends Ed Balls and #LeMallForAll is: 0.3836842210757322
+
+
+
+Cosine similarity for trends Ed Balls and #Weltkatzentag is: 0.29395595945680564
+
+
+
+Cosine similarity for trends Ed Balls and #Delta is: 0.3794159556713856
+
+
+
+Cosine similarity for trends Ed Balls and #NeDemiştiAtalarımız is: 0.15148641132230664
+
+
+
+Cosine similarity for trends Ed Balls and #camilaisoverparty is: 0.2749444663142939
+
+
+
+Cosine similarity for trends Ed Balls and #AfternoonTeaWeek is: 0.33074300504768694
+
+
+
+Cosine similarity for trends Ed Balls and #BuenLunes is: 0.12110845576894975
+
+
+
+Cosine similarity for trends Ed Balls and #AEstasHorasYo is: 0.011239908683499113
+
+
+
+Cosine similarity for trends Ed Balls and #FreedomOfChoice is: 0.07962691780804977
+
+
+
+Cosine similarity for trends Ed Balls and #traiRicordi is: 0.15801302260976693
+
+
+
+Cosine similarity for trends #idamahayır and #9YearsOfJonasBrothers is: 0.08609587064412083
+
+
+
+Cosine similarity for trends #idamahayır and #KısaVeÖz is: 0.2716830543267765
+
+
+
+Cosine similarity for trends #idamahayır and #HappyBirthdayShawn is: 0.10070581968095911
+
+
+
+Cosine similarity for trends #idamahayır and #LeMallForAll is: 0.10868927108695746
+
+
+
+Cosine similarity for trends #idamahayır and #Weltkatzentag is: 0.11860001608291702
+
+
+
+Cosine similarity for trends #idamahayır and #Delta is: 0.10843207117605601
+
+
+
+Cosine similarity for trends #idamahayır and #NeDemiştiAtalarımız is: 0.26623963018974395
+
+
+
+Cosine similarity for trends #idamahayır and #camilaisoverparty is: 0.0857837070387989
+
+
+
+Cosine similarity for trends #idamahayır and #AfternoonTeaWeek is: 0.09699595380679309
+
+
+
+Cosine similarity for trends #idamahayır and #BuenLunes is: 0.08515639210006637
+
+
+
+Cosine similarity for trends #idamahayır and #AEstasHorasYo is: 0.06935201668196254
+
+
+
+Cosine similarity for trends #idamahayır and #FreedomOfChoice is: 0.021879464846131912
+
+
+
+Cosine similarity for trends #idamahayır and #traiRicordi is: 0.09239454141961291
+
+
+
+Cosine similarity for trends #9YearsOfJonasBrothers and #KısaVeÖz is: 0.1020073861478277
+
+
+
+Cosine similarity for trends #9YearsOfJonasBrothers and #HappyBirthdayShawn is: 0.21829049764126765
+
+
+
+Cosine similarity for trends #9YearsOfJonasBrothers and #LeMallForAll is: 0.2585692848551165
+
+
+
+Cosine similarity for trends #9YearsOfJonasBrothers and #Weltkatzentag is: 0.2365155251622031
+
+
+
+Cosine similarity for trends #9YearsOfJonasBrothers and #Delta is: 0.2478689200744163
+
+
+
+Cosine similarity for trends #9YearsOfJonasBrothers and #NeDemiştiAtalarımız is: 0.13586531921802356
+
+
+
+Cosine similarity for trends #9YearsOfJonasBrothers and #camilaisoverparty is: 0.19333647425391584
+
+
+
+Cosine similarity for trends #9YearsOfJonasBrothers and #AfternoonTeaWeek is: 0.20929097001500305
+
+
+
+Cosine similarity for trends #9YearsOfJonasBrothers and #BuenLunes is: 0.14077229689920948
+
+
+
+Cosine similarity for trends #9YearsOfJonasBrothers and #AEstasHorasYo is: 0.10619660989213987
+
+
+
+Cosine similarity for trends #9YearsOfJonasBrothers and #FreedomOfChoice is: 0.04787804667886961
+
+
+
+Cosine similarity for trends #9YearsOfJonasBrothers and #traiRicordi is: 0.19805986061679548
+
+
+
+Cosine similarity for trends #KısaVeÖz and #HappyBirthdayShawn is: 0.14837205114539007
+
+
+
+Cosine similarity for trends #KısaVeÖz and #LeMallForAll is: 0.19674029178869903
+
+
+
+Cosine similarity for trends #KısaVeÖz and #Weltkatzentag is: 0.2067356113208202
+
+
+
+Cosine similarity for trends #KısaVeÖz and #Delta is: 0.17559213734858906
+
+
+
+Cosine similarity for trends #KısaVeÖz and #NeDemiştiAtalarımız is: 0.4669465565852841
+
+
+
+Cosine similarity for trends #KısaVeÖz and #camilaisoverparty is: 0.12367743619045211
+
+
+
+Cosine similarity for trends #KısaVeÖz and #AfternoonTeaWeek is: 0.17478990743626838
+
+
+
+Cosine similarity for trends #KısaVeÖz and #BuenLunes is: 0.10561164073236508
+
+
+
+Cosine similarity for trends #KısaVeÖz and #AEstasHorasYo is: 0.033458387552623876
+
+
+
+Cosine similarity for trends #KısaVeÖz and #FreedomOfChoice is: 0.03758890080527822
+
+
+
+Cosine similarity for trends #KısaVeÖz and #traiRicordi is: 0.1207905108108826
+
+
+
+Cosine similarity for trends #HappyBirthdayShawn and #LeMallForAll is: 0.3803434763254497
+
+
+
+Cosine similarity for trends #HappyBirthdayShawn and #Weltkatzentag is: 0.36073835371325436
+
+
+
+Cosine similarity for trends #HappyBirthdayShawn and #Delta is: 0.3572536125737465
+
+
+
+Cosine similarity for trends #HappyBirthdayShawn and #NeDemiştiAtalarımız is: 0.17742949270033848
+
+
+
+Cosine similarity for trends #HappyBirthdayShawn and #camilaisoverparty is: 0.2800055519092019
+
+
+
+Cosine similarity for trends #HappyBirthdayShawn and #AfternoonTeaWeek is: 0.34763084159096586
+
+
+
+Cosine similarity for trends #HappyBirthdayShawn and #BuenLunes is: 0.16936257562537643
+
+
+
+Cosine similarity for trends #HappyBirthdayShawn and #AEstasHorasYo is: 0.053502442602637444
+
+
+
+Cosine similarity for trends #HappyBirthdayShawn and #FreedomOfChoice is: 0.07233737357908805
+
+
+
+Cosine similarity for trends #HappyBirthdayShawn and #traiRicordi is: 0.22266708418919745
+
+
+
+Cosine similarity for trends #LeMallForAll and #Weltkatzentag is: 0.5011933301763762
+
+
+
+Cosine similarity for trends #LeMallForAll and #Delta is: 0.523848926642757
+
+
+
+Cosine similarity for trends #LeMallForAll and #NeDemiştiAtalarımız is: 0.24124030234352947
+
+
+
+Cosine similarity for trends #LeMallForAll and #camilaisoverparty is: 0.3724585744232073
+
+
+
+Cosine similarity for trends #LeMallForAll and #AfternoonTeaWeek is: 0.4908022185709651
+
+
+
+Cosine similarity for trends #LeMallForAll and #BuenLunes is: 0.2022622392779407
+
+
+
+Cosine similarity for trends #LeMallForAll and #AEstasHorasYo is: 0.012017847633251443
+
+
+
+Cosine similarity for trends #LeMallForAll and #FreedomOfChoice is: 0.11206432021421847
+
+
+
+Cosine similarity for trends #LeMallForAll and #traiRicordi is: 0.2668559287050765
+
+
+
+Cosine similarity for trends #Weltkatzentag and #Delta is: 0.44562189607104186
+
+
+
+Cosine similarity for trends #Weltkatzentag and #NeDemiştiAtalarımız is: 0.24076619494639984
+
+
+
+Cosine similarity for trends #Weltkatzentag and #camilaisoverparty is: 0.29562706018856316
+
+
+
+Cosine similarity for trends #Weltkatzentag and #AfternoonTeaWeek is: 0.4315683137202364
+
+
+
+Cosine similarity for trends #Weltkatzentag and #BuenLunes is: 0.21475834541189157
+
+
+
+Cosine similarity for trends #Weltkatzentag and #AEstasHorasYo is: 0.020880541241083947
+
+
+
+Cosine similarity for trends #Weltkatzentag and #FreedomOfChoice is: 0.09529993950922327
+
+
+
+Cosine similarity for trends #Weltkatzentag and #traiRicordi is: 0.2816298074724679
+
+
+
+Cosine similarity for trends #Delta and #NeDemiştiAtalarımız is: 0.20464850822242908
+
+
+
+Cosine similarity for trends #Delta and #camilaisoverparty is: 0.3859542203030096
+
+
+
+Cosine similarity for trends #Delta and #AfternoonTeaWeek is: 0.45005942469058796
+
+
+
+Cosine similarity for trends #Delta and #BuenLunes is: 0.19916469998252714
+
+
+
+Cosine similarity for trends #Delta and #AEstasHorasYo is: 0.0563686382030213
+
+
+
+Cosine similarity for trends #Delta and #FreedomOfChoice is: 0.10518084083351575
+
+
+
+Cosine similarity for trends #Delta and #traiRicordi is: 0.23808892781801033
+
+
+
+Cosine similarity for trends #NeDemiştiAtalarımız and #camilaisoverparty is: 0.15673271435095254
+
+
+
+Cosine similarity for trends #NeDemiştiAtalarımız and #AfternoonTeaWeek is: 0.20031453219434062
+
+
+
+Cosine similarity for trends #NeDemiştiAtalarımız and #BuenLunes is: 0.14294141126708582
+
+
+
+Cosine similarity for trends #NeDemiştiAtalarımız and #AEstasHorasYo is: 0.059993605392540734
+
+
+
+Cosine similarity for trends #NeDemiştiAtalarımız and #FreedomOfChoice is: 0.043618587530575514
+
+
+
+Cosine similarity for trends #NeDemiştiAtalarımız and #traiRicordi is: 0.14361589692080992
+
+
+
+Cosine similarity for trends #camilaisoverparty and #AfternoonTeaWeek is: 0.31479042087174103
+
+
+
+Cosine similarity for trends #camilaisoverparty and #BuenLunes is: 0.150731986343039
+
+
+
+Cosine similarity for trends #camilaisoverparty and #AEstasHorasYo is: 0.0692958928675237
+
+
+
+Cosine similarity for trends #camilaisoverparty and #FreedomOfChoice is: 0.07286877219666474
+
+
+
+Cosine similarity for trends #camilaisoverparty and #traiRicordi is: 0.16130842558051736
+
+
+
+Cosine similarity for trends #AfternoonTeaWeek and #BuenLunes is: 0.1802429036716291
+
+
+
+Cosine similarity for trends #AfternoonTeaWeek and #AEstasHorasYo is: 0.019157404504602602
+
+
+
+Cosine similarity for trends #AfternoonTeaWeek and #FreedomOfChoice is: 0.0936723252161572
+
+
+
+Cosine similarity for trends #AfternoonTeaWeek and #traiRicordi is: 0.2269098835178742
+
+
+
+Cosine similarity for trends #BuenLunes and #AEstasHorasYo is: 0.1697485878445165
+
+
+
+Cosine similarity for trends #BuenLunes and #FreedomOfChoice is: 0.04391671698209918
+
+
+
+Cosine similarity for trends #BuenLunes and #traiRicordi is: 0.13260387488584813
+
+
+
+Cosine similarity for trends #AEstasHorasYo and #FreedomOfChoice is: 0.0032914728809807204
+
+
+
+Cosine similarity for trends #AEstasHorasYo and #traiRicordi is: 0.027168777654026095
+
+
+
+Cosine similarity for trends #FreedomOfChoice and #traiRicordi is: 0.05188498531780754
+
+
 

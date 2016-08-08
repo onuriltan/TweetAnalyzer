@@ -70,7 +70,7 @@ public class CosineSimilarityStream {
 				if(database.getTrendsCount() > 100*database.getCosineSimilarityCalculatonVariable()){
 
 					database.getTrendDatabaseList().add(0,database.getTrendNumberOne());
-					database.getTrendDatabaseList().add(1,database.getTrendNumberTwo());					
+					database.getTrendDatabaseList().add(1,database.getTrendNumberTwo());
 					database.getTrendDatabaseList().add(2,database.getTrendNumberThree());
 					database.getTrendDatabaseList().add(3,database.getTrendNumberFour());
 					database.getTrendDatabaseList().add(4,database.getTrendNumberFive());
@@ -80,7 +80,7 @@ public class CosineSimilarityStream {
 					database.getTrendDatabaseList().add(8,database.getTrendNumberNine());
 					database.getTrendDatabaseList().add(9,database.getTrendNumberTen());
 					database.getTrendDatabaseList().add(10,database.getTrendNumber11());
-					database.getTrendDatabaseList().add(11,database.getTrendNumber12());					
+					database.getTrendDatabaseList().add(11,database.getTrendNumber12());
 					database.getTrendDatabaseList().add(12,database.getTrendNumber13());
 					database.getTrendDatabaseList().add(13,database.getTrendNumber14());
 					database.getTrendDatabaseList().add(14,database.getTrendNumber15());
@@ -89,11 +89,13 @@ public class CosineSimilarityStream {
 					database.getTrendDatabaseList().add(17,database.getTrendNumber18());
 					database.getTrendDatabaseList().add(18,database.getTrendNumber19());
 					database.getTrendDatabaseList().add(19,database.getTrendNumber20());
+					
 
 					Hashtable<String, Double> topSimilarTrends= new Hashtable<String, Double>() ;
 					ArrayList<String> sortedKeys = new ArrayList<String>();
 					ArrayList<Double> sortedValues = new ArrayList<Double>();
 					ArrayList<String> array = new ArrayList<String>();
+					topSimilarTrends.clear();
 					calculateCosineSimilarity(array,topSimilarTrends,cosineController,sortedKeys,sortedValues);
 					System.out.println("Calculation done.");
 					database.setCosineSimilarityCalculatonVariable(database.getCosineSimilarityCalculatonVariable()+1);
@@ -131,16 +133,16 @@ public class CosineSimilarityStream {
 		trendTopicArray = database.getTrendTopicArray();
 		for(int i = 0 ; i<trendTopicArray.length; i++){
 			if(tweet.getText().contains(trendTopicArray[i])){
+				String cleanText = tweet.getText();
 				if(i == 0){
-					StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
 						database.setTrendNumberOne(database.getTrendNumberOne() +" "+ token + " ");
-
 					}
 				}
 				if(i == 1){
-					StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
 						database.setTrendNumberTwo(database.getTrendNumberTwo() +" "+ token + " ");
@@ -148,129 +150,147 @@ public class CosineSimilarityStream {
 					}
 				}
 				if(i == 2){
-					StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
+
 						database.setTrendNumberThree(database.getTrendNumberThree() +" "+ token + " ");
 
 					}
 				}
 				if(i == 3){
-					StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
+
 						database.setTrendNumberFour(database.getTrendNumberFour() +" "+ token + " ");
 					}
 				}
 				if(i == 4){
-					StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
+
 						database.setTrendNumberFive(database.getTrendNumberFive() +" "+ token + " ");
 					}
 				}
 				if(i == 5){
-					StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
+
 						database.setTrendNumberSix(database.getTrendNumberSix() + " "+token + " ");
 					}
 				}
 				if(i == 6){
-					StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
+
 						database.setTrendNumberSeven(database.getTrendNumberSeven() +" "+ token + " ");					}
 				}
 				if(i == 7){
-					StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
+
 						database.setTrendNumberEight(database.getTrendNumberEight() +" "+ token + " ");
 					}
 				}
 				if(i == 8){
-					StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
+
 						database.setTrendNumberNine(database.getTrendNumberNine() +" "+ token + " ");
 					}
 				}
 				if(i == 9){
-					StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
+
 						database.setTrendNumberTen(database.getTrendNumberTen() +" "+ token + " ");					}
 				}
 				if(i == 10){
-					StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
+
 						database.setTrendNumber11(database.getTrendNumber11() +" "+ token + " ");
 
 					}
 				}
 				if(i == 11){
-					StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
+
 						database.setTrendNumber12(database.getTrendNumber12() +" "+ token + " ");
 
 					}
 				}
 				if(i == 12){
-					StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
+
 						database.setTrendNumber13(database.getTrendNumber13() +" "+ token + " ");
 
 					}
 				}
 				if(i == 13){
-					StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
+
 						database.setTrendNumber14(database.getTrendNumber14() +" "+ token + " ");
 					}
 				}
 				if(i == 14){
-					StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
+
 						database.setTrendNumber15(database.getTrendNumber15() +" "+ token + " ");
 					}
 				}
 				if(i == 15){
-					StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
+
 						database.setTrendNumber16(database.getTrendNumber16() + " "+token + " ");
 					}
 				}
 				if(i == 16){
-					StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
+
 						database.setTrendNumber17(database.getTrendNumber17() +" "+ token + " ");					}
 				}
 				if(i == 17){
-					StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
+
 						database.setTrendNumber18(database.getTrendNumber18() +" "+ token + " ");
 					}
 				}
 				if(i == 18){
-					StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
+
 						database.setTrendNumber19(database.getTrendNumber19() +" "+ token + " ");
 					}
 				}
 				if(i == 19){
-					StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
+
 						database.setTrendNumber20(database.getTrendNumber20() +" "+ token + " ");					}
 				}
 			}
@@ -305,7 +325,7 @@ public class CosineSimilarityStream {
 					}
 				}
 			}
-			/*try {
+			try {
 				if(!array.isEmpty()){
 					cosineSimilarityToTxt(array,0);
 					cosineSimilarityToTxt(database.getTrendDatabaseList(),1);
@@ -313,7 +333,7 @@ public class CosineSimilarityStream {
 
 			} catch (IOException e1) {
 				e1.printStackTrace();
-			}*/
+			}
 		}
 	}
 
@@ -362,16 +382,9 @@ public class CosineSimilarityStream {
 
 
 
-	public TwitterStream getStream() {
-		return stream;
-	}
-
-	public void setStream(TwitterStream stream) {
-		this.stream = stream;
-	}
 
 
-	void cosineSimilarityToTxt(ArrayList<String> array,int k) throws IOException{
+	public void cosineSimilarityToTxt(ArrayList<String> array,int k) throws IOException{
 		OutputStream outputStream;
 		if(k == 1){
 			 outputStream = new FileOutputStream("words.txt");
@@ -386,12 +399,21 @@ public class CosineSimilarityStream {
 			out.write(array.get(i));
 			out.write(eol);
 			out.write(eol);
+			out.write(eol);
+			out.write(eol);
 		}
 		out.flush();
 	}
 
 
 
+	public TwitterStream getStream() {
+		return stream;
+	}
+
+	public void setStream(TwitterStream stream) {
+		this.stream = stream;
+	}
 
 }
 

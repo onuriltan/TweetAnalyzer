@@ -31,7 +31,6 @@ public class TrendPanel extends JPanel {
 
 	}
 
-
 	private void createTrendPanel(DatabaseModel database) {
 		setLayout(new BorderLayout());
 		model = new DefaultListModel<String>();
@@ -56,9 +55,13 @@ public class TrendPanel extends JPanel {
 			Trends trends = twitter.getPlaceTrends(1);//takes worldwide trends
 			int i  = 0;
 			for (Trend trend : trends.getTrends()) {
-				if(i==20)break;
-				database.getTrendTopicList().add(trend.getName());
-				i++;
+				if(!isProbablyArabic(trend.getName()) && !containsHanScript(trend.getName()) &&
+						!hasJapanese(trend.getName()) && !hasKorean(trend.getName())
+						&&!hasRussian(trend.getName())){
+					if(i==20)break;
+					database.getTrendTopicList().add(trend.getName());
+					i++;
+				}
 			}
 		} catch (TwitterException e) {
 			e.printStackTrace();
@@ -76,7 +79,70 @@ public class TrendPanel extends JPanel {
 		cb.setJSONStoreEnabled(true);
 		return cb;
 	}
+	public boolean isProbablyArabic(String s) {
+		for (int i = 0; i < s.length();) {
+			int c = s.codePointAt(i);
+			if (c >= 0x0600 && c <= 0x06E0)
+				return true;
+			i += Character.charCount(c);            
+		}
+		return false;
+	}
+	public boolean containsHanScript(String s) {
+		return s.codePoints().anyMatch(
+				codepoint ->
+				Character.UnicodeScript.of(codepoint) == Character.UnicodeScript.HAN);
+	}
 
+
+	public boolean hasKorean(CharSequence charSequence) {
+		boolean hasKorean = false;
+		for (char c : charSequence.toString().toCharArray()) {
+			if (Character.UnicodeBlock.of(c) == Character.UnicodeBlock.HANGUL_JAMO
+					|| Character.UnicodeBlock.of(c) == Character.UnicodeBlock.HANGUL_COMPATIBILITY_JAMO
+					|| Character.UnicodeBlock.of(c) == Character.UnicodeBlock.HANGUL_SYLLABLES) {
+				hasKorean = true;
+				break;
+			}
+		}
+
+		return hasKorean;
+	}
+
+	public boolean hasJapanese(CharSequence charSequence) {
+		boolean hasJapanese = false;
+		for (char c : charSequence.toString().toCharArray()) {
+			if (Character.UnicodeBlock.of(c) == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS
+					|| Character.UnicodeBlock.of(c) == Character.UnicodeBlock.HIRAGANA
+					|| Character.UnicodeBlock.of(c) == Character.UnicodeBlock.KATAKANA
+					|| Character.UnicodeBlock.of(c) == Character.UnicodeBlock.HALFWIDTH_AND_FULLWIDTH_FORMS
+					|| Character.UnicodeBlock.of(c) == Character.UnicodeBlock.HALFWIDTH_AND_FULLWIDTH_FORMS
+					|| Character.UnicodeBlock.of(c) == Character.UnicodeBlock.CJK_SYMBOLS_AND_PUNCTUATION) {
+				hasJapanese = true;
+				break;
+			}
+		}
+
+		return hasJapanese;
+	}
+
+
+
+
+	public boolean hasRussian(String charSequence){
+
+		boolean isRussian = false;
+
+		for(int i = 0; i < charSequence.length(); i++) {
+			if(Character.UnicodeBlock.of(charSequence.charAt(i)) == Character.UnicodeBlock.CYRILLIC) {
+				isRussian = true;
+				break;
+
+			}
+		}
+
+		return isRussian;
+	}
 
 	public JList<String> getList() {
 		return list;

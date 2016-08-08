@@ -1,7 +1,6 @@
 package ozu.tweetanalyzer;
 
 
-import java.util.StringTokenizer;
 
 import org.bson.Document;
 import controller.ChartController;
@@ -53,7 +52,7 @@ public class Stream {
 
 
 				if(spamDetector.isNotSpam(tweet,currentTime) && tweet.isRetweet() == false){// if tweet is not spam according to our parameters and not a retweet
-					
+
 					try {
 						mongoConnection.coll.insertOne(basicObj);
 
@@ -62,10 +61,11 @@ public class Stream {
 					}
 					database.setTweetCount(database.getTweetCount()+1);
 					searchPanel.getTweetCountlabel().setText("<html>Tweet count: "+database.getTweetCount()+"<html>");
-
 					recognition.entityRecognition(tweet,locationController,organizationController,personController,languageController,hashtagController,urlController, allWordsController); // apply entity recognition on tweet text
 					mapController.updateMap(tweet);
-					String cleanedText = getCleanedTweetText(tweet);
+					
+					
+					String cleanedText = tweet.getText();
 					StringBuilder str = new StringBuilder();
 					int j  = 1 ;
 					for(int i = 0 ; i< cleanedText.length()  ;i++){
@@ -83,7 +83,7 @@ public class Stream {
 
 				}
 				else if (tweet.isRetweet() == false){
-					String cleanedText = getCleanedTweetText(tweet);
+					String cleanedText = tweet.getText();
 					StringBuilder str = new StringBuilder();
 					int j  = 1 ;
 					for(int i = 0 ; i< cleanedText.length()  ;i++){
@@ -106,20 +106,10 @@ public class Stream {
 
 
 
-			private String getCleanedTweetText(Status tweet) {
-				StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
-				String tokenizedText = tweet.getUser().getScreenName()+" : ";
-				while(tokenizer.hasMoreTokens()){
-					String text = tokenizer.nextToken(); 
-					if(text.charAt(0) != '#' && !text.contains("http")){
-						tokenizedText += text+ " ";
-					}
-				}
-				return tokenizedText;
-			}
 			
 			
-			
+
+
 			public void onException(Exception arg0) {}
 			public void onDeletionNotice(StatusDeletionNotice arg0) {}
 			public void onScrubGeo(long arg0, long arg1) {}
