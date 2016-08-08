@@ -1,7 +1,12 @@
 package view;
 
 
+import java.awt.Dimension;
+
 import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JSplitPane;
+import javax.swing.JTextPane;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -44,12 +49,24 @@ public class ChartView extends JFrame{
 		chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));
 		setContentPane(chartPanel);
 		model.setChartPanel(chartPanel);
+		
+		JTextPane textPane = new JTextPane();
+		model.setTextPane(textPane); 
+		
+		JScrollPane streamContainer = new JScrollPane(textPane);
+		streamContainer.setSize(new Dimension(300,900));
+		model.setScrollPane(streamContainer);
+
+		JSplitPane panel = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, chartPanel, streamContainer);
+		panel.setResizeWeight(0.5);
+		model.setSplitPane(panel);
 
 	}
 
 	public void updateChart(){
 
 		model.getPlot().setDataset(model.getDataset());
+		model.getTextPane().setText(model.getText());
 
 
 	}

@@ -1,11 +1,15 @@
 package ozu.tweetanalyzer;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.border.LineBorder;
+import javax.swing.border.TitledBorder;
 
 import model.DatabaseModel;
 import twitter4j.Trend;
@@ -42,7 +46,14 @@ public class TrendPanel extends JPanel {
 			model.addElement(t);
 			database.getTrendTopicArray()[i] = t;
 			i++;
-		}    
+		}   
+		
+		
+		TitledBorder spamTitle = new TitledBorder(new LineBorder(Color.WHITE, 1),"TRENDS OF THE DAY");
+		spamTitle.setTitleFont(new Font("Arial", Font.BOLD, 14));
+		spamTitle.setTitleJustification(TitledBorder.CENTER);
+		spamTitle.setTitlePosition(TitledBorder.TOP);
+		pane.setBorder(spamTitle);
 		add(pane, BorderLayout.NORTH);
 	}
 

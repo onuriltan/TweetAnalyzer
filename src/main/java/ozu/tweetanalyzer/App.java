@@ -98,7 +98,7 @@ public class App
 				organizationController, personController, languageController, hashtagController, urlController, allWordsController,cosineController);
 
 
-		appFrame.populateApplication(cosineSimilarityPanelView,searchPanel,mapController.getPanel(),locationController.getChartPanel(),organizationController.getChartPanel(), personController.getChartPanel(), languageController.getChartPanel(), hashtagController.getChartPanel(), urlController.getChartPanel(),allWordsController.getChartPanel());
+		appFrame.populateApplication(cosineSimilarityPanelView,searchPanel,mapController.getPanel(),locationController.getSplitPane(),organizationController.getSplitPane(), personController.getSplitPane(), languageController.getSplitPane(), hashtagController.getSplitPane(), urlController.getSplitPane(),allWordsController.getSplitPane());
 		appFrame.pack();
 		RefineryUtilities.centerFrameOnScreen(appFrame);
 		appFrame.setVisible(true);

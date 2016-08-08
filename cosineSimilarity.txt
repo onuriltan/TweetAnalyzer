@@ -1,760 +1,684 @@
-Cosine similarity for trends #InternationalCatDay and #FelizLunes is: 0.39951043590129953
+Cosine similarity for trends #InternationalCatDay and #FelizLunes is: 0.4694072729798726
 
 
 
-Cosine similarity for trends #InternationalCatDay and #Delta is: 0.3130775529548858
+Cosine similarity for trends #InternationalCatDay and #mondaymotivation is: 0.533891625830017
 
 
 
-Cosine similarity for trends #InternationalCatDay and #mondaymotivation is: 0.5028296735644668
+Cosine similarity for trends #InternationalCatDay and Rafaela Silva is: 0.04433354240420598
 
 
 
-Cosine similarity for trends #InternationalCatDay and Bryan Clauson is: 0.3245938542623634
+Cosine similarity for trends #InternationalCatDay and Alejandra Benítez is: 0.2731216724600461
 
 
 
-Cosine similarity for trends #InternationalCatDay and The Maccabees is: 0.43521712140036845
+Cosine similarity for trends #InternationalCatDay and Bryan Clauson is: 0.3540869273228388
 
 
 
-Cosine similarity for trends #InternationalCatDay and Fikret Orman is: 0.023407182454200745
+Cosine similarity for trends #InternationalCatDay and Evan McMullin is: 0.2867824502359134
 
 
 
-Cosine similarity for trends #InternationalCatDay and #qanda is: 0.03515778818017535
+Cosine similarity for trends #InternationalCatDay and Abhinav Bindra is: 0.21044435725284405
 
 
 
-Cosine similarity for trends #InternationalCatDay and #prayforGiGi is: 0.1457993530688772
+Cosine similarity for trends #InternationalCatDay and Simón Díaz is: 0.2728404901557899
 
 
 
-Cosine similarity for trends #InternationalCatDay and #ThisIsBLACKPINKArea is: 0.17006381897458944
+Cosine similarity for trends #InternationalCatDay and #Delta is: 0.42395468603686015
 
 
 
-Cosine similarity for trends #InternationalCatDay and #JourneeDuChat is: 0.3658471593894586
+Cosine similarity for trends #InternationalCatDay and #YoSeríaMedallaDeOroEn is: 0.0043511157541241035
 
 
 
-Cosine similarity for trends #InternationalCatDay and #Quetta is: 0.42581413217646724
+Cosine similarity for trends #InternationalCatDay and #prayforGiGi is: 0.17010024945934032
 
 
 
-Cosine similarity for trends #InternationalCatDay and #FPJAPKabugan is: 0.0020613080470103544
+Cosine similarity for trends #InternationalCatDay and #SegundaDetremuraSdv is: 0.3047851783442703
 
 
 
-Cosine similarity for trends #InternationalCatDay and #YoSeríaMedallaDeOroEn is: 0.23107712008919298
+Cosine similarity for trends #InternationalCatDay and #JourneeDuChat is: 0.5576477270882612
 
 
 
-Cosine similarity for trends #InternationalCatDay and #SegundaDetremuraSdv is: 0.14608038996241432
+Cosine similarity for trends #InternationalCatDay and #ThisIsBLACKPINKArea is: 0.5266912093289092
 
 
 
-Cosine similarity for trends #InternationalCatDay and #idamahayır is: 0.19249255543742555
+Cosine similarity for trends #InternationalCatDay and #MentirasQueMeDijeronMisExs is: 0.02396407697524647
 
 
 
-Cosine similarity for trends #InternationalCatDay and #DolceAmoreOperation1010 is: 0.06321830798196193
+Cosine similarity for trends #InternationalCatDay and #AEstasHorasYo is: 0.0029349880373066377
 
 
 
-Cosine similarity for trends #InternationalCatDay and #9YearsOfJonasBrothers is: 0.17187100924051155
+Cosine similarity for trends #InternationalCatDay and #saineymarENTRAMARTA is: 0.014378446185147881
 
 
 
-Cosine similarity for trends #InternationalCatDay and #AvisalaLiraAtMira is: 0.16464398366645608
+Cosine similarity for trends #InternationalCatDay and #KısaVeÖz is: 0.1635207620785127
 
 
 
-Cosine similarity for trends #InternationalCatDay and #Hoeneß is: 0.002805084954371271
+Cosine similarity for trends #FelizLunes and #mondaymotivation is: 0.3817393182044483
 
 
 
-Cosine similarity for trends #FelizLunes and #Delta is: 0.28575892108784195
+Cosine similarity for trends #FelizLunes and Rafaela Silva is: 0.08074689918749241
 
 
 
-Cosine similarity for trends #FelizLunes and #mondaymotivation is: 0.45886402446822133
+Cosine similarity for trends #FelizLunes and Alejandra Benítez is: 0.27342549977675934
 
 
 
-Cosine similarity for trends #FelizLunes and Bryan Clauson is: 0.3196276824330939
+Cosine similarity for trends #FelizLunes and Bryan Clauson is: 0.2551634791344773
 
 
 
-Cosine similarity for trends #FelizLunes and The Maccabees is: 0.565391297229085
+Cosine similarity for trends #FelizLunes and Evan McMullin is: 0.2374914882717317
 
 
 
-Cosine similarity for trends #FelizLunes and Fikret Orman is: 0.038131055706295575
+Cosine similarity for trends #FelizLunes and Abhinav Bindra is: 0.17565506213798923
 
 
 
-Cosine similarity for trends #FelizLunes and #qanda is: 0.009111640951564104
+Cosine similarity for trends #FelizLunes and Simón Díaz is: 0.39287836289350253
 
 
 
-Cosine similarity for trends #FelizLunes and #prayforGiGi is: 0.14234717053362772
+Cosine similarity for trends #FelizLunes and #Delta is: 0.31741181390332623
 
 
 
-Cosine similarity for trends #FelizLunes and #ThisIsBLACKPINKArea is: 0.14299713029186523
+Cosine similarity for trends #FelizLunes and #YoSeríaMedallaDeOroEn is: 0.0902219936601278
 
 
 
-Cosine similarity for trends #FelizLunes and #JourneeDuChat is: 0.42829133719764306
+Cosine similarity for trends #FelizLunes and #prayforGiGi is: 0.20489328531408865
 
 
 
-Cosine similarity for trends #FelizLunes and #Quetta is: 0.4243193766905302
+Cosine similarity for trends #FelizLunes and #SegundaDetremuraSdv is: 0.29300456847777473
 
 
 
-Cosine similarity for trends #FelizLunes and #FPJAPKabugan is: 0.004273738431706882
+Cosine similarity for trends #FelizLunes and #JourneeDuChat is: 0.42600643361512924
 
 
 
-Cosine similarity for trends #FelizLunes and #YoSeríaMedallaDeOroEn is: 0.4009596555237029
+Cosine similarity for trends #FelizLunes and #ThisIsBLACKPINKArea is: 0.3900406046416122
 
 
 
-Cosine similarity for trends #FelizLunes and #SegundaDetremuraSdv is: 0.28080707612947575
+Cosine similarity for trends #FelizLunes and #MentirasQueMeDijeronMisExs is: 0.11180339887498948
 
 
 
-Cosine similarity for trends #FelizLunes and #idamahayır is: 0.2570012296641212
+Cosine similarity for trends #FelizLunes and #AEstasHorasYo is: 0.12171612389003691
 
 
 
-Cosine similarity for trends #FelizLunes and #DolceAmoreOperation1010 is: 0.055428776364360936
+Cosine similarity for trends #FelizLunes and #saineymarENTRAMARTA is: 0.05590169943749474
 
 
 
-Cosine similarity for trends #FelizLunes and #9YearsOfJonasBrothers is: 0.10381632946194311
+Cosine similarity for trends #FelizLunes and #KısaVeÖz is: 0.15214515486254612
 
 
 
-Cosine similarity for trends #FelizLunes and #AvisalaLiraAtMira is: 0.1833894844723039
+Cosine similarity for trends #mondaymotivation and Rafaela Silva is: 0.03556646104956539
 
 
 
-Cosine similarity for trends #FelizLunes and #Hoeneß is: 0.0058158213621134856
+Cosine similarity for trends #mondaymotivation and Alejandra Benítez is: 0.2267294772790305
 
 
 
-Cosine similarity for trends #Delta and #mondaymotivation is: 0.34215392744362244
+Cosine similarity for trends #mondaymotivation and Bryan Clauson is: 0.30299080403199297
 
 
 
-Cosine similarity for trends #Delta and Bryan Clauson is: 0.22632742975917344
+Cosine similarity for trends #mondaymotivation and Evan McMullin is: 0.2775301188128895
 
 
 
-Cosine similarity for trends #Delta and The Maccabees is: 0.35503580124836315
+Cosine similarity for trends #mondaymotivation and Abhinav Bindra is: 0.2571260621537982
 
 
 
-Cosine similarity for trends #Delta and Fikret Orman is: 0.05746628212274875
+Cosine similarity for trends #mondaymotivation and Simón Díaz is: 0.20680074709435084
 
 
 
-Cosine similarity for trends #Delta and #qanda is: 0.018881372801234024
+Cosine similarity for trends #mondaymotivation and #Delta is: 0.35058926180107103
 
 
 
-Cosine similarity for trends #Delta and #prayforGiGi is: 0.13920187724940272
+Cosine similarity for trends #mondaymotivation and #YoSeríaMedallaDeOroEn is: 0.0036901373943067756
 
 
 
-Cosine similarity for trends #Delta and #ThisIsBLACKPINKArea is: 0.1400427164547719
+Cosine similarity for trends #mondaymotivation and #prayforGiGi is: 0.18257009714803513
 
 
 
-Cosine similarity for trends #Delta and #JourneeDuChat is: 0.26957265930477975
+Cosine similarity for trends #mondaymotivation and #SegundaDetremuraSdv is: 0.2515993590957054
 
 
 
-Cosine similarity for trends #Delta and #Quetta is: 0.2835431294288466
+Cosine similarity for trends #mondaymotivation and #JourneeDuChat is: 0.4729354140091855
 
 
 
-Cosine similarity for trends #Delta and #FPJAPKabugan is: 0.008856148855400953
+Cosine similarity for trends #mondaymotivation and #ThisIsBLACKPINKArea is: 0.45723303504170504
 
 
 
-Cosine similarity for trends #Delta and #YoSeríaMedallaDeOroEn is: 0.17469758079301215
+Cosine similarity for trends #mondaymotivation and #MentirasQueMeDijeronMisExs is: 0.020323692028323077
 
 
 
-Cosine similarity for trends #Delta and #SegundaDetremuraSdv is: 0.10390991507084506
+Cosine similarity for trends #mondaymotivation and #AEstasHorasYo is: 0.012445668789715408
 
 
 
-Cosine similarity for trends #Delta and #idamahayır is: 0.127233827007815
+Cosine similarity for trends #mondaymotivation and #saineymarENTRAMARTA is: 0.015242769021242308
 
 
 
-Cosine similarity for trends #Delta and #DolceAmoreOperation1010 is: 0.04308784477009207
+Cosine similarity for trends #mondaymotivation and #KısaVeÖz is: 0.13868030937111453
 
 
 
-Cosine similarity for trends #Delta and #9YearsOfJonasBrothers is: 0.11628693150774139
+Cosine similarity for trends Rafaela Silva and Alejandra Benítez is: 0.0418765756358005
 
 
 
-Cosine similarity for trends #Delta and #AvisalaLiraAtMira is: 0.12040374729571866
+Cosine similarity for trends Rafaela Silva and Bryan Clauson is: 0.036810508691615514
 
 
 
-Cosine similarity for trends #Delta and #Hoeneß is: 0.036155076303109365
+Cosine similarity for trends Rafaela Silva and Evan McMullin is: 0.0413802944301184
 
 
 
-Cosine similarity for trends #mondaymotivation and Bryan Clauson is: 0.36637115665835385
+Cosine similarity for trends Rafaela Silva and Abhinav Bindra is: 0.031008683647302117
 
 
 
-Cosine similarity for trends #mondaymotivation and The Maccabees is: 0.48626070562605833
+Cosine similarity for trends Rafaela Silva and Simón Díaz is: 0.08403069556091937
 
 
 
-Cosine similarity for trends #mondaymotivation and Fikret Orman is: 0.029150523846452538
+Cosine similarity for trends Rafaela Silva and #Delta is: 0.03602814176392641
 
 
 
-Cosine similarity for trends #mondaymotivation and #qanda is: 0.028733470537756402
+Cosine similarity for trends Rafaela Silva and #YoSeríaMedallaDeOroEn is: 0.050435627722400206
 
 
 
-Cosine similarity for trends #mondaymotivation and #prayforGiGi is: 0.18661736091957276
+Cosine similarity for trends Rafaela Silva and #prayforGiGi is: 0.049088069367381595
 
 
 
-Cosine similarity for trends #mondaymotivation and #ThisIsBLACKPINKArea is: 0.19458372039228963
+Cosine similarity for trends Rafaela Silva and #SegundaDetremuraSdv is: 0.07239537379384489
 
 
 
-Cosine similarity for trends #mondaymotivation and #JourneeDuChat is: 0.41864781189547845
+Cosine similarity for trends Rafaela Silva and #JourneeDuChat is: 0.06804138174397717
 
 
 
-Cosine similarity for trends #mondaymotivation and #Quetta is: 0.49652284916985745
+Cosine similarity for trends Rafaela Silva and #ThisIsBLACKPINKArea is: 0.037770591990556754
 
 
 
-Cosine similarity for trends #mondaymotivation and #FPJAPKabugan is: 0.008984794869647655
+Cosine similarity for trends Rafaela Silva and #MentirasQueMeDijeronMisExs is: 0.05555555555555555
 
 
 
-Cosine similarity for trends #mondaymotivation and #YoSeríaMedallaDeOroEn is: 0.2593686868302321
+Cosine similarity for trends Rafaela Silva and #AEstasHorasYo is: 0.05103103630798288
 
 
 
-Cosine similarity for trends #mondaymotivation and #SegundaDetremuraSdv is: 0.17499608650992593
+Cosine similarity for trends Rafaela Silva and #saineymarENTRAMARTA is: 0.020833333333333332
 
 
 
-Cosine similarity for trends #mondaymotivation and #idamahayır is: 0.21759545319891813
+Cosine similarity for trends Rafaela Silva and #KısaVeÖz is: 0.029160592175990215
 
 
 
-Cosine similarity for trends #mondaymotivation and #DolceAmoreOperation1010 is: 0.07476390081566163
+Cosine similarity for trends Alejandra Benítez and Bryan Clauson is: 0.14428421761260582
 
 
 
-Cosine similarity for trends #mondaymotivation and #9YearsOfJonasBrothers is: 0.1976100285218864
+Cosine similarity for trends Alejandra Benítez and Evan McMullin is: 0.10813077784295576
 
 
 
-Cosine similarity for trends #mondaymotivation and #AvisalaLiraAtMira is: 0.194680951411757
+Cosine similarity for trends Alejandra Benítez and Abhinav Bindra is: 0.08726171906745601
 
 
 
-Cosine similarity for trends #mondaymotivation and #Hoeneß is: 0.006113378576170237
+Cosine similarity for trends Alejandra Benítez and Simón Díaz is: 0.175050164393881
 
 
 
-Cosine similarity for trends Bryan Clauson and The Maccabees is: 0.331461654022252
+Cosine similarity for trends Alejandra Benítez and #Delta is: 0.1868417676131314
 
 
 
-Cosine similarity for trends Bryan Clauson and Fikret Orman is: 0.018289963027486773
+Cosine similarity for trends Alejandra Benítez and #YoSeríaMedallaDeOroEn is: 0.03041382785840883
 
 
 
-Cosine similarity for trends Bryan Clauson and #qanda is: 0.0480754414848157
+Cosine similarity for trends Alejandra Benítez and #prayforGiGi is: 0.06906951238920019
 
 
 
-Cosine similarity for trends Bryan Clauson and #prayforGiGi is: 0.10970561792186269
+Cosine similarity for trends Alejandra Benítez and #SegundaDetremuraSdv is: 0.16152739605406055
 
 
 
-Cosine similarity for trends Bryan Clauson and #ThisIsBLACKPINKArea is: 0.11024524546678689
+Cosine similarity for trends Alejandra Benítez and #JourneeDuChat is: 0.28721347895177635
 
 
 
-Cosine similarity for trends Bryan Clauson and #JourneeDuChat is: 0.2886322121152663
+Cosine similarity for trends Alejandra Benítez and #ThisIsBLACKPINKArea is: 0.22776523953141753
 
 
 
-Cosine similarity for trends Bryan Clauson and #Quetta is: 0.3315350907598684
+Cosine similarity for trends Alejandra Benítez and #MentirasQueMeDijeronMisExs is: 0.0335012605086404
 
 
 
-Cosine similarity for trends Bryan Clauson and #FPJAPKabugan is: 0.007516460280028288
+Cosine similarity for trends Alejandra Benítez and #AEstasHorasYo is: 0.10257624248277727
 
 
 
-Cosine similarity for trends Bryan Clauson and #YoSeríaMedallaDeOroEn is: 0.1735852146410985
+Cosine similarity for trends Alejandra Benítez and #saineymarENTRAMARTA is: 0.050251890762960605
 
 
 
-Cosine similarity for trends Bryan Clauson and #SegundaDetremuraSdv is: 0.11641243682216791
+Cosine similarity for trends Alejandra Benítez and #KısaVeÖz is: 0.11136849183844391
 
 
 
-Cosine similarity for trends Bryan Clauson and #idamahayır is: 0.14038296209487264
+Cosine similarity for trends Bryan Clauson and Evan McMullin is: 0.19192694066046675
 
 
 
-Cosine similarity for trends Bryan Clauson and #DolceAmoreOperation1010 is: 0.045024723186134895
+Cosine similarity for trends Bryan Clauson and Abhinav Bindra is: 0.16436814032369812
 
 
 
-Cosine similarity for trends Bryan Clauson and #9YearsOfJonasBrothers is: 0.11350035251676517
+Cosine similarity for trends Bryan Clauson and Simón Díaz is: 0.17209510376148404
 
 
 
-Cosine similarity for trends Bryan Clauson and #AvisalaLiraAtMira is: 0.13731783261667505
+Cosine similarity for trends Bryan Clauson and #Delta is: 0.22439544696200572
 
 
 
-Cosine similarity for trends Bryan Clauson and #Hoeneß is: 0.010228606865536926
+Cosine similarity for trends Bryan Clauson and #YoSeríaMedallaDeOroEn is: 0.01336724001102598
 
 
 
-Cosine similarity for trends The Maccabees and Fikret Orman is: 0.06503324771430899
+Cosine similarity for trends Bryan Clauson and #prayforGiGi is: 0.1409426307200048
 
 
 
-Cosine similarity for trends The Maccabees and #qanda is: 0.05698028822981897
+Cosine similarity for trends Bryan Clauson and #SegundaDetremuraSdv is: 0.15829568585450224
 
 
 
-Cosine similarity for trends The Maccabees and #prayforGiGi is: 0.1300260078026009
+Cosine similarity for trends Bryan Clauson and #JourneeDuChat is: 0.3155843721336013
 
 
 
-Cosine similarity for trends The Maccabees and #ThisIsBLACKPINKArea is: 0.17762353461188415
+Cosine similarity for trends Bryan Clauson and #ThisIsBLACKPINKArea is: 0.2866658609442067
 
 
 
-Cosine similarity for trends The Maccabees and #JourneeDuChat is: 0.42553224817349505
+Cosine similarity for trends Bryan Clauson and #MentirasQueMeDijeronMisExs is: 0.07362101738323103
 
 
 
-Cosine similarity for trends The Maccabees and #Quetta is: 0.4369417931410368
+Cosine similarity for trends Bryan Clauson and #AEstasHorasYo is: 0.022541740866685808
 
 
 
-Cosine similarity for trends The Maccabees and #FPJAPKabugan is: 0.026726124191242435
+Cosine similarity for trends Bryan Clauson and #saineymarENTRAMARTA is: 0.027607881518711633
 
 
 
-Cosine similarity for trends The Maccabees and #YoSeríaMedallaDeOroEn is: 0.2957480874273428
+Cosine similarity for trends Bryan Clauson and #KısaVeÖz is: 0.09016696346674323
 
 
 
-Cosine similarity for trends The Maccabees and #SegundaDetremuraSdv is: 0.23832064010818138
+Cosine similarity for trends Evan McMullin and Abhinav Bindra is: 0.13344743975843895
 
 
 
-Cosine similarity for trends The Maccabees and #idamahayır is: 0.25780627435981834
+Cosine similarity for trends Evan McMullin and Simón Díaz is: 0.18966626855337199
 
 
 
-Cosine similarity for trends The Maccabees and #DolceAmoreOperation1010 is: 0.056503583995575306
+Cosine similarity for trends Evan McMullin and #Delta is: 0.1932148227693871
 
 
 
-Cosine similarity for trends The Maccabees and #9YearsOfJonasBrothers is: 0.1403724812687193
+Cosine similarity for trends Evan McMullin and #YoSeríaMedallaDeOroEn is: 0.020035594799239317
 
 
 
-Cosine similarity for trends The Maccabees and #AvisalaLiraAtMira is: 0.18167747380137386
+Cosine similarity for trends Evan McMullin and #prayforGiGi is: 0.2234406639771159
 
 
 
-Cosine similarity for trends The Maccabees and #Hoeneß is: 0.036369648372665396
+Cosine similarity for trends Evan McMullin and #SegundaDetremuraSdv is: 0.13660582986333075
 
 
 
-Cosine similarity for trends Fikret Orman and #qanda is: 0.03458572319330373
+Cosine similarity for trends Evan McMullin and #JourneeDuChat is: 0.23650808243982008
 
 
 
-Cosine similarity for trends Fikret Orman and #prayforGiGi is: 0.024283936419735197
+Cosine similarity for trends Evan McMullin and #ThisIsBLACKPINKArea is: 0.22506598330115185
 
 
 
-Cosine similarity for trends Fikret Orman and #ThisIsBLACKPINKArea is: 0.029741626587270104
+Cosine similarity for trends Evan McMullin and #MentirasQueMeDijeronMisExs is: 0.11034745181364906
 
 
 
-Cosine similarity for trends Fikret Orman and #JourneeDuChat is: 0.0607737125462764
+Cosine similarity for trends Evan McMullin and #AEstasHorasYo is: 0.016893434459987148
 
 
 
-Cosine similarity for trends Fikret Orman and #Quetta is: 0.019338492356023543
+Cosine similarity for trends Evan McMullin and #saineymarENTRAMARTA is: 0.0413802944301184
 
 
 
-Cosine similarity for trends Fikret Orman and #FPJAPKabugan is: 0.016222142113076255
+Cosine similarity for trends Evan McMullin and #KısaVeÖz is: 0.07722712895994126
 
 
 
-Cosine similarity for trends Fikret Orman and #YoSeríaMedallaDeOroEn is: 0.03902440881590392
+Cosine similarity for trends Abhinav Bindra and Simón Díaz is: 0.12507270025494252
 
 
 
-Cosine similarity for trends Fikret Orman and #SegundaDetremuraSdv is: 0.02284028559265607
+Cosine similarity for trends Abhinav Bindra and #Delta is: 0.1555121868497984
 
 
 
-Cosine similarity for trends Fikret Orman and #idamahayır is: 0.053270629273970485
+Cosine similarity for trends Abhinav Bindra and #YoSeríaMedallaDeOroEn is: 0.015013847276131278
 
 
 
-Cosine similarity for trends Fikret Orman and #DolceAmoreOperation1010 is: 0.005276365338074585
+Cosine similarity for trends Abhinav Bindra and #prayforGiGi is: 0.13394976442055626
 
 
 
-Cosine similarity for trends Fikret Orman and #9YearsOfJonasBrothers is: 0.021300716142115247
+Cosine similarity for trends Abhinav Bindra and #SegundaDetremuraSdv is: 0.140080839194495
 
 
 
-Cosine similarity for trends Fikret Orman and #AvisalaLiraAtMira is: 0.03446063879368434
+Cosine similarity for trends Abhinav Bindra and #JourneeDuChat is: 0.20254787341673333
 
 
 
-Cosine similarity for trends Fikret Orman and #Hoeneß is: 0.022075539284417398
+Cosine similarity for trends Abhinav Bindra and #ThisIsBLACKPINKArea is: 0.21976277473256461
 
 
 
-Cosine similarity for trends #qanda and #prayforGiGi is: 0.09574603534846936
+Cosine similarity for trends Abhinav Bindra and #MentirasQueMeDijeronMisExs is: 0.08268982305947231
 
 
 
-Cosine similarity for trends #qanda and #ThisIsBLACKPINKArea is: 0.019544077624852607
+Cosine similarity for trends Abhinav Bindra and #AEstasHorasYo is: 0.025318484177091666
 
 
 
-Cosine similarity for trends #qanda and #JourneeDuChat is: 0.01996807659577179
+Cosine similarity for trends Abhinav Bindra and #saineymarENTRAMARTA is: 0.031008683647302117
 
 
 
-Cosine similarity for trends #qanda and #Quetta is: 0.02178493564872644
+Cosine similarity for trends Abhinav Bindra and #KısaVeÖz is: 0.057870820976209526
 
 
 
-Cosine similarity for trends #qanda and #FPJAPKabugan is: 0.04264014327112208
+Cosine similarity for trends Simón Díaz and #Delta is: 0.17834549439083763
 
 
 
-Cosine similarity for trends #qanda and #YoSeríaMedallaDeOroEn is: 0.020515248496555453
+Cosine similarity for trends Simón Díaz and #YoSeríaMedallaDeOroEn is: 0.09431789882478926
 
 
 
-Cosine similarity for trends #qanda and #SegundaDetremuraSdv is: 0.020012010810811352
+Cosine similarity for trends Simón Díaz and #prayforGiGi is: 0.22949469299658595
 
 
 
-Cosine similarity for trends #qanda and #idamahayır is: 0.008751415382412567
+Cosine similarity for trends Simón Díaz and #SegundaDetremuraSdv is: 0.2508586807177578
 
 
 
-Cosine similarity for trends #qanda and #DolceAmoreOperation1010 is: 0.006934502619876822
+Cosine similarity for trends Simón Díaz and #JourneeDuChat is: 0.2619684159977919
 
 
 
-Cosine similarity for trends #qanda and #9YearsOfJonasBrothers is: 0.11197850219117086
+Cosine similarity for trends Simón Díaz and #ThisIsBLACKPINKArea is: 0.2228542308727572
 
 
 
-Cosine similarity for trends #qanda and #AvisalaLiraAtMira is: 0.03623212187723684
+Cosine similarity for trends Simón Díaz and #MentirasQueMeDijeronMisExs is: 0.1527830828380352
 
 
 
-Cosine similarity for trends #qanda and #Hoeneß is: 0.058025885318565944
+Cosine similarity for trends Simón Díaz and #AEstasHorasYo is: 0.09356014857063996
 
 
 
-Cosine similarity for trends #prayforGiGi and #ThisIsBLACKPINKArea is: 0.08233578967338415
+Cosine similarity for trends Simón Díaz and #saineymarENTRAMARTA is: 0.022917462425705283
 
 
 
-Cosine similarity for trends #prayforGiGi and #JourneeDuChat is: 0.09463727629519564
+Cosine similarity for trends Simón Díaz and #KısaVeÖz is: 0.15504253191706052
 
 
 
-Cosine similarity for trends #prayforGiGi and #Quetta is: 0.13638953191081707
+Cosine similarity for trends #Delta and #YoSeríaMedallaDeOroEn is: 0.01308313400785381
 
 
 
-Cosine similarity for trends #prayforGiGi and #FPJAPKabugan is: 0.014969623771302397
+Cosine similarity for trends #Delta and #prayforGiGi is: 0.09974632840562093
 
 
 
-Cosine similarity for trends #prayforGiGi and #YoSeríaMedallaDeOroEn is: 0.08642716314028859
+Cosine similarity for trends #Delta and #SegundaDetremuraSdv is: 0.2103309565134291
 
 
 
-Cosine similarity for trends #prayforGiGi and #SegundaDetremuraSdv is: 0.09835829565027593
+Cosine similarity for trends #Delta and #JourneeDuChat is: 0.3883024802900143
 
 
 
-Cosine similarity for trends #prayforGiGi and #idamahayır is: 0.04762140739246363
+Cosine similarity for trends #Delta and #ThisIsBLACKPINKArea is: 0.3562832926454929
 
 
 
-Cosine similarity for trends #prayforGiGi and #DolceAmoreOperation1010 is: 0.03205408525267397
+Cosine similarity for trends #Delta and #MentirasQueMeDijeronMisExs is: 0.014411256705570563
 
 
 
-Cosine similarity for trends #prayforGiGi and #9YearsOfJonasBrothers is: 0.17199069113290966
+Cosine similarity for trends #Delta and #AEstasHorasYo is: 0.017650112740455196
 
 
 
-Cosine similarity for trends #prayforGiGi and #AvisalaLiraAtMira is: 0.10175973931223374
+Cosine similarity for trends #Delta and #saineymarENTRAMARTA is: 0.010808442529177923
 
 
 
-Cosine similarity for trends #prayforGiGi and #Hoeneß is: 0.010185538855869014
+Cosine similarity for trends #Delta and #KısaVeÖz is: 0.11346501047435482
 
 
 
-Cosine similarity for trends #ThisIsBLACKPINKArea and #JourneeDuChat is: 0.1352242719158446
+Cosine similarity for trends #YoSeríaMedallaDeOroEn and #prayforGiGi is: 0.04159323154937354
 
 
 
-Cosine similarity for trends #ThisIsBLACKPINKArea and #Quetta is: 0.15533380170156666
+Cosine similarity for trends #YoSeríaMedallaDeOroEn and #SegundaDetremuraSdv is: 0.08675503344661116
 
 
 
-Cosine similarity for trends #ThisIsBLACKPINKArea and #FPJAPKabugan is: 0.0045834924851410564
+Cosine similarity for trends #YoSeríaMedallaDeOroEn and #JourneeDuChat is: 0.024708310555370042
 
 
 
-Cosine similarity for trends #ThisIsBLACKPINKArea and #YoSeríaMedallaDeOroEn is: 0.09261982170436855
+Cosine similarity for trends #YoSeríaMedallaDeOroEn and #ThisIsBLACKPINKArea is: 0.0049875932068112055
 
 
 
-Cosine similarity for trends #ThisIsBLACKPINKArea and #SegundaDetremuraSdv is: 0.062383048688183916
+Cosine similarity for trends #YoSeríaMedallaDeOroEn and #MentirasQueMeDijeronMisExs is: 0.04034850217792016
 
 
 
-Cosine similarity for trends #ThisIsBLACKPINKArea and #idamahayır is: 0.07243473765116837
+Cosine similarity for trends #YoSeríaMedallaDeOroEn and #AEstasHorasYo is: 0.09883324222148017
 
 
 
-Cosine similarity for trends #ThisIsBLACKPINKArea and #DolceAmoreOperation1010 is: 0.0274558066803792
+Cosine similarity for trends #YoSeríaMedallaDeOroEn and #saineymarENTRAMARTA is: 0.015130688316720061
 
 
 
-Cosine similarity for trends #ThisIsBLACKPINKArea and #9YearsOfJonasBrothers is: 0.08726709699816647
+Cosine similarity for trends #YoSeríaMedallaDeOroEn and #KısaVeÖz is: 0.038827345158438636
 
 
 
-Cosine similarity for trends #ThisIsBLACKPINKArea and #AvisalaLiraAtMira is: 0.06815687748887683
+Cosine similarity for trends #prayforGiGi and #SegundaDetremuraSdv is: 0.1535219624449344
 
 
 
-Cosine similarity for trends #ThisIsBLACKPINKArea and #Hoeneß is: 0.006237343238042665
+Cosine similarity for trends #prayforGiGi and #JourneeDuChat is: 0.12024072240843034
 
 
 
-Cosine similarity for trends #JourneeDuChat and #Quetta is: 0.37323280022691147
+Cosine similarity for trends #prayforGiGi and #ThisIsBLACKPINKArea is: 0.1840601181936394
 
 
 
-Cosine similarity for trends #JourneeDuChat and #FPJAPKabugan is: 0.00936585811581694
+Cosine similarity for trends #prayforGiGi and #MentirasQueMeDijeronMisExs is: 0.14726420810214477
 
 
 
-Cosine similarity for trends #JourneeDuChat and #YoSeríaMedallaDeOroEn is: 0.23882598110917816
+Cosine similarity for trends #prayforGiGi and #AEstasHorasYo is: 0.030060180602107585
 
 
 
-Cosine similarity for trends #JourneeDuChat and #SegundaDetremuraSdv is: 0.14945091039992964
+Cosine similarity for trends #prayforGiGi and #saineymarENTRAMARTA is: 0.0490880693673816
 
 
 
-Cosine similarity for trends #JourneeDuChat and #idamahayır is: 0.1864571111668174
+Cosine similarity for trends #prayforGiGi and #KısaVeÖz is: 0.07157185857644663
 
 
 
-Cosine similarity for trends #JourneeDuChat and #DolceAmoreOperation1010 is: 0.04848711592679274
+Cosine similarity for trends #SegundaDetremuraSdv and #JourneeDuChat is: 0.28373076085276344
 
 
 
-Cosine similarity for trends #JourneeDuChat and #9YearsOfJonasBrothers is: 0.13527771618440249
+Cosine similarity for trends #SegundaDetremuraSdv and #ThisIsBLACKPINKArea is: 0.2648903475826026
 
 
 
-Cosine similarity for trends #JourneeDuChat and #AvisalaLiraAtMira is: 0.16314604448863693
+Cosine similarity for trends #SegundaDetremuraSdv and #MentirasQueMeDijeronMisExs is: 0.04343722427630694
 
 
 
-Cosine similarity for trends #JourneeDuChat and #Hoeneß is: 0.012745318548364542
+Cosine similarity for trends #SegundaDetremuraSdv and #AEstasHorasYo is: 0.07979927648983973
 
 
 
-Cosine similarity for trends #Quetta and #FPJAPKabugan is: 0.006812027032901716
+Cosine similarity for trends #SegundaDetremuraSdv and #saineymarENTRAMARTA is: 0.0325779182072302
 
 
 
-Cosine similarity for trends #Quetta and #YoSeríaMedallaDeOroEn is: 0.23433681945321347
+Cosine similarity for trends #SegundaDetremuraSdv and #KısaVeÖz is: 0.14439869079113854
 
 
 
-Cosine similarity for trends #Quetta and #SegundaDetremuraSdv is: 0.15985213482888583
+Cosine similarity for trends #JourneeDuChat and #ThisIsBLACKPINKArea is: 0.47100417717674226
 
 
 
-Cosine similarity for trends #Quetta and #idamahayır is: 0.2048205981644233
+Cosine similarity for trends #JourneeDuChat and #MentirasQueMeDijeronMisExs is: 0.13608276348795434
 
 
 
-Cosine similarity for trends #Quetta and #DolceAmoreOperation1010 is: 0.06106911502862884
+Cosine similarity for trends #JourneeDuChat and #AEstasHorasYo is: 0.08333333333333333
 
 
 
-Cosine similarity for trends #Quetta and #9YearsOfJonasBrothers is: 0.13864176038632026
+Cosine similarity for trends #JourneeDuChat and #saineymarENTRAMARTA is: 0.10206207261596577
 
 
 
-Cosine similarity for trends #Quetta and #AvisalaLiraAtMira is: 0.15628425981545876
+Cosine similarity for trends #JourneeDuChat and #KısaVeÖz is: 0.16666666666666666
 
 
 
-Cosine similarity for trends #Quetta and #Hoeneß is: 0.009269994635919156
+Cosine similarity for trends #ThisIsBLACKPINKArea and #MentirasQueMeDijeronMisExs is: 0.027469521447677638
 
 
 
-Cosine similarity for trends #FPJAPKabugan and #YoSeríaMedallaDeOroEn is: 0.009622504486493762
+Cosine similarity for trends #ThisIsBLACKPINKArea and #AEstasHorasYo is: 0.008410788878156113
 
 
 
-Cosine similarity for trends #FPJAPKabugan and #SegundaDetremuraSdv is: 0.06570525562495048
+Cosine similarity for trends #ThisIsBLACKPINKArea and #saineymarENTRAMARTA is: 0.030903211628637343
 
 
 
-Cosine similarity for trends #FPJAPKabugan and #idamahayır is: 0.020523888315214546
+Cosine similarity for trends #ThisIsBLACKPINKArea and #KısaVeÖz is: 0.13937878712372986
 
 
 
-Cosine similarity for trends #FPJAPKabugan and #DolceAmoreOperation1010 is: 0.21250124244873975
+Cosine similarity for trends #MentirasQueMeDijeronMisExs and #AEstasHorasYo is: 0.06804138174397717
 
 
 
-Cosine similarity for trends #FPJAPKabugan and #9YearsOfJonasBrothers is: 0.013130643285972255
+Cosine similarity for trends #MentirasQueMeDijeronMisExs and #saineymarENTRAMARTA is: 0.08333333333333333
 
 
 
-Cosine similarity for trends #FPJAPKabugan and #AvisalaLiraAtMira is: 0.10196622927890096
+Cosine similarity for trends #MentirasQueMeDijeronMisExs and #KısaVeÖz is: 0.05832118435198043
 
 
 
-Cosine similarity for trends #FPJAPKabugan and #Hoeneß is: 0.027216552697590865
+Cosine similarity for trends #AEstasHorasYo and #saineymarENTRAMARTA is: 0.051031036307982884
 
 
 
-Cosine similarity for trends #YoSeríaMedallaDeOroEn and #SegundaDetremuraSdv is: 0.13096588852915617
+Cosine similarity for trends #AEstasHorasYo and #KısaVeÖz is: 0.03571428571428571
 
 
 
-Cosine similarity for trends #YoSeríaMedallaDeOroEn and #idamahayır is: 0.1244194606578728
-
-
-
-Cosine similarity for trends #YoSeríaMedallaDeOroEn and #DolceAmoreOperation1010 is: 0.029472160707892877
-
-
-
-Cosine similarity for trends #YoSeríaMedallaDeOroEn and #9YearsOfJonasBrothers is: 0.06949232066139947
-
-
-
-Cosine similarity for trends #YoSeríaMedallaDeOroEn and #AvisalaLiraAtMira is: 0.08994062904814866
-
-
-
-Cosine similarity for trends #YoSeríaMedallaDeOroEn and #Hoeneß is: 0.013094570021973102
-
-
-
-Cosine similarity for trends #SegundaDetremuraSdv and #idamahayır is: 0.09439691297183744
-
-
-
-Cosine similarity for trends #SegundaDetremuraSdv and #DolceAmoreOperation1010 is: 0.04554078486830923
-
-
-
-Cosine similarity for trends #SegundaDetremuraSdv and #9YearsOfJonasBrothers is: 0.043137613681242346
-
-
-
-Cosine similarity for trends #SegundaDetremuraSdv and #AvisalaLiraAtMira is: 0.07178268385588392
-
-
-
-Cosine similarity for trends #SegundaDetremuraSdv and #Hoeneß is: 0.012773361087322455
-
-
-
-Cosine similarity for trends #idamahayır and #DolceAmoreOperation1010 is: 0.03671546130266701
-
-
-
-Cosine similarity for trends #idamahayır and #9YearsOfJonasBrothers is: 0.051203452698561094
-
-
-
-Cosine similarity for trends #idamahayır and #AvisalaLiraAtMira is: 0.068014163803421
-
-
-
-Cosine similarity for trends #idamahayır and #Hoeneß is: 0.1340614770937215
-
-
-
-Cosine similarity for trends #DolceAmoreOperation1010 and #9YearsOfJonasBrothers is: 0.03327691252057382
-
-
-
-Cosine similarity for trends #DolceAmoreOperation1010 and #AvisalaLiraAtMira is: 0.09488940868140691
-
-
-
-Cosine similarity for trends #DolceAmoreOperation1010 and #Hoeneß is: 3.6884893261541194E-4
-
-
-
-Cosine similarity for trends #9YearsOfJonasBrothers and #AvisalaLiraAtMira is: 0.06694410919384543
-
-
-
-Cosine similarity for trends #9YearsOfJonasBrothers and #Hoeneß is: 0.01786854224729658
-
-
-
-Cosine similarity for trends #AvisalaLiraAtMira and #Hoeneß is: 0.01156320521893267
+Cosine similarity for trends #saineymarENTRAMARTA and #KısaVeÖz is: 0.014580296087995107
 
 
 

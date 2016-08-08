@@ -67,8 +67,8 @@ public class SearchPanel extends JPanel  {
 	public void populateSearchPanel(final CosineSimilarityStream cosineStream,final Search search,final Stream stream,final DatabaseModel database, final EntityRecognition recognition,final SpamDetector spamDetector, final CurrentTime currentTime,
 			final MapController mapController,final ChartController locationController, final ChartController organizationController,final ChartController personController,final ChartController languageController,final ChartController hashtagController,final ChartController urlController, final ChartController allWordsController
 			,final CosineSimilarityPanelController  cosineController){
-		
-		
+
+
 		this.setLayout(new BorderLayout());
 		userText.setPreferredSize( new Dimension( 200, 24 ) );
 		label.setBackground(Color.blue);
@@ -76,7 +76,7 @@ public class SearchPanel extends JPanel  {
 		tweetCountlabel = new JLabel("Tweet count: "+database.getTweetCount());
 		tweetCountlabel.setPreferredSize( new Dimension( 100, 24 ) );
 		whyTweetIsSpam = new JLabel(" ");
-		whyTweetIsSpam.setPreferredSize( new Dimension( 900, 24 ) );
+		whyTweetIsSpam.setPreferredSize( new Dimension( 1000, 24 ) );
 
 		spamPanel = new JPanel();
 		notSpamPanel = new JPanel();
@@ -111,8 +111,8 @@ public class SearchPanel extends JPanel  {
 		notSpamPanel.add(notSpamScrollPane, BorderLayout.NORTH);
 		splitPanel = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, notSpamPanel, spamPanel);
 		splitPanel.setResizeWeight(0.5);
-	
-		
+
+
 		JPanel labelPanel = new JPanel();
 		labelPanel.setLayout(new BoxLayout(labelPanel, BoxLayout.X_AXIS));
 		labelPanel.add(whyTweetIsSpam);
@@ -128,9 +128,25 @@ public class SearchPanel extends JPanel  {
 		subPanel.add(searchButton);
 		subPanel.add(refreshButton);
 		subPanel.add(resultButton);
-		    
+
 		add(subPanel,BorderLayout.PAGE_START);
-		add(trendPanel,BorderLayout.LINE_END);
+		JPanel sad = new JPanel();
+		sad.setLayout(new BorderLayout());
+
+		JLabel label = new JLabel("<html>SEARCH: Searches a query <BR> "
+				+ "through twitter stream<BR>"
+				+"<BR>"
+				+"REFRESH: Refreshes everything to<BR>"
+				+ "make search again<BR>"
+				+"<BR>"
+				+"GENERATE RESULTS: Put results from <BR>"
+				+"database in project directory.<html>");
+		sad.add(trendPanel,BorderLayout.NORTH);	
+		sad.add(label,BorderLayout.CENTER);	
+
+
+
+		add(sad,BorderLayout.LINE_END);
 		add(splitPanel,BorderLayout.CENTER);
 		add(labelPanel,BorderLayout.PAGE_END);
 
@@ -165,6 +181,7 @@ public class SearchPanel extends JPanel  {
 					JOptionPane.showMessageDialog(null, "Search completed.");
 					resultButton.setEnabled(true);
 					searchButton.setEnabled(false);
+
 				}
 			}
 		}); 
@@ -181,18 +198,39 @@ public class SearchPanel extends JPanel  {
 				mapController.getTwitterStreamPanel().setText("");
 				locationController.getPlot().setDataset(null);
 				locationController.setDataset(null);
+				locationController.setText("");
+				locationController.getTextPane().setText("");;
+
 				organizationController.getPlot().setDataset(null);
 				organizationController.setDataset(null);
+				organizationController.setText("");
+				organizationController.getTextPane().setText("");;
+
 				personController.getPlot().setDataset(null);
 				personController.setDataset(null);
+				personController.setText("");
+				personController.getTextPane().setText("");;
+
 				languageController.getPlot().setDataset(null);
 				languageController.setDataset(null);
+				languageController.setText("");
+				languageController.getTextPane().setText("");;
+
 				hashtagController.getPlot().setDataset(null);
 				hashtagController.setDataset(null);
+				hashtagController.setText("");
+				hashtagController.getTextPane().setText("");;
+
 				urlController.getPlot().setDataset(null);
 				urlController.setDataset(null);
+				urlController.setText("");
+				urlController.getTextPane().setText("");;
+
 				allWordsController.getPlot().setDataset(null);
 				allWordsController.setDataset(null);
+				allWordsController.setText("");
+				allWordsController.getTextPane().setText("");;
+
 				tweetCountlabel.setText("<html>Tweet count: "+database.getTweetCount()+"<html>");
 				searchButton.setEnabled(true);
 				resultButton.setEnabled(false);

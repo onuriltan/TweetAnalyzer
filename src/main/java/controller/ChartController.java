@@ -1,6 +1,10 @@
 package controller;
 
 
+import javax.swing.JScrollPane;
+import javax.swing.JSplitPane;
+import javax.swing.JTextPane;
+
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PiePlot3D;
@@ -20,6 +24,15 @@ public class ChartController {
 		this.model=model;
 		this.view=view;
 
+	}
+
+	public JTextPane getTextPane() {
+		return model.getTextPane();
+	}
+
+
+	public void setTextPane(JTextPane textPane) {
+		model.setTextPane(textPane);
 	}
 
 
@@ -58,6 +71,29 @@ public class ChartController {
 		return model.getPlot();
 	}
 
+
+	public JScrollPane getScrollPane() {
+		return model.getScrollPane();
+	}
+
+
+	public void setScrollPane(JScrollPane scrollPane) {
+		model.setScrollPane(scrollPane);
+
+	}
+
+
+	public JSplitPane getSplitPane() {
+		return model.getSplitPane();
+	}
+
+
+	public void setSplitPane(JSplitPane splitPane) {
+		model.setSplitPane(splitPane);
+
+	}
+
+
 	public void setPlot(PiePlot3D plot) {
 		model.setPlot(plot);
 	}
@@ -65,11 +101,20 @@ public class ChartController {
 	public void populateChart(){				
 		view.populateChart(model);
 	}	
-	
+
 	public void updateChart(){
 		view.updateChart();
 	}
 
+
+	public String getText() {
+		return model.getText();
+	}
+
+
+	public void setText(String text) {
+		model.setText(text);;
+	}
 
 
 

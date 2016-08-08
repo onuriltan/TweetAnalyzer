@@ -53,6 +53,84 @@ public class DatabaseModel {
 	private int spamCount = 0;
 	private int notSpamCount = 0;
 	private String eliminationReason = " ";
+	private String location = " ";
+	private String organization = " ";
+	private String person = " ";
+	private String language = " ";
+	private String hashtag = " ";
+	private String url = " ";
+	private String mostcommon = " ";
+
+
+
+	public String getLocation() {
+		return location;
+	}
+
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+
+	public String getOrganization() {
+		return organization;
+	}
+
+
+	public void setOrganization(String organization) {
+		this.organization = organization;
+	}
+
+
+	public String getPerson() {
+		return person;
+	}
+
+
+	public void setPerson(String person) {
+		this.person = person;
+	}
+
+
+	public String getLanguage() {
+		return language;
+	}
+
+
+	public void setLanguage(String language) {
+		this.language = language;
+	}
+
+
+	public String getHashtag() {
+		return hashtag;
+	}
+
+
+	public void setHashtag(String hashtag) {
+		this.hashtag = hashtag;
+	}
+
+
+	public String getUrl() {
+		return url;
+	}
+
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+
+	public String getMostcommon() {
+		return mostcommon;
+	}
+
+
+	public void setMostcommon(String mostcommon) {
+		this.mostcommon = mostcommon;
+	}
 
 
 	public DatabaseModel(){}
@@ -515,6 +593,13 @@ public class DatabaseModel {
 		spamCount = 0;
 		notSpamCount = 0;
 		eliminationReason = " ";
+		location = " ";
+		organization = " ";
+		person = " ";
+		language = " ";
+		hashtag = " ";
+		url = " ";
+		mostcommon = " ";
 
 		//trendTopicList.clear();
 

@@ -69,6 +69,10 @@ public class EntityRecognition {
 		for (int i = 0; i < out.size(); i++) {
 			if (out.get(i).first.equals("LOCATION")) {// IF ENETITYRECOGNIZER RECOGNIZE A TOKEN AS LOCATION
 				String location = text.substring(out.get(i).second,	out.get(i).third);//TAKE LOCATION, MAKE IT UPPER CASED LETTERS TO MATCH SAME WORDS(e.g ONUR onur)
+				database.setLocation(database.getLocation()+"\n"
+						+tweet.getUser().getScreenName()+" : "
+						+text+"\n");
+				locationChartController.setText(database.getLocation());
 				updateDatabase(database.getLocationList(), location.toLowerCase(Locale.ENGLISH), "location");//UPDATE THE LOCATION LIST
 				locationChartController.setDataset(listToPieChartDataset(database.getLocationList()));// CHANGE THE CHART DATASET
 				locationChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
@@ -76,6 +80,10 @@ public class EntityRecognition {
 			}		
 			if (out.get(i).first.equals("ORGANIZATION")) {// IF ENETITYRECOGNIZER RECOGNIZE A TOKEN AS ORGANIZATION
 				String organization = text.substring(out.get(i).second,	out.get(i).third);
+				database.setOrganization(database.getOrganization()+"\n"
+						+tweet.getUser().getScreenName()+" : "
+						+text+"\n");
+				organizationChartController.setText(database.getOrganization());
 				updateDatabase(database.getOrganizationList(), organization.toLowerCase(Locale.ENGLISH), "organization");//UPDATE DATA WHEN NEW TOKEN COMES
 				organizationChartController.setDataset(listToPieChartDataset(database.getOrganizationList()));// CHANGE THE CHART DATASET
 				organizationChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
@@ -84,6 +92,10 @@ public class EntityRecognition {
 			}
 			if (out.get(i).first.equals("PERSON")) {// IF ENETITYRECOGNIZER RECOGNIZE A TOKEN AS PERSON
 				String person = text.substring(out.get(i).second, out.get(i).third);
+				database.setPerson(database.getPerson()+"\n"
+						+tweet.getUser().getScreenName()+" : "
+						+text+"\n");
+				personChartController.setText(database.getPerson());
 				updateDatabase(database.getPersonList(), person.toLowerCase(Locale.ENGLISH),"person");
 				personChartController.setDataset(listToPieChartDataset(database.getPersonList()));
 				personChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
@@ -94,6 +106,10 @@ public class EntityRecognition {
 
 		String language = tweet.getLang().toUpperCase();// GET THE TWEET LANGUAGE
 		updateDatabase(database.getLanguageList(), language, "language");
+		database.setLanguage(database.getLanguage()+"\n"
+				+tweet.getUser().getScreenName()+" : "
+				+text+"\n");
+		languageChartController.setText(database.getLanguage());
 		languageChartController.setDataset(listToPieChartDataset(database.getLanguageList()));// CHANGE THE CHART DATASET
 		languageChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
 
@@ -102,12 +118,20 @@ public class EntityRecognition {
 			updateDatabase(database.getHashTagList(), "#"+hashtag.getText(),"hashtag");
 		}
 		hashTagChartController.setDataset(listToPieChartDataset(database.getHashTagList()));// CHANGE THE CHART DATASET
+		database.setHashtag(database.getHashtag()+"\n"
+				+tweet.getUser().getScreenName()+" : "
+				+text+"\n");
+		hashTagChartController.setText(database.getLanguage());
 		hashTagChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
 
 		URLEntity[] urls = tweet.getURLEntities();// TAKE URL ENTITIES
 		for(URLEntity url : urls){
 			updateDatabase(database.getVerifiedURLList(), url.getURL(), "verifiedURLList");
 		}						
+		database.setUrl(database.getUrl()+"\n"
+				+tweet.getUser().getScreenName()+" : "
+				+text+"\n");
+		verifiedUrlChartController.setText(database.getUrl());
 
 		verifiedUrlChartController.setDataset(listToPieChartDataset(database.getVerifiedURLList()));// CHANGE THE CHART DATASET
 		verifiedUrlChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
@@ -133,6 +157,10 @@ public class EntityRecognition {
 			}
 		}
 		allWordsController.setDataset(listToPieChartDataset(database.getAllWords()));// CHANGE THE CHART DATASET
+		database.setMostcommon(database.getMostcommon()+"\n"
+				+tweet.getUser().getScreenName()+" : "
+				+text+"\n");
+		allWordsController.setText(database.getMostcommon());
 		allWordsController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET */
 
 
