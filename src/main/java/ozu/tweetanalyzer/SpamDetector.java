@@ -31,11 +31,12 @@ public class SpamDetector {
 
 
 		if(isDefaultPP ){//isDefaultProfile returns true if user changed theme or background(picture)
-
 			return true;
-		}
-		if(isUserAccountOlderThanOneMonth){
 
+		}
+		
+		if(isUserAccountOlderThanOneMonth){
+			//System.out.println("olderthan1  "+userAccountCreationYear+"."+userAccountCreationMonth+"      "+currentYear+"."+currentMonth);
 			return true;
 
 		}
@@ -45,6 +46,8 @@ public class SpamDetector {
 		if(followersCount >10){
 			return true;
 		}
+
+
 		if(!isDefaultPP ){//isDefaultProfile returns true if user changed theme or background(picture)
 
 			database.setEliminationReason("Tweet eliminated, user still uses default profile picture.");
@@ -62,10 +65,12 @@ public class SpamDetector {
 		}
 		if(!isUserAccountOlderThanOneMonth)
 		{
+			System.out.println("new "+userAccountCreationYear+"."+userAccountCreationMonth+"      "+currentYear+"."+currentMonth);
 			database.setEliminationReason("Yeardifference: "+yearDifference+"  MonthDiffrence"+monthDifference +"user created at:"+userAccountCreationMonth+"."+userAccountCreationYear+"current: "+currentMonth+"."+currentYear);
 			return false;
 
 		}else{
+			System.out.println("sıkıntı");
 			return true;
 		}
 

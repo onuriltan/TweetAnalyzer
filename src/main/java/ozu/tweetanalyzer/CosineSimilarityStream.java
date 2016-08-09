@@ -43,7 +43,7 @@ public class CosineSimilarityStream {
 
 	}
 
-	
+
 
 	public void startCosineStream(CosineSimilarityPanelController cosineController){
 
@@ -81,15 +81,12 @@ public class CosineSimilarityStream {
 					database.getTrendDatabaseList().add(17,database.getTrendNumber18());
 					database.getTrendDatabaseList().add(18,database.getTrendNumber19());
 					database.getTrendDatabaseList().add(19,database.getTrendNumber20());
-					
-
 					Hashtable<String, Double> topSimilarTrends= new Hashtable<String, Double>() ;
 					ArrayList<String> sortedKeys = new ArrayList<String>();
 					ArrayList<Double> sortedValues = new ArrayList<Double>();
 					ArrayList<String> array = new ArrayList<String>();
 					topSimilarTrends.clear();
 					calculateCosineSimilarity(array,topSimilarTrends,cosineController,sortedKeys,sortedValues);
-					System.out.println("Calculation done.");
 					database.setCosineSimilarityCalculatonVariable(database.getCosineSimilarityCalculatonVariable()+1);
 
 				}
@@ -110,15 +107,15 @@ public class CosineSimilarityStream {
 			public void onTrackLimitationNotice(int arg0) {}
 		};
 		tf = new TwitterStreamFactory(cb.build());
-		
+
 		stream = tf.getInstance();
 		stream.addListener(listener);
 
 		filtre = new FilterQuery();
 		filtre.track(database.getTrendTopicArray());
 		stream.filter(filtre);
-		
-		  
+
+
 	}
 
 	private void getTweets(Status tweet) {
@@ -128,18 +125,21 @@ public class CosineSimilarityStream {
 		for(int i = 0 ; i<trendTopicArray.length; i++){
 			if(tweet.getText().contains(trendTopicArray[i])){
 				String cleanText = tweet.getText();
+
 				if(i == 0){
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-						database.setTrendNumberOne(database.getTrendNumberOne() +" "+ token + " ");
+						if(token.toString().contains("http") == false)
+							database.setTrendNumberOne(database.getTrendNumberOne() +" "+ token + " ");
 					}
 				}
 				if(i == 1){
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-						database.setTrendNumberTwo(database.getTrendNumberTwo() +" "+ token + " ");
+						if(token.toString().contains("http") == false)
+							database.setTrendNumberTwo(database.getTrendNumberTwo() +" "+ token + " ");
 
 					}
 				}
@@ -147,8 +147,8 @@ public class CosineSimilarityStream {
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-
-						database.setTrendNumberThree(database.getTrendNumberThree() +" "+ token + " ");
+						if(token.toString().contains("http") == false)
+							database.setTrendNumberThree(database.getTrendNumberThree() +" "+ token + " ");
 
 					}
 				}
@@ -156,62 +156,62 @@ public class CosineSimilarityStream {
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-
-						database.setTrendNumberFour(database.getTrendNumberFour() +" "+ token + " ");
+						if(token.toString().contains("http") == false)
+							database.setTrendNumberFour(database.getTrendNumberFour() +" "+ token + " ");
 					}
 				}
 				if(i == 4){
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-
-						database.setTrendNumberFive(database.getTrendNumberFive() +" "+ token + " ");
+						if(token.toString().contains("http") == false)
+							database.setTrendNumberFive(database.getTrendNumberFive() +" "+ token + " ");
 					}
 				}
 				if(i == 5){
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-
-						database.setTrendNumberSix(database.getTrendNumberSix() + " "+token + " ");
+						if(token.toString().contains("http") == false)
+							database.setTrendNumberSix(database.getTrendNumberSix() + " "+token + " ");
 					}
 				}
 				if(i == 6){
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-
-						database.setTrendNumberSeven(database.getTrendNumberSeven() +" "+ token + " ");					}
+						if(token.toString().contains("http") == false)
+							database.setTrendNumberSeven(database.getTrendNumberSeven() +" "+ token + " ");					}
 				}
 				if(i == 7){
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-
-						database.setTrendNumberEight(database.getTrendNumberEight() +" "+ token + " ");
+						if(token.toString().contains("http") == false)
+							database.setTrendNumberEight(database.getTrendNumberEight() +" "+ token + " ");
 					}
 				}
 				if(i == 8){
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-
-						database.setTrendNumberNine(database.getTrendNumberNine() +" "+ token + " ");
+						if(token.toString().contains("http") == false)
+							database.setTrendNumberNine(database.getTrendNumberNine() +" "+ token + " ");
 					}
 				}
 				if(i == 9){
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-
-						database.setTrendNumberTen(database.getTrendNumberTen() +" "+ token + " ");					}
+						if(token.toString().contains("http") == false)
+							database.setTrendNumberTen(database.getTrendNumberTen() +" "+ token + " ");					}
 				}
 				if(i == 10){
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-
-						database.setTrendNumber11(database.getTrendNumber11() +" "+ token + " ");
+						if(token.toString().contains("http") == false)
+							database.setTrendNumber11(database.getTrendNumber11() +" "+ token + " ");
 
 					}
 				}
@@ -219,8 +219,8 @@ public class CosineSimilarityStream {
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-
-						database.setTrendNumber12(database.getTrendNumber12() +" "+ token + " ");
+						if(token.toString().contains("http") == false)
+							database.setTrendNumber12(database.getTrendNumber12() +" "+ token + " ");
 
 					}
 				}
@@ -228,8 +228,8 @@ public class CosineSimilarityStream {
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-
-						database.setTrendNumber13(database.getTrendNumber13() +" "+ token + " ");
+						if(token.toString().contains("http") == false)
+							database.setTrendNumber13(database.getTrendNumber13() +" "+ token + " ");
 
 					}
 				}
@@ -237,55 +237,55 @@ public class CosineSimilarityStream {
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-
-						database.setTrendNumber14(database.getTrendNumber14() +" "+ token + " ");
+						if(token.toString().contains("http") == false)
+							database.setTrendNumber14(database.getTrendNumber14() +" "+ token + " ");
 					}
 				}
 				if(i == 14){
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-
-						database.setTrendNumber15(database.getTrendNumber15() +" "+ token + " ");
+						if(token.toString().contains("http") == false)
+							database.setTrendNumber15(database.getTrendNumber15() +" "+ token + " ");
 					}
 				}
 				if(i == 15){
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-
-						database.setTrendNumber16(database.getTrendNumber16() + " "+token + " ");
+						if(token.toString().contains("http") == false)
+							database.setTrendNumber16(database.getTrendNumber16() + " "+token + " ");
 					}
 				}
 				if(i == 16){
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-
-						database.setTrendNumber17(database.getTrendNumber17() +" "+ token + " ");					}
+						if(token.toString().contains("http") == false)
+							database.setTrendNumber17(database.getTrendNumber17() +" "+ token + " ");					}
 				}
 				if(i == 17){
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-
-						database.setTrendNumber18(database.getTrendNumber18() +" "+ token + " ");
+						if(token.toString().contains("http") == false)
+							database.setTrendNumber18(database.getTrendNumber18() +" "+ token + " ");
 					}
 				}
 				if(i == 18){
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-
-						database.setTrendNumber19(database.getTrendNumber19() +" "+ token + " ");
+						if(token.toString().contains("http") == false)
+							database.setTrendNumber19(database.getTrendNumber19() +" "+ token + " ");
 					}
 				}
 				if(i == 19){
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-
-						database.setTrendNumber20(database.getTrendNumber20() +" "+ token + " ");					}
+						if(token.toString().contains("http") == false)
+							database.setTrendNumber20(database.getTrendNumber20() +" "+ token + " ");					}
 				}
 			}
 
@@ -382,14 +382,14 @@ public class CosineSimilarityStream {
 	public void cosineSimilarityToTxt(ArrayList<String> array,int k) throws IOException{
 		OutputStream outputStream;
 		if(k == 1){
-			 outputStream = new FileOutputStream("words.txt");
+			outputStream = new FileOutputStream("words.txt");
 		}else{
 			outputStream = new FileOutputStream("cosineSimilarity.txt");
 		}
 		String eol = System.getProperty("line.separator");
 		@SuppressWarnings("resource")        
 		Writer out = new OutputStreamWriter(outputStream);
-	
+
 		for (int i = 0; i < array.size(); i++) {
 			out.write(array.get(i));
 			out.write(eol);

@@ -64,7 +64,7 @@ public class CosineSimilarityPanelView extends JPanel{
 
 		this.setBackground(Color.white);
 		this.setLayout(new GridLayout(0,1));
-		
+
 		model.getLabelList().add(model.getLabelOne());
 		model.getLabelList().add(model.getLabelTwo());
 		model.getLabelList().add(model.getLabelThree());
@@ -94,13 +94,12 @@ public class CosineSimilarityPanelView extends JPanel{
 	public void updateCosinePanel(Hashtable<String, Double> topSimilarTrends,DatabaseModel database, ArrayList<String> sortedKeys, ArrayList<Double> sortedValues){
 
 		ArrayList<Entry<String, Double>> sortedHashTable = sortValue(topSimilarTrends);
-		System.out.println(sortedHashTable);
 		ArrayList<String> sortedList = new ArrayList<String>();
 		for (int i = 0; i < sortedHashTable.size(); i++) {
 			sortedList.add(sortedHashTable.get(i).toString());
 		}
-		
-		
+
+
 
 		for (int i = 0; i < sortedList.size(); i++) {
 			if(i == 0){
@@ -137,7 +136,7 @@ public class CosineSimilarityPanelView extends JPanel{
 
 
 
-		
+
 
 	}
 	public ArrayList<Map.Entry<String, Double>>  sortValue(Hashtable<String, Double> t){
