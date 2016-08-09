@@ -240,10 +240,7 @@ public class UrlView extends JPanel{
 
 
 		}
-		for (int i = 0; i < sortedList.size(); i++) {
-
-		}
-		String text;
+	
 		model.getTextPane().setText(model.getText());
 		model.getVerifiedTextPane().setText(database.getUrlText());
 

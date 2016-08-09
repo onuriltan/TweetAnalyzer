@@ -51,8 +51,8 @@ public class Stream {
 				basicObj.put("language", tweet.getLang());
 				basicObj.put("createdAt", tweet.getCreatedAt()); 
 				basicObj.put("isVerified", tweet.getUser().isVerified());
-				
-			
+
+
 
 				if(spamDetector.isNotSpam(database,tweet,currentTime) && tweet.isRetweet() == false){// if tweet is not spam according to our parameters and not a retweet
 					database.setTweetCount(database.getTweetCount()+1);
@@ -87,18 +87,17 @@ public class Stream {
 					searchPanel.repaint();
 				}
 				if (!spamDetector.isNotSpam(database,tweet,currentTime) && tweet.isRetweet() == false){
-					
-					
+
+
 					database.setTweetCount(database.getTweetCount()+1);
 					searchPanel.getTweetCountlabel().setText("<html>Tweet count: "+database.getTweetCount()+"<html>");
-					String cleanedText = tweet.getText();
+					String fullText = tweet.getUser().getScreenName()+" : "+tweet.getText();
 					StringBuilder str = new StringBuilder();
 					int j  = 1 ;
-					for(int i = 0 ; i< cleanedText.length()  ;i++){
-						str.append(cleanedText.charAt(i));
+					for(int i = 0 ; i< fullText.length()  ;i++){
+						str.append(fullText.charAt(i));
 						if(i == 50*j){
 							database.getSpamModel().addElement(str.toString());
-							//todo
 							str.setLength(0);
 							j++;
 						}

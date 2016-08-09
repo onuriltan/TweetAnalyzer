@@ -1,684 +1,364 @@
-Cosine similarity for trends #cruel and #NationalBookLoversDay is: 0.37198706131010906
+Cosine similarity for trends #quyinciqİleFandomlarKazanıyor and Putin is: 0.2429001872146785
 
 
 
-Cosine similarity for trends #cruel and John Stones is: 0.3812081154611556
+Cosine similarity for trends #quyinciqİleFandomlarKazanıyor and #Demirtaş is: 0.324780209006333
 
 
 
-Cosine similarity for trends #cruel and #MesPremiersMotsDevantDieu is: 0.07948867764424694
+Cosine similarity for trends #quyinciqİleFandomlarKazanıyor and #BuradaykenYazayım is: 0.12186392930633554
 
 
 
-Cosine similarity for trends #cruel and #WomensDay is: 0.28861717943270454
+Cosine similarity for trends #quyinciqİleFandomlarKazanıyor and Mete Kalkavan is: 0.06299541644497095
 
 
 
-Cosine similarity for trends #cruel and Hakkı Yalçın is: 0.36755944606132784
+Cosine similarity for trends #quyinciqİleFandomlarKazanıyor and #ErkeklerNeİster is: 0.0662758000814513
 
 
 
-Cosine similarity for trends #cruel and #ErkeklerNeİster is: 0.26417825587455956
+Cosine similarity for trends #quyinciqİleFandomlarKazanıyor and #BlockFotomaç is: 0.1210593386533121
 
 
 
-Cosine similarity for trends #cruel and #census2016 is: 0.30624567114651585
+Cosine similarity for trends #quyinciqİleFandomlarKazanıyor and Diyanet'te FETÖ is: 0.003685998822706908
 
 
 
-Cosine similarity for trends #cruel and #FrasesSimpsons is: 0.028733443641300364
+Cosine similarity for trends #quyinciqİleFandomlarKazanıyor and Ahmet Özal is: 0.12935950028256393
 
 
 
-Cosine similarity for trends #cruel and #examresults is: 0.03351536927343037
+Cosine similarity for trends #quyinciqİleFandomlarKazanıyor and Büşra Katipoğlu is: 0.15380095500716742
 
 
 
-Cosine similarity for trends #cruel and #LeMallForAllDay is: 0.510165223835333
+Cosine similarity for trends #quyinciqİleFandomlarKazanıyor and Victor Sanchez is: 0.08652288491416123
 
 
 
-Cosine similarity for trends #cruel and #TuesdayMotivation is: 0.5296594890957931
+Cosine similarity for trends #quyinciqİleFandomlarKazanıyor and Luis Cavanda is: 0.007248089700593803
 
 
 
-Cosine similarity for trends #cruel and #BuradaykenYazayım is: 0.1339347209648771
+Cosine similarity for trends #quyinciqİleFandomlarKazanıyor and Jose Sosa is: 0.10421098348069739
 
 
 
-Cosine similarity for trends #cruel and #yuri is: 0.25215062787263587
+Cosine similarity for trends #quyinciqİleFandomlarKazanıyor and AşkSanaBenzer MuratYıldırım is: 0.16459935929026176
 
 
 
-Cosine similarity for trends #cruel and #LaVidaEsPerfectaCuando is: 0.12667618885141757
+Cosine similarity for trends Putin and #Demirtaş is: 0.37508219449997937
 
 
 
-Cosine similarity for trends #cruel and #Muktangan is: 0.09835062128193754
+Cosine similarity for trends Putin and #BuradaykenYazayım is: 0.2650869659842345
 
 
 
-Cosine similarity for trends #cruel and #DemocracyVSModi is: 0.29694972620499577
+Cosine similarity for trends Putin and Mete Kalkavan is: 0.18795338436723558
 
 
 
-Cosine similarity for trends #cruel and #BuenMartes is: 0.28746127311279346
+Cosine similarity for trends Putin and #ErkeklerNeİster is: 0.17462181208001062
 
 
 
-Cosine similarity for trends #cruel and #charitytuesday is: 0.4611540361496188
+Cosine similarity for trends Putin and #BlockFotomaç is: 0.23966445854555193
 
 
 
-Cosine similarity for trends #NationalBookLoversDay and John Stones is: 0.3491868616754413
+Cosine similarity for trends Putin and Diyanet'te FETÖ is: 0.035030252566036306
 
 
 
-Cosine similarity for trends #NationalBookLoversDay and #MesPremiersMotsDevantDieu is: 0.06420387375057796
+Cosine similarity for trends Putin and Ahmet Özal is: 0.3352533370333724
 
 
 
-Cosine similarity for trends #NationalBookLoversDay and #WomensDay is: 0.3833516562719042
+Cosine similarity for trends Putin and Büşra Katipoğlu is: 0.49518665647159227
 
 
 
-Cosine similarity for trends #NationalBookLoversDay and Hakkı Yalçın is: 0.24740148503046833
+Cosine similarity for trends Putin and Victor Sanchez is: 0.2896285482252555
 
 
 
-Cosine similarity for trends #NationalBookLoversDay and #ErkeklerNeİster is: 0.1778163872986684
+Cosine similarity for trends Putin and Luis Cavanda is: 0.03368451157578059
 
 
 
-Cosine similarity for trends #NationalBookLoversDay and #census2016 is: 0.40436678950343713
+Cosine similarity for trends Putin and Jose Sosa is: 0.3233891713776889
 
 
 
-Cosine similarity for trends #NationalBookLoversDay and #FrasesSimpsons is: 0.01657736891986613
+Cosine similarity for trends Putin and AşkSanaBenzer MuratYıldırım is: 0.5767683394011951
 
 
 
-Cosine similarity for trends #NationalBookLoversDay and #examresults is: 0.17483179848303984
+Cosine similarity for trends #Demirtaş and #BuradaykenYazayım is: 0.2771068763067384
 
 
 
-Cosine similarity for trends #NationalBookLoversDay and #LeMallForAllDay is: 0.3868052747968764
+Cosine similarity for trends #Demirtaş and Mete Kalkavan is: 0.24087129993169556
 
 
 
-Cosine similarity for trends #NationalBookLoversDay and #TuesdayMotivation is: 0.40896919862471837
+Cosine similarity for trends #Demirtaş and #ErkeklerNeİster is: 0.20034580071919827
 
 
 
-Cosine similarity for trends #NationalBookLoversDay and #BuradaykenYazayım is: 0.09521508029743476
+Cosine similarity for trends #Demirtaş and #BlockFotomaç is: 0.11954058947339004
 
 
 
-Cosine similarity for trends #NationalBookLoversDay and #yuri is: 0.16182669659869317
+Cosine similarity for trends #Demirtaş and Diyanet'te FETÖ is: 0.0837143913903965
 
 
 
-Cosine similarity for trends #NationalBookLoversDay and #LaVidaEsPerfectaCuando is: 0.09379126378940299
+Cosine similarity for trends #Demirtaş and Ahmet Özal is: 0.19101172809033634
 
 
 
-Cosine similarity for trends #NationalBookLoversDay and #Muktangan is: 0.20577539077931958
+Cosine similarity for trends #Demirtaş and Büşra Katipoğlu is: 0.280646230351323
 
 
 
-Cosine similarity for trends #NationalBookLoversDay and #DemocracyVSModi is: 0.2915464327729333
+Cosine similarity for trends #Demirtaş and Victor Sanchez is: 0.12775935072967232
 
 
 
-Cosine similarity for trends #NationalBookLoversDay and #BuenMartes is: 0.21839240757775924
+Cosine similarity for trends #Demirtaş and Luis Cavanda is: 0.004841607448117723
 
 
 
-Cosine similarity for trends #NationalBookLoversDay and #charitytuesday is: 0.3129645796454628
+Cosine similarity for trends #Demirtaş and Jose Sosa is: 0.185630032974337
 
 
 
-Cosine similarity for trends John Stones and #MesPremiersMotsDevantDieu is: 0.06082993574504365
+Cosine similarity for trends #Demirtaş and AşkSanaBenzer MuratYıldırım is: 0.2661940759092123
 
 
 
-Cosine similarity for trends John Stones and #WomensDay is: 0.30470387090856205
+Cosine similarity for trends #BuradaykenYazayım and Mete Kalkavan is: 0.21899809048182445
 
 
 
-Cosine similarity for trends John Stones and Hakkı Yalçın is: 0.27544752496799596
+Cosine similarity for trends #BuradaykenYazayım and #ErkeklerNeİster is: 0.1511687718098761
 
 
 
-Cosine similarity for trends John Stones and #ErkeklerNeİster is: 0.20035495453209873
+Cosine similarity for trends #BuradaykenYazayım and #BlockFotomaç is: 0.10564774666721925
 
 
 
-Cosine similarity for trends John Stones and #census2016 is: 0.3401988678606958
+Cosine similarity for trends #BuradaykenYazayım and Diyanet'te FETÖ is: 0.07062225547765921
 
 
 
-Cosine similarity for trends John Stones and #FrasesSimpsons is: 0.00949973097142828
+Cosine similarity for trends #BuradaykenYazayım and Ahmet Özal is: 0.14286954478718214
 
 
 
-Cosine similarity for trends John Stones and #examresults is: 0.07523802922167283
+Cosine similarity for trends #BuradaykenYazayım and Büşra Katipoğlu is: 0.17112453320927404
 
 
 
-Cosine similarity for trends John Stones and #LeMallForAllDay is: 0.4302021025632521
+Cosine similarity for trends #BuradaykenYazayım and Victor Sanchez is: 0.08309492171451681
 
 
 
-Cosine similarity for trends John Stones and #TuesdayMotivation is: 0.4384891751892449
+Cosine similarity for trends #BuradaykenYazayım and Luis Cavanda is: 0.02645152086668156
 
 
 
-Cosine similarity for trends John Stones and #BuradaykenYazayım is: 0.10726932681379955
+Cosine similarity for trends #BuradaykenYazayım and Jose Sosa is: 0.1131882395234382
 
 
 
-Cosine similarity for trends John Stones and #yuri is: 0.20465134721305495
+Cosine similarity for trends #BuradaykenYazayım and AşkSanaBenzer MuratYıldırım is: 0.31220419319010195
 
 
 
-Cosine similarity for trends John Stones and #LaVidaEsPerfectaCuando is: 0.09146843550811332
+Cosine similarity for trends Mete Kalkavan and #ErkeklerNeİster is: 0.1346991328943407
 
 
 
-Cosine similarity for trends John Stones and #Muktangan is: 0.1399688354010418
+Cosine similarity for trends Mete Kalkavan and #BlockFotomaç is: 0.03869116162670684
 
 
 
-Cosine similarity for trends John Stones and #DemocracyVSModi is: 0.30093612368264727
+Cosine similarity for trends Mete Kalkavan and Diyanet'te FETÖ is: 0.040643187331214845
 
 
 
-Cosine similarity for trends John Stones and #BuenMartes is: 0.20498365246019418
+Cosine similarity for trends Mete Kalkavan and Ahmet Özal is: 0.04691992534257563
 
 
 
-Cosine similarity for trends John Stones and #charitytuesday is: 0.3563392625767383
+Cosine similarity for trends Mete Kalkavan and Büşra Katipoğlu is: 0.1240877748886561
 
 
 
-Cosine similarity for trends #MesPremiersMotsDevantDieu and #WomensDay is: 0.04841229182759271
+Cosine similarity for trends Mete Kalkavan and Victor Sanchez is: 0.050212281794275275
 
 
 
-Cosine similarity for trends #MesPremiersMotsDevantDieu and Hakkı Yalçın is: 0.11009637651263607
+Cosine similarity for trends Mete Kalkavan and Luis Cavanda is: 0.04995007487521835
 
 
 
-Cosine similarity for trends #MesPremiersMotsDevantDieu and #ErkeklerNeİster is: 0.04923659639173309
+Cosine similarity for trends Mete Kalkavan and Jose Sosa is: 0.1367939137911457
 
 
 
-Cosine similarity for trends #MesPremiersMotsDevantDieu and #census2016 is: 0.055345984924147794
+Cosine similarity for trends Mete Kalkavan and AşkSanaBenzer MuratYıldırım is: 0.11940351705851214
 
 
 
-Cosine similarity for trends #MesPremiersMotsDevantDieu and #FrasesSimpsons is: 0.012909944487358056
+Cosine similarity for trends #ErkeklerNeİster and #BlockFotomaç is: 0.05502201320880617
 
 
 
-Cosine similarity for trends #MesPremiersMotsDevantDieu and #examresults is: 0.026352313834736494
+Cosine similarity for trends #ErkeklerNeİster and Diyanet'te FETÖ is: 0.021017437914789452
 
 
 
-Cosine similarity for trends #MesPremiersMotsDevantDieu and #LeMallForAllDay is: 0.09221388919541469
+Cosine similarity for trends #ErkeklerNeİster and Ahmet Özal is: 0.09705307901349215
 
 
 
-Cosine similarity for trends #MesPremiersMotsDevantDieu and #TuesdayMotivation is: 0.09004503377814962
+Cosine similarity for trends #ErkeklerNeİster and Büşra Katipoğlu is: 0.14437883372112675
 
 
 
-Cosine similarity for trends #MesPremiersMotsDevantDieu and #BuradaykenYazayım is: 0.028398091712353243
+Cosine similarity for trends #ErkeklerNeİster and Victor Sanchez is: 0.06491453946333181
 
 
 
-Cosine similarity for trends #MesPremiersMotsDevantDieu and #yuri is: 0.055328333517248814
+Cosine similarity for trends #ErkeklerNeİster and Luis Cavanda is: 0.01033208925248537
 
 
 
-Cosine similarity for trends #MesPremiersMotsDevantDieu and #LaVidaEsPerfectaCuando is: 0.026560635762986527
+Cosine similarity for trends #ErkeklerNeİster and Jose Sosa is: 0.07781287730896526
 
 
 
-Cosine similarity for trends #MesPremiersMotsDevantDieu and #Muktangan is: 0.0149071198499986
+Cosine similarity for trends #ErkeklerNeİster and AşkSanaBenzer MuratYıldırım is: 0.14201589969081962
 
 
 
-Cosine similarity for trends #MesPremiersMotsDevantDieu and #DemocracyVSModi is: 0.049154588494053374
+Cosine similarity for trends #BlockFotomaç and Diyanet'te FETÖ is: 0.016413304107465318
 
 
 
-Cosine similarity for trends #MesPremiersMotsDevantDieu and #BuenMartes is: 0.053708615552957466
+Cosine similarity for trends #BlockFotomaç and Ahmet Özal is: 0.1667432422124789
 
 
 
-Cosine similarity for trends #MesPremiersMotsDevantDieu and #charitytuesday is: 0.09589266029707683
+Cosine similarity for trends #BlockFotomaç and Büşra Katipoğlu is: 0.23385358667337133
 
 
 
-Cosine similarity for trends #WomensDay and Hakkı Yalçın is: 0.1865506268111591
+Cosine similarity for trends #BlockFotomaç and Victor Sanchez is: 0.14194374348941724
 
 
 
-Cosine similarity for trends #WomensDay and #ErkeklerNeİster is: 0.12812153542987648
+Cosine similarity for trends #BlockFotomaç and Luis Cavanda is: 0.01613743060919757
 
 
 
-Cosine similarity for trends #WomensDay and #census2016 is: 0.3896331936658554
+Cosine similarity for trends #BlockFotomaç and Jose Sosa is: 0.15467960838455727
 
 
 
-Cosine similarity for trends #WomensDay and #FrasesSimpsons is: 0.0125
+Cosine similarity for trends #BlockFotomaç and AşkSanaBenzer MuratYıldırım is: 0.25074294368839933
 
 
 
-Cosine similarity for trends #WomensDay and #examresults is: 0.14033534984695292
+Cosine similarity for trends Diyanet'te FETÖ and Ahmet Özal is: 0.0318464877649241
 
 
 
-Cosine similarity for trends #WomensDay and #LeMallForAllDay is: 0.2924107142857143
+Cosine similarity for trends Diyanet'te FETÖ and Büşra Katipoğlu is: 0.03509312031717982
 
 
 
-Cosine similarity for trends #WomensDay and #TuesdayMotivation is: 0.3269464839669917
+Cosine similarity for trends Diyanet'te FETÖ and Victor Sanchez is: 0.042601432284230495
 
 
 
-Cosine similarity for trends #WomensDay and #BuradaykenYazayım is: 0.08478036337171987
+Cosine similarity for trends Diyanet'te FETÖ and Luis Cavanda is: 0.06780635036208105
 
 
 
-Cosine similarity for trends #WomensDay and #yuri is: 0.12946428571428573
+Cosine similarity for trends Diyanet'te FETÖ and Jose Sosa is: 0.046423834544262965
 
 
 
-Cosine similarity for trends #WomensDay and #LaVidaEsPerfectaCuando is: 0.0739370218568357
+Cosine similarity for trends Diyanet'te FETÖ and AşkSanaBenzer MuratYıldırım is: 0.04052204492365539
 
 
 
-Cosine similarity for trends #WomensDay and #Muktangan is: 0.2110936921724569
+Cosine similarity for trends Ahmet Özal and Büşra Katipoğlu is: 0.3241018617760822
 
 
 
-Cosine similarity for trends #WomensDay and #DemocracyVSModi is: 0.27536369844283826
+Cosine similarity for trends Ahmet Özal and Victor Sanchez is: 0.19672236884115843
 
 
 
-Cosine similarity for trends #WomensDay and #BuenMartes is: 0.1560094301883457
+Cosine similarity for trends Ahmet Özal and Luis Cavanda is: 0.03131121455425748
 
 
 
-Cosine similarity for trends #WomensDay and #charitytuesday is: 0.23211917272131485
+Cosine similarity for trends Ahmet Özal and Jose Sosa is: 0.21437323142813602
 
 
 
-Cosine similarity for trends Hakkı Yalçın and #ErkeklerNeİster is: 0.2439346884545225
+Cosine similarity for trends Ahmet Özal and AşkSanaBenzer MuratYıldırım is: 0.41166465371081584
 
 
 
-Cosine similarity for trends Hakkı Yalçın and #census2016 is: 0.19295742583126907
+Cosine similarity for trends Büşra Katipoğlu and Victor Sanchez is: 0.30348848933344197
 
 
 
-Cosine similarity for trends Hakkı Yalçın and #FrasesSimpsons is: 0.04264014327112208
+Cosine similarity for trends Büşra Katipoğlu and Luis Cavanda is: 0.03450327796711771
 
 
 
-Cosine similarity for trends Hakkı Yalçın and #examresults is: 0.04351941398892446
+Cosine similarity for trends Büşra Katipoğlu and Jose Sosa is: 0.3307189138830738
 
 
 
-Cosine similarity for trends Hakkı Yalçın and #LeMallForAllDay is: 0.3959441875175622
+Cosine similarity for trends Büşra Katipoğlu and AşkSanaBenzer MuratYıldırım is: 0.5361109642475097
 
 
 
-Cosine similarity for trends Hakkı Yalçın and #TuesdayMotivation is: 0.4130679975805081
+Cosine similarity for trends Victor Sanchez and Luis Cavanda is: 0.04188539082916955
 
 
 
-Cosine similarity for trends Hakkı Yalçın and #BuradaykenYazayım is: 0.14069371488316254
+Cosine similarity for trends Victor Sanchez and Jose Sosa is: 0.22941573387056174
 
 
 
-Cosine similarity for trends Hakkı Yalçın and #yuri is: 0.21320071635561044
+Cosine similarity for trends Victor Sanchez and AşkSanaBenzer MuratYıldırım is: 0.35043832202523123
 
 
 
-Cosine similarity for trends Hakkı Yalçın and #LaVidaEsPerfectaCuando is: 0.10965861582662817
+Cosine similarity for trends Luis Cavanda and Jose Sosa is: 0.04564354645876384
 
 
 
-Cosine similarity for trends Hakkı Yalçın and #Muktangan is: 0.04923659639173309
+Cosine similarity for trends Luis Cavanda and AşkSanaBenzer MuratYıldırım is: 0.03984095364447979
 
 
 
-Cosine similarity for trends Hakkı Yalçın and #DemocracyVSModi is: 0.2203352133452888
-
-
-
-Cosine similarity for trends Hakkı Yalçın and #BuenMartes is: 0.23652495839563303
-
-
-
-Cosine similarity for trends Hakkı Yalçın and #charitytuesday is: 0.3959037912324479
-
-
-
-Cosine similarity for trends #ErkeklerNeİster and #census2016 is: 0.14420045251869898
-
-
-
-Cosine similarity for trends #ErkeklerNeİster and #FrasesSimpsons is: 0.0047673129462279615
-
-
-
-Cosine similarity for trends #ErkeklerNeİster and #examresults is: 0.014596855203028555
-
-
-
-Cosine similarity for trends #ErkeklerNeİster and #LeMallForAllDay is: 0.27412049440810776
-
-
-
-Cosine similarity for trends #ErkeklerNeİster and #TuesdayMotivation is: 0.2826363253074388
-
-
-
-Cosine similarity for trends #ErkeklerNeİster and #BuradaykenYazayım is: 0.21148158871540426
-
-
-
-Cosine similarity for trends #ErkeklerNeİster and #yuri is: 0.1464246119198588
-
-
-
-Cosine similarity for trends #ErkeklerNeİster and #LaVidaEsPerfectaCuando is: 0.06620511221285622
-
-
-
-Cosine similarity for trends #ErkeklerNeİster and #Muktangan is: 0.02890029883456697
-
-
-
-Cosine similarity for trends #ErkeklerNeİster and #DemocracyVSModi is: 0.15299150725127417
-
-
-
-Cosine similarity for trends #ErkeklerNeİster and #BuenMartes is: 0.15536022882095887
-
-
-
-Cosine similarity for trends #ErkeklerNeİster and #charitytuesday is: 0.25672765902623523
-
-
-
-Cosine similarity for trends #census2016 and #FrasesSimpsons is: 0.010122275900392805
-
-
-
-Cosine similarity for trends #census2016 and #examresults is: 0.22485127614961783
-
-
-
-Cosine similarity for trends #census2016 and #LeMallForAllDay is: 0.34407231947133526
-
-
-
-Cosine similarity for trends #census2016 and #TuesdayMotivation is: 0.3539300962850503
-
-
-
-Cosine similarity for trends #census2016 and #BuradaykenYazayım is: 0.09081050944544043
-
-
-
-Cosine similarity for trends #census2016 and #yuri is: 0.14375333001398186
-
-
-
-Cosine similarity for trends #census2016 and #LaVidaEsPerfectaCuando is: 0.0808513500582718
-
-
-
-Cosine similarity for trends #census2016 and #Muktangan is: 0.1942303396756146
-
-
-
-Cosine similarity for trends #census2016 and #DemocracyVSModi is: 0.2966650414511932
-
-
-
-Cosine similarity for trends #census2016 and #BuenMartes is: 0.1717476930976926
-
-
-
-Cosine similarity for trends #census2016 and #charitytuesday is: 0.2498841381744349
-
-
-
-Cosine similarity for trends #FrasesSimpsons and #examresults is: 0.010206207261596576
-
-
-
-Cosine similarity for trends #FrasesSimpsons and #LeMallForAllDay is: 0.007142857142857143
-
-
-
-Cosine similarity for trends #FrasesSimpsons and #TuesdayMotivation is: 0.007749842582921286
-
-
-
-Cosine similarity for trends #FrasesSimpsons and #BuradaykenYazayım is: 0.003666177875533832
-
-
-
-Cosine similarity for trends #FrasesSimpsons and #yuri is: 0.007142857142857143
-
-
-
-Cosine similarity for trends #FrasesSimpsons and #LaVidaEsPerfectaCuando is: 0.11315578997220073
-
-
-
-Cosine similarity for trends #FrasesSimpsons and #Muktangan is: 0.005773502691896258
-
-
-
-Cosine similarity for trends #FrasesSimpsons and #DemocracyVSModi is: 0.0027196414661021058
-
-
-
-Cosine similarity for trends #FrasesSimpsons and #BuenMartes is: 0.076271276980969
-
-
-
-Cosine similarity for trends #FrasesSimpsons and #charitytuesday is: 0.009284766908852594
-
-
-
-Cosine similarity for trends #examresults and #LeMallForAllDay is: 0.029160592175990215
-
-
-
-Cosine similarity for trends #examresults and #TuesdayMotivation is: 0.055367549752229114
-
-
-
-Cosine similarity for trends #examresults and #BuradaykenYazayım is: 0.0374177712555781
-
-
-
-Cosine similarity for trends #examresults and #yuri is: 0.014580296087995107
-
-
-
-Cosine similarity for trends #examresults and #LaVidaEsPerfectaCuando is: 0.0104990131391452
-
-
-
-Cosine similarity for trends #examresults and #Muktangan is: 0.07071067811865475
-
-
-
-Cosine similarity for trends #examresults and #DemocracyVSModi is: 0.08882311833686551
-
-
-
-Cosine similarity for trends #examresults and #BuenMartes is: 0.014153462926807445
-
-
-
-Cosine similarity for trends #examresults and #charitytuesday is: 0.018952451089472584
-
-
-
-Cosine similarity for trends #LeMallForAllDay and #TuesdayMotivation is: 0.5840059946415683
-
-
-
-Cosine similarity for trends #LeMallForAllDay and #BuradaykenYazayım is: 0.13355362260873246
-
-
-
-Cosine similarity for trends #LeMallForAllDay and #yuri is: 0.28061224489795916
-
-
-
-Cosine similarity for trends #LeMallForAllDay and #LaVidaEsPerfectaCuando is: 0.11389056782916307
-
-
-
-Cosine similarity for trends #LeMallForAllDay and #Muktangan is: 0.12165594957924258
-
-
-
-Cosine similarity for trends #LeMallForAllDay and #DemocracyVSModi is: 0.3360699811683317
-
-
-
-Cosine similarity for trends #LeMallForAllDay and #BuenMartes is: 0.2674447374657355
-
-
-
-Cosine similarity for trends #LeMallForAllDay and #charitytuesday is: 0.5040302036234264
-
-
-
-Cosine similarity for trends #TuesdayMotivation and #BuradaykenYazayım is: 0.13922027694024233
-
-
-
-Cosine similarity for trends #TuesdayMotivation and #yuri is: 0.2823156940921326
-
-
-
-Cosine similarity for trends #TuesdayMotivation and #LaVidaEsPerfectaCuando is: 0.11161048940753836
-
-
-
-Cosine similarity for trends #TuesdayMotivation and #Muktangan is: 0.09619903458067681
-
-
-
-Cosine similarity for trends #TuesdayMotivation and #DemocracyVSModi is: 0.34987476785499116
-
-
-
-Cosine similarity for trends #TuesdayMotivation and #BuenMartes is: 0.27942454809496975
-
-
-
-Cosine similarity for trends #TuesdayMotivation and #charitytuesday is: 0.7915103015899669
-
-
-
-Cosine similarity for trends #BuradaykenYazayım and #yuri is: 0.06808616054562831
-
-
-
-Cosine similarity for trends #BuradaykenYazayım and #LaVidaEsPerfectaCuando is: 0.05657035277517755
-
-
-
-Cosine similarity for trends #BuradaykenYazayım and #Muktangan is: 0.019050019050028573
-
-
-
-Cosine similarity for trends #BuradaykenYazayım and #DemocracyVSModi is: 0.0777713771047819
-
-
-
-Cosine similarity for trends #BuradaykenYazayım and #BuenMartes is: 0.11184962728253656
-
-
-
-Cosine similarity for trends #BuradaykenYazayım and #charitytuesday is: 0.1293505066787513
-
-
-
-Cosine similarity for trends #yuri and #LaVidaEsPerfectaCuando is: 0.11756445711397477
-
-
-
-Cosine similarity for trends #yuri and #Muktangan is: 0.032991443953692905
-
-
-
-Cosine similarity for trends #yuri and #DemocracyVSModi is: 0.16317848796612636
-
-
-
-Cosine similarity for trends #yuri and #BuenMartes is: 0.1386750490563073
-
-
-
-Cosine similarity for trends #yuri and #charitytuesday is: 0.2520151018117132
-
-
-
-Cosine similarity for trends #LaVidaEsPerfectaCuando and #Muktangan is: 0.020786985482077455
-
-
-
-Cosine similarity for trends #LaVidaEsPerfectaCuando and #DemocracyVSModi is: 0.0587509704481518
-
-
-
-Cosine similarity for trends #LaVidaEsPerfectaCuando and #BuenMartes is: 0.2639089703817296
-
-
-
-Cosine similarity for trends #LaVidaEsPerfectaCuando and #charitytuesday is: 0.09551137584354213
-
-
-
-Cosine similarity for trends #Muktangan and #DemocracyVSModi is: 0.16486950191809854
-
-
-
-Cosine similarity for trends #Muktangan and #BuenMartes is: 0.04003203845127178
-
-
-
-Cosine similarity for trends #Muktangan and #charitytuesday is: 0.05360562674188974
-
-
-
-Cosine similarity for trends #DemocracyVSModi and #BuenMartes is: 0.14331563721636525
-
-
-
-Cosine similarity for trends #DemocracyVSModi and #charitytuesday is: 0.27776360797249
-
-
-
-Cosine similarity for trends #BuenMartes and #charitytuesday is: 0.24463744624668723
+Cosine similarity for trends Jose Sosa and AşkSanaBenzer MuratYıldırım is: 0.3818813079129867
 
 
 

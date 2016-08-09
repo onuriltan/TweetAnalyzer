@@ -16,14 +16,10 @@ import java.util.StringTokenizer;
 import controller.CosineSimilarityPanelController;
 import model.DatabaseModel;
 import twitter4j.FilterQuery;
-import twitter4j.RateLimitStatus;
 import twitter4j.StallWarning;
 import twitter4j.Status;
 import twitter4j.StatusDeletionNotice;
 import twitter4j.StatusListener;
-import twitter4j.Twitter;
-import twitter4j.TwitterException;
-import twitter4j.TwitterFactory;
 import twitter4j.TwitterStream;
 import twitter4j.TwitterStreamFactory;
 import twitter4j.conf.ConfigurationBuilder;
@@ -37,11 +33,13 @@ public class CosineSimilarityStream {
 	private TwitterStreamFactory tf;
 	private TwitterStream stream;
 	private FilterQuery filtre;
-	public CosineSimilarityStream(DatabaseModel database,CurrentTime currentTime,SpamDetector spamDetector){
+	private SearchPanel searchPanel;
+	public CosineSimilarityStream(SearchPanel searchPanel,DatabaseModel database,CurrentTime currentTime,SpamDetector spamDetector){
 
 		this.database = database;
 		this.currentTime = currentTime;
 		this.spamDetector = spamDetector;
+		this.searchPanel = searchPanel;
 
 	}
 
@@ -321,15 +319,16 @@ public class CosineSimilarityStream {
 					}
 				}
 			}
-			try {
+			/*	try {
 				if(!array.isEmpty()){
 					cosineSimilarityToTxt(array,0);
+					database.setCosineSimArray(array);
 					cosineSimilarityToTxt(database.getTrendDatabaseList(),1);
 				}
 
 			} catch (IOException e1) {
 				e1.printStackTrace();
-			}
+			}*/
 		}
 	}
 

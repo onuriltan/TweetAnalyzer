@@ -63,7 +63,7 @@ public class TrendPanel extends JPanel {
 		try {
 			Twitter twitter = new TwitterFactory(cb.build()).getInstance();
 			//int turkeyTrends = getTrendsFromTurkey(twitter);
-			Trends trends = twitter.getPlaceTrends(1);//takes worldwide trends
+			Trends trends = twitter.getPlaceTrends(23424969);//takes worldwide trends
 			int i  = 0;
 			for (Trend trend : trends.getTrends()) {
 				if(!isProbablyArabic(trend.getName()) && !containsHanScript(trend.getName()) &&

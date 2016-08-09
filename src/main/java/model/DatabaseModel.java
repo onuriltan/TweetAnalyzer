@@ -61,7 +61,18 @@ public class DatabaseModel {
 	private String url = " ";
 	private String mostcommon = " ";
 	private String urlText = " "; 
+	private ArrayList<String> cosineSimArray;
+	
 
+
+	public ArrayList<String> getCosineSimArray() {
+		return cosineSimArray;
+	}
+
+
+	public void setCosineSimArray(ArrayList<String> cosineSimArray) {
+		this.cosineSimArray = cosineSimArray;
+	}
 
 
 	public String getLocation() {

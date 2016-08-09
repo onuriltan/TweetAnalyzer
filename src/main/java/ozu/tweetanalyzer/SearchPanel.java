@@ -10,9 +10,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -258,7 +260,14 @@ public class SearchPanel extends JPanel  {
 				Date date = new Date();
 				String mainFile = "results";
 				String file = dateFormat.format(cal.getTime())+" to "+dateFormat.format(date);
-
+				ArrayList<String> cosineArray = new ArrayList<String>();
+				try {
+					cosineSimilarityToTxt(database.getCosineSimArray(),0);
+				} catch (IOException e2) {
+					// TODO Auto-generated catch block
+					e2.printStackTrace();
+				}
+				
 				File asd = new File(database.getSearchQuery()+"/"+file);
 				//ImageIO.write(image, "jpg",asd);
 
@@ -305,13 +314,8 @@ public class SearchPanel extends JPanel  {
 
 				try {
 					ChartUtilities.saveChartAsJPEG(locationfile, locationController.getChart(), 600, 400);
-					ChartUtilities.saveChartAsJPEG(asd, locationController.getChart(), 600, 400);
+					ChartUtilities.saveChartAsJPEG(organizationfile, locationController.getChart(), 600, 400);
 					ChartUtilities.saveChartAsJPEG(asd, organizationController.getChart(), 600, 400);
-					ChartUtilities.saveChartAsJPEG(asd, personController.getChart(), 600, 400);
-					ChartUtilities.saveChartAsJPEG(asd, languageController.getChart(), 600, 400);
-					ChartUtilities.saveChartAsJPEG(asd, hashtagController.getChart(), 600, 400);
-					ChartUtilities.saveChartAsJPEG(asd, allWordsController.getChart(), 600, 400);
-
 					ChartUtilities.saveChartAsJPEG(organizationfile, organizationController.getChart(), 600, 400);
 					ChartUtilities.saveChartAsJPEG(personfile, personController.getChart(), 600, 400);
 					ChartUtilities.saveChartAsJPEG(languagefile, languageController.getChart(), 600, 400);
@@ -344,8 +348,38 @@ public class SearchPanel extends JPanel  {
 
 	}
 
-
-
+	public void cosineSimilarityToTxt(ArrayList<String> array,int k) throws IOException{
+		OutputStream outputStream;
+		if(k == 1){
+			 outputStream = new FileOutputStream("words.txt");
+		}else{
+			outputStream = new FileOutputStream("cosineSimilarity.txt");
+		}
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH;mm;ss");
+		Date date = new Date();
+		String mainFile = "results";
+		String file = dateFormat.format(cal.getTime())+" to "+dateFormat.format(date);
+		File cosfile = new File(mainFile+"/"+file+"/cosineSimilarity.txt");
+		File parentDir = cosfile.getParentFile();
+		if(! parentDir.exists() ){ 
+			parentDir.mkdirs();
+		}
+		Writer w = new OutputStreamWriter(new FileOutputStream(cosfile));
+	
+		w.close();
+		String eol = System.getProperty("line.separator");
+		@SuppressWarnings("resource")        
+		Writer out = new OutputStreamWriter(outputStream);
+	
+		for (int i = 0; i < array.size(); i++) {
+			w.write(array.get(i));
+			w.write(eol);
+			w.write(eol);
+			w.write(eol);
+			w.write(eol);
+		}
+		w.flush();
+	}
 
 	public JLabel getNamelabel() {
 		return enterQueryLabel;

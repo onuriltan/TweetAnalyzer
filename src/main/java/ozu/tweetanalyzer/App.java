@@ -4,7 +4,6 @@ package ozu.tweetanalyzer;
 import java.util.Calendar;
 
 import javax.swing.JFrame;
-import javax.swing.JSplitPane;
 
 import org.jfree.ui.RefineryUtilities;
 import controller.ChartController;
@@ -34,8 +33,8 @@ public class App
 		EntityRecognition recognition = new EntityRecognition(database);
 		SpamDetector spamDetector = new SpamDetector();
 		TrendPanel trendPanel= new TrendPanel(database);
-		CosineSimilarityStream cosineStream = new CosineSimilarityStream(database,time,spamDetector);
 		SearchPanel searchPanel = new SearchPanel(trendPanel,cal);
+		CosineSimilarityStream cosineStream = new CosineSimilarityStream(searchPanel,database,time,spamDetector);
 		Search searchRecentTweets = new Search(searchPanel);
 		ApplicationMainFrame appFrame = new ApplicationMainFrame();
 		Stream stream = new Stream(searchPanel);

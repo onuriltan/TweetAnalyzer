@@ -54,7 +54,7 @@ public class ChartView extends JFrame{
 		model.setTextPane(textPane); 
 		
 		JScrollPane streamContainer = new JScrollPane(textPane);
-		streamContainer.setSize(new Dimension(300,900));
+		streamContainer.setPreferredSize(new Dimension(300,900));
 		model.setScrollPane(streamContainer);
 
 		JSplitPane panel = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, chartPanel, streamContainer);

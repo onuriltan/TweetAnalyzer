@@ -98,15 +98,17 @@ public class EntityRecognition {
 			}
 		}
 
-		String language = tweet.getLang().toUpperCase();// GET THE TWEET LANGUAGE
+		if(!tweet.getLang().isEmpty() && !tweet.getLang().equals("und")){
+			String language = tweet.getLang().toUpperCase();// GET THE TWEET LANGUAGE
 
-		updateDatabase(database.getLanguageList(), language, "language");
-		database.setLanguage(database.getLanguage()+"\n"
-				+tweet.getUser().getScreenName()+" : "
-				+text+"\n");
-		languageChartController.setText(database.getLanguage());
-		languageChartController.setDataset(listToPieChartDataset(database.getLanguageList()));// CHANGE THE CHART DATASET
-		languageChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
+			updateDatabase(database.getLanguageList(), language, "language");
+			database.setLanguage(database.getLanguage()+"\n"
+					+tweet.getUser().getScreenName()+" : "
+					+text+"\n");
+			languageChartController.setText(database.getLanguage());
+			languageChartController.setDataset(listToPieChartDataset(database.getLanguageList()));// CHANGE THE CHART DATASET
+			languageChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
+		}
 
 		HashtagEntity[] hashtagsEntities = tweet.getHashtagEntities();// TO GET HASHTAGS THAT USED IN TWEET
 		if(hashtagsEntities.length>0){
@@ -143,12 +145,16 @@ public class EntityRecognition {
 					String urlText = tweet.getUser().getName()+" : "+url.getExpandedURL()+"\n";
 					urlText = urlText+"/n";
 					database.setUrlText(database.getUrlText()+urlText); 
+					database.setUrl(database.getUrl()+"\n"
+							+tweet.getUser().getScreenName()+" : "
+							+text+"\n");
+					verifiedUrlChartController.setText(database.getUrl());
 				}
 				verifiedUrlChartController.updateUrlPanel(database,database.getVerifiedURLList());
 			}				
 		}
 
-		StringTokenizer tokenizer = new StringTokenizer(tweetForEntity);
+		StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
 		String lang = tweet.getLang();
 
 		StopWords stopWords = new StopWords(lang);
