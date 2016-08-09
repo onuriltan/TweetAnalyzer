@@ -29,10 +29,12 @@ import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+
 import org.jfree.chart.ChartUtilities;
 import controller.ChartController;
 import controller.CosineSimilarityPanelController;
 import controller.MapController;
+import controller.UrlController;
 import model.DatabaseModel;
 
 public class SearchPanel extends JPanel  {
@@ -46,10 +48,8 @@ public class SearchPanel extends JPanel  {
 	private JButton searchButton = new JButton("SEARCH");	  
 	private JButton refreshButton = new JButton("REFRESH");	
 	private JButton resultButton = new JButton("GENERATE RESULTS");	
-	private JLabel label = new JLabel("<html>This is a tool to analyze real-time tweets. You need to enter a query that can be a specific event<BR>and after you enter the search button user can see the tweets visualization from world map<BR>and also user can see the names, organizations, locations and tweets<BR>languages as a graph. This tool uses Stanford named entity recognizer tool to identify tweets and recognizes<BR>which names, locations and organization names mentioned in a tweet, and if Twitter user shared his/her location,<BR> user also can see wheretweet tweeted in world map as a visualization.</html>");
 	private JLabel tweetCountlabel;
 	private JLabel whyTweetIsSpam;
-
 	private TrendPanel trendPanel;
 	private Calendar cal;
 	private JPanel spamPanel;
@@ -65,13 +65,12 @@ public class SearchPanel extends JPanel  {
 	}
 
 	public void populateSearchPanel(final CosineSimilarityStream cosineStream,final Search search,final Stream stream,final DatabaseModel database, final EntityRecognition recognition,final SpamDetector spamDetector, final CurrentTime currentTime,
-			final MapController mapController,final ChartController locationController, final ChartController organizationController,final ChartController personController,final ChartController languageController,final ChartController hashtagController,final ChartController urlController, final ChartController allWordsController
+			final MapController mapController,final ChartController locationController, final ChartController organizationController,final ChartController personController,final ChartController languageController,final ChartController hashtagController,final UrlController urlController, final ChartController allWordsController
 			,final CosineSimilarityPanelController  cosineController){
 
 
 		this.setLayout(new BorderLayout());
 		userText.setPreferredSize( new Dimension( 200, 24 ) );
-		label.setBackground(Color.blue);
 		this.setBackground(Color.white);
 		tweetCountlabel = new JLabel("Tweet count: "+database.getTweetCount());
 		tweetCountlabel.setPreferredSize( new Dimension( 100, 24 ) );
@@ -221,16 +220,21 @@ public class SearchPanel extends JPanel  {
 				hashtagController.setText("");
 				hashtagController.getTextPane().setText("");;
 
-				urlController.getPlot().setDataset(null);
+				urlController.clear();
+				/*	urlController.getPlot().setDataset(null);
 				urlController.setDataset(null);
 				urlController.setText("");
-				urlController.getTextPane().setText("");;
+				urlController.getTextPane().setText("");;*/
 
 				allWordsController.getPlot().setDataset(null);
 				allWordsController.setDataset(null);
 				allWordsController.setText("");
 				allWordsController.getTextPane().setText("");;
+				for (int i = 0; i < cosineController.getlabelList().size(); i++) {
+					cosineController.getlabelList().get(i).setText("");
 
+				}
+				cosineController.getView().repaint();
 				tweetCountlabel.setText("<html>Tweet count: "+database.getTweetCount()+"<html>");
 				searchButton.setEnabled(true);
 				resultButton.setEnabled(false);
@@ -248,11 +252,15 @@ public class SearchPanel extends JPanel  {
 
 			public void actionPerformed(ActionEvent arg0) {
 				//locationController, organizationController, personController, languageController, hashtagController, urlController,allWordsController
-
+				//	MongoConnection mongoConnection = new MongoConnection(database.getSearchQuery());
+				//	Document basicObj = new Document();
 				SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH;mm;ss");
 				Date date = new Date();
 				String mainFile = "results";
 				String file = dateFormat.format(cal.getTime())+" to "+dateFormat.format(date);
+
+				File asd = new File(database.getSearchQuery()+"/"+file);
+				//ImageIO.write(image, "jpg",asd);
 
 				File locationfile = new File(mainFile+"/"+file+"/Location.png");
 				File organizationfile = new File(mainFile+"/"+file+"/Organization.png");
@@ -297,6 +305,13 @@ public class SearchPanel extends JPanel  {
 
 				try {
 					ChartUtilities.saveChartAsJPEG(locationfile, locationController.getChart(), 600, 400);
+					ChartUtilities.saveChartAsJPEG(asd, locationController.getChart(), 600, 400);
+					ChartUtilities.saveChartAsJPEG(asd, organizationController.getChart(), 600, 400);
+					ChartUtilities.saveChartAsJPEG(asd, personController.getChart(), 600, 400);
+					ChartUtilities.saveChartAsJPEG(asd, languageController.getChart(), 600, 400);
+					ChartUtilities.saveChartAsJPEG(asd, hashtagController.getChart(), 600, 400);
+					ChartUtilities.saveChartAsJPEG(asd, allWordsController.getChart(), 600, 400);
+
 					ChartUtilities.saveChartAsJPEG(organizationfile, organizationController.getChart(), 600, 400);
 					ChartUtilities.saveChartAsJPEG(personfile, personController.getChart(), 600, 400);
 					ChartUtilities.saveChartAsJPEG(languagefile, languageController.getChart(), 600, 400);
@@ -318,7 +333,8 @@ public class SearchPanel extends JPanel  {
 					e1.printStackTrace();
 				}
 				JOptionPane.showMessageDialog(null, "Your search results created in the project directory.");
-
+				//basicObj.put(file, asd);
+				//	mongoConnection.coll.insertOne(basicObj);
 
 			}
 
@@ -369,16 +385,6 @@ public class SearchPanel extends JPanel  {
 	}
 
 
-
-	public JLabel getLabel() {
-		return label;
-	}
-
-
-
-	public void setLabel(JLabel label) {
-		this.label = label;
-	}
 
 
 	public JTextField getUserText() {

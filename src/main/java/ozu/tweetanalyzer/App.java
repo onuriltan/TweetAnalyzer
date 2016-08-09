@@ -10,13 +10,16 @@ import org.jfree.ui.RefineryUtilities;
 import controller.ChartController;
 import controller.CosineSimilarityPanelController;
 import controller.MapController;
+import controller.UrlController;
 import model.ChartModel;
 import model.CosineSimilarityPanelModel;
 import model.DatabaseModel;
 import model.MapModel;
+import model.UrlModel;
 import view.ChartView;
 import view.CosineSimilarityPanelView;
 import view.MapView;
+import view.UrlView;
 
 
 public class App 
@@ -48,43 +51,41 @@ public class App
 
 
 		ChartModel locationChartModel = new ChartModel();
-		locationChartModel.setChartName("Location");
 		ChartController locationController = new ChartController(locationChartModel, new ChartView());
 		locationController.populateChart();
 
 		ChartModel organizationChartModel = new ChartModel();
-		organizationChartModel.setChartName("Organization");
 		ChartController organizationController = new ChartController(organizationChartModel, new ChartView());
 		organizationController.populateChart();
 
 		ChartModel personChartModel = new ChartModel();
-		personChartModel.setChartName("Person");
 		ChartController personController = new ChartController(personChartModel, new ChartView());
 		personController.populateChart();
 
 		ChartModel languageChartModel = new ChartModel();
-		languageChartModel.setChartName("Language");
 		ChartController languageController = new ChartController(languageChartModel, new ChartView());
 		languageController.populateChart();
 
 		ChartModel hashtagChartModel = new ChartModel();
-		hashtagChartModel.setChartName("Hashtag");
 		ChartController hashtagController = new ChartController(hashtagChartModel, new ChartView());
 		hashtagController.populateChart();
 
-		ChartModel verifiedUrlChartModel = new ChartModel();
-		verifiedUrlChartModel.setChartName("URLs");
-		ChartController urlController = new ChartController(verifiedUrlChartModel, new ChartView());
-		urlController.populateChart();
+		//ChartModel verifiedUrlChartModel = new ChartModel();
+		//ChartController urlController = new ChartController(verifiedUrlChartModel, new ChartView());
+		//urlController.populateChart();
 
 		ChartModel allWordsChartModel = new ChartModel();
-		allWordsChartModel.setChartName("MostCommonWords");
 		ChartController allWordsController = new ChartController(allWordsChartModel, new ChartView());
 		allWordsController.populateChart();
 
 		MapModel mapModel = new MapModel();
 		MapController mapController = new MapController(mapModel, new MapView(mapModel,getLocationFromAccountInfo));
 		mapController.populateMap();
+		
+		
+		UrlModel urlModel = new UrlModel();
+		UrlController urlController = new UrlController(urlModel, new UrlView(urlModel));
+		urlController.populateUrlPanel();		
 
 	
 		
@@ -98,7 +99,7 @@ public class App
 				organizationController, personController, languageController, hashtagController, urlController, allWordsController,cosineController);
 
 
-		appFrame.populateApplication(cosineSimilarityPanelView,searchPanel,mapController.getPanel(),locationController.getSplitPane(),organizationController.getSplitPane(), personController.getSplitPane(), languageController.getSplitPane(), hashtagController.getSplitPane(), urlController.getSplitPane(),allWordsController.getSplitPane());
+		appFrame.populateApplication(cosineSimilarityPanelView,searchPanel,mapController.getPanel(),locationController.getSplitPane(),organizationController.getSplitPane(), personController.getSplitPane(), languageController.getSplitPane(), hashtagController.getSplitPane(), urlController.getView(),allWordsController.getSplitPane());
 		appFrame.pack();
 		RefineryUtilities.centerFrameOnScreen(appFrame);
 		appFrame.setVisible(true);

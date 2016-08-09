@@ -1,684 +1,684 @@
-Cosine similarity for trends #InternationalCatDay and #FelizLunes is: 0.4694072729798726
+Cosine similarity for trends #cruel and #NationalBookLoversDay is: 0.37198706131010906
 
 
 
-Cosine similarity for trends #InternationalCatDay and #mondaymotivation is: 0.533891625830017
+Cosine similarity for trends #cruel and John Stones is: 0.3812081154611556
 
 
 
-Cosine similarity for trends #InternationalCatDay and Rafaela Silva is: 0.04433354240420598
+Cosine similarity for trends #cruel and #MesPremiersMotsDevantDieu is: 0.07948867764424694
 
 
 
-Cosine similarity for trends #InternationalCatDay and Alejandra Benítez is: 0.2731216724600461
+Cosine similarity for trends #cruel and #WomensDay is: 0.28861717943270454
 
 
 
-Cosine similarity for trends #InternationalCatDay and Bryan Clauson is: 0.3540869273228388
+Cosine similarity for trends #cruel and Hakkı Yalçın is: 0.36755944606132784
 
 
 
-Cosine similarity for trends #InternationalCatDay and Evan McMullin is: 0.2867824502359134
+Cosine similarity for trends #cruel and #ErkeklerNeİster is: 0.26417825587455956
 
 
 
-Cosine similarity for trends #InternationalCatDay and Abhinav Bindra is: 0.21044435725284405
+Cosine similarity for trends #cruel and #census2016 is: 0.30624567114651585
 
 
 
-Cosine similarity for trends #InternationalCatDay and Simón Díaz is: 0.2728404901557899
+Cosine similarity for trends #cruel and #FrasesSimpsons is: 0.028733443641300364
 
 
 
-Cosine similarity for trends #InternationalCatDay and #Delta is: 0.42395468603686015
+Cosine similarity for trends #cruel and #examresults is: 0.03351536927343037
 
 
 
-Cosine similarity for trends #InternationalCatDay and #YoSeríaMedallaDeOroEn is: 0.0043511157541241035
+Cosine similarity for trends #cruel and #LeMallForAllDay is: 0.510165223835333
 
 
 
-Cosine similarity for trends #InternationalCatDay and #prayforGiGi is: 0.17010024945934032
+Cosine similarity for trends #cruel and #TuesdayMotivation is: 0.5296594890957931
 
 
 
-Cosine similarity for trends #InternationalCatDay and #SegundaDetremuraSdv is: 0.3047851783442703
+Cosine similarity for trends #cruel and #BuradaykenYazayım is: 0.1339347209648771
 
 
 
-Cosine similarity for trends #InternationalCatDay and #JourneeDuChat is: 0.5576477270882612
+Cosine similarity for trends #cruel and #yuri is: 0.25215062787263587
 
 
 
-Cosine similarity for trends #InternationalCatDay and #ThisIsBLACKPINKArea is: 0.5266912093289092
+Cosine similarity for trends #cruel and #LaVidaEsPerfectaCuando is: 0.12667618885141757
 
 
 
-Cosine similarity for trends #InternationalCatDay and #MentirasQueMeDijeronMisExs is: 0.02396407697524647
+Cosine similarity for trends #cruel and #Muktangan is: 0.09835062128193754
 
 
 
-Cosine similarity for trends #InternationalCatDay and #AEstasHorasYo is: 0.0029349880373066377
+Cosine similarity for trends #cruel and #DemocracyVSModi is: 0.29694972620499577
 
 
 
-Cosine similarity for trends #InternationalCatDay and #saineymarENTRAMARTA is: 0.014378446185147881
+Cosine similarity for trends #cruel and #BuenMartes is: 0.28746127311279346
 
 
 
-Cosine similarity for trends #InternationalCatDay and #KısaVeÖz is: 0.1635207620785127
+Cosine similarity for trends #cruel and #charitytuesday is: 0.4611540361496188
 
 
 
-Cosine similarity for trends #FelizLunes and #mondaymotivation is: 0.3817393182044483
+Cosine similarity for trends #NationalBookLoversDay and John Stones is: 0.3491868616754413
 
 
 
-Cosine similarity for trends #FelizLunes and Rafaela Silva is: 0.08074689918749241
+Cosine similarity for trends #NationalBookLoversDay and #MesPremiersMotsDevantDieu is: 0.06420387375057796
 
 
 
-Cosine similarity for trends #FelizLunes and Alejandra Benítez is: 0.27342549977675934
+Cosine similarity for trends #NationalBookLoversDay and #WomensDay is: 0.3833516562719042
 
 
 
-Cosine similarity for trends #FelizLunes and Bryan Clauson is: 0.2551634791344773
+Cosine similarity for trends #NationalBookLoversDay and Hakkı Yalçın is: 0.24740148503046833
 
 
 
-Cosine similarity for trends #FelizLunes and Evan McMullin is: 0.2374914882717317
+Cosine similarity for trends #NationalBookLoversDay and #ErkeklerNeİster is: 0.1778163872986684
 
 
 
-Cosine similarity for trends #FelizLunes and Abhinav Bindra is: 0.17565506213798923
+Cosine similarity for trends #NationalBookLoversDay and #census2016 is: 0.40436678950343713
 
 
 
-Cosine similarity for trends #FelizLunes and Simón Díaz is: 0.39287836289350253
+Cosine similarity for trends #NationalBookLoversDay and #FrasesSimpsons is: 0.01657736891986613
 
 
 
-Cosine similarity for trends #FelizLunes and #Delta is: 0.31741181390332623
+Cosine similarity for trends #NationalBookLoversDay and #examresults is: 0.17483179848303984
 
 
 
-Cosine similarity for trends #FelizLunes and #YoSeríaMedallaDeOroEn is: 0.0902219936601278
+Cosine similarity for trends #NationalBookLoversDay and #LeMallForAllDay is: 0.3868052747968764
 
 
 
-Cosine similarity for trends #FelizLunes and #prayforGiGi is: 0.20489328531408865
+Cosine similarity for trends #NationalBookLoversDay and #TuesdayMotivation is: 0.40896919862471837
 
 
 
-Cosine similarity for trends #FelizLunes and #SegundaDetremuraSdv is: 0.29300456847777473
+Cosine similarity for trends #NationalBookLoversDay and #BuradaykenYazayım is: 0.09521508029743476
 
 
 
-Cosine similarity for trends #FelizLunes and #JourneeDuChat is: 0.42600643361512924
+Cosine similarity for trends #NationalBookLoversDay and #yuri is: 0.16182669659869317
 
 
 
-Cosine similarity for trends #FelizLunes and #ThisIsBLACKPINKArea is: 0.3900406046416122
+Cosine similarity for trends #NationalBookLoversDay and #LaVidaEsPerfectaCuando is: 0.09379126378940299
 
 
 
-Cosine similarity for trends #FelizLunes and #MentirasQueMeDijeronMisExs is: 0.11180339887498948
+Cosine similarity for trends #NationalBookLoversDay and #Muktangan is: 0.20577539077931958
 
 
 
-Cosine similarity for trends #FelizLunes and #AEstasHorasYo is: 0.12171612389003691
+Cosine similarity for trends #NationalBookLoversDay and #DemocracyVSModi is: 0.2915464327729333
 
 
 
-Cosine similarity for trends #FelizLunes and #saineymarENTRAMARTA is: 0.05590169943749474
+Cosine similarity for trends #NationalBookLoversDay and #BuenMartes is: 0.21839240757775924
 
 
 
-Cosine similarity for trends #FelizLunes and #KısaVeÖz is: 0.15214515486254612
+Cosine similarity for trends #NationalBookLoversDay and #charitytuesday is: 0.3129645796454628
 
 
 
-Cosine similarity for trends #mondaymotivation and Rafaela Silva is: 0.03556646104956539
+Cosine similarity for trends John Stones and #MesPremiersMotsDevantDieu is: 0.06082993574504365
 
 
 
-Cosine similarity for trends #mondaymotivation and Alejandra Benítez is: 0.2267294772790305
+Cosine similarity for trends John Stones and #WomensDay is: 0.30470387090856205
 
 
 
-Cosine similarity for trends #mondaymotivation and Bryan Clauson is: 0.30299080403199297
+Cosine similarity for trends John Stones and Hakkı Yalçın is: 0.27544752496799596
 
 
 
-Cosine similarity for trends #mondaymotivation and Evan McMullin is: 0.2775301188128895
+Cosine similarity for trends John Stones and #ErkeklerNeİster is: 0.20035495453209873
 
 
 
-Cosine similarity for trends #mondaymotivation and Abhinav Bindra is: 0.2571260621537982
+Cosine similarity for trends John Stones and #census2016 is: 0.3401988678606958
 
 
 
-Cosine similarity for trends #mondaymotivation and Simón Díaz is: 0.20680074709435084
+Cosine similarity for trends John Stones and #FrasesSimpsons is: 0.00949973097142828
 
 
 
-Cosine similarity for trends #mondaymotivation and #Delta is: 0.35058926180107103
+Cosine similarity for trends John Stones and #examresults is: 0.07523802922167283
 
 
 
-Cosine similarity for trends #mondaymotivation and #YoSeríaMedallaDeOroEn is: 0.0036901373943067756
+Cosine similarity for trends John Stones and #LeMallForAllDay is: 0.4302021025632521
 
 
 
-Cosine similarity for trends #mondaymotivation and #prayforGiGi is: 0.18257009714803513
+Cosine similarity for trends John Stones and #TuesdayMotivation is: 0.4384891751892449
 
 
 
-Cosine similarity for trends #mondaymotivation and #SegundaDetremuraSdv is: 0.2515993590957054
+Cosine similarity for trends John Stones and #BuradaykenYazayım is: 0.10726932681379955
 
 
 
-Cosine similarity for trends #mondaymotivation and #JourneeDuChat is: 0.4729354140091855
+Cosine similarity for trends John Stones and #yuri is: 0.20465134721305495
 
 
 
-Cosine similarity for trends #mondaymotivation and #ThisIsBLACKPINKArea is: 0.45723303504170504
+Cosine similarity for trends John Stones and #LaVidaEsPerfectaCuando is: 0.09146843550811332
 
 
 
-Cosine similarity for trends #mondaymotivation and #MentirasQueMeDijeronMisExs is: 0.020323692028323077
+Cosine similarity for trends John Stones and #Muktangan is: 0.1399688354010418
 
 
 
-Cosine similarity for trends #mondaymotivation and #AEstasHorasYo is: 0.012445668789715408
+Cosine similarity for trends John Stones and #DemocracyVSModi is: 0.30093612368264727
 
 
 
-Cosine similarity for trends #mondaymotivation and #saineymarENTRAMARTA is: 0.015242769021242308
+Cosine similarity for trends John Stones and #BuenMartes is: 0.20498365246019418
 
 
 
-Cosine similarity for trends #mondaymotivation and #KısaVeÖz is: 0.13868030937111453
+Cosine similarity for trends John Stones and #charitytuesday is: 0.3563392625767383
 
 
 
-Cosine similarity for trends Rafaela Silva and Alejandra Benítez is: 0.0418765756358005
+Cosine similarity for trends #MesPremiersMotsDevantDieu and #WomensDay is: 0.04841229182759271
 
 
 
-Cosine similarity for trends Rafaela Silva and Bryan Clauson is: 0.036810508691615514
+Cosine similarity for trends #MesPremiersMotsDevantDieu and Hakkı Yalçın is: 0.11009637651263607
 
 
 
-Cosine similarity for trends Rafaela Silva and Evan McMullin is: 0.0413802944301184
+Cosine similarity for trends #MesPremiersMotsDevantDieu and #ErkeklerNeİster is: 0.04923659639173309
 
 
 
-Cosine similarity for trends Rafaela Silva and Abhinav Bindra is: 0.031008683647302117
+Cosine similarity for trends #MesPremiersMotsDevantDieu and #census2016 is: 0.055345984924147794
 
 
 
-Cosine similarity for trends Rafaela Silva and Simón Díaz is: 0.08403069556091937
+Cosine similarity for trends #MesPremiersMotsDevantDieu and #FrasesSimpsons is: 0.012909944487358056
 
 
 
-Cosine similarity for trends Rafaela Silva and #Delta is: 0.03602814176392641
+Cosine similarity for trends #MesPremiersMotsDevantDieu and #examresults is: 0.026352313834736494
 
 
 
-Cosine similarity for trends Rafaela Silva and #YoSeríaMedallaDeOroEn is: 0.050435627722400206
+Cosine similarity for trends #MesPremiersMotsDevantDieu and #LeMallForAllDay is: 0.09221388919541469
 
 
 
-Cosine similarity for trends Rafaela Silva and #prayforGiGi is: 0.049088069367381595
+Cosine similarity for trends #MesPremiersMotsDevantDieu and #TuesdayMotivation is: 0.09004503377814962
 
 
 
-Cosine similarity for trends Rafaela Silva and #SegundaDetremuraSdv is: 0.07239537379384489
+Cosine similarity for trends #MesPremiersMotsDevantDieu and #BuradaykenYazayım is: 0.028398091712353243
 
 
 
-Cosine similarity for trends Rafaela Silva and #JourneeDuChat is: 0.06804138174397717
+Cosine similarity for trends #MesPremiersMotsDevantDieu and #yuri is: 0.055328333517248814
 
 
 
-Cosine similarity for trends Rafaela Silva and #ThisIsBLACKPINKArea is: 0.037770591990556754
+Cosine similarity for trends #MesPremiersMotsDevantDieu and #LaVidaEsPerfectaCuando is: 0.026560635762986527
 
 
 
-Cosine similarity for trends Rafaela Silva and #MentirasQueMeDijeronMisExs is: 0.05555555555555555
+Cosine similarity for trends #MesPremiersMotsDevantDieu and #Muktangan is: 0.0149071198499986
 
 
 
-Cosine similarity for trends Rafaela Silva and #AEstasHorasYo is: 0.05103103630798288
+Cosine similarity for trends #MesPremiersMotsDevantDieu and #DemocracyVSModi is: 0.049154588494053374
 
 
 
-Cosine similarity for trends Rafaela Silva and #saineymarENTRAMARTA is: 0.020833333333333332
+Cosine similarity for trends #MesPremiersMotsDevantDieu and #BuenMartes is: 0.053708615552957466
 
 
 
-Cosine similarity for trends Rafaela Silva and #KısaVeÖz is: 0.029160592175990215
+Cosine similarity for trends #MesPremiersMotsDevantDieu and #charitytuesday is: 0.09589266029707683
 
 
 
-Cosine similarity for trends Alejandra Benítez and Bryan Clauson is: 0.14428421761260582
+Cosine similarity for trends #WomensDay and Hakkı Yalçın is: 0.1865506268111591
 
 
 
-Cosine similarity for trends Alejandra Benítez and Evan McMullin is: 0.10813077784295576
+Cosine similarity for trends #WomensDay and #ErkeklerNeİster is: 0.12812153542987648
 
 
 
-Cosine similarity for trends Alejandra Benítez and Abhinav Bindra is: 0.08726171906745601
+Cosine similarity for trends #WomensDay and #census2016 is: 0.3896331936658554
 
 
 
-Cosine similarity for trends Alejandra Benítez and Simón Díaz is: 0.175050164393881
+Cosine similarity for trends #WomensDay and #FrasesSimpsons is: 0.0125
 
 
 
-Cosine similarity for trends Alejandra Benítez and #Delta is: 0.1868417676131314
+Cosine similarity for trends #WomensDay and #examresults is: 0.14033534984695292
 
 
 
-Cosine similarity for trends Alejandra Benítez and #YoSeríaMedallaDeOroEn is: 0.03041382785840883
+Cosine similarity for trends #WomensDay and #LeMallForAllDay is: 0.2924107142857143
 
 
 
-Cosine similarity for trends Alejandra Benítez and #prayforGiGi is: 0.06906951238920019
+Cosine similarity for trends #WomensDay and #TuesdayMotivation is: 0.3269464839669917
 
 
 
-Cosine similarity for trends Alejandra Benítez and #SegundaDetremuraSdv is: 0.16152739605406055
+Cosine similarity for trends #WomensDay and #BuradaykenYazayım is: 0.08478036337171987
 
 
 
-Cosine similarity for trends Alejandra Benítez and #JourneeDuChat is: 0.28721347895177635
+Cosine similarity for trends #WomensDay and #yuri is: 0.12946428571428573
 
 
 
-Cosine similarity for trends Alejandra Benítez and #ThisIsBLACKPINKArea is: 0.22776523953141753
+Cosine similarity for trends #WomensDay and #LaVidaEsPerfectaCuando is: 0.0739370218568357
 
 
 
-Cosine similarity for trends Alejandra Benítez and #MentirasQueMeDijeronMisExs is: 0.0335012605086404
+Cosine similarity for trends #WomensDay and #Muktangan is: 0.2110936921724569
 
 
 
-Cosine similarity for trends Alejandra Benítez and #AEstasHorasYo is: 0.10257624248277727
+Cosine similarity for trends #WomensDay and #DemocracyVSModi is: 0.27536369844283826
 
 
 
-Cosine similarity for trends Alejandra Benítez and #saineymarENTRAMARTA is: 0.050251890762960605
+Cosine similarity for trends #WomensDay and #BuenMartes is: 0.1560094301883457
 
 
 
-Cosine similarity for trends Alejandra Benítez and #KısaVeÖz is: 0.11136849183844391
+Cosine similarity for trends #WomensDay and #charitytuesday is: 0.23211917272131485
 
 
 
-Cosine similarity for trends Bryan Clauson and Evan McMullin is: 0.19192694066046675
+Cosine similarity for trends Hakkı Yalçın and #ErkeklerNeİster is: 0.2439346884545225
 
 
 
-Cosine similarity for trends Bryan Clauson and Abhinav Bindra is: 0.16436814032369812
+Cosine similarity for trends Hakkı Yalçın and #census2016 is: 0.19295742583126907
 
 
 
-Cosine similarity for trends Bryan Clauson and Simón Díaz is: 0.17209510376148404
+Cosine similarity for trends Hakkı Yalçın and #FrasesSimpsons is: 0.04264014327112208
 
 
 
-Cosine similarity for trends Bryan Clauson and #Delta is: 0.22439544696200572
+Cosine similarity for trends Hakkı Yalçın and #examresults is: 0.04351941398892446
 
 
 
-Cosine similarity for trends Bryan Clauson and #YoSeríaMedallaDeOroEn is: 0.01336724001102598
+Cosine similarity for trends Hakkı Yalçın and #LeMallForAllDay is: 0.3959441875175622
 
 
 
-Cosine similarity for trends Bryan Clauson and #prayforGiGi is: 0.1409426307200048
+Cosine similarity for trends Hakkı Yalçın and #TuesdayMotivation is: 0.4130679975805081
 
 
 
-Cosine similarity for trends Bryan Clauson and #SegundaDetremuraSdv is: 0.15829568585450224
+Cosine similarity for trends Hakkı Yalçın and #BuradaykenYazayım is: 0.14069371488316254
 
 
 
-Cosine similarity for trends Bryan Clauson and #JourneeDuChat is: 0.3155843721336013
+Cosine similarity for trends Hakkı Yalçın and #yuri is: 0.21320071635561044
 
 
 
-Cosine similarity for trends Bryan Clauson and #ThisIsBLACKPINKArea is: 0.2866658609442067
+Cosine similarity for trends Hakkı Yalçın and #LaVidaEsPerfectaCuando is: 0.10965861582662817
 
 
 
-Cosine similarity for trends Bryan Clauson and #MentirasQueMeDijeronMisExs is: 0.07362101738323103
+Cosine similarity for trends Hakkı Yalçın and #Muktangan is: 0.04923659639173309
 
 
 
-Cosine similarity for trends Bryan Clauson and #AEstasHorasYo is: 0.022541740866685808
+Cosine similarity for trends Hakkı Yalçın and #DemocracyVSModi is: 0.2203352133452888
 
 
 
-Cosine similarity for trends Bryan Clauson and #saineymarENTRAMARTA is: 0.027607881518711633
+Cosine similarity for trends Hakkı Yalçın and #BuenMartes is: 0.23652495839563303
 
 
 
-Cosine similarity for trends Bryan Clauson and #KısaVeÖz is: 0.09016696346674323
+Cosine similarity for trends Hakkı Yalçın and #charitytuesday is: 0.3959037912324479
 
 
 
-Cosine similarity for trends Evan McMullin and Abhinav Bindra is: 0.13344743975843895
+Cosine similarity for trends #ErkeklerNeİster and #census2016 is: 0.14420045251869898
 
 
 
-Cosine similarity for trends Evan McMullin and Simón Díaz is: 0.18966626855337199
+Cosine similarity for trends #ErkeklerNeİster and #FrasesSimpsons is: 0.0047673129462279615
 
 
 
-Cosine similarity for trends Evan McMullin and #Delta is: 0.1932148227693871
+Cosine similarity for trends #ErkeklerNeİster and #examresults is: 0.014596855203028555
 
 
 
-Cosine similarity for trends Evan McMullin and #YoSeríaMedallaDeOroEn is: 0.020035594799239317
+Cosine similarity for trends #ErkeklerNeİster and #LeMallForAllDay is: 0.27412049440810776
 
 
 
-Cosine similarity for trends Evan McMullin and #prayforGiGi is: 0.2234406639771159
+Cosine similarity for trends #ErkeklerNeİster and #TuesdayMotivation is: 0.2826363253074388
 
 
 
-Cosine similarity for trends Evan McMullin and #SegundaDetremuraSdv is: 0.13660582986333075
+Cosine similarity for trends #ErkeklerNeİster and #BuradaykenYazayım is: 0.21148158871540426
 
 
 
-Cosine similarity for trends Evan McMullin and #JourneeDuChat is: 0.23650808243982008
+Cosine similarity for trends #ErkeklerNeİster and #yuri is: 0.1464246119198588
 
 
 
-Cosine similarity for trends Evan McMullin and #ThisIsBLACKPINKArea is: 0.22506598330115185
+Cosine similarity for trends #ErkeklerNeİster and #LaVidaEsPerfectaCuando is: 0.06620511221285622
 
 
 
-Cosine similarity for trends Evan McMullin and #MentirasQueMeDijeronMisExs is: 0.11034745181364906
+Cosine similarity for trends #ErkeklerNeİster and #Muktangan is: 0.02890029883456697
 
 
 
-Cosine similarity for trends Evan McMullin and #AEstasHorasYo is: 0.016893434459987148
+Cosine similarity for trends #ErkeklerNeİster and #DemocracyVSModi is: 0.15299150725127417
 
 
 
-Cosine similarity for trends Evan McMullin and #saineymarENTRAMARTA is: 0.0413802944301184
+Cosine similarity for trends #ErkeklerNeİster and #BuenMartes is: 0.15536022882095887
 
 
 
-Cosine similarity for trends Evan McMullin and #KısaVeÖz is: 0.07722712895994126
+Cosine similarity for trends #ErkeklerNeİster and #charitytuesday is: 0.25672765902623523
 
 
 
-Cosine similarity for trends Abhinav Bindra and Simón Díaz is: 0.12507270025494252
+Cosine similarity for trends #census2016 and #FrasesSimpsons is: 0.010122275900392805
 
 
 
-Cosine similarity for trends Abhinav Bindra and #Delta is: 0.1555121868497984
+Cosine similarity for trends #census2016 and #examresults is: 0.22485127614961783
 
 
 
-Cosine similarity for trends Abhinav Bindra and #YoSeríaMedallaDeOroEn is: 0.015013847276131278
+Cosine similarity for trends #census2016 and #LeMallForAllDay is: 0.34407231947133526
 
 
 
-Cosine similarity for trends Abhinav Bindra and #prayforGiGi is: 0.13394976442055626
+Cosine similarity for trends #census2016 and #TuesdayMotivation is: 0.3539300962850503
 
 
 
-Cosine similarity for trends Abhinav Bindra and #SegundaDetremuraSdv is: 0.140080839194495
+Cosine similarity for trends #census2016 and #BuradaykenYazayım is: 0.09081050944544043
 
 
 
-Cosine similarity for trends Abhinav Bindra and #JourneeDuChat is: 0.20254787341673333
+Cosine similarity for trends #census2016 and #yuri is: 0.14375333001398186
 
 
 
-Cosine similarity for trends Abhinav Bindra and #ThisIsBLACKPINKArea is: 0.21976277473256461
+Cosine similarity for trends #census2016 and #LaVidaEsPerfectaCuando is: 0.0808513500582718
 
 
 
-Cosine similarity for trends Abhinav Bindra and #MentirasQueMeDijeronMisExs is: 0.08268982305947231
+Cosine similarity for trends #census2016 and #Muktangan is: 0.1942303396756146
 
 
 
-Cosine similarity for trends Abhinav Bindra and #AEstasHorasYo is: 0.025318484177091666
+Cosine similarity for trends #census2016 and #DemocracyVSModi is: 0.2966650414511932
 
 
 
-Cosine similarity for trends Abhinav Bindra and #saineymarENTRAMARTA is: 0.031008683647302117
+Cosine similarity for trends #census2016 and #BuenMartes is: 0.1717476930976926
 
 
 
-Cosine similarity for trends Abhinav Bindra and #KısaVeÖz is: 0.057870820976209526
+Cosine similarity for trends #census2016 and #charitytuesday is: 0.2498841381744349
 
 
 
-Cosine similarity for trends Simón Díaz and #Delta is: 0.17834549439083763
+Cosine similarity for trends #FrasesSimpsons and #examresults is: 0.010206207261596576
 
 
 
-Cosine similarity for trends Simón Díaz and #YoSeríaMedallaDeOroEn is: 0.09431789882478926
+Cosine similarity for trends #FrasesSimpsons and #LeMallForAllDay is: 0.007142857142857143
 
 
 
-Cosine similarity for trends Simón Díaz and #prayforGiGi is: 0.22949469299658595
+Cosine similarity for trends #FrasesSimpsons and #TuesdayMotivation is: 0.007749842582921286
 
 
 
-Cosine similarity for trends Simón Díaz and #SegundaDetremuraSdv is: 0.2508586807177578
+Cosine similarity for trends #FrasesSimpsons and #BuradaykenYazayım is: 0.003666177875533832
 
 
 
-Cosine similarity for trends Simón Díaz and #JourneeDuChat is: 0.2619684159977919
+Cosine similarity for trends #FrasesSimpsons and #yuri is: 0.007142857142857143
 
 
 
-Cosine similarity for trends Simón Díaz and #ThisIsBLACKPINKArea is: 0.2228542308727572
+Cosine similarity for trends #FrasesSimpsons and #LaVidaEsPerfectaCuando is: 0.11315578997220073
 
 
 
-Cosine similarity for trends Simón Díaz and #MentirasQueMeDijeronMisExs is: 0.1527830828380352
+Cosine similarity for trends #FrasesSimpsons and #Muktangan is: 0.005773502691896258
 
 
 
-Cosine similarity for trends Simón Díaz and #AEstasHorasYo is: 0.09356014857063996
+Cosine similarity for trends #FrasesSimpsons and #DemocracyVSModi is: 0.0027196414661021058
 
 
 
-Cosine similarity for trends Simón Díaz and #saineymarENTRAMARTA is: 0.022917462425705283
+Cosine similarity for trends #FrasesSimpsons and #BuenMartes is: 0.076271276980969
 
 
 
-Cosine similarity for trends Simón Díaz and #KısaVeÖz is: 0.15504253191706052
+Cosine similarity for trends #FrasesSimpsons and #charitytuesday is: 0.009284766908852594
 
 
 
-Cosine similarity for trends #Delta and #YoSeríaMedallaDeOroEn is: 0.01308313400785381
+Cosine similarity for trends #examresults and #LeMallForAllDay is: 0.029160592175990215
 
 
 
-Cosine similarity for trends #Delta and #prayforGiGi is: 0.09974632840562093
+Cosine similarity for trends #examresults and #TuesdayMotivation is: 0.055367549752229114
 
 
 
-Cosine similarity for trends #Delta and #SegundaDetremuraSdv is: 0.2103309565134291
+Cosine similarity for trends #examresults and #BuradaykenYazayım is: 0.0374177712555781
 
 
 
-Cosine similarity for trends #Delta and #JourneeDuChat is: 0.3883024802900143
+Cosine similarity for trends #examresults and #yuri is: 0.014580296087995107
 
 
 
-Cosine similarity for trends #Delta and #ThisIsBLACKPINKArea is: 0.3562832926454929
+Cosine similarity for trends #examresults and #LaVidaEsPerfectaCuando is: 0.0104990131391452
 
 
 
-Cosine similarity for trends #Delta and #MentirasQueMeDijeronMisExs is: 0.014411256705570563
+Cosine similarity for trends #examresults and #Muktangan is: 0.07071067811865475
 
 
 
-Cosine similarity for trends #Delta and #AEstasHorasYo is: 0.017650112740455196
+Cosine similarity for trends #examresults and #DemocracyVSModi is: 0.08882311833686551
 
 
 
-Cosine similarity for trends #Delta and #saineymarENTRAMARTA is: 0.010808442529177923
+Cosine similarity for trends #examresults and #BuenMartes is: 0.014153462926807445
 
 
 
-Cosine similarity for trends #Delta and #KısaVeÖz is: 0.11346501047435482
+Cosine similarity for trends #examresults and #charitytuesday is: 0.018952451089472584
 
 
 
-Cosine similarity for trends #YoSeríaMedallaDeOroEn and #prayforGiGi is: 0.04159323154937354
+Cosine similarity for trends #LeMallForAllDay and #TuesdayMotivation is: 0.5840059946415683
 
 
 
-Cosine similarity for trends #YoSeríaMedallaDeOroEn and #SegundaDetremuraSdv is: 0.08675503344661116
+Cosine similarity for trends #LeMallForAllDay and #BuradaykenYazayım is: 0.13355362260873246
 
 
 
-Cosine similarity for trends #YoSeríaMedallaDeOroEn and #JourneeDuChat is: 0.024708310555370042
+Cosine similarity for trends #LeMallForAllDay and #yuri is: 0.28061224489795916
 
 
 
-Cosine similarity for trends #YoSeríaMedallaDeOroEn and #ThisIsBLACKPINKArea is: 0.0049875932068112055
+Cosine similarity for trends #LeMallForAllDay and #LaVidaEsPerfectaCuando is: 0.11389056782916307
 
 
 
-Cosine similarity for trends #YoSeríaMedallaDeOroEn and #MentirasQueMeDijeronMisExs is: 0.04034850217792016
+Cosine similarity for trends #LeMallForAllDay and #Muktangan is: 0.12165594957924258
 
 
 
-Cosine similarity for trends #YoSeríaMedallaDeOroEn and #AEstasHorasYo is: 0.09883324222148017
+Cosine similarity for trends #LeMallForAllDay and #DemocracyVSModi is: 0.3360699811683317
 
 
 
-Cosine similarity for trends #YoSeríaMedallaDeOroEn and #saineymarENTRAMARTA is: 0.015130688316720061
+Cosine similarity for trends #LeMallForAllDay and #BuenMartes is: 0.2674447374657355
 
 
 
-Cosine similarity for trends #YoSeríaMedallaDeOroEn and #KısaVeÖz is: 0.038827345158438636
+Cosine similarity for trends #LeMallForAllDay and #charitytuesday is: 0.5040302036234264
 
 
 
-Cosine similarity for trends #prayforGiGi and #SegundaDetremuraSdv is: 0.1535219624449344
+Cosine similarity for trends #TuesdayMotivation and #BuradaykenYazayım is: 0.13922027694024233
 
 
 
-Cosine similarity for trends #prayforGiGi and #JourneeDuChat is: 0.12024072240843034
+Cosine similarity for trends #TuesdayMotivation and #yuri is: 0.2823156940921326
 
 
 
-Cosine similarity for trends #prayforGiGi and #ThisIsBLACKPINKArea is: 0.1840601181936394
+Cosine similarity for trends #TuesdayMotivation and #LaVidaEsPerfectaCuando is: 0.11161048940753836
 
 
 
-Cosine similarity for trends #prayforGiGi and #MentirasQueMeDijeronMisExs is: 0.14726420810214477
+Cosine similarity for trends #TuesdayMotivation and #Muktangan is: 0.09619903458067681
 
 
 
-Cosine similarity for trends #prayforGiGi and #AEstasHorasYo is: 0.030060180602107585
+Cosine similarity for trends #TuesdayMotivation and #DemocracyVSModi is: 0.34987476785499116
 
 
 
-Cosine similarity for trends #prayforGiGi and #saineymarENTRAMARTA is: 0.0490880693673816
+Cosine similarity for trends #TuesdayMotivation and #BuenMartes is: 0.27942454809496975
 
 
 
-Cosine similarity for trends #prayforGiGi and #KısaVeÖz is: 0.07157185857644663
+Cosine similarity for trends #TuesdayMotivation and #charitytuesday is: 0.7915103015899669
 
 
 
-Cosine similarity for trends #SegundaDetremuraSdv and #JourneeDuChat is: 0.28373076085276344
+Cosine similarity for trends #BuradaykenYazayım and #yuri is: 0.06808616054562831
 
 
 
-Cosine similarity for trends #SegundaDetremuraSdv and #ThisIsBLACKPINKArea is: 0.2648903475826026
+Cosine similarity for trends #BuradaykenYazayım and #LaVidaEsPerfectaCuando is: 0.05657035277517755
 
 
 
-Cosine similarity for trends #SegundaDetremuraSdv and #MentirasQueMeDijeronMisExs is: 0.04343722427630694
+Cosine similarity for trends #BuradaykenYazayım and #Muktangan is: 0.019050019050028573
 
 
 
-Cosine similarity for trends #SegundaDetremuraSdv and #AEstasHorasYo is: 0.07979927648983973
+Cosine similarity for trends #BuradaykenYazayım and #DemocracyVSModi is: 0.0777713771047819
 
 
 
-Cosine similarity for trends #SegundaDetremuraSdv and #saineymarENTRAMARTA is: 0.0325779182072302
+Cosine similarity for trends #BuradaykenYazayım and #BuenMartes is: 0.11184962728253656
 
 
 
-Cosine similarity for trends #SegundaDetremuraSdv and #KısaVeÖz is: 0.14439869079113854
+Cosine similarity for trends #BuradaykenYazayım and #charitytuesday is: 0.1293505066787513
 
 
 
-Cosine similarity for trends #JourneeDuChat and #ThisIsBLACKPINKArea is: 0.47100417717674226
+Cosine similarity for trends #yuri and #LaVidaEsPerfectaCuando is: 0.11756445711397477
 
 
 
-Cosine similarity for trends #JourneeDuChat and #MentirasQueMeDijeronMisExs is: 0.13608276348795434
+Cosine similarity for trends #yuri and #Muktangan is: 0.032991443953692905
 
 
 
-Cosine similarity for trends #JourneeDuChat and #AEstasHorasYo is: 0.08333333333333333
+Cosine similarity for trends #yuri and #DemocracyVSModi is: 0.16317848796612636
 
 
 
-Cosine similarity for trends #JourneeDuChat and #saineymarENTRAMARTA is: 0.10206207261596577
+Cosine similarity for trends #yuri and #BuenMartes is: 0.1386750490563073
 
 
 
-Cosine similarity for trends #JourneeDuChat and #KısaVeÖz is: 0.16666666666666666
+Cosine similarity for trends #yuri and #charitytuesday is: 0.2520151018117132
 
 
 
-Cosine similarity for trends #ThisIsBLACKPINKArea and #MentirasQueMeDijeronMisExs is: 0.027469521447677638
+Cosine similarity for trends #LaVidaEsPerfectaCuando and #Muktangan is: 0.020786985482077455
 
 
 
-Cosine similarity for trends #ThisIsBLACKPINKArea and #AEstasHorasYo is: 0.008410788878156113
+Cosine similarity for trends #LaVidaEsPerfectaCuando and #DemocracyVSModi is: 0.0587509704481518
 
 
 
-Cosine similarity for trends #ThisIsBLACKPINKArea and #saineymarENTRAMARTA is: 0.030903211628637343
+Cosine similarity for trends #LaVidaEsPerfectaCuando and #BuenMartes is: 0.2639089703817296
 
 
 
-Cosine similarity for trends #ThisIsBLACKPINKArea and #KısaVeÖz is: 0.13937878712372986
+Cosine similarity for trends #LaVidaEsPerfectaCuando and #charitytuesday is: 0.09551137584354213
 
 
 
-Cosine similarity for trends #MentirasQueMeDijeronMisExs and #AEstasHorasYo is: 0.06804138174397717
+Cosine similarity for trends #Muktangan and #DemocracyVSModi is: 0.16486950191809854
 
 
 
-Cosine similarity for trends #MentirasQueMeDijeronMisExs and #saineymarENTRAMARTA is: 0.08333333333333333
+Cosine similarity for trends #Muktangan and #BuenMartes is: 0.04003203845127178
 
 
 
-Cosine similarity for trends #MentirasQueMeDijeronMisExs and #KısaVeÖz is: 0.05832118435198043
+Cosine similarity for trends #Muktangan and #charitytuesday is: 0.05360562674188974
 
 
 
-Cosine similarity for trends #AEstasHorasYo and #saineymarENTRAMARTA is: 0.051031036307982884
+Cosine similarity for trends #DemocracyVSModi and #BuenMartes is: 0.14331563721636525
 
 
 
-Cosine similarity for trends #AEstasHorasYo and #KısaVeÖz is: 0.03571428571428571
+Cosine similarity for trends #DemocracyVSModi and #charitytuesday is: 0.27776360797249
 
 
 
-Cosine similarity for trends #saineymarENTRAMARTA and #KısaVeÖz is: 0.014580296087995107
+Cosine similarity for trends #BuenMartes and #charitytuesday is: 0.24463744624668723
 
 
 

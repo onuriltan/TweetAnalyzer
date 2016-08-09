@@ -18,6 +18,7 @@ import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.data.general.PieDataset;
 
 import controller.ChartController;
+import controller.UrlController;
 import edu.stanford.nlp.ie.AbstractSequenceClassifier;
 import edu.stanford.nlp.ie.crf.CRFClassifier;
 import edu.stanford.nlp.ling.CoreLabel;
@@ -43,21 +44,14 @@ public class EntityRecognition {
 
 
 
-	public void entityRecognition(Status tweet, ChartController locationChartController, ChartController organizationChartController, ChartController personChartController, ChartController languageChartController, ChartController hashTagChartController, ChartController verifiedUrlChartController,
+	public void entityRecognition(Status tweet, ChartController locationChartController, ChartController organizationChartController, ChartController personChartController, ChartController languageChartController, ChartController hashTagChartController, UrlController verifiedUrlChartController,
 			ChartController allWordsController) 
 	{
 		String text = tweet.getText();
-		String text1 = tweet.getText();
 		String tweetForEntity = text.replaceAll("[\\d[^\\w\\s]]+", " ").replaceAll("(\\s{2,})", " ");
 		tweetForEntity = tweetForEntity.toLowerCase(Locale.ENGLISH).toString();
 		//System.out.println(text);
 		//	System.out.println(tweetForEntity.toLowerCase(Locale.ENGLISH).toString());
-		text1 = text1.replaceAll("RT", " ");
-		text1 = text1.replaceAll("#", " ");
-		text1 = text1.replaceAll("'", "");
-		text1 = text1.replaceAll("RT", " ");
-
-
 
 		List<Triple<String, Integer, Integer>> out = classifier.classifyToCharacterOffsets(text);
 		System.out.println(text);
@@ -105,6 +99,7 @@ public class EntityRecognition {
 		}
 
 		String language = tweet.getLang().toUpperCase();// GET THE TWEET LANGUAGE
+
 		updateDatabase(database.getLanguageList(), language, "language");
 		database.setLanguage(database.getLanguage()+"\n"
 				+tweet.getUser().getScreenName()+" : "
@@ -114,28 +109,44 @@ public class EntityRecognition {
 		languageChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
 
 		HashtagEntity[] hashtagsEntities = tweet.getHashtagEntities();// TO GET HASHTAGS THAT USED IN TWEET
-		for (HashtagEntity hashtag : hashtagsEntities){
-			updateDatabase(database.getHashTagList(), "#"+hashtag.getText(),"hashtag");
+		if(hashtagsEntities.length>0){
+			for (HashtagEntity hashtag : hashtagsEntities){
+				updateDatabase(database.getHashTagList(), "#"+hashtag.getText(),"hashtag");
+			}
+			hashTagChartController.setDataset(listToPieChartDataset(database.getHashTagList()));// CHANGE THE CHART DATASET
+			database.setHashtag(database.getHashtag()+"\n"
+					+tweet.getUser().getScreenName()+" : "
+					+text+"\n");
+			hashTagChartController.setText(database.getLanguage());
+			hashTagChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
+
 		}
-		hashTagChartController.setDataset(listToPieChartDataset(database.getHashTagList()));// CHANGE THE CHART DATASET
-		database.setHashtag(database.getHashtag()+"\n"
-				+tweet.getUser().getScreenName()+" : "
-				+text+"\n");
-		hashTagChartController.setText(database.getLanguage());
-		hashTagChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
-
 		URLEntity[] urls = tweet.getURLEntities();// TAKE URL ENTITIES
-		for(URLEntity url : urls){
-			updateDatabase(database.getVerifiedURLList(), url.getURL(), "verifiedURLList");
-		}						
-		database.setUrl(database.getUrl()+"\n"
-				+tweet.getUser().getScreenName()+" : "
-				+text+"\n");
-		verifiedUrlChartController.setText(database.getUrl());
+		if(urls.length>0){
+			for(URLEntity url : urls){
+				updateDatabase(database.getVerifiedURLList(), url.getURL(), "verifiedURLList");
+			}						
+			database.setUrl(database.getUrl()+"\n"
+					+tweet.getUser().getScreenName()+" : "
+					+text+"\n");
+			verifiedUrlChartController.setText(database.getUrl());
+			//verifiedUrlChartController.setDataset(listToPieChartDataset(database.getVerifiedURLList()));// CHANGE THE CHART DATASET
+			verifiedUrlChartController.updateUrlPanel(database,database.getVerifiedURLList());//UPDATE CHART BASED ON CHANGED DATASET
 
-		verifiedUrlChartController.setDataset(listToPieChartDataset(database.getVerifiedURLList()));// CHANGE THE CHART DATASET
-		verifiedUrlChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
+		}
 
+
+		if(tweet.getUser().isVerified()){
+			URLEntity[] urlss = tweet.getURLEntities();// TAKE URL ENTITIES
+			if(urls.length>0){
+				for(URLEntity url : urlss){
+					String urlText = tweet.getUser().getName()+" : "+url.getExpandedURL()+"\n";
+					urlText = urlText+"/n";
+					database.setUrlText(database.getUrlText()+urlText); 
+				}
+				verifiedUrlChartController.updateUrlPanel(database,database.getVerifiedURLList());
+			}				
+		}
 
 		StringTokenizer tokenizer = new StringTokenizer(tweetForEntity);
 		String lang = tweet.getLang();
@@ -171,13 +182,14 @@ public class EntityRecognition {
 
 	public void updateDatabase(Hashtable<String, Integer> table, String key, String tableName){
 
+		if(table.containsKey(key)){
+			table.put(key, table.get(key)+1);
+		}
 
 		if(!table.containsKey(key)){
 			table.put(key,1);
 		}
-		if(table.containsKey(key)){
-			table.put(key, table.get(key)+1);
-		}
+
 		if(tableName.equals("location")){
 			database.setLocationList(table);
 		}
@@ -206,7 +218,7 @@ public class EntityRecognition {
 
 		final DefaultPieDataset result = new DefaultPieDataset();
 
-		if(list.size()<6){//IF DATASET HAS LESS THAN 5 TOKEN, SHOW IT RANDOM
+		if(list.size()<7){//IF DATASET HAS LESS THAN 5 TOKEN, SHOW IT RANDOM
 			Set<String> keys = list.keySet();
 			for(String key: keys)
 			{
@@ -214,12 +226,12 @@ public class EntityRecognition {
 
 			}
 		}
-		if(list.size()>= 6){// TO SHOW NO MORE THAN 5 DIFFERENT TOKEN IN GRAPH, 
+		if(list.size()>= 7){// TO SHOW NO MORE THAN 5 DIFFERENT TOKEN IN GRAPH, 
 			//BECAUSE NO POINT SHOWING ALL THE TOKENS IN ONE GRAPH 
 
 			ArrayList<Map.Entry<String, Integer>> sortedList = sortHashTable(list);
 
-			for(int i = sortedList.size()-1 ; i>=sortedList.size()-6;i--){
+			for(int i = sortedList.size()-1 ; i>=sortedList.size()-7;i--){
 				String token = sortedList.get(i).toString();
 				String[] parts = token.split("=", 2);
 				String tokenName = parts[0];
@@ -256,16 +268,7 @@ public class EntityRecognition {
 			e.printStackTrace();
 		}
 	}
-	public String cleanData(String tweet) {
 
-		//remove # from hash tag
-		tweet = tweet.replaceAll("RT", " ");
-		tweet = tweet.toLowerCase();
-		tweet = tweet.replaceAll("[^a-zA-Z0-9 ]+", "").trim();
-
-
-		return tweet;
-	}
 
 
 

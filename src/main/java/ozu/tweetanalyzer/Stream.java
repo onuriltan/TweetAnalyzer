@@ -2,11 +2,11 @@ package ozu.tweetanalyzer;
 
 
 
-import javax.swing.JOptionPane;
 
 import org.bson.Document;
 import controller.ChartController;
 import controller.MapController;
+import controller.UrlController;
 import model.DatabaseModel;
 import twitter4j.FilterQuery;
 import twitter4j.StallWarning;
@@ -36,7 +36,7 @@ public class Stream {
 			final EntityRecognition recognition,  final SpamDetector spamDetector,  final CurrentTime currentTime,
 			final MapController mapController, final ChartController locationController,  final ChartController organizationController,
 			final ChartController personController,  final ChartController languageController,
-			final ChartController hashtagController,  final ChartController urlController,final ChartController allWordsController) {
+			final ChartController hashtagController,  final UrlController urlController,final ChartController allWordsController) {
 
 		final MongoConnection mongoConnection=new MongoConnection(database.getSearchQuery());
 		StatusListener listener = new StatusListener() {
@@ -51,7 +51,8 @@ public class Stream {
 				basicObj.put("language", tweet.getLang());
 				basicObj.put("createdAt", tweet.getCreatedAt()); 
 				basicObj.put("isVerified", tweet.getUser().isVerified());
-
+				
+			
 
 				if(spamDetector.isNotSpam(database,tweet,currentTime) && tweet.isRetweet() == false){// if tweet is not spam according to our parameters and not a retweet
 					database.setTweetCount(database.getTweetCount()+1);

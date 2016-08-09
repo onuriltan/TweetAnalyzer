@@ -6,6 +6,7 @@ import java.util.List;
 
 import controller.ChartController;
 import controller.MapController;
+import controller.UrlController;
 import model.DatabaseModel;
 import twitter4j.Query;
 import twitter4j.QueryResult;
@@ -28,7 +29,7 @@ public class Search {
 
 
 	public void searchRecentlyRelatedTweets(SpamDetector spamDetector,CurrentTime currentTime,DatabaseModel database,EntityRecognition entityRecognition,MapController mapController,
-			ChartController locationController,ChartController organizationController,ChartController personController,ChartController languageController,ChartController hashtagController,ChartController urlController,
+			ChartController locationController,ChartController organizationController,ChartController personController,ChartController languageController,ChartController hashtagController,UrlController urlController,
 			ChartController allWordsController){
 
 

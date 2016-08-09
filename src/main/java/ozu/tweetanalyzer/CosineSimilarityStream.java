@@ -16,10 +16,14 @@ import java.util.StringTokenizer;
 import controller.CosineSimilarityPanelController;
 import model.DatabaseModel;
 import twitter4j.FilterQuery;
+import twitter4j.RateLimitStatus;
 import twitter4j.StallWarning;
 import twitter4j.Status;
 import twitter4j.StatusDeletionNotice;
 import twitter4j.StatusListener;
+import twitter4j.Twitter;
+import twitter4j.TwitterException;
+import twitter4j.TwitterFactory;
 import twitter4j.TwitterStream;
 import twitter4j.TwitterStreamFactory;
 import twitter4j.conf.ConfigurationBuilder;
@@ -41,17 +45,7 @@ public class CosineSimilarityStream {
 
 	}
 
-	public void toTxt(String s) throws IOException{
-
-		OutputStream outputStream = new FileOutputStream("output.txt");
-		@SuppressWarnings("resource")        
-		Writer out = new OutputStreamWriter(outputStream);
-		String eol = System.getProperty("line.separator");
-		out.write(s);
-		out.write(eol);
-		out.write(eol);
-		out.flush();
-	}
+	
 
 	public void startCosineStream(CosineSimilarityPanelController cosineController){
 
@@ -118,13 +112,15 @@ public class CosineSimilarityStream {
 			public void onTrackLimitationNotice(int arg0) {}
 		};
 		tf = new TwitterStreamFactory(cb.build());
+		
 		stream = tf.getInstance();
 		stream.addListener(listener);
 
 		filtre = new FilterQuery();
 		filtre.track(database.getTrendTopicArray());
 		stream.filter(filtre);
-
+		
+		  
 	}
 
 	private void getTweets(Status tweet) {

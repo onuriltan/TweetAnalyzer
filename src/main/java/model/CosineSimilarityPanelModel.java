@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+
 import javax.swing.JLabel;
 
 public class CosineSimilarityPanelModel {
@@ -16,6 +18,7 @@ public class CosineSimilarityPanelModel {
 	 private JLabel labelEight = new JLabel();
 	 private JLabel labelNine = new JLabel();
 	 private JLabel labelTen = new JLabel();
+	 private ArrayList<JLabel> labelList = new  ArrayList<JLabel>();
 	 
 	 
 	 
@@ -80,6 +83,12 @@ public class CosineSimilarityPanelModel {
 	}
 	public void setLabelTen(JLabel labelTen) {
 		this.labelTen = labelTen;
+	}
+	public ArrayList<JLabel> getLabelList() {
+		return labelList;
+	}
+	public void setLabelList(ArrayList<JLabel> labelList) {
+		this.labelList = labelList;
 	}
 
 	

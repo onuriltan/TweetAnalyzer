@@ -85,6 +85,12 @@ public class CosineSimilarityPanelController {
 	public void setLabelTen(JLabel labelTen){
 		model.setLabelTen(labelTen);
 	}
+	public ArrayList<JLabel> getlabelList(){
+		return model.getLabelList();
+	}
+	public void setLabelList(ArrayList<JLabel> labelList){
+		model.setLabelList(labelList);
+	} 
 
 
 	public void populateCosinePanel(){				
@@ -93,6 +99,16 @@ public class CosineSimilarityPanelController {
 	
 	public void updateCosinePanel(Hashtable<String, Double> topSimilarTrends,DatabaseModel database, ArrayList<String> sortedKeys, ArrayList<Double> sortedValues){
 		view.updateCosinePanel(topSimilarTrends,database,sortedKeys,sortedValues);
+	}
+
+
+	public CosineSimilarityPanelView getView() {
+		return view;
+	}
+
+
+	public void setView(CosineSimilarityPanelView view) {
+		this.view = view;
 	}
 
 

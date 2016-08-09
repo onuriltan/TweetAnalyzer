@@ -7,7 +7,6 @@ import javax.swing.JPanel;
 import javax.swing.JSplitPane;
 import javax.swing.JTabbedPane;
 
-import org.jfree.chart.ChartPanel;
 
 
 public class ApplicationMainFrame extends JFrame{
@@ -16,7 +15,7 @@ public class ApplicationMainFrame extends JFrame{
 	private static final long serialVersionUID = 1L;
 	private  JTabbedPane tabs = new JTabbedPane();
 	private JPanel content = new JPanel(new BorderLayout());
-	public void populateApplication(JPanel cosineSimilarityPanel,JPanel searchPanel,JSplitPane mapPanel,JSplitPane jSplitPane,JSplitPane jSplitPane2,JSplitPane jSplitPane3,JSplitPane jSplitPane4,JSplitPane jSplitPane5, JSplitPane jSplitPane6,
+	public void populateApplication(JPanel cosineSimilarityPanel,JPanel searchPanel,JSplitPane mapPanel,JSplitPane jSplitPane,JSplitPane jSplitPane2,JSplitPane jSplitPane3,JSplitPane jSplitPane4,JSplitPane jSplitPane5, JPanel jSplitPane6,
 			JSplitPane jSplitPane7){
 
 
@@ -43,9 +42,9 @@ public class ApplicationMainFrame extends JFrame{
 
 
 	}
-	
-	
-	
+
+
+
 
 
 

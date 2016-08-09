@@ -60,6 +60,7 @@ public class DatabaseModel {
 	private String hashtag = " ";
 	private String url = " ";
 	private String mostcommon = " ";
+	private String urlText = " "; 
 
 
 
@@ -558,6 +559,16 @@ public class DatabaseModel {
 	}
 
 
+	public String getUrlText() {
+		return urlText;
+	}
+
+
+	public void setUrlText(String urlText) {
+		this.urlText = urlText;
+	}
+
+
 	public void clearDatabase(){
 		hashTagList.clear();
 		locationList.clear();
@@ -581,8 +592,6 @@ public class DatabaseModel {
 		trendNumberEight = " ";
 		trendNumberNine = " ";
 		trendNumberTen = " ";
-		String [] temp = new String[20];
-		//trendTopicArray = temp;
 		topSimilarTrends.clear();
 		trendDatabaseList.clear();
 		cosineSimilarityCalculatonVariable = 1;
@@ -600,6 +609,7 @@ public class DatabaseModel {
 		hashtag = " ";
 		url = " ";
 		mostcommon = " ";
+		urlText = " ";
 
 		//trendTopicList.clear();
 
