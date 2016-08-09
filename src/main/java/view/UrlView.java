@@ -192,7 +192,6 @@ public class UrlView extends JPanel{
 	public void updateUrl(DatabaseModel database,Hashtable<String, Integer> topSimilarTrends){
 
 		ArrayList<Entry<String, Integer>> sortedHashTable = sortValue(topSimilarTrends);
-		System.out.println(sortedHashTable);
 		ArrayList<String> sortedList = new ArrayList<String>();
 		for (int i = 0; i < sortedHashTable.size(); i++) {
 			sortedList.add(sortedHashTable.get(i).toString());
@@ -201,46 +200,67 @@ public class UrlView extends JPanel{
 
 
 		for (int i = 0; i < sortedList.size(); i++) {
+
 			if(i == 0){
-				model.getLabelList().get(0).setText(sortedList.get(0).toString());
+				String[] parts = sortedList.get(0).toString().split("=", 2);
+				String tokenName = parts[0];
+				String tokenValue = parts[1];
+				model.getLabelList().get(0).setText(tokenName+"      "+tokenValue);
 			}
 			if(i == 1){
-				model.getLabelList().get(1).setText(sortedList.get(1).toString());
-			}
+				String[] parts = sortedList.get(1).toString().split("=", 2);
+				String tokenName = parts[0];
+				String tokenValue = parts[1];
+				model.getLabelList().get(1).setText(tokenName+"      "+tokenValue);			}
 			if(i == 2){
-				model.getLabelList().get(2).setText(sortedList.get(2).toString());
-			}
+				String[] parts = sortedList.get(2).toString().split("=", 2);
+				String tokenName = parts[0];
+				String tokenValue = parts[1];
+				model.getLabelList().get(2).setText(tokenName+"      "+tokenValue);			}
 			if(i == 3){
-				model.getLabelList().get(3).setText(sortedList.get(3).toString());
-			}
+				String[] parts = sortedList.get(3).toString().split("=", 2);
+				String tokenName = parts[0];
+				String tokenValue = parts[1];
+				model.getLabelList().get(3).setText(tokenName+"      "+tokenValue);			}
 			if(i == 4){
-				model.getLabelList().get(4).setText(sortedList.get(4).toString());
+				String[] parts = sortedList.get(4).toString().split("=", 2);
+				String tokenName = parts[0];
+				String tokenValue = parts[1];
+				model.getLabelList().get(4).setText(tokenName+"      "+tokenValue);
 			}
 			if(i == 5){
-				model.getLabelList().get(5).setText(sortedList.get(5).toString());
+				String[] parts = sortedList.get(5).toString().split("=", 2);
+				String tokenName = parts[0];
+				String tokenValue = parts[1];
+				model.getLabelList().get(5).setText(tokenName+"      "+tokenValue);
 			}
 			if(i == 6){
-				model.getLabelList().get(6).setText(sortedList.get(6).toString());
-			}			
+				String[] parts = sortedList.get(6).toString().split("=", 2);
+				String tokenName = parts[0];
+				String tokenValue = parts[6];
+				model.getLabelList().get(2).setText(tokenName+"      "+tokenValue);			}			
 			if(i == 7){
-				model.getLabelList().get(7).setText(sortedList.get(7).toString());
+				String[] parts = sortedList.get(7).toString().split("=", 2);
+				String tokenName = parts[0];
+				String tokenValue = parts[1];
+				model.getLabelList().get(7).setText(tokenName+"      "+tokenValue);
 			}
 			if(i == 8){
-				model.getLabelList().get(8).setText(sortedList.get(8).toString());
-			}
+				String[] parts = sortedList.get(8).toString().split("=", 2);
+				String tokenName = parts[0];
+				String tokenValue = parts[8];
+				model.getLabelList().get(2).setText(tokenName+"      "+tokenValue);			}
 			if(i == 9){
-				model.getLabelList().get(9).setText(sortedList.get(9).toString());
-
-
-
-
-
+				String[] parts = sortedList.get(9).toString().split("=", 2);
+				String tokenName = parts[0];
+				String tokenValue = parts[1];
+				model.getLabelList().get(9).setText(tokenName+"      "+tokenValue);
 
 			}
 
 
 		}
-	
+
 		model.getTextPane().setText(model.getText());
 		model.getVerifiedTextPane().setText(database.getUrlText());
 

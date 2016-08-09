@@ -4,6 +4,7 @@ package ozu.tweetanalyzer;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Hashtable;
@@ -21,6 +22,7 @@ import controller.ChartController;
 import controller.UrlController;
 import edu.stanford.nlp.ie.AbstractSequenceClassifier;
 import edu.stanford.nlp.ie.crf.CRFClassifier;
+import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.util.Triple;
 import model.DatabaseModel;
@@ -40,63 +42,83 @@ public class EntityRecognition {
 	public EntityRecognition(DatabaseModel database){
 		this.database = database;
 		loadClassifier();
+		/*List<String> asd = enetityRecognition("Si Ricky Rubio Es Una Estrella De La Nba Yo Soy Una Monja De Clausura");
+		for (int i = 0; i < asd.size(); i++) {
+			System.out.println(asd.get(i));
+
+		}*/
 	}
 
 
-
-	public void entityRecognition(Status tweet, ChartController locationChartController, ChartController organizationChartController, ChartController personChartController, ChartController languageChartController, ChartController hashTagChartController, UrlController verifiedUrlChartController,
+	public void entityRecognition(int count, Status tweet, ChartController locationChartController, ChartController organizationChartController, ChartController personChartController, ChartController languageChartController, ChartController hashTagChartController, UrlController verifiedUrlChartController,
 			ChartController allWordsController) 
 	{
+
 		String text = tweet.getText();
-		String tweetForEntity = text.replaceAll("[\\d[^\\w\\s]]+", " ").replaceAll("(\\s{2,})", " ");
-		tweetForEntity = tweetForEntity.toLowerCase(Locale.ENGLISH).toString();
-		//System.out.println(text);
-		//	System.out.println(tweetForEntity.toLowerCase(Locale.ENGLISH).toString());
+		text = text.toLowerCase(Locale.ENGLISH);
+		text = text.replaceAll("((www\\.[^\\s]+)|(https?://[^\\s]+))", "");
+		text = text.replaceAll("\\p{Punct}+", " ");
+		text = text.trim().replaceAll(" +", " ");
 
-		List<Triple<String, Integer, Integer>> out = classifier.classifyToCharacterOffsets(text);
-		System.out.println(text);
-		System.out.println(out);
-		System.out.println();
-		System.out.println();
+		String cleanText = text.toString().toLowerCase(Locale.ENGLISH);
+		String entityText ="";
+		StringTokenizer tokenizer = new StringTokenizer(cleanText);
 
+		while(tokenizer.hasMoreTokens()){
+			String token = tokenizer.nextToken();
+			token = Character.toUpperCase(token.charAt(0)) + token.substring(1);
+			entityText = entityText+" "+token+" ";
+		}
 
-		for (int i = 0; i < out.size(); i++) {
-			if (out.get(i).first.equals("LOCATION")) {// IF ENETITYRECOGNIZER RECOGNIZE A TOKEN AS LOCATION
-				String location = text.substring(out.get(i).second,	out.get(i).third);//TAKE LOCATION, MAKE IT UPPER CASED LETTERS TO MATCH SAME WORDS(e.g ONUR onur)
-				database.setLocation(database.getLocation()+"\n"
-						+tweet.getUser().getScreenName()+" : "
-						+text+"\n");
-				locationChartController.setText(database.getLocation());
-				updateDatabase(database.getLocationList(), location.toLowerCase(Locale.ENGLISH), "location");//UPDATE THE LOCATION LIST
+		entityText = entityText.trim().replaceAll(" +", " ");
+		System.out.println(entityText);
+
+		List<String> recognizedStrs = enetityRecognition(entityText);
+
+		for (int i = 0; i < recognizedStrs.size(); i++) {
+			//System.out.println(recognizedStrs.get(i));
+			String[] parts = recognizedStrs.get(i).split("=", 2);
+			String word = parts[0];
+			String answer = parts[1];
+			if(answer.equals("LOCATION")){
+				if(count == 0){
+					database.setLocation(database.getLocation()+"\n"
+							+tweet.getUser().getScreenName()+" : "
+							+tweet.getText()+"\n");
+
+					locationChartController.setText(database.getLocation());
+				}
+				updateDatabase(database.getLocationList(), word, "location");//UPDATE THE LOCATION LIST
 				locationChartController.setDataset(listToPieChartDataset(database.getLocationList()));// CHANGE THE CHART DATASET
 				locationChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
-
-			}		
-			if (out.get(i).first.equals("ORGANIZATION")) {// IF ENETITYRECOGNIZER RECOGNIZE A TOKEN AS ORGANIZATION
-				String organization = text.substring(out.get(i).second,	out.get(i).third);
-				database.setOrganization(database.getOrganization()+"\n"
-						+tweet.getUser().getScreenName()+" : "
-						+text+"\n");
-				organizationChartController.setText(database.getOrganization());
-				updateDatabase(database.getOrganizationList(), organization.toLowerCase(Locale.ENGLISH), "organization");//UPDATE DATA WHEN NEW TOKEN COMES
+			}
+			if(answer.equals("ORGANIZATION")){
+				if(count == 0){
+					database.setOrganization(database.getOrganization()+"\n"
+							+tweet.getUser().getScreenName()+" : "
+							+tweet.getText()+"\n");
+					organizationChartController.setText(database.getOrganization());
+				}
+				updateDatabase(database.getOrganizationList(), word, "organization");//UPDATE DATA WHEN NEW TOKEN COMES
 				organizationChartController.setDataset(listToPieChartDataset(database.getOrganizationList()));// CHANGE THE CHART DATASET
 				organizationChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
-
-
 			}
-			if (out.get(i).first.equals("PERSON")) {// IF ENETITYRECOGNIZER RECOGNIZE A TOKEN AS PERSON
-				String person = text.substring(out.get(i).second, out.get(i).third);
-				database.setPerson(database.getPerson()+"\n"
-						+tweet.getUser().getScreenName()+" : "
-						+text+"\n");
-				personChartController.setText(database.getPerson());
-				updateDatabase(database.getPersonList(), person.toLowerCase(Locale.ENGLISH),"person");
+			if(answer.equals("PERSON")){
+				if(count == 0){
+					database.setPerson(database.getPerson()+"\n"
+							+tweet.getUser().getScreenName()+" : "
+							+tweet.getText()+"\n");
+					personChartController.setText(database.getPerson());
+				}
+				updateDatabase(database.getPersonList(), word,"person");
 				personChartController.setDataset(listToPieChartDataset(database.getPersonList()));
 				personChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
-
-
 			}
+			count = 1;
+
+
 		}
+
 
 		if(!tweet.getLang().isEmpty() && !tweet.getLang().equals("und")){
 			String language = tweet.getLang().toUpperCase();// GET THE TWEET LANGUAGE
@@ -104,7 +126,7 @@ public class EntityRecognition {
 			updateDatabase(database.getLanguageList(), language, "language");
 			database.setLanguage(database.getLanguage()+"\n"
 					+tweet.getUser().getScreenName()+" : "
-					+text+"\n");
+					+tweet.getText()+"\n");
 			languageChartController.setText(database.getLanguage());
 			languageChartController.setDataset(listToPieChartDataset(database.getLanguageList()));// CHANGE THE CHART DATASET
 			languageChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
@@ -130,7 +152,7 @@ public class EntityRecognition {
 			}						
 			database.setUrl(database.getUrl()+"\n"
 					+tweet.getUser().getScreenName()+" : "
-					+text+"\n");
+					+tweet.getText()+"\n"+Arrays.toString(urls)+"\n" );
 			verifiedUrlChartController.setText(database.getUrl());
 			//verifiedUrlChartController.setDataset(listToPieChartDataset(database.getVerifiedURLList()));// CHANGE THE CHART DATASET
 			verifiedUrlChartController.updateUrlPanel(database,database.getVerifiedURLList());//UPDATE CHART BASED ON CHANGED DATASET
@@ -142,26 +164,27 @@ public class EntityRecognition {
 			URLEntity[] urlss = tweet.getURLEntities();// TAKE URL ENTITIES
 			if(urls.length>0){
 				for(URLEntity url : urlss){
+					updateDatabase(database.getVerifiedURLList(), url.getURL(), "verifiedURLList");
 					String urlText = tweet.getUser().getName()+" : "+url.getExpandedURL()+"\n";
-					urlText = urlText+"/n";
+					urlText = urlText+"\n";
 					database.setUrlText(database.getUrlText()+urlText); 
 					database.setUrl(database.getUrl()+"\n"
 							+tweet.getUser().getScreenName()+" : "
-							+text+"\n");
+							+tweet.getText()+"\n");
 					verifiedUrlChartController.setText(database.getUrl());
 				}
 				verifiedUrlChartController.updateUrlPanel(database,database.getVerifiedURLList());
 			}				
 		}
 
-		StringTokenizer tokenizer = new StringTokenizer(tweet.getText());
+		StringTokenizer tokenizer1 = new StringTokenizer(entityText);
 		String lang = tweet.getLang();
 
 		StopWords stopWords = new StopWords(lang);
 		stopWords.loadStopWordsFromFile(database);
-		while(tokenizer.hasMoreTokens()){
+		while(tokenizer1.hasMoreTokens()){
 
-			String word = tokenizer.nextToken().toLowerCase();
+			String word = tokenizer1.nextToken().toLowerCase();
 			if(database.getStopWords().contains(word.toUpperCase()) == false ){
 				if(word.charAt(0) != '#'){
 					if(word.contains("https") == false){
@@ -176,7 +199,7 @@ public class EntityRecognition {
 		allWordsController.setDataset(listToPieChartDataset(database.getAllWords()));// CHANGE THE CHART DATASET
 		database.setMostcommon(database.getMostcommon()+"\n"
 				+tweet.getUser().getScreenName()+" : "
-				+text+"\n");
+				+tweet.getText()+"\n");
 		allWordsController.setText(database.getMostcommon());
 		allWordsController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET */
 
@@ -274,7 +297,21 @@ public class EntityRecognition {
 			e.printStackTrace();
 		}
 	}
+	public List<String> enetityRecognition(String text) {
+		List<List<CoreLabel>> classify = classifier.classify(text);
+		List<String> results = new ArrayList<String>();
+		for (List<CoreLabel> coreLabels : classify) {
+			for (CoreLabel coreLabel : coreLabels) {
+				String word = coreLabel.word();
+				String answer = coreLabel.get(CoreAnnotations.AnswerAnnotation.class);
+				if(!"O".equals(answer)){
+					results.add((word+"="+answer));
+				}
 
+			}
+		}
+		return results;
+	}
 
 
 

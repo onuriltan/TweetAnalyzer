@@ -55,15 +55,14 @@ public class Stream {
 
 
 				if(spamDetector.isNotSpam(database,tweet,currentTime) && tweet.isRetweet() == false){// if tweet is not spam according to our parameters and not a retweet
-					database.setTweetCount(database.getTweetCount()+1);
-					searchPanel.getTweetCountlabel().setText("<html>Tweet count: "+database.getTweetCount()+"<html>");
+
 					try {
 						mongoConnection.coll.insertOne(basicObj);
 
 					} catch (Exception e) {
 						System.out.println("MongoDB Connection Error : " + e.getMessage());                    
 					}
-					recognition.entityRecognition(tweet,locationController,organizationController,personController,languageController,hashtagController,urlController, allWordsController); // apply entity recognition on tweet text
+					recognition.entityRecognition(0,tweet,locationController,organizationController,personController,languageController,hashtagController,urlController, allWordsController); // apply entity recognition on tweet text
 					mapController.updateMap(tweet);
 
 
@@ -83,14 +82,14 @@ public class Stream {
 					j = 1;
 					str.setLength(0);
 					database.setNotSpamCount(database.getNotSpamCount()+1);
+					database.setTweetCount(database.getTweetCount()+1);
+					searchPanel.getTweetCountlabel().setText("<html>Tweet count: "+database.getTweetCount()+"<html>");
 					searchPanel.getNotSpamTitle().setTitle("PASSED - "+database.getNotSpamCount());;
 					searchPanel.repaint();
 				}
 				if (!spamDetector.isNotSpam(database,tweet,currentTime) && tweet.isRetweet() == false){
 
 
-					database.setTweetCount(database.getTweetCount()+1);
-					searchPanel.getTweetCountlabel().setText("<html>Tweet count: "+database.getTweetCount()+"<html>");
 					String fullText = tweet.getUser().getScreenName()+" : "+tweet.getText();
 					StringBuilder str = new StringBuilder();
 					int j  = 1 ;
@@ -109,7 +108,11 @@ public class Stream {
 					str.setLength(0);
 					database.setSpamCount(database.getSpamCount()+1);
 					searchPanel.getWhyTweetIsSpam().setText(database.getEliminationReason());
+					searchPanel.getTweetCountlabel().setText("<html>Tweet count: "+database.getTweetCount()+"<html>");
 					searchPanel.getSpamTitle().setTitle("SPAMS - "+database.getSpamCount());;
+
+					database.setTweetCount(database.getTweetCount()+1);
+
 					searchPanel.repaint();
 
 				}

@@ -47,8 +47,8 @@ public class TrendPanel extends JPanel {
 			database.getTrendTopicArray()[i] = t;
 			i++;
 		}   
-		
-		
+
+
 		TitledBorder spamTitle = new TitledBorder(new LineBorder(Color.WHITE, 1),"TRENDS OF THE DAY");
 		spamTitle.setTitleFont(new Font("Arial", Font.BOLD, 14));
 		spamTitle.setTitleJustification(TitledBorder.CENTER);
@@ -62,8 +62,8 @@ public class TrendPanel extends JPanel {
 		ConfigurationBuilder cb = defineConfBuilder();
 		try {
 			Twitter twitter = new TwitterFactory(cb.build()).getInstance();
-			//int turkeyTrends = getTrendsFromTurkey(twitter);
-			Trends trends = twitter.getPlaceTrends(23424969);//takes worldwide trends
+			//int turkeyTrends = getTrendsFromTurkey(twitter)23424969;
+			Trends trends = twitter.getPlaceTrends(1);//takes worldwide trends
 			int i  = 0;
 			for (Trend trend : trends.getTrends()) {
 				if(!isProbablyArabic(trend.getName()) && !containsHanScript(trend.getName()) &&

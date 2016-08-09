@@ -52,7 +52,7 @@ public class Search {
 				List<Status> tweets = result.getTweets();
 				for (Status tweet : tweets) {
 					if(spamDetector.isNotSpam(database,tweet,currentTime) && tweet.isRetweet() == false){// if tweet is not spam according to our parameters and not a retweet
-						entityRecognition.entityRecognition(tweet,locationController,organizationController,personController,languageController,hashtagController,urlController, allWordsController); // apply entity recognition on tweet text
+						entityRecognition.entityRecognition(0,tweet,locationController,organizationController,personController,languageController,hashtagController,urlController, allWordsController); // apply entity recognition on tweet text
 						//this command takes tweets and analyzes them and updates charts according to analyzation
 						database.setTweetCount(database.getTweetCount()+1);
 						mapController.updateMap(tweet);

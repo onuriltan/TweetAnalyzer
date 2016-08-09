@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Hashtable;
+import java.util.Locale;
 import java.util.Map;
 import java.util.StringTokenizer;
 
@@ -125,21 +126,24 @@ public class CosineSimilarityStream {
 		for(int i = 0 ; i<trendTopicArray.length; i++){
 			if(tweet.getText().contains(trendTopicArray[i])){
 				String cleanText = tweet.getText();
+				cleanText = cleanText.toLowerCase(Locale.ENGLISH);
+				cleanText = cleanText.replaceAll("((www\\.[^\\s]+)|(https?://[^\\s]+))", "");
+				cleanText = cleanText.replaceAll("\\p{Punct}+", " ");
+				cleanText = cleanText.trim().replaceAll(" +", " ");
+
 
 				if(i == 0){
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-						if(token.toString().contains("http") == false)
-							database.setTrendNumberOne(database.getTrendNumberOne() +" "+ token + " ");
+						database.setTrendNumberOne(database.getTrendNumberOne() +" "+ token + " ");
 					}
 				}
 				if(i == 1){
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-						if(token.toString().contains("http") == false)
-							database.setTrendNumberTwo(database.getTrendNumberTwo() +" "+ token + " ");
+						database.setTrendNumberTwo(database.getTrendNumberTwo() +" "+ token + " ");
 
 					}
 				}
@@ -147,8 +151,7 @@ public class CosineSimilarityStream {
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-						if(token.toString().contains("http") == false)
-							database.setTrendNumberThree(database.getTrendNumberThree() +" "+ token + " ");
+						database.setTrendNumberThree(database.getTrendNumberThree() +" "+ token + " ");
 
 					}
 				}
@@ -164,16 +167,14 @@ public class CosineSimilarityStream {
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-						if(token.toString().contains("http") == false)
-							database.setTrendNumberFive(database.getTrendNumberFive() +" "+ token + " ");
+						database.setTrendNumberFive(database.getTrendNumberFive() +" "+ token + " ");
 					}
 				}
 				if(i == 5){
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-						if(token.toString().contains("http") == false)
-							database.setTrendNumberSix(database.getTrendNumberSix() + " "+token + " ");
+						database.setTrendNumberSix(database.getTrendNumberSix() + " "+token + " ");
 					}
 				}
 				if(i == 6){
@@ -187,8 +188,7 @@ public class CosineSimilarityStream {
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-						if(token.toString().contains("http") == false)
-							database.setTrendNumberEight(database.getTrendNumberEight() +" "+ token + " ");
+						database.setTrendNumberEight(database.getTrendNumberEight() +" "+ token + " ");
 					}
 				}
 				if(i == 8){
@@ -203,15 +203,13 @@ public class CosineSimilarityStream {
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-						if(token.toString().contains("http") == false)
-							database.setTrendNumberTen(database.getTrendNumberTen() +" "+ token + " ");					}
+						database.setTrendNumberTen(database.getTrendNumberTen() +" "+ token + " ");					}
 				}
 				if(i == 10){
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-						if(token.toString().contains("http") == false)
-							database.setTrendNumber11(database.getTrendNumber11() +" "+ token + " ");
+						database.setTrendNumber11(database.getTrendNumber11() +" "+ token + " ");
 
 					}
 				}
@@ -219,8 +217,7 @@ public class CosineSimilarityStream {
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-						if(token.toString().contains("http") == false)
-							database.setTrendNumber12(database.getTrendNumber12() +" "+ token + " ");
+						database.setTrendNumber12(database.getTrendNumber12() +" "+ token + " ");
 
 					}
 				}
@@ -228,8 +225,7 @@ public class CosineSimilarityStream {
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-						if(token.toString().contains("http") == false)
-							database.setTrendNumber13(database.getTrendNumber13() +" "+ token + " ");
+						database.setTrendNumber13(database.getTrendNumber13() +" "+ token + " ");
 
 					}
 				}
@@ -245,16 +241,14 @@ public class CosineSimilarityStream {
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-						if(token.toString().contains("http") == false)
-							database.setTrendNumber15(database.getTrendNumber15() +" "+ token + " ");
+						database.setTrendNumber15(database.getTrendNumber15() +" "+ token + " ");
 					}
 				}
 				if(i == 15){
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-						if(token.toString().contains("http") == false)
-							database.setTrendNumber16(database.getTrendNumber16() + " "+token + " ");
+						database.setTrendNumber16(database.getTrendNumber16() + " "+token + " ");
 					}
 				}
 				if(i == 16){
@@ -268,24 +262,21 @@ public class CosineSimilarityStream {
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-						if(token.toString().contains("http") == false)
-							database.setTrendNumber18(database.getTrendNumber18() +" "+ token + " ");
+						database.setTrendNumber18(database.getTrendNumber18() +" "+ token + " ");
 					}
 				}
 				if(i == 18){
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-						if(token.toString().contains("http") == false)
-							database.setTrendNumber19(database.getTrendNumber19() +" "+ token + " ");
+						database.setTrendNumber19(database.getTrendNumber19() +" "+ token + " ");
 					}
 				}
 				if(i == 19){
 					StringTokenizer tokenizer = new StringTokenizer(cleanText);
 					while(tokenizer.hasMoreTokens()){
 						String token = tokenizer.nextToken();
-						if(token.toString().contains("http") == false)
-							database.setTrendNumber20(database.getTrendNumber20() +" "+ token + " ");					}
+						database.setTrendNumber20(database.getTrendNumber20() +" "+ token + " ");					}
 				}
 			}
 
