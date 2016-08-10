@@ -1,11 +1,6 @@
 package ozu.tweetanalyzer;
 
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -34,20 +29,25 @@ public class CosineSimilarityStream {
 	private TwitterStreamFactory tf;
 	private TwitterStream stream;
 	private FilterQuery filtre;
-	private SearchPanel searchPanel;
-	public CosineSimilarityStream(SearchPanel searchPanel,DatabaseModel database,CurrentTime currentTime,SpamDetector spamDetector){
+	public CosineSimilarityStream(DatabaseModel database,CurrentTime currentTime,SpamDetector spamDetector){
 
 		this.database = database;
 		this.currentTime = currentTime;
 		this.spamDetector = spamDetector;
-		this.searchPanel = searchPanel;
 
 	}
 
 
 
 	public void startCosineStream(CosineSimilarityPanelController cosineController){
-
+		ArrayList<String> asd = new ArrayList<String>();
+		for (int i = 0; i < database.getTrendTopicArray().length; i++) {
+			asd.add(i,database.getTrendTopicArray()[i]+"  :  "+"\n");
+			
+		}
+		
+		
+		database.setTrendDatabaseList(asd);
 		ConfigurationBuilder cb = new ConfigurationBuilder();
 		cb.setDebugEnabled(true)
 		.setOAuthConsumerKey("xjhjEo5dv9l9gkH6aOsYT9FEW")
@@ -85,9 +85,10 @@ public class CosineSimilarityStream {
 					Hashtable<String, Double> topSimilarTrends= new Hashtable<String, Double>() ;
 					ArrayList<String> sortedKeys = new ArrayList<String>();
 					ArrayList<Double> sortedValues = new ArrayList<Double>();
-					ArrayList<String> array = new ArrayList<String>();
+					ArrayList<String> cosStream = new ArrayList<String>();
+					database.setCosineSimArray(cosStream); 					
 					topSimilarTrends.clear();
-					calculateCosineSimilarity(array,topSimilarTrends,cosineController,sortedKeys,sortedValues);
+					calculateCosineSimilarity(cosStream,topSimilarTrends,cosineController,sortedKeys,sortedValues);
 					database.setCosineSimilarityCalculatonVariable(database.getCosineSimilarityCalculatonVariable()+1);
 
 				}
@@ -123,13 +124,27 @@ public class CosineSimilarityStream {
 
 		String[] trendTopicArray = new String[20];
 		trendTopicArray = database.getTrendTopicArray();
+		
 		for(int i = 0 ; i<trendTopicArray.length; i++){
 			if(tweet.getText().contains(trendTopicArray[i])){
-				String cleanText = tweet.getText();
-				cleanText = cleanText.toLowerCase(Locale.ENGLISH);
-				cleanText = cleanText.replaceAll("((www\\.[^\\s]+)|(https?://[^\\s]+))", "");
-				cleanText = cleanText.replaceAll("\\p{Punct}+", " ");
-				cleanText = cleanText.trim().replaceAll(" +", " ");
+				String text = tweet.getText();
+				text = text.toLowerCase(Locale.ENGLISH);
+				text = text.replaceAll("((www\\.[^\\s]+)|(https?://[^\\s]+))", "");
+				text = text.replaceAll("\\p{Punct}+", " ");
+				text = text.trim().replaceAll(" +", " ");// eliminate double spaces, special words, http and hashtags
+
+				String cleanText = text.toString().toLowerCase(Locale.ENGLISH);
+				String entityText ="";
+				StringTokenizer tokenizerr = new StringTokenizer(cleanText);
+
+				while(tokenizerr.hasMoreTokens()){
+					String token = tokenizerr.nextToken();
+					token = Character.toUpperCase(token.charAt(0)) + token.substring(1);
+					entityText = entityText+" "+token+" ";
+				}
+
+				entityText = entityText.trim().replaceAll(" +", " ");
+				cleanText = entityText;
 
 
 				if(i == 0){
@@ -310,16 +325,6 @@ public class CosineSimilarityStream {
 					}
 				}
 			}
-			/*	try {
-				if(!array.isEmpty()){
-					cosineSimilarityToTxt(array,0);
-					database.setCosineSimArray(array);
-					cosineSimilarityToTxt(database.getTrendDatabaseList(),1);
-				}
-
-			} catch (IOException e1) {
-				e1.printStackTrace();
-			}*/
 		}
 	}
 
@@ -365,33 +370,6 @@ public class CosineSimilarityStream {
 
 		return result;
 	}
-
-
-
-
-
-	public void cosineSimilarityToTxt(ArrayList<String> array,int k) throws IOException{
-		OutputStream outputStream;
-		if(k == 1){
-			outputStream = new FileOutputStream("words.txt");
-		}else{
-			outputStream = new FileOutputStream("cosineSimilarity.txt");
-		}
-		String eol = System.getProperty("line.separator");
-		@SuppressWarnings("resource")        
-		Writer out = new OutputStreamWriter(outputStream);
-
-		for (int i = 0; i < array.size(); i++) {
-			out.write(array.get(i));
-			out.write(eol);
-			out.write(eol);
-			out.write(eol);
-			out.write(eol);
-		}
-		out.flush();
-	}
-
-
 
 	public TwitterStream getStream() {
 		return stream;

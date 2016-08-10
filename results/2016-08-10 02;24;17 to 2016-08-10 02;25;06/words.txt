@@ -1,0 +1,464 @@
+Cosine similarity for trends #HalaMadrid and #PrayForPortugal is: 0.12031575278960195
+
+
+
+Cosine similarity for trends #HalaMadrid and #GinasticaArtistica is: 0.6048754278337961
+
+
+
+Cosine similarity for trends #HalaMadrid and #7FaveGames is: 0.33571941174423553
+
+
+
+Cosine similarity for trends #HalaMadrid and Serena Williams is: 0.027896138453718654
+
+
+
+Cosine similarity for trends #HalaMadrid and #USAvCOL is: 0.13670630076674195
+
+
+
+Cosine similarity for trends #HalaMadrid and 2nd Amendment is: 0.03603589100721609
+
+
+
+Cosine similarity for trends #HalaMadrid and Madeira is: 0.02070359005437023
+
+
+
+Cosine similarity for trends #HalaMadrid and Benoit Paire is: 0.016268767570199027
+
+
+
+Cosine similarity for trends #HalaMadrid and Luis Javier Mosquera is: 0.02121187773466487
+
+
+
+Cosine similarity for trends #HalaMadrid and #PelisSinUnDuro is: 0.011496857065694864
+
+
+
+Cosine similarity for trends #HalaMadrid and #topfansarebeautiful is: 0.058574478620755405
+
+
+
+Cosine similarity for trends #HalaMadrid and #OperacaoMafiaSDV is: 0.02701941766210993
+
+
+
+Cosine similarity for trends #HalaMadrid and #Basquetebol is: 0.01117964118175896
+
+
+
+Cosine similarity for trends #HalaMadrid and #InútilComoAtletaMexicano is: 0.019363706537195886
+
+
+
+Cosine similarity for trends #HalaMadrid and #FinalFive is: 0.02782259488776722
+
+
+
+Cosine similarity for trends #HalaMadrid and #ÖSYMSonuçlarıAçıkla is: 0.031549340836226195
+
+
+
+Cosine similarity for trends #HalaMadrid and #VamoALaPlayaDeMTVHits is: 0.03259149133191284
+
+
+
+Cosine similarity for trends #HalaMadrid and #birsiirdebenden is: 0.02802576324826489
+
+
+
+Cosine similarity for trends #HalaMadrid and #ChiringuitoMadrid is: 0.04464147319006621
+
+
+
+Cosine similarity for trends #PrayForPortugal and #GinasticaArtistica is: 0.19201462789211063
+
+
+
+Cosine similarity for trends #PrayForPortugal and #7FaveGames is: 0.09596599970656763
+
+
+
+Cosine similarity for trends #PrayForPortugal and Serena Williams is: 0.08296756097090828
+
+
+
+Cosine similarity for trends #PrayForPortugal and #USAvCOL is: 0.1958764621619869
+
+
+
+Cosine similarity for trends #PrayForPortugal and 2nd Amendment is: 0.12832007436540774
+
+
+
+Cosine similarity for trends #PrayForPortugal and Madeira is: 0.2562972292574565
+
+
+
+Cosine similarity for trends #PrayForPortugal and Benoit Paire is: 0.04523244681414881
+
+
+
+Cosine similarity for trends #PrayForPortugal and Luis Javier Mosquera is: 0.05550672490616467
+
+
+
+Cosine similarity for trends #PrayForPortugal and #PelisSinUnDuro is: 0.06607888473826036
+
+
+
+Cosine similarity for trends #PrayForPortugal and #topfansarebeautiful is: 0.17412634937058452
+
+
+
+Cosine similarity for trends #PrayForPortugal and #OperacaoMafiaSDV is: 0.12832731334448944
+
+
+
+Cosine similarity for trends #PrayForPortugal and #Basquetebol is: 0.00731365317332818
+
+
+
+Cosine similarity for trends #PrayForPortugal and #InútilComoAtletaMexicano is: 0.1722796168379279
+
+
+
+Cosine similarity for trends #PrayForPortugal and #FinalFive is: 0.05801687365356205
+
+
+
+Cosine similarity for trends #PrayForPortugal and #ÖSYMSonuçlarıAçıkla is: 0.13857873879439261
+
+
+
+Cosine similarity for trends #PrayForPortugal and #VamoALaPlayaDeMTVHits is: 0.1705692410894634
+
+
+
+Cosine similarity for trends #PrayForPortugal and #birsiirdebenden is: 0.11579547556219935
+
+
+
+Cosine similarity for trends #PrayForPortugal and #ChiringuitoMadrid is: 0.13628617277025612
+
+
+
+Cosine similarity for trends #GinasticaArtistica and #7FaveGames is: 0.3949418760406463
+
+
+
+Cosine similarity for trends #GinasticaArtistica and Serena Williams is: 0.013661848122395584
+
+
+
+Cosine similarity for trends #GinasticaArtistica and #USAvCOL is: 0.13972280511982957
+
+
+
+Cosine similarity for trends #GinasticaArtistica and 2nd Amendment is: 0.018771276394456943
+
+
+
+Cosine similarity for trends #GinasticaArtistica and Madeira is: 0.08985042789075844
+
+
+
+Cosine similarity for trends #GinasticaArtistica and Benoit Paire is: 0.035853580388235946
+
+
+
+Cosine similarity for trends #GinasticaArtistica and Luis Javier Mosquera is: 0.028048409700253712
+
+
+
+Cosine similarity for trends #GinasticaArtistica and #PelisSinUnDuro is: 0.02895669261367984
+
+
+
+Cosine similarity for trends #GinasticaArtistica and #topfansarebeautiful is: 0.0212615743011731
+
+
+
+Cosine similarity for trends #GinasticaArtistica and #OperacaoMafiaSDV is: 0.06669171478989425
+
+
+
+Cosine similarity for trends #GinasticaArtistica and #Basquetebol is: 0.09855206599818044
+
+
+
+Cosine similarity for trends #GinasticaArtistica and #InútilComoAtletaMexicano is: 0.05462309935991351
+
+
+
+Cosine similarity for trends #GinasticaArtistica and #FinalFive is: 0.006131623911359875
+
+
+
+Cosine similarity for trends #GinasticaArtistica and #ÖSYMSonuçlarıAçıkla is: 0.05959658536710725
+
+
+
+Cosine similarity for trends #GinasticaArtistica and #VamoALaPlayaDeMTVHits is: 0.03830723786213018
+
+
+
+Cosine similarity for trends #GinasticaArtistica and #birsiirdebenden is: 0.04941118993691745
+
+
+
+Cosine similarity for trends #GinasticaArtistica and #ChiringuitoMadrid is: 0.049846965849538356
+
+
+
+Cosine similarity for trends #7FaveGames and Serena Williams is: 0.08100534778506088
+
+
+
+Cosine similarity for trends #7FaveGames and #USAvCOL is: 0.14679275270616177
+
+
+
+Cosine similarity for trends #7FaveGames and 2nd Amendment is: 0.07063316038609634
+
+
+
+Cosine similarity for trends #7FaveGames and Madeira is: 0.03163209892973933
+
+
+
+Cosine similarity for trends #7FaveGames and Benoit Paire is: 0.01700696258760295
+
+
+
+Cosine similarity for trends #7FaveGames and Luis Javier Mosquera is: 0.02217436628125852
+
+
+
+Cosine similarity for trends #7FaveGames and #PelisSinUnDuro is: 0.01802779010280917
+
+
+
+Cosine similarity for trends #7FaveGames and #topfansarebeautiful is: 0.08374416743431605
+
+
+
+Cosine similarity for trends #7FaveGames and #OperacaoMafiaSDV is: 0.02033670471973829
+
+
+
+Cosine similarity for trends #7FaveGames and #Basquetebol is: 0.011686917186602468
+
+
+
+Cosine similarity for trends #7FaveGames and #InútilComoAtletaMexicano is: 0.04453313557229987
+
+
+
+Cosine similarity for trends #7FaveGames and #FinalFive is: 0.06907698092208289
+
+
+
+Cosine similarity for trends #7FaveGames and #ÖSYMSonuçlarıAçıkla is: 0.076562784009629
+
+
+
+Cosine similarity for trends #7FaveGames and #VamoALaPlayaDeMTVHits is: 0.03154660150729528
+
+
+
+Cosine similarity for trends #7FaveGames and #birsiirdebenden is: 0.046259102715382076
+
+
+
+Cosine similarity for trends #7FaveGames and #ChiringuitoMadrid is: 0.028778032162495044
+
+
+
+Cosine similarity for trends Serena Williams and #USAvCOL is: 0.17538236354747044
+
+
+
+Cosine similarity for trends Serena Williams and 2nd Amendment is: 0.10117820241066569
+
+
+
+Cosine similarity for trends Serena Williams and Madeira is: 0.0965446760516365
+
+
+
+Cosine similarity for trends Serena Williams and Benoit Paire is: 0.03548953876374736
+
+
+
+Cosine similarity for trends Serena Williams and Luis Javier Mosquera is: 0.036531076810761225
+
+
+
+Cosine similarity for trends Serena Williams and #PelisSinUnDuro is: 0.036959770264816276
+
+
+
+Cosine similarity for trends Serena Williams and #topfansarebeautiful is: 0.11551395705118864
+
+
+
+Cosine similarity for trends Serena Williams and #OperacaoMafiaSDV is: 0.04913865460977081
+
+
+
+Cosine similarity for trends Serena Williams and #Basquetebol is: 0.005134284804469571
+
+
+
+Cosine similarity for trends Serena Williams and #InútilComoAtletaMexicano is: 0.14584261112667024
+
+
+
+Cosine similarity for trends Serena Williams and #FinalFive is: 0.14215094229026456
+
+
+
+Cosine similarity for trends Serena Williams and #ÖSYMSonuçlarıAçıkla is: 0.03467042395274855
+
+
+
+Cosine similarity for trends Serena Williams and #VamoALaPlayaDeMTVHits is: 0.07095819016486807
+
+
+
+Cosine similarity for trends Serena Williams and #birsiirdebenden is: 0.06774167625438317
+
+
+
+Cosine similarity for trends Serena Williams and #ChiringuitoMadrid is: 0.05603807482204045
+
+
+
+Cosine similarity for trends #USAvCOL and 2nd Amendment is: 0.17923391345420592
+
+
+
+Cosine similarity for trends #USAvCOL and Madeira is: 0.09151536782266466
+
+
+
+Cosine similarity for trends #USAvCOL and Benoit Paire is: 0.025072861941295342
+
+
+
+Cosine similarity for trends #USAvCOL and Luis Javier Mosquera is: 0.02335072312471522
+
+
+
+Cosine similarity for trends #USAvCOL and #PelisSinUnDuro is: 0.01518733585985615
+
+
+
+Cosine similarity for trends #USAvCOL and #topfansarebeautiful is: 0.22757889255812824
+
+
+
+Cosine similarity for trends #USAvCOL and #OperacaoMafiaSDV is: 0.04949376885230059
+
+
+
+Cosine similarity for trends #USAvCOL and #Basquetebol is: 0.009845529344808548
+
+
+
+Cosine similarity for trends #USAvCOL and #InútilComoAtletaMexicano is: 0.12107599507359296
+
+
+
+Cosine similarity for trends #USAvCOL and #FinalFive is: 0.2205217081357349
+
+
+
+Cosine similarity for trends #USAvCOL and #ÖSYMSonuçlarıAçıkla is: 0.10369546302345128
+
+
+
+Cosine similarity for trends #USAvCOL and #VamoALaPlayaDeMTVHits is: 0.05208920816185976
+
+
+
+Cosine similarity for trends #USAvCOL and #birsiirdebenden is: 0.09223025360852515
+
+
+
+Cosine similarity for trends #USAvCOL and #ChiringuitoMadrid is: 0.051763730225122144
+
+
+
+Cosine similarity for trends 2nd Amendment and Madeira is: 0.07421071750829658
+
+
+
+Cosine similarity for trends 2nd Amendment and Benoit Paire is: 0.0029612768556732147
+
+
+
+Cosine similarity for trends 2nd Amendment and Luis Javier Mosquera is: 0.02702722847996606
+
+
+
+Cosine similarity for trends 2nd Amendment and #PelisSinUnDuro is: 0.01913310363432914
+
+
+
+Cosine similarity for trends 2nd Amendment and #topfansarebeautiful is: 0.16055499943038656
+
+
+
+Cosine similarity for trends 2nd Amendment and #OperacaoMafiaSDV is: 0.027541549453910727
+
+
+
+Cosine similarity for trends 2nd Amendment and #Basquetebol is: 0.016279543016850147
+
+
+
+Cosine similarity for trends 2nd Amendment and #InútilComoAtletaMexicano is: 0.09023038601340024
+
+
+
+Cosine similarity for trends 2nd Amendment and #FinalFive is: 0.1418012376543808
+
+
+
+Cosine similarity for trends 2nd Amendment and #ÖSYMSonuçlarıAçıkla is: 0.09598480114867802
+
+
+
+Cosine similarity for trends 2nd Amendment and #VamoALaPlayaDeMTVHits is: 0.05888431417956126
+
+
+
+Cosine similarity for trends 2nd Amendment and #birsiirdebenden is: 0.07088137484050822
+
+
+
+Cosine similarity for trends 2nd Amendment and #ChiringuitoMadrid is: 0.053088162363731935
+
+
+
+Cosine similarity for trends Madeira and Benoit Paire is: 0.031670974095730386
+
+
+
+Cosine similarity for trends Madeira and Luis Javier Mosquera is: 0.04129389809999927
+
+
+
+Cosine similarity for trends Madeira and #PelisSinUnDuro is: 0.04185599452813829
+
+
+
+Cosine similarity for trends Madeira and #topfansarebeautiful is: 0.07195410886369177
+
+
+

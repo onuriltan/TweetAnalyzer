@@ -9,8 +9,8 @@ import javax.swing.JList;
 
 
 public class DatabaseModel {
-	private int tweetCount;
-	private int trendsCount;
+	private int tweetCount = 0;
+	private int trendsCount = 0;
 	private String searchQuery;
 	private Hashtable<String, Integer> locationList = new Hashtable<String, Integer>()  ;
 	private Hashtable<String, Integer> organizationList = new Hashtable<String, Integer>() ;
@@ -61,8 +61,11 @@ public class DatabaseModel {
 	private String url = " ";
 	private String mostcommon = " ";
 	private String urlText = " "; 
-	private ArrayList<String> cosineSimArray;
-	
+	private ArrayList<String> cosineSimArray = new ArrayList<String>();
+
+
+
+
 
 
 	public ArrayList<String> getCosineSimArray() {

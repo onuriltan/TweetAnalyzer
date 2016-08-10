@@ -211,17 +211,20 @@ public class UrlView extends JPanel{
 				String[] parts = sortedList.get(1).toString().split("=", 2);
 				String tokenName = parts[0];
 				String tokenValue = parts[1];
-				model.getLabelList().get(1).setText(tokenName+"      "+tokenValue);			}
+				model.getLabelList().get(1).setText(tokenName+"      "+tokenValue);	
+				}
 			if(i == 2){
 				String[] parts = sortedList.get(2).toString().split("=", 2);
 				String tokenName = parts[0];
 				String tokenValue = parts[1];
-				model.getLabelList().get(2).setText(tokenName+"      "+tokenValue);			}
+				model.getLabelList().get(2).setText(tokenName+"      "+tokenValue);		
+				}
 			if(i == 3){
 				String[] parts = sortedList.get(3).toString().split("=", 2);
 				String tokenName = parts[0];
 				String tokenValue = parts[1];
-				model.getLabelList().get(3).setText(tokenName+"      "+tokenValue);			}
+				model.getLabelList().get(3).setText(tokenName+"      "+tokenValue);	
+				}
 			if(i == 4){
 				String[] parts = sortedList.get(4).toString().split("=", 2);
 				String tokenName = parts[0];
@@ -237,8 +240,9 @@ public class UrlView extends JPanel{
 			if(i == 6){
 				String[] parts = sortedList.get(6).toString().split("=", 2);
 				String tokenName = parts[0];
-				String tokenValue = parts[6];
-				model.getLabelList().get(2).setText(tokenName+"      "+tokenValue);			}			
+				String tokenValue = parts[1];
+				model.getLabelList().get(6).setText(tokenName+"      "+tokenValue);		
+				}			
 			if(i == 7){
 				String[] parts = sortedList.get(7).toString().split("=", 2);
 				String tokenName = parts[0];
@@ -248,8 +252,9 @@ public class UrlView extends JPanel{
 			if(i == 8){
 				String[] parts = sortedList.get(8).toString().split("=", 2);
 				String tokenName = parts[0];
-				String tokenValue = parts[8];
-				model.getLabelList().get(2).setText(tokenName+"      "+tokenValue);			}
+				String tokenValue = parts[1];
+				model.getLabelList().get(8).setText(tokenName+"      "+tokenValue);		
+				}
 			if(i == 9){
 				String[] parts = sortedList.get(9).toString().split("=", 2);
 				String tokenName = parts[0];

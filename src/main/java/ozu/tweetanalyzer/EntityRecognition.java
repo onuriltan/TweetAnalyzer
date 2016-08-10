@@ -42,11 +42,7 @@ public class EntityRecognition {
 	public EntityRecognition(DatabaseModel database){
 		this.database = database;
 		loadClassifier();
-		/*List<String> asd = enetityRecognition("Si Ricky Rubio Es Una Estrella De La Nba Yo Soy Una Monja De Clausura");
-		for (int i = 0; i < asd.size(); i++) {
-			System.out.println(asd.get(i));
 
-		}*/
 	}
 
 
@@ -58,7 +54,7 @@ public class EntityRecognition {
 		text = text.toLowerCase(Locale.ENGLISH);
 		text = text.replaceAll("((www\\.[^\\s]+)|(https?://[^\\s]+))", "");
 		text = text.replaceAll("\\p{Punct}+", " ");
-		text = text.trim().replaceAll(" +", " ");
+		text = text.trim().replaceAll(" +", " ");// eliminate double spaces, special words, http and hashtags
 
 		String cleanText = text.toString().toLowerCase(Locale.ENGLISH);
 		String entityText ="";
@@ -71,7 +67,6 @@ public class EntityRecognition {
 		}
 
 		entityText = entityText.trim().replaceAll(" +", " ");
-		System.out.println(entityText);
 
 		List<String> recognizedStrs = enetityRecognition(entityText);
 
@@ -84,7 +79,7 @@ public class EntityRecognition {
 				if(count == 0){
 					database.setLocation(database.getLocation()+"\n"
 							+tweet.getUser().getScreenName()+" : "
-							+tweet.getText()+"\n");
+							+tweet.getText()+"\n"+"\n");
 
 					locationChartController.setText(database.getLocation());
 				}
@@ -96,7 +91,7 @@ public class EntityRecognition {
 				if(count == 0){
 					database.setOrganization(database.getOrganization()+"\n"
 							+tweet.getUser().getScreenName()+" : "
-							+tweet.getText()+"\n");
+							+tweet.getText()+"\n"+"\n");
 					organizationChartController.setText(database.getOrganization());
 				}
 				updateDatabase(database.getOrganizationList(), word, "organization");//UPDATE DATA WHEN NEW TOKEN COMES
@@ -107,7 +102,7 @@ public class EntityRecognition {
 				if(count == 0){
 					database.setPerson(database.getPerson()+"\n"
 							+tweet.getUser().getScreenName()+" : "
-							+tweet.getText()+"\n");
+							+tweet.getText()+"\n"+"\n");
 					personChartController.setText(database.getPerson());
 				}
 				updateDatabase(database.getPersonList(), word,"person");
@@ -126,7 +121,7 @@ public class EntityRecognition {
 			updateDatabase(database.getLanguageList(), language, "language");
 			database.setLanguage(database.getLanguage()+"\n"
 					+tweet.getUser().getScreenName()+" : "
-					+tweet.getText()+"\n");
+					+tweet.getText()+"\n"+"\n");
 			languageChartController.setText(database.getLanguage());
 			languageChartController.setDataset(listToPieChartDataset(database.getLanguageList()));// CHANGE THE CHART DATASET
 			languageChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
@@ -140,21 +135,22 @@ public class EntityRecognition {
 			hashTagChartController.setDataset(listToPieChartDataset(database.getHashTagList()));// CHANGE THE CHART DATASET
 			database.setHashtag(database.getHashtag()+"\n"
 					+tweet.getUser().getScreenName()+" : "
-					+text+"\n");
-			hashTagChartController.setText(database.getLanguage());
+					+text+"\n"+"\n");
+			hashTagChartController.setText(database.getHashtag());
 			hashTagChartController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET
 
 		}
 		URLEntity[] urls = tweet.getURLEntities();// TAKE URL ENTITIES
 		if(urls.length>0){
 			for(URLEntity url : urls){
+				if(tweet.getText().contains(url.getText())){
 				updateDatabase(database.getVerifiedURLList(), url.getURL(), "verifiedURLList");
+				}
 			}						
 			database.setUrl(database.getUrl()+"\n"
 					+tweet.getUser().getScreenName()+" : "
-					+tweet.getText()+"\n"+Arrays.toString(urls)+"\n" );
+					+tweet.getText()+"\n"+"\n" );
 			verifiedUrlChartController.setText(database.getUrl());
-			//verifiedUrlChartController.setDataset(listToPieChartDataset(database.getVerifiedURLList()));// CHANGE THE CHART DATASET
 			verifiedUrlChartController.updateUrlPanel(database,database.getVerifiedURLList());//UPDATE CHART BASED ON CHANGED DATASET
 
 		}
@@ -170,7 +166,7 @@ public class EntityRecognition {
 					database.setUrlText(database.getUrlText()+urlText); 
 					database.setUrl(database.getUrl()+"\n"
 							+tweet.getUser().getScreenName()+" : "
-							+tweet.getText()+"\n");
+							+tweet.getText()+"\n"+"\n");
 					verifiedUrlChartController.setText(database.getUrl());
 				}
 				verifiedUrlChartController.updateUrlPanel(database,database.getVerifiedURLList());
@@ -199,7 +195,7 @@ public class EntityRecognition {
 		allWordsController.setDataset(listToPieChartDataset(database.getAllWords()));// CHANGE THE CHART DATASET
 		database.setMostcommon(database.getMostcommon()+"\n"
 				+tweet.getUser().getScreenName()+" : "
-				+tweet.getText()+"\n");
+				+tweet.getText()+"\n"+"\n");
 		allWordsController.setText(database.getMostcommon());
 		allWordsController.updateChart();//UPDATE CHART BASED ON CHANGED DATASET */
 

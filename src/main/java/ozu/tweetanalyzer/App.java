@@ -34,7 +34,7 @@ public class App
 		SpamDetector spamDetector = new SpamDetector();
 		TrendPanel trendPanel= new TrendPanel(database);
 		SearchPanel searchPanel = new SearchPanel(trendPanel,cal);
-		CosineSimilarityStream cosineStream = new CosineSimilarityStream(searchPanel,database,time,spamDetector);
+		CosineSimilarityStream cosineStream = new CosineSimilarityStream(database,time,spamDetector);
 		Search searchRecentTweets = new Search(searchPanel);
 		ApplicationMainFrame appFrame = new ApplicationMainFrame();
 		Stream stream = new Stream(searchPanel);
@@ -69,10 +69,6 @@ public class App
 		ChartController hashtagController = new ChartController(hashtagChartModel, new ChartView());
 		hashtagController.populateChart();
 
-		//ChartModel verifiedUrlChartModel = new ChartModel();
-		//ChartController urlController = new ChartController(verifiedUrlChartModel, new ChartView());
-		//urlController.populateChart();
-
 		ChartModel allWordsChartModel = new ChartModel();
 		ChartController allWordsController = new ChartController(allWordsChartModel, new ChartView());
 		allWordsController.populateChart();
@@ -93,7 +89,6 @@ public class App
 		cosineSimilarityPanelView.populateCosinePanel();
 		CosineSimilarityPanelController  cosineController = new CosineSimilarityPanelController(cosinePanelModel,cosineSimilarityPanelView);
 
-		database.setTweetCount(0);
 		searchPanel.populateSearchPanel(cosineStream,searchRecentTweets,stream, database, recognition, spamDetector, currentTime, mapController,locationController,
 				organizationController, personController, languageController, hashtagController, urlController, allWordsController,cosineController);
 

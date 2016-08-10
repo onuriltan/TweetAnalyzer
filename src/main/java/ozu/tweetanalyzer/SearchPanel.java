@@ -253,23 +253,11 @@ public class SearchPanel extends JPanel  {
 
 
 			public void actionPerformed(ActionEvent arg0) {
-				//locationController, organizationController, personController, languageController, hashtagController, urlController,allWordsController
-				//	MongoConnection mongoConnection = new MongoConnection(database.getSearchQuery());
-				//	Document basicObj = new Document();
+
 				SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH;mm;ss");
 				Date date = new Date();
 				String mainFile = "results";
 				String file = dateFormat.format(cal.getTime())+" to "+dateFormat.format(date);
-				ArrayList<String> cosineArray = new ArrayList<String>();
-				try {
-					cosineSimilarityToTxt(database.getCosineSimArray(),0);
-				} catch (IOException e2) {
-					// TODO Auto-generated catch block
-					e2.printStackTrace();
-				}
-				
-				File asd = new File(database.getSearchQuery()+"/"+file);
-				//ImageIO.write(image, "jpg",asd);
 
 				File locationfile = new File(mainFile+"/"+file+"/Location.png");
 				File organizationfile = new File(mainFile+"/"+file+"/Organization.png");
@@ -277,19 +265,28 @@ public class SearchPanel extends JPanel  {
 				File languagefile = new File(mainFile+"/"+file+"/Language.png");
 				File hashtagfile = new File(mainFile+"/"+file+"/Hashtags.png");
 				File allWordsfile = new File(mainFile+"/"+file+"/MostCommonWords.png");
+				File cosStream = new File(mainFile+"/"+file+"/cosineSimilarity.txt");;
+				File similarity = new File(mainFile+"/"+file+"/words.txt");
+
 				File parentDir = locationfile.getParentFile();
 				File parentDir1 = organizationfile.getParentFile();
 				File parentDir2 = personfile.getParentFile();
 				File parentDir3 = languagefile.getParentFile();
 				File parentDir4 = hashtagfile.getParentFile();
 				File parentDir5 = allWordsfile.getParentFile();
-				if(! parentDir.exists() && ! parentDir1.exists()&& ! parentDir2.exists()&& ! parentDir3.exists()&& ! parentDir4.exists()&& ! parentDir5.exists()){ 
+				File parentDir6 = cosStream.getParentFile();
+				File parentDir7 = similarity.getParentFile();
+
+				if(! parentDir.exists() && ! parentDir1.exists()&& ! parentDir2.exists()&& ! parentDir3.exists()&& ! parentDir4.exists()&& ! parentDir5.exists()&& ! parentDir6.exists()&& ! parentDir7.exists()){ 
 					parentDir.mkdirs();
 					parentDir1.mkdirs();
 					parentDir2.mkdirs();
 					parentDir3.mkdirs();
 					parentDir4.mkdirs();
 					parentDir5.mkdirs();
+					parentDir6.mkdirs();
+					parentDir7.mkdirs();
+
 				}
 				// create parent dir and ancestors if necessary
 				// FileWriter does not allow to specify charset, better use this:
@@ -299,7 +296,8 @@ public class SearchPanel extends JPanel  {
 				Writer w3= null;
 				Writer w4= null;
 				Writer w5= null;
-
+				Writer w6= null;
+				Writer w7= null;
 
 				try {
 					w = new OutputStreamWriter(new FileOutputStream(locationfile));
@@ -308,6 +306,9 @@ public class SearchPanel extends JPanel  {
 					w3 = new OutputStreamWriter(new FileOutputStream(languagefile));
 					w4 = new OutputStreamWriter(new FileOutputStream(hashtagfile));
 					w5 = new OutputStreamWriter(new FileOutputStream(allWordsfile));
+					w6 = new OutputStreamWriter(new FileOutputStream(cosStream));
+					w7 = new OutputStreamWriter(new FileOutputStream(similarity));
+
 				} catch (FileNotFoundException e1) {
 					e1.printStackTrace();
 				}
@@ -315,16 +316,46 @@ public class SearchPanel extends JPanel  {
 				try {
 					ChartUtilities.saveChartAsJPEG(locationfile, locationController.getChart(), 600, 400);
 					ChartUtilities.saveChartAsJPEG(organizationfile, locationController.getChart(), 600, 400);
-					ChartUtilities.saveChartAsJPEG(asd, organizationController.getChart(), 600, 400);
 					ChartUtilities.saveChartAsJPEG(organizationfile, organizationController.getChart(), 600, 400);
 					ChartUtilities.saveChartAsJPEG(personfile, personController.getChart(), 600, 400);
 					ChartUtilities.saveChartAsJPEG(languagefile, languageController.getChart(), 600, 400);
 					ChartUtilities.saveChartAsJPEG(hashtagfile, hashtagController.getChart(), 600, 400);
 					ChartUtilities.saveChartAsJPEG(allWordsfile, allWordsController.getChart(), 600, 400);
+
 				} catch (IOException e) {
 
 					e.printStackTrace();
 				}
+				if(!database.getCosineSimArray().isEmpty()){
+
+					String eol = System.getProperty("line.separator");
+
+					for (int i = 0; i < database.getCosineSimArray().size(); i++) {
+						try {
+							w6.write(database.getCosineSimArray().get(i));
+							w6.write(eol);
+							w6.write(eol);
+							w6.write(eol);
+							w6.write(eol);
+						} catch (IOException e) {
+							e.printStackTrace();
+						}
+
+					}
+					for (int i = 0; i < database.getTrendDatabaseList().size(); i++) {
+						try {
+							w7.write(database.getTrendDatabaseList().get(i));
+							w7.write(eol);
+							w7.write(eol);
+							w7.write(eol);
+							w7.write(eol);
+						} catch (IOException e) {
+							e.printStackTrace();
+						}
+
+					}
+				}
+
 				try {
 					w.close();
 					w1.close();
@@ -332,13 +363,15 @@ public class SearchPanel extends JPanel  {
 					w3.close();
 					w4.close();
 					w5.close();
+					w6.close();
+					w7.close();
 
 				} catch (IOException e1) {
 					e1.printStackTrace();
 				}
+
+
 				JOptionPane.showMessageDialog(null, "Your search results created in the project directory.");
-				//basicObj.put(file, asd);
-				//	mongoConnection.coll.insertOne(basicObj);
 
 			}
 
@@ -349,28 +382,27 @@ public class SearchPanel extends JPanel  {
 	}
 
 	public void cosineSimilarityToTxt(ArrayList<String> array,int k) throws IOException{
-		OutputStream outputStream;
-		if(k == 1){
-			 outputStream = new FileOutputStream("words.txt");
-		}else{
-			outputStream = new FileOutputStream("cosineSimilarity.txt");
-		}
+		File file;
+		String mainFile = "results";
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH;mm;ss");
 		Date date = new Date();
-		String mainFile = "results";
-		String file = dateFormat.format(cal.getTime())+" to "+dateFormat.format(date);
-		File cosfile = new File(mainFile+"/"+file+"/cosineSimilarity.txt");
-		File parentDir = cosfile.getParentFile();
+		String time = dateFormat.format(cal.getTime())+" to "+dateFormat.format(date);
+		if(k == 1){
+			file = new File(mainFile+"/"+time+"/words.txt");
+		}else{
+			file = new File(mainFile+"/"+time+"/cosineSimilarity.txt");
+		}
+
+
+
+		File parentDir = file.getParentFile();
 		if(! parentDir.exists() ){ 
 			parentDir.mkdirs();
 		}
-		Writer w = new OutputStreamWriter(new FileOutputStream(cosfile));
-	
-		w.close();
+		Writer w = new OutputStreamWriter(new FileOutputStream(file));
+
 		String eol = System.getProperty("line.separator");
-		@SuppressWarnings("resource")        
-		Writer out = new OutputStreamWriter(outputStream);
-	
+
 		for (int i = 0; i < array.size(); i++) {
 			w.write(array.get(i));
 			w.write(eol);
@@ -379,7 +411,14 @@ public class SearchPanel extends JPanel  {
 			w.write(eol);
 		}
 		w.flush();
+		w.close();
+
 	}
+
+
+
+
+
 
 	public JLabel getNamelabel() {
 		return enterQueryLabel;
