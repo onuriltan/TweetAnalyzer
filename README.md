@@ -7,3 +7,7 @@ TweetAnalyzer is a tool to analyze tweets in real time and gives nice data visua
 
 #ScreenShots:
 
+<p align="center">
+  <img src="C:\Users\asus\Desktop" width="350"/>
+  
+</p>
