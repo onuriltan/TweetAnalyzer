@@ -1,0 +1,612 @@
+Cosine similarity for trends #MasterChefBR and Michael Phelps is: 0.00965226406613799
+
+
+
+Cosine similarity for trends #MasterChefBR and #QuitYourJobIn5Words is: 0.010608193066118208
+
+
+
+Cosine similarity for trends #MasterChefBR and #ElMejorDeMisTalentos is: 0.09392932715684625
+
+
+
+Cosine similarity for trends #MasterChefBR and Alejandro Fernández is: 0.1345345587992625
+
+
+
+Cosine similarity for trends #MasterChefBR and Zico is: 0.039296978068056876
+
+
+
+Cosine similarity for trends #MasterChefBR and Cordera is: 0.13074409009212268
+
+
+
+Cosine similarity for trends #MasterChefBR and Ryan Lochte is: 0.07626738588707158
+
+
+
+Cosine similarity for trends #MasterChefBR and #PrayForPortugal is: 0.04937664972095048
+
+
+
+Cosine similarity for trends #MasterChefBR and #FinalFive is: 0.018367958959266125
+
+
+
+Cosine similarity for trends #MasterChefBR and #MiLugarIdealParaSexo is: 0.11375557435721576
+
+
+
+Cosine similarity for trends #MasterChefBR and #FreedomFrom is: 0.003565600575780644
+
+
+
+Cosine similarity for trends #MasterChefBR and #CoolpadMega is: 0.0016625385362714887
+
+
+
+Cosine similarity for trends #MasterChefBR and #ShowtimeAugust10xAngSaya is: 0.005001969913556578
+
+
+
+Cosine similarity for trends #MasterChefBR and #MiercolesDeGanarSeguidores is: 0.07698231688328035
+
+
+
+Cosine similarity for trends #MasterChefBR and #ALDUBAngPahintulot is: 8.039099508063087E-4
+
+
+
+Cosine similarity for trends #MasterChefBR and #SULTANEnters300crClub is: 0.004567019518076486
+
+
+
+Cosine similarity for trends #MasterChefBR and #TuBuscandoMedallasyYo is: 0.06933752452815364
+
+
+
+Cosine similarity for trends Michael Phelps and #QuitYourJobIn5Words is: 0.08321902828633566
+
+
+
+Cosine similarity for trends Michael Phelps and #ElMejorDeMisTalentos is: 0.05238310533574712
+
+
+
+Cosine similarity for trends Michael Phelps and Alejandro Fernández is: 0.042203300345435124
+
+
+
+Cosine similarity for trends Michael Phelps and Zico is: 0.1351905557863736
+
+
+
+Cosine similarity for trends Michael Phelps and Cordera is: 0.00182285491939215
+
+
+
+Cosine similarity for trends Michael Phelps and Ryan Lochte is: 0.07443324254184612
+
+
+
+Cosine similarity for trends Michael Phelps and #PrayForPortugal is: 0.09382141776730941
+
+
+
+Cosine similarity for trends Michael Phelps and #FinalFive is: 0.1577508289964912
+
+
+
+Cosine similarity for trends Michael Phelps and #MiLugarIdealParaSexo is: 0.03912129209884378
+
+
+
+Cosine similarity for trends Michael Phelps and #FreedomFrom is: 0.12308733513560999
+
+
+
+Cosine similarity for trends Michael Phelps and #CoolpadMega is: 0.1427849620728459
+
+
+
+Cosine similarity for trends Michael Phelps and #ShowtimeAugust10xAngSaya is: 0.01394765217632959
+
+
+
+Cosine similarity for trends Michael Phelps and #MiercolesDeGanarSeguidores is: 0.07255506094241045
+
+
+
+Cosine similarity for trends Michael Phelps and #ALDUBAngPahintulot is: 0.06769777275255812
+
+
+
+Cosine similarity for trends Michael Phelps and #SULTANEnters300crClub is: 0.105316983267322
+
+
+
+Cosine similarity for trends Michael Phelps and #TuBuscandoMedallasyYo is: 0.00966714805966085
+
+
+
+Cosine similarity for trends #QuitYourJobIn5Words and #ElMejorDeMisTalentos is: 0.08743589335117305
+
+
+
+Cosine similarity for trends #QuitYourJobIn5Words and Alejandro Fernández is: 0.03710638291899783
+
+
+
+Cosine similarity for trends #QuitYourJobIn5Words and Zico is: 0.15399870007056976
+
+
+
+Cosine similarity for trends #QuitYourJobIn5Words and Cordera is: 0.006010153716455157
+
+
+
+Cosine similarity for trends #QuitYourJobIn5Words and Ryan Lochte is: 0.04808122973164126
+
+
+
+Cosine similarity for trends #QuitYourJobIn5Words and #PrayForPortugal is: 0.12191999515578587
+
+
+
+Cosine similarity for trends #QuitYourJobIn5Words and #FinalFive is: 0.07599183339946798
+
+
+
+Cosine similarity for trends #QuitYourJobIn5Words and #MiLugarIdealParaSexo is: 0.015687634236670633
+
+
+
+Cosine similarity for trends #QuitYourJobIn5Words and #FreedomFrom is: 0.13505896450342264
+
+
+
+Cosine similarity for trends #QuitYourJobIn5Words and #CoolpadMega is: 0.11494314337148413
+
+
+
+Cosine similarity for trends #QuitYourJobIn5Words and #ShowtimeAugust10xAngSaya is: 0.014255953739487253
+
+
+
+Cosine similarity for trends #QuitYourJobIn5Words and #MiercolesDeGanarSeguidores is: 0.028310300379397545
+
+
+
+Cosine similarity for trends #QuitYourJobIn5Words and #ALDUBAngPahintulot is: 0.073392243098767
+
+
+
+Cosine similarity for trends #QuitYourJobIn5Words and #SULTANEnters300crClub is: 0.10035159440359762
+
+
+
+Cosine similarity for trends #QuitYourJobIn5Words and #TuBuscandoMedallasyYo is: 0.006374730673318458
+
+
+
+Cosine similarity for trends #ElMejorDeMisTalentos and Alejandro Fernández is: 0.2772184966351638
+
+
+
+Cosine similarity for trends #ElMejorDeMisTalentos and Zico is: 0.04498575301873973
+
+
+
+Cosine similarity for trends #ElMejorDeMisTalentos and Cordera is: 0.03991228933928331
+
+
+
+Cosine similarity for trends #ElMejorDeMisTalentos and Ryan Lochte is: 0.1862573502499888
+
+
+
+Cosine similarity for trends #ElMejorDeMisTalentos and #PrayForPortugal is: 0.0818260803521711
+
+
+
+Cosine similarity for trends #ElMejorDeMisTalentos and #FinalFive is: 0.011214385170874816
+
+
+
+Cosine similarity for trends #ElMejorDeMisTalentos and #MiLugarIdealParaSexo is: 0.16205559915566037
+
+
+
+Cosine similarity for trends #ElMejorDeMisTalentos and #FreedomFrom is: 0.029388744127647987
+
+
+
+Cosine similarity for trends #ElMejorDeMisTalentos and #CoolpadMega is: 0.02588370664847421
+
+
+
+Cosine similarity for trends #ElMejorDeMisTalentos and #ShowtimeAugust10xAngSaya is: 0.015269529224272627
+
+
+
+Cosine similarity for trends #ElMejorDeMisTalentos and #MiercolesDeGanarSeguidores is: 0.33605594866301114
+
+
+
+Cosine similarity for trends #ElMejorDeMisTalentos and #ALDUBAngPahintulot is: 0.014724590550916338
+
+
+
+Cosine similarity for trends #ElMejorDeMisTalentos and #SULTANEnters300crClub is: 0.012547579310519422
+
+
+
+Cosine similarity for trends #ElMejorDeMisTalentos and #TuBuscandoMedallasyYo is: 0.04233337566673017
+
+
+
+Cosine similarity for trends Alejandro Fernández and Zico is: 0.03436421044244713
+
+
+
+Cosine similarity for trends Alejandro Fernández and Cordera is: 0.05716619504750295
+
+
+
+Cosine similarity for trends Alejandro Fernández and Ryan Lochte is: 0.20960938184084413
+
+
+
+Cosine similarity for trends Alejandro Fernández and #PrayForPortugal is: 0.05551537834769105
+
+
+
+Cosine similarity for trends Alejandro Fernández and #FinalFive is: 0.03212462831016178
+
+
+
+Cosine similarity for trends Alejandro Fernández and #MiLugarIdealParaSexo is: 0.18237333408466458
+
+
+
+Cosine similarity for trends Alejandro Fernández and #FreedomFrom is: 0.02026717713839516
+
+
+
+Cosine similarity for trends Alejandro Fernández and #CoolpadMega is: 0.015992325525180033
+
+
+
+Cosine similarity for trends Alejandro Fernández and #ShowtimeAugust10xAngSaya is: 0.010935239501022188
+
+
+
+Cosine similarity for trends Alejandro Fernández and #MiercolesDeGanarSeguidores is: 0.26254442464396144
+
+
+
+Cosine similarity for trends Alejandro Fernández and #ALDUBAngPahintulot is: 0.016168973746636502
+
+
+
+Cosine similarity for trends Alejandro Fernández and #SULTANEnters300crClub is: 0.007987485426596524
+
+
+
+Cosine similarity for trends Alejandro Fernández and #TuBuscandoMedallasyYo is: 0.03031695312954162
+
+
+
+Cosine similarity for trends Zico and Cordera is: 0.008349002416427073
+
+
+
+Cosine similarity for trends Zico and Ryan Lochte is: 0.06679201933141657
+
+
+
+Cosine similarity for trends Zico and #PrayForPortugal is: 0.1288255875797612
+
+
+
+Cosine similarity for trends Zico and #FinalFive is: 0.06568428051432973
+
+
+
+Cosine similarity for trends Zico and #MiLugarIdealParaSexo is: 0.04600632611361568
+
+
+
+Cosine similarity for trends Zico and #FreedomFrom is: 0.13524825049090283
+
+
+
+Cosine similarity for trends Zico and #CoolpadMega is: 0.11465895939701595
+
+
+
+Cosine similarity for trends Zico and #ShowtimeAugust10xAngSaya is: 0.030983132851191596
+
+
+
+Cosine similarity for trends Zico and #MiercolesDeGanarSeguidores is: 0.044243146616035664
+
+
+
+Cosine similarity for trends Zico and #ALDUBAngPahintulot is: 0.08778413510173647
+
+
+
+Cosine similarity for trends Zico and #SULTANEnters300crClub is: 0.11548898736690702
+
+
+
+Cosine similarity for trends Zico and #TuBuscandoMedallasyYo is: 0.008855454337197682
+
+
+
+Cosine similarity for trends Cordera and Ryan Lochte is: 0.018518518518518517
+
+
+
+Cosine similarity for trends Cordera and #PrayForPortugal is: 0.011989166687760107
+
+
+
+Cosine similarity for trends Cordera and #FinalFive is: 0.031219527052723135
+
+
+
+Cosine similarity for trends Cordera and #MiLugarIdealParaSexo is: 0.03222454963485545
+
+
+
+Cosine similarity for trends Cordera and #FreedomFrom is: 0.0030301778189305286
+
+
+
+Cosine similarity for trends Cordera and #CoolpadMega is: 0.002825772146182769
+
+
+
+Cosine similarity for trends Cordera and #ShowtimeAugust10xAngSaya is: 0.004250857032604834
+
+
+
+Cosine similarity for trends Cordera and #MiercolesDeGanarSeguidores is: 0.039253433598942976
+
+
+
+Cosine similarity for trends Cordera and #ALDUBAngPahintulot is: 0.0027327683508885222
+
+
+
+Cosine similarity for trends Cordera and #SULTANEnters300crClub is: 0.007762440547210372
+
+
+
+Cosine similarity for trends Cordera and #TuBuscandoMedallasyYo is: 0.11785113019775793
+
+
+
+Cosine similarity for trends Ryan Lochte and #PrayForPortugal is: 0.10790250018984096
+
+
+
+Cosine similarity for trends Ryan Lochte and #FinalFive is: 0.031219527052723132
+
+
+
+Cosine similarity for trends Ryan Lochte and #MiLugarIdealParaSexo is: 0.16112274817427727
+
+
+
+Cosine similarity for trends Ryan Lochte and #FreedomFrom is: 0.057068348923191625
+
+
+
+Cosine similarity for trends Ryan Lochte and #CoolpadMega is: 0.06028313911856574
+
+
+
+Cosine similarity for trends Ryan Lochte and #ShowtimeAugust10xAngSaya is: 0.007793237893108863
+
+
+
+Cosine similarity for trends Ryan Lochte and #MiercolesDeGanarSeguidores is: 0.18536343643945297
+
+
+
+Cosine similarity for trends Ryan Lochte and #ALDUBAngPahintulot is: 0.03165456673112538
+
+
+
+Cosine similarity for trends Ryan Lochte and #SULTANEnters300crClub is: 0.04398716310085877
+
+
+
+Cosine similarity for trends Ryan Lochte and #TuBuscandoMedallasyYo is: 0.049104637582399135
+
+
+
+Cosine similarity for trends #PrayForPortugal and #FinalFive is: 0.03705531526106523
+
+
+
+Cosine similarity for trends #PrayForPortugal and #MiLugarIdealParaSexo is: 0.07301929893494313
+
+
+
+Cosine similarity for trends #PrayForPortugal and #FreedomFrom is: 0.15203814964731752
+
+
+
+Cosine similarity for trends #PrayForPortugal and #CoolpadMega is: 0.10519321844127706
+
+
+
+Cosine similarity for trends #PrayForPortugal and #ShowtimeAugust10xAngSaya is: 0.019723158376008083
+
+
+
+Cosine similarity for trends #PrayForPortugal and #MiercolesDeGanarSeguidores is: 0.07482793739905944
+
+
+
+Cosine similarity for trends #PrayForPortugal and #ALDUBAngPahintulot is: 0.06251297795011451
+
+
+
+Cosine similarity for trends #PrayForPortugal and #SULTANEnters300crClub is: 0.07370763335047167
+
+
+
+Cosine similarity for trends #PrayForPortugal and #TuBuscandoMedallasyYo is: 0.019074647397804817
+
+
+
+Cosine similarity for trends #FinalFive and #MiLugarIdealParaSexo is: 0.018108633583569404
+
+
+
+Cosine similarity for trends #FinalFive and #FreedomFrom is: 0.11408846638155185
+
+
+
+Cosine similarity for trends #FinalFive and #CoolpadMega is: 0.16117660622164182
+
+
+
+Cosine similarity for trends #FinalFive and #ShowtimeAugust10xAngSaya is: 0.00477755086055994
+
+
+
+Cosine similarity for trends #FinalFive and #MiercolesDeGanarSeguidores is: 0.011029262689390243
+
+
+
+Cosine similarity for trends #FinalFive and #ALDUBAngPahintulot is: 0.0560524381968191
+
+
+
+Cosine similarity for trends #FinalFive and #SULTANEnters300crClub is: 0.11777710521217152
+
+
+
+Cosine similarity for trends #FinalFive and #TuBuscandoMedallasyYo is: 0.016556654463313048
+
+
+
+Cosine similarity for trends #MiLugarIdealParaSexo and #FreedomFrom is: 0.010545780477085005
+
+
+
+Cosine similarity for trends #MiLugarIdealParaSexo and #CoolpadMega is: 0.009014864243364408
+
+
+
+Cosine similarity for trends #MiLugarIdealParaSexo and #ShowtimeAugust10xAngSaya is: 0.0061641879047031976
+
+
+
+Cosine similarity for trends #MiLugarIdealParaSexo and #MiercolesDeGanarSeguidores is: 0.1669699969538886
+
+
+
+Cosine similarity for trends #MiLugarIdealParaSexo and #ALDUBAngPahintulot is: 0.008321880674876195
+
+
+
+Cosine similarity for trends #MiLugarIdealParaSexo and #SULTANEnters300crClub is: 0.00675381106893227
+
+
+
+Cosine similarity for trends #MiLugarIdealParaSexo and #TuBuscandoMedallasyYo is: 0.06835859270246633
+
+
+
+Cosine similarity for trends #FreedomFrom and #CoolpadMega is: 0.21947636016161629
+
+
+
+Cosine similarity for trends #FreedomFrom and #ShowtimeAugust10xAngSaya is: 0.022374041125385657
+
+
+
+Cosine similarity for trends #FreedomFrom and #MiercolesDeGanarSeguidores is: 0.025335260251184807
+
+
+
+Cosine similarity for trends #FreedomFrom and #ALDUBAngPahintulot is: 0.09856191302464219
+
+
+
+Cosine similarity for trends #FreedomFrom and #SULTANEnters300crClub is: 0.14141170990354604
+
+
+
+Cosine similarity for trends #FreedomFrom and #TuBuscandoMedallasyYo is: 0.0016069944629751294
+
+
+
+Cosine similarity for trends #CoolpadMega and #ShowtimeAugust10xAngSaya is: 0.015567491606581283
+
+
+
+Cosine similarity for trends #CoolpadMega and #MiercolesDeGanarSeguidores is: 0.022627936898409296
+
+
+
+Cosine similarity for trends #CoolpadMega and #ALDUBAngPahintulot is: 0.0916352571330912
+
+
+
+Cosine similarity for trends #CoolpadMega and #SULTANEnters300crClub is: 0.14648118396527202
+
+
+
+Cosine similarity for trends #CoolpadMega and #TuBuscandoMedallasyYo is: 0.0014985919849904248
+
+
+
+Cosine similarity for trends #ShowtimeAugust10xAngSaya and #MiercolesDeGanarSeguidores is: 0.013015137272900384
+
+
+
+Cosine similarity for trends #ShowtimeAugust10xAngSaya and #ALDUBAngPahintulot is: 0.05823405371258906
+
+
+
+Cosine similarity for trends #ShowtimeAugust10xAngSaya and #SULTANEnters300crClub is: 0.024945750892656313
+
+
+
+Cosine similarity for trends #ShowtimeAugust10xAngSaya and #TuBuscandoMedallasyYo is: 0.0022543573752070527
+
+
+
+Cosine similarity for trends #MiercolesDeGanarSeguidores and #ALDUBAngPahintulot is: 0.015446957904416955
+
+
+
+Cosine similarity for trends #MiercolesDeGanarSeguidores and #SULTANEnters300crClub is: 0.008226966003812954
+
+
+
+Cosine similarity for trends #MiercolesDeGanarSeguidores and #TuBuscandoMedallasyYo is: 0.03469546135333556
+
+
+
+Cosine similarity for trends #ALDUBAngPahintulot and #SULTANEnters300crClub is: 0.07293012847085564
+
+
+
+Cosine similarity for trends #ALDUBAngPahintulot and #TuBuscandoMedallasyYo is: 0.0014492692742439394
+
+
+
+Cosine similarity for trends #SULTANEnters300crClub and #TuBuscandoMedallasyYo is: 0.004116655762117402
+
+
+
