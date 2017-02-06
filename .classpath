@@ -18,7 +18,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/JMapViewer.jar"/>
-	<classpathentry kind="lib" path="C:/Users/asus/Desktop/Eclipse-Workspace/TweetAnalyzer/libs/stanford-ner-3.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Protel/Desktop/Eclipse-Playground/Eclipse-Playground-Ws/TweetAnalyzer/libs/JMapViewer.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Protel/Desktop/Eclipse-Playground/Eclipse-Playground-Ws/TweetAnalyzer/libs/stanford-ner-3.6.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
