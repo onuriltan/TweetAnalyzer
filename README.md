@@ -3,7 +3,7 @@ TweetAnalyzer is a tool to analyze tweets in real time and gives nice data visua
 
 
 #Instructions:
-#1.Download the project and add as existing maven project into Eclipse.
-#2.Include all the libraries in libs file.
-#3.Start the application.
+#1.Pull the project into eclipse
+#2.Configure path to java 8 jdk.
+#3.Start the application from App.java in ozu.tweetanalyzer in src folder.
 
