@@ -83,10 +83,10 @@ public class TrendPanel extends JPanel {
 	private ConfigurationBuilder defineConfBuilder(){
 		cb = new ConfigurationBuilder();
 		cb.setDebugEnabled(true)
-		.setOAuthConsumerKey("xjhjEo5dv9l9gkH6aOsYT9FEW")
-		.setOAuthConsumerSecret("BCFiOEtwg49XtHzkhQ08CF5Nm4Nafx2ppHjg6gmA0aB862L7ps")
-		.setOAuthAccessToken("4013320817-ShvBoFTZYGMm8RQMrcZEmsihk9yua2KpU3WEoPJ")
-		.setOAuthAccessTokenSecret("Fmz8lmkNce9Fx5svO7XyFJikvyRp3Y0hssZQDDrjtxhP7");
+				.setOAuthConsumerKey("gYBOmrWOnlS69DScInBWrTGFr")
+				.setOAuthConsumerSecret("wv8LHjQnCUjR28ALBVinPFRIiufvCQoh82qvmCo2ufkioZVFkU")
+				.setOAuthAccessToken("964455826084777984-OxlNnBZYownQAwRAa57c61UApqsYUJ3")
+				.setOAuthAccessTokenSecret("frUPdfMpefBgWrwGOFn292o4emhUdYg31gpTy9PijLldW");
 		cb.setJSONStoreEnabled(true);
 		return cb;
 	}

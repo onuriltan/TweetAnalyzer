@@ -7,9 +7,6 @@ import java.util.Calendar;
 
 public class CurrentTime {
 
-
-
-
 	private String currentDate;
 	private String currentTime;
 	private int year;
